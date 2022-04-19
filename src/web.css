@@ -1,0 +1,98 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+.login-area {
+    border-radius: 10%;
+    background: #11263E;
+    padding: 20px;
+    padding-top: 60px;
+}
+
+.container {
+    color: white;
+}
+
+.login-logo {
+    border-radius: 50%;
+    border: none;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: 75px;
+    height: 150px;
+    width: 150px;
+    transition: 0.2s ease-out;
+    box-shadow: 0px 0px 0px 10px #D5AA41 inset;
+}
+
+.login-logo:hover {
+    box-shadow: 0px 0px 0px 10px #D5AA41 inset, 0 0 20px #222222;
+    height: 160px;
+    width: 160px;
+    top: 65px;
+}
+
+input-group {
+    border-right: 0 !important;
+}
+
+.input-group input {
+    border-right: 0 !important;
+}
+
+.forgot {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.forgot:hover {
+    color: #D5AA41
+}
+
+.forgot:hover>.forgot2 {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(5deg);
+    }
+
+    20% {
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(5deg);
+    }
+
+    40% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    60% {
+        transform: rotate(-15deg);
+    }
+
+    70% {
+        transform: rotate(-5deg);
+    }
+
+}
