@@ -16,15 +16,13 @@ function App() {
                 <div id="tcp" className="input-group-prepend">
                   <span className="input-group-text h-100" id="basic-addon1" style={{background:"#D5AA41", borderColor:"#D5AA41"}}><i className="fa fa-id-badge "></i></span>
                 </div>
-                <input type="text" maxLength="11" id="tc" className="form-control" placeholder="T.C. Kimlik Numarası" aria-describedby="basic-addon1" required
-                  onInvalid={e => e.target.setCustomValidity('Lütfen T.C. Kimlik Numaranızı doldurunuz.')} onInput={e => e.target.setCustomValidity('')} />
+                <input type="text" maxLength="11" id="tc" className="form-control" placeholder="T.C. Kimlik Numarası" aria-describedby="basic-addon1" required/>
               </div>
               <div className="input-group mb-3 mt-4">
                 <div id="passwordp" className="input-group-prepend">
                   <span className="input-group-text h-100" id="basic-addon2" style={{background:"#D5AA41", borderColor:"#D5AA41"}}><i className="fa fa-lock"></i></span>
                 </div>
-                <input type="password" id="password" className="form-control" placeholder="Şifre" aria-describedby="basic-addon2" required
-                  onInvalid={e => e.target.setCustomValidity('Lütfen şifrenizi doldurunuz.')} onInput={e => e.target.setCustomValidity('')} />
+                <input type="password" id="password" minLength="8" className="form-control" placeholder="Şifre" aria-describedby="basic-addon2" required />
               </div>
               <div className="mt-2 mb-3" style={{ overflow: "hidden" }}>
                 <button type="submit" className="button mt-3 mb-3" style={{ marginLeft:"12px",float: "left", width: "43%" }}><i className="fa fa-sign-in"></i>&nbsp;Giriş Yap</button>
