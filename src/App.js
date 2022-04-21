@@ -99,7 +99,7 @@ function App() {
                             borderColor: "#D5AA41",
                           }}
                         >
-                          <i className="fa fa-id-badge "></i>
+                          <i className="fa fa-id-badge"></i>
                         </span>
                       </div>
                       <input
