@@ -11,6 +11,9 @@ body {
 
 }
 
+a{
+    cursor: pointer;
+}
 .login-area {
     border-radius: 10%;
     background: #11263E;
@@ -121,7 +124,7 @@ body {
     transition: 0.3s ease-out;
 }
 
-.button:last-of-type {
+.button:nth-child(2) {
     background: #585858;
 }
 
@@ -142,4 +145,8 @@ body {
     box-shadow: 0 0 12px #D5AA41;
     background-color: #D5AA41;
     border-radius: .3rem;
+}
+
+.modal-content{
+    border-radius: 10px;
 }
