@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
+import $ from "jquery";
 import { useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 
