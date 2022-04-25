@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     import("bootstrap/dist/js/bootstrap");
   }, []);
 
-  var isLogin = true;
+  var isLogin = false;
   if (isLogin) {
     return (
       <Layout>

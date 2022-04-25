@@ -3,6 +3,7 @@
 .body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../public/login/background.jpg);
+  background-color: #F0F2F5;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -16,7 +17,9 @@
 
 .loginArea {
   border-radius: 10%;
-  background: #11263e;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 10px 0px 100px 12px gray;
+  backdrop-filter: blur(5px);
   padding: 20px;
   padding-top: 60px;
 }
@@ -29,17 +32,18 @@
   border-radius: 50%;
   border: none;
   left: 50%;
+  z-index: 1;
   transform: translateX(-50%);
   position: relative;
   top: 75px;
   height: 150px;
   width: 150px;
   transition: 0.2s ease-out;
-  box-shadow: 0px 0px 0px 10px #d5aa41 inset;
+  box-shadow: 0px 0px 0px 15px #d5aa41 inset;
 }
 
 .loginLogo:hover {
-  box-shadow: 0px 0px 0px 10px #d5aa41 inset, 0 0 15px #d5aa41;
+  box-shadow: 0px 0px 0px 10px #d5aa41 inset, 0 0 20px 5px #d5aa41;
   height: 160px;
   width: 160px;
   top: 65px;
@@ -48,24 +52,26 @@
 .forgot {
   text-decoration: none;
   color: white;
-  transition: 0.2s ease;
+  font-weight: bold;
+  
+  transition: 0.2s ease-out;
 }
 
 .forgot:hover {
-  color: #d5aa41;
+  color: #d5aa41 !important;
 }
 
-.forgot:hover > .forgot2 {
+.forgot:hover>.forgot2 {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-.button:hover > .faSignIn {
+.button:hover>.faSignIn {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-.button:hover > .faPlusCircle {
+.button:hover>.faPlusCircle {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -112,7 +118,7 @@
   font-size: 12pt;
   padding: 10px;
   color: white;
-  background: #d5aa41;
+  background: #11263E;
   border: none;
   letter-spacing: 0.05em;
   border-radius: 0.35rem;
@@ -130,18 +136,83 @@
 .formControl,
 .inputGroupText {
   transition: 0.3s ease-out;
+  height: 50px !important;
 }
 
 .button:hover,
 .formControl:focus {
-  box-shadow: 0 0 12px #d5aa41;
+  box-shadow: 0 0 10px 3px #11263E;
 }
+
 .inputGroupText {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .inputGroup:focus-within {
-  box-shadow: 0 0 12px #d5aa41;
+  box-shadow: 0 0 3px px #d5aa41;
   background-color: #d5aa41;
   border-radius: 0.3rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #707070;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .5s ease;
+}
+
+input:checked+.slider {
+  background-color: #d5aa41;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #d5aa41;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
