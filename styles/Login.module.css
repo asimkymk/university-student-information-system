@@ -3,7 +3,7 @@
 .body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../public/login/background.jpg);
-  background-color: #F0F2F5;
+  background-color: #f0f2f5;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 .loginArea {
   border-radius: 10%;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 150px 5px #202020;
+  box-shadow: 0px 0px 100px 5px #202020;
   backdrop-filter: blur(5px);
   padding: 20px;
   padding-top: 60px;
@@ -61,22 +61,22 @@
   text-shadow: 0px 0px 5px black;
 }
 
-.forgot:hover>.forgot2 {
+.forgot:hover > .forgot2 {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-.button:hover>.faSignIn {
+.button:hover > .faSignIn {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-.button:hover>.faPlusCircle {
+.button:hover > .faPlusCircle {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-.button:hover>.faPaperPlane {
+.button:hover > .faPaperPlane {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -125,7 +125,7 @@
   font-size: 12pt;
   padding: 10px;
   color: white;
-  background: #11263E;
+  background: #11263e;
   border: none;
   letter-spacing: 0.05em;
   border-radius: 0.35rem;
@@ -133,14 +133,14 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  top:0;
+  top: 0;
   transition: 0.2s ease;
 }
 
 .button:last-of-type {
-  background: #11263E;
+  background: #11263e;
 }
-.button:nth-child(2){
+.button:nth-child(2) {
   background: #505050;
 }
 
@@ -154,15 +154,14 @@
 
 .button:hover,
 .formControl:focus {
-  box-shadow: 0 0 10px 3px #11263E;
+  box-shadow: 0 0 10px 3px #11263e;
 }
 
-.button:hover{
-  top:-3px !important; 
+.button:hover {
+  top: -3px !important;
 }
 .formControl:focus {
   background-color: rgba(255, 255, 255, 0.6) !important;
-
 }
 
 .inputGroupText {
@@ -193,8 +192,8 @@
   right: 0;
   bottom: 0;
   background-color: rgba(70, 70, 70, 0.4);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -205,19 +204,19 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s ease-out;
+  -webkit-transition: 0.4s;
+  transition: 0.4s ease-out;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #d5aa41;
 }
 
-input:focus+.slider {
+input:focus + .slider {
   box-shadow: 0 0 1px #d5aa41;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(22px);
   -ms-transform: translateX(22px);
   transform: translateX(22px);

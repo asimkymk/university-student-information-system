@@ -1,6 +1,8 @@
 import styles from "../../styles/Layout.module.css";
 import $ from "jquery";
 import React, { useState, Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 class Layout extends Component {
   constructor({ children }) {
@@ -24,6 +26,7 @@ class Layout extends Component {
     });
   }
   render() {
+    const homeElement = <FontAwesomeIcon icon={faHome} />;
     return (
       <div className={styles.main}>
         <div className={styles.leftPanel}>
@@ -32,7 +35,39 @@ class Layout extends Component {
 
         <div className={styles.rightPanel}>
           <div className={`scrollCheck ${styles.topPanel}`}>
-            Ana Sayfa / Notlar
+            <div className={styles.topPanelRoot}>
+              <div className={styles.topPanelItem}>
+                <nav className={styles.topPanelNav}>
+                  <ol className={styles.topPanelList}>
+                    <li className={styles.topPanelLi}>
+                      <a href="#">
+                        <span
+                          className={styles.topPanelLink}
+                          style={{ marginRight: "7px" }}
+                        >
+                          {homeElement}
+                        </span>
+                      </a>
+                    </li>
+                    <li className={styles.topPanelLi}>
+                      <a href="#">
+                        <span className={styles.topPanelLink}>Ana Sayfa</span>
+                      </a>
+                    </li>
+                    <li className={styles.topPanelListSeperator}>/</li>
+                    <li className={styles.topPanelLi}>
+                      <a href="#">
+                        <span className={styles.topPanelLink}>Notlar</span>
+                      </a>
+                    </li>
+                  </ol>
+                </nav>
+                <h6 className={styles.topPanelPageText}>Notlar</h6>
+              </div>
+              <div className={styles.topPanelItem}>
+                Profil Resmi Ayarlar vs.
+              </div>
+            </div>
           </div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt
           quasi atque quam quidem architecto nobis sint perspiciatis fuga ut
@@ -92,9 +127,58 @@ class Layout extends Component {
           Beatae iste esse placeat, inventore molestiae illo nobis sint soluta
           id facere ipsam ipsa vel modi eum debitis consequuntur ut, cumque in.
           Obcaecati facere perspiciatis consequatur quae consequuntur
-          reprehenderit alias doloremque, recusandae, odit nostrum sit. Nostrum
-          inventore voluptate omnis nesciunt repellendus minus aperiam. Qui,
-          adipisci. Ipsa, eum ipsum. Consequuntur aliquid ea maxime, aut
+          reprehenderit alias doloremque, recusandae, odit nostrum sit.
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+            saepe a, sit expedita aspernatur atque sapiente quidem labore
+            similique itaque suscipit illo harum quisquam dolorum, reprehenderit
+            impedit tenetur sed at. Rerum quod repellendus nobis facilis cum,
+            minima iste tenetur sit, dicta labore eaque molestias in atque sunt
+            commodi reiciendis magni praesentium asperiores a. Cum placeat rerum
+            natus numquam quaerat veniam dolorem distinctio aut dicta aliquam
+            neque magnam, deleniti earum molestiae voluptatibus hic iusto ipsam
+            temporibus consectetur debitis nobis! Aliquid sequi sapiente dolore
+            fugit, officia voluptate. Nesciunt quaerat labore explicabo beatae,
+            porro eligendi quas qui accusantium quod saepe similique nihil
+            dignissimos odit id, sequi eos mollitia minima dicta. Fuga eveniet
+            ipsum vitae, architecto nostrum eaque debitis beatae excepturi.
+            Nobis voluptatibus itaque velit nesciunt explicabo nam repellat,
+            eaque molestias illo minima? Soluta laudantium totam quidem delectus
+            dolore minus unde odit ex mollitia suscipit molestias nobis non
+            ratione porro facilis nostrum eveniet, deleniti qui dolor quam ut
+            dignissimos ipsam expedita. Eligendi voluptatem earum reiciendis
+            sint voluptas sed consectetur aliquam velit eveniet libero.
+            Molestiae eligendi doloremque magnam, explicabo ad corporis fugiat
+            repellat nisi quasi error facere, possimus sit dignissimos
+            laboriosam? Odio, quod tempore nesciunt, mollitia vel cum ea iure,
+            laboriosam aspernatur magnam molestiae quisquam corrupti praesentium
+            quidem aliquid laudantium eius? Voluptatibus soluta perferendis ea
+            aliquid eaque iusto aspernatur fugit. Dolorum, itaque harum optio
+            quod atque dolorem. Tenetur vitae ab corporis sit, distinctio
+            facilis aperiam ducimus hic exercitationem odio, itaque similique
+            facere numquam? Quidem doloribus officia perferendis voluptate!
+            Magnam reiciendis officia natus doloribus expedita sequi temporibus
+            quas sit voluptas deleniti harum inventore nobis laborum,
+            accusantium eligendi recusandae nihil pariatur ipsam unde voluptate.
+            Enim, totam aspernatur mollitia eos blanditiis incidunt, aliquam
+            asperiores error dignissimos cumque suscipit voluptatibus ea eveniet
+            corrupti placeat facere ratione non maxime consequuntur? Natus amet
+            magni cumque in saepe unde dignissimos suscipit corrupti illo.
+            Blanditiis, corporis. Fugiat earum, cum blanditiis, dicta sequi
+            autem hic nemo ab, harum reprehenderit obcaecati quo exercitationem
+            recusandae. Cumque rem, itaque possimus natus assumenda temporibus,
+            nesciunt accusamus blanditiis, quam praesentium in illum veniam
+            molestiae quibusdam. Quas amet voluptatum quasi quidem voluptatibus
+            obcaecati autem eaque repellendus nobis saepe excepturi similique
+            nemo dolore veritatis quis dolorem facere error, nam maxime quod
+            ipsum blanditiis nisi. Dignissimos debitis autem recusandae
+            accusamus nostrum expedita, ipsam est velit perspiciatis excepturi
+            consequatur cumque quasi. Eveniet, sunt earum. Quasi minus labore
+            officiis. Omnis, cum! Repellat quos porro excepturi soluta error
+            asperiores. Eaque quaerat qui inventore dolor neque.
+          </p>
+          Nostrum inventore voluptate omnis nesciunt repellendus minus aperiam.
+          Qui, adipisci. Ipsa, eum ipsum. Consequuntur aliquid ea maxime, aut
           voluptatibus excepturi optio! Culpa, doloribus corporis qui expedita,
           alias illo aliquam sed beatae doloremque magnam cumque earum nam
           repellendus ipsum blanditiis commodi dicta soluta hic exercitationem
@@ -173,7 +257,9 @@ class Layout extends Component {
             ullam totam assumenda nesciunt rerum. Amet cupiditate iure nihil
             ratione.
           </p>
+          {this.children}
         </div>
+
         <script>{this._handleScroll}</script>
       </div>
     );

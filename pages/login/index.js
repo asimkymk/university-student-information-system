@@ -3,12 +3,11 @@ REFACTOR BUTTON STYLE
 CUSTOMINPUTTEXT
 CLEAN CODE*/
 
-import "font-awesome/css/font-awesome.min.css";
+import "react-fontawesome/lib/index";
 import loginStyles from "../../styles/Login.module.css";
 import CustomButton from "../../components/CustomButton";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
-
 
 export default function Login() {
   const [show, setShow] = useState(false);
@@ -85,11 +84,18 @@ export default function Login() {
                 <div style={{ marginLeft: "10px" }}>
                   <label className={`switch ${loginStyles.switch}`}>
                     <input type="checkbox" />
-                    <span className={`slider round ${loginStyles.slider} ${loginStyles.round}`}></span>
+                    <span
+                      className={`slider round ${loginStyles.slider} ${loginStyles.round}`}
+                    ></span>
                   </label>
-                  <span style={{ verticalAlign: "bottom", color: "#232323" }}>&nbsp;Beni Hatırla</span>
+                  <span style={{ verticalAlign: "bottom", color: "#232323" }}>
+                    &nbsp;Beni Hatırla
+                  </span>
                 </div>
-                <div className="mt-3 mb-3" style={{ overflow: "hidden", paddingTop:"10px" }}>
+                <div
+                  className="mt-3 mb-3"
+                  style={{ overflow: "hidden", paddingTop: "10px" }}
+                >
                   <CustomButton
                     id="btn1"
                     type="submit"
@@ -117,7 +123,11 @@ export default function Login() {
                   onClick={handleShow}
                   style={{ textAlign: "center" }}
                 >
-                  <a className={loginStyles.forgot} style={{ color: "#232323" }} href="#">
+                  <a
+                    className={loginStyles.forgot}
+                    style={{ color: "#232323" }}
+                    href="#"
+                  >
                     <i className={`fa fa-key ${loginStyles.forgot2}`}>
                       {" "}
                       &nbsp;
