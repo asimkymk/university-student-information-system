@@ -53,12 +53,12 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
-
   transition: 0.2s ease-out;
 }
 
 .forgot:hover {
   color: #d5aa41 !important;
+  text-shadow: 0px 0px 5px black;
 }
 
 .forgot:hover>.forgot2 {
@@ -72,6 +72,11 @@
 }
 
 .button:hover>.faPlusCircle {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.button:hover>.faPaperPlane {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -127,11 +132,11 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  transition: 0.3s ease-out;
+  transition: 0.25s ease;
 }
 
 .button:last-of-type {
-  background: #585858;
+  background: #11263E;
 }
 
 .formControl,
@@ -147,6 +152,9 @@
   box-shadow: 0 0 10px 3px #11263E;
 }
 
+.button:hover{
+  transform: translateX(25deg);
+}
 .formControl:focus {
   background-color: rgba(255, 255, 255, 0.6) !important;
 

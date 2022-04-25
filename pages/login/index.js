@@ -6,8 +6,14 @@ CLEAN CODE*/
 import "font-awesome/css/font-awesome.min.css";
 import loginStyles from "../../styles/Login.module.css";
 import CustomButton from "../../components/CustomButton";
+import { Modal } from "react-bootstrap";
+import { useState } from "react";
+
 
 export default function Login() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div className={loginStyles.body}>
       <div className={`container ${loginStyles.containerText}`}>
@@ -76,12 +82,12 @@ export default function Login() {
                     onInput={(e) => e.target.setCustomValidity("")}
                   />
                 </div>
-                <div style={{marginLeft: "10px"}}>
+                <div style={{ marginLeft: "10px" }}>
                   <label className={`switch ${loginStyles.switch}`}>
                     <input type="checkbox" />
                     <span className={`slider round ${loginStyles.slider} ${loginStyles.round}`}></span>
                   </label>
-                  <span style={{verticalAlign:"bottom", color:"#232323"}}>&nbsp;Beni Hatırla</span>
+                  <span style={{ verticalAlign: "bottom", color: "#232323" }}>&nbsp;Beni Hatırla</span>
                 </div>
                 <div className="mt-2 mb-3" style={{ overflow: "hidden" }}>
                   <CustomButton
@@ -108,9 +114,10 @@ export default function Login() {
                 </div>
                 <div
                   className={loginStyles.forgot}
+                  onClick={handleShow}
                   style={{ textAlign: "center" }}
                 >
-                  <a className={loginStyles.forgot} style={{color:"#232323"}} href="#">
+                  <a className={loginStyles.forgot} style={{ color: "#232323" }} href="#">
                     <i className={`fa fa-key ${loginStyles.forgot2}`}>
                       {" "}
                       &nbsp;
@@ -118,6 +125,48 @@ export default function Login() {
                     Şifremi Unuttum
                   </a>
                 </div>
+                <Modal show={show} onHide={handleClose} centered>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Şifremi Unuttum</Modal.Title>
+                  </Modal.Header>
+                  <form>
+                    <Modal.Body>
+                      <div className={`input-group ${loginStyles.inputGroup}`}>
+                        <div id="tcp" className="input-group-prepend">
+                          <span
+                            className={`input-group-text ${loginStyles.inputGroupText} h-100`}
+                            id="basic-addon1"
+                            style={{
+                              background: "#D5AA41",
+                              borderColor: "#D5AA41",
+                            }}
+                          >
+                            <i className="fa fa-id-badge"></i>
+                          </span>
+                        </div>
+                        <input
+                          type="text"
+                          minLength="11"
+                          maxLength="11"
+                          id="tc"
+                          className={`form-control ${loginStyles.formControl}`}
+                          placeholder="T.C. Kimlik Numarası"
+                          aria-describedby="basic-addon1"
+                          required
+                        />
+                      </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <CustomButton
+                        id="btn3"
+                        type="submit"
+                        className={`button w-100 ${loginStyles.button}`}
+                        icon={`fa fa-paper-plane ${loginStyles.faPaperPlane}`}
+                        value="Gönder"
+                      ></CustomButton>
+                    </Modal.Footer>
+                  </form>
+                </Modal>
               </form>
             </div>
           </div>
