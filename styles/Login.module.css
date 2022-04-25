@@ -18,7 +18,7 @@
 .loginArea {
   border-radius: 10%;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 10px 0px 100px 12px gray;
+  box-shadow: 0px 0px 150px 5px #202020;
   backdrop-filter: blur(5px);
   padding: 20px;
   padding-top: 60px;
@@ -35,25 +35,25 @@
   z-index: 1;
   transform: translateX(-50%);
   position: relative;
-  top: 75px;
-  height: 150px;
-  width: 150px;
+  top: 80px;
+  height: 160px;
+  width: 160px;
   transition: 0.2s ease-out;
   box-shadow: 0px 0px 0px 15px #d5aa41 inset;
 }
 
 .loginLogo:hover {
   box-shadow: 0px 0px 0px 10px #d5aa41 inset, 0 0 20px 5px #d5aa41;
-  height: 160px;
-  width: 160px;
-  top: 65px;
+  height: 180px;
+  width: 180px;
+  top: 80px;
 }
 
 .forgot {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  
+
   transition: 0.2s ease-out;
 }
 
@@ -111,6 +111,7 @@
 }
 
 .button {
+  height: 50px;
   align-items: center;
   text-align: center;
   font-family: inherit;
@@ -136,7 +137,9 @@
 .formControl,
 .inputGroupText {
   transition: 0.3s ease-out;
-  height: 50px !important;
+  height: 60px !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
 }
 
 .button:hover,
@@ -144,15 +147,14 @@
   box-shadow: 0 0 10px 3px #11263E;
 }
 
+.formControl:focus {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+
+}
+
 .inputGroupText {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-.inputGroup:focus-within {
-  box-shadow: 0 0 3px px #d5aa41;
-  background-color: #d5aa41;
-  border-radius: 0.3rem;
 }
 
 .switch {
@@ -177,7 +179,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #707070;
+  background-color: rgba(70, 70, 70, 0.4);
   -webkit-transition: .4s;
   transition: .4s;
 }
