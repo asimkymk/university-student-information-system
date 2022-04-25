@@ -1,0 +1,83 @@
+.main {
+  flex-direction: row;
+  display: flex;
+}
+
+.leftPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 95vh;
+  width: 250px;
+  margin: 1rem;
+  border-radius: 0.75rem;
+  /*
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    256deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(17, 38, 62, 1) 56%,
+    rgba(13, 83, 97, 1) 100%
+  );*/
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.rightPanel {
+  margin-left: 290px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.topPanel {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-direction: column;
+  width: 100% !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: sticky;
+  z-index: 1100;
+  left: auto;
+  right: 0px;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: rgb(123, 128, 154);
+  top: 1rem;
+  min-height: 4.6875rem;
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background-color: transparent;
+  transition: 150ms ease-in;
+
+}
+.topPanelScroll {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-direction: column;
+  transition: 150ms ease-out;
+
+  width: 100% !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: sticky;
+  z-index: 1100;
+  left: auto;
+  right: 0px;
+  box-shadow: rgba(255, 255, 255, 0.9) 0rem 0rem 0.0625rem 0.0625rem inset,
+    rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 0rem;
+  backdrop-filter: saturate(200%) blur(1.875rem);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(52, 71, 103);
+  top: 1rem;
+  min-height: 4.6875rem;
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
