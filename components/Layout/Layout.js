@@ -13,7 +13,7 @@ class Layout extends Component {
   _handleScroll() {
     $(document).ready(function () {
       $(window).scroll(function () {
-        if ($(document).scrollTop() > 50) {
+        if ($(document).scrollTop() > 25) {
           $(".scrollCheck").removeClass(styles.topPanel);
           $(".scrollCheck").addClass(styles.topPanelScroll);
         } else {
@@ -173,7 +173,6 @@ class Layout extends Component {
             ullam totam assumenda nesciunt rerum. Amet cupiditate iure nihil
             ratione.
           </p>
-          {this.children}
         </div>
         <script>{this._handleScroll}</script>
       </div>
