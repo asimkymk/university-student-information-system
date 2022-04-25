@@ -117,6 +117,7 @@
 
 .button {
   height: 50px;
+  position: relative;
   align-items: center;
   text-align: center;
   font-family: inherit;
@@ -132,17 +133,21 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  transition: 0.25s ease;
+  top:0;
+  transition: 0.2s ease;
 }
 
 .button:last-of-type {
   background: #11263E;
 }
+.button:nth-child(2){
+  background: #505050;
+}
 
 .formControl,
 .inputGroupText {
   transition: 0.3s ease-out;
-  height: 60px !important;
+  height: 50px !important;
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
 }
@@ -153,7 +158,7 @@
 }
 
 .button:hover{
-  transform: translateX(25deg);
+  top:-2px !important; 
 }
 .formControl:focus {
   background-color: rgba(255, 255, 255, 0.6) !important;
@@ -201,7 +206,7 @@
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
-  transition: .5s ease;
+  transition: .4s ease-out;
 }
 
 input:checked+.slider {

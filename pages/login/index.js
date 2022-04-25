@@ -89,7 +89,7 @@ export default function Login() {
                   </label>
                   <span style={{ verticalAlign: "bottom", color: "#232323" }}>&nbsp;Beni Hatırla</span>
                 </div>
-                <div className="mt-2 mb-3" style={{ overflow: "hidden" }}>
+                <div className="mt-3 mb-3" style={{ overflow: "hidden", paddingTop:"10px" }}>
                   <CustomButton
                     id="btn1"
                     type="submit"
