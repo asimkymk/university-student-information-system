@@ -18,7 +18,7 @@
 .loginArea {
   border-radius: 10%;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 150px 5px #202020;
+  box-shadow: 0px 0px 100px 2px #202020;
   backdrop-filter: blur(5px);
   padding: 20px;
   padding-top: 60px;
