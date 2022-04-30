@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
 
 .body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -12,7 +12,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .loginArea {
@@ -136,7 +136,12 @@
   top: 0;
   transition: 0.2s ease;
 }
-
+.button:nth-of-type(1):hover {
+  background: #11263e;
+}
+#btn3:hover {
+  background: #11263e;
+}
 .button:last-of-type {
   background: #11263e;
 }
