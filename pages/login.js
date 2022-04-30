@@ -148,7 +148,7 @@ export default function Login() {
                 >
                   <a
                     className={loginStyles.forgot}
-                  onClick={handleShow}
+                    onClick={handleShow}
                     style={{ color: "#232323" }}
                     href="#tcf"
                   >
