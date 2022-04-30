@@ -1,15 +1,9 @@
 import styles from "../../styles/Layout.module.css";
 
 import React, { useState, Component } from "react";
-import ReactDOM from "react-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faBell } from "@fortawesome/free-solid-svg-icons";
-import IconButton from "@mui/material/IconButton";
-import { PhotoCamera, MailIcon } from "@mui/material/Icon";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import Badge from "@mui/material/Badge";
+
 import AppBar from "../AppBar/AppBar";
+import SideBar from "../SideBar/SideBar";
 class Layout extends Component {
   constructor({ children }) {
     super();
@@ -18,9 +12,7 @@ class Layout extends Component {
   render() {
     return (
       <div className={styles.main}>
-        <div className={styles.leftPanel}>
-          <h1>Sol Menü</h1>
-        </div>
+        <SideBar></SideBar>
 
         <div className={styles.rightPanel}>
           <AppBar

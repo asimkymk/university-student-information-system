@@ -1,0 +1,188 @@
+.sideBar {
+  box-shadow: rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 0rem;
+  margin-bottom: inherit;
+  left: 0px;
+  width: 250px;
+  transform: translateX(0px);
+  transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,
+    background-color 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  z-index: 1200;
+  position: fixed;
+  top: 0px;
+  outline: 0px;
+  left: 0px;
+  width: 15.625rem;
+  background-color: rgb(255, 255, 255);
+  height: calc(100vh - 2rem);
+  margin: 1rem;
+  border-radius: 0.75rem;
+  border: none;
+}
+.logoPanel {
+  padding: 24px 32px 8px;
+  text-align: center;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+.logoImage {
+  width: 6rem;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+.seperator {
+  flex-shrink: 0;
+  border-top: 0px solid rgba(0, 0, 0, 0.12);
+  border-right: 0px solid rgba(0, 0, 0, 0.12);
+  border-left: 0px solid rgba(0, 0, 0, 0.12);
+  background-color: transparent;
+  height: 0.0625rem;
+  margin: 1rem 0px;
+  border-bottom: none;
+  opacity: 0.25;
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 71, 103, 0),
+    rgba(52, 71, 103, 0.4),
+    rgba(52, 71, 103, 0)
+  ) !important;
+}
+.linkList {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+.linkItem {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.itemPanel {
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0.09375rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: none;
+}
+.itemPanel:hover {
+  background-color: rgba(206, 212, 218, 0.2);
+}
+.itemProfile {
+  flex-shrink: 0;
+  min-width: 2rem;
+  min-height: 2rem;
+  color: rgb(52, 71, 103);
+  border-radius: 0.375rem;
+  display: grid;
+  place-items: center;
+  transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.circularAvatar {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  user-select: none;
+  transition: all 200ms ease-in-out 0s;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 0.875rem;
+}
+.circularAvatarImage {
+  width: 100%;
+  text-align: center;
+  object-fit: cover;
+  color: transparent;
+  text-indent: 10000px;
+  height: auto;
+}
+.itemBottom {
+  flex: 1 1 auto;
+  min-width: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.625rem;
+  opacity: 1;
+  max-width: 100%;
+  margin-left: 0.625rem;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    margin 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.itemText {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 0;
+}
+.itemExpand {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  margin-bottom: -0.0625rem;
+  transform: rotate(0deg);
+  color: rgb(52, 71, 103);
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.125rem !important;
+  display: block !important;
+  font-family: "Material Icons Round";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}

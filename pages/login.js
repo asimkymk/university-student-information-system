@@ -4,8 +4,7 @@ CUSTOMINPUTTEXT
 CLEAN CODE*/
 
 import "react-fontawesome/lib/index";
-import loginStyles from "../../styles/Login.module.css";
-import CustomButton from "../../components/CustomButton";
+import loginStyles from "../styles/Login.module.css";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 
@@ -96,16 +95,17 @@ export default function Login() {
                   className="mt-3 mb-3"
                   style={{ overflow: "hidden", paddingTop: "10px" }}
                 >
-                  <CustomButton
+                  <button
                     id="btn1"
                     type="submit"
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
                     style={{ marginLeft: "12px", float: "left", width: "43%" }}
-                    icon={`fa fa-sign-in ${loginStyles.faSignIn}`}
-                    value="Giriş Yap"
-                  ></CustomButton>
+                  >
+                    <i className={`fa fa-sign-in ${loginStyles.faSignIn}`}></i>
+                    &nbsp; Giriş Yap
+                  </button>
 
-                  <CustomButton
+                  <button
                     id="btn2"
                     type="submit"
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
@@ -114,9 +114,12 @@ export default function Login() {
                       float: "right",
                       width: "43%",
                     }}
-                    icon={`fa fa-plus-circle ${loginStyles.faPlusCircle}`}
-                    value="Kayıt Ol"
-                  ></CustomButton>
+                  >
+                    <i
+                      className={`fa fa-plus-circle ${loginStyles.faPlusCircle}`}
+                    ></i>
+                    &nbsp; Kayıt Ol
+                  </button>
                 </div>
                 <div
                   className={loginStyles.forgot}
@@ -167,13 +170,21 @@ export default function Login() {
                       </div>
                     </Modal.Body>
                     <Modal.Footer>
-                      <CustomButton
+                      <button
                         id="btn3"
                         type="submit"
                         className={`button w-100 ${loginStyles.button}`}
-                        icon={`fa fa-paper-plane ${loginStyles.faPaperPlane}`}
-                        value="Gönder"
-                      ></CustomButton>
+                        style={{
+                          marginRight: "12px",
+                          float: "right",
+                          width: "43%",
+                        }}
+                      >
+                        <i
+                          className={`fa fa-paper-plane ${loginStyles.faPaperPlane}`}
+                        ></i>
+                        &nbsp; Gönder
+                      </button>
                     </Modal.Footer>
                   </form>
                 </Modal>
