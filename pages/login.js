@@ -7,11 +7,37 @@ import "react-fontawesome/lib/index";
 import loginStyles from "../styles/Login.module.css";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSignIn,
+  faIdBadge,
+  faLock,
+  faPlusCircle,
+  faKey,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 export default function Login() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const idBadgeElement = <FontAwesomeIcon icon={faIdBadge} />;
+  const lockElement = <FontAwesomeIcon icon={faLock} />;
+  const signElement = (
+    <FontAwesomeIcon icon={faSignIn} className={loginStyles.faSignIn} />
+  );
+  const registerElement = (
+    <FontAwesomeIcon icon={faPlusCircle} className={loginStyles.faPlusCircle} />
+  );
+  const forgotPasswordElement = (
+    <FontAwesomeIcon icon={faKey} className={loginStyles.forgot2}>
+      {"   "}
+      &nbsp;
+    </FontAwesomeIcon>
+  );
+  const sendElement = (
+    <FontAwesomeIcon icon={faPaperPlane} className={loginStyles.faPaperPlane} />
+  );
+
   return (
     <div className={loginStyles.body}>
       <div className={`container ${loginStyles.containerText}`}>
@@ -36,7 +62,7 @@ export default function Login() {
                       id="basic-addon1"
                       style={{ background: "#D5AA41", borderColor: "#D5AA41" }}
                     >
-                      <i className="fa fa-id-badge "></i>
+                      {idBadgeElement}
                     </span>
                   </div>
                   <input
@@ -64,7 +90,7 @@ export default function Login() {
                       id="basic-addon2"
                       style={{ background: "#D5AA41", borderColor: "#D5AA41" }}
                     >
-                      <i className="fa fa-lock"></i>
+                      {lockElement}
                     </span>
                   </div>
                   <input
@@ -101,7 +127,7 @@ export default function Login() {
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
                     style={{ marginLeft: "12px", float: "left", width: "43%" }}
                   >
-                    <i className={`fa fa-sign-in ${loginStyles.faSignIn}`}></i>
+                    {signElement}
                     &nbsp; Giriş Yap
                   </button>
 
@@ -115,9 +141,7 @@ export default function Login() {
                       width: "43%",
                     }}
                   >
-                    <i
-                      className={`fa fa-plus-circle ${loginStyles.faPlusCircle}`}
-                    ></i>
+                    {registerElement}
                     &nbsp; Kayıt Ol
                   </button>
                 </div>
@@ -131,11 +155,8 @@ export default function Login() {
                     style={{ color: "#232323" }}
                     href="#"
                   >
-                    <i className={`fa fa-key ${loginStyles.forgot2}`}>
-                      {" "}
-                      &nbsp;
-                    </i>
-                    Şifremi Unuttum
+                    {forgotPasswordElement}
+                    &nbsp;Şifremi Unuttum
                   </a>
                 </div>
                 <Modal show={show} onHide={handleClose} centered>
@@ -154,7 +175,7 @@ export default function Login() {
                               borderColor: "#D5AA41",
                             }}
                           >
-                            <i className="fa fa-id-badge"></i>
+                            {idBadgeElement}
                           </span>
                         </div>
                         <input
@@ -180,9 +201,7 @@ export default function Login() {
                           width: "43%",
                         }}
                       >
-                        <i
-                          className={`fa fa-paper-plane ${loginStyles.faPaperPlane}`}
-                        ></i>
+                        {sendElement}
                         &nbsp; Gönder
                       </button>
                     </Modal.Footer>

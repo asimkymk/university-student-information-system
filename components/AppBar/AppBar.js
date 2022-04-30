@@ -4,7 +4,7 @@ import IconButton from "@mui/material/IconButton";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faBell } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import Badge from "@mui/material/Badge";
 import $ from "jquery";
 import React, { useEffect, Component } from "react";
@@ -34,8 +34,6 @@ class AppBar extends Component {
 
   render() {
     const homeElement = <FontAwesomeIcon icon={faHome} />;
-    const userElement = <FontAwesomeIcon icon={faUser} />;
-    const notificationElement = <FontAwesomeIcon icon={faBell} />;
 
     return (
       <div className={`scrollCheck ${styles.Panel}`}>
