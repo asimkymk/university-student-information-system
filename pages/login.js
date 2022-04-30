@@ -28,8 +28,7 @@ export default function Login() {
     <FontAwesomeIcon icon={faPlusCircle} className={loginStyles.faPlusCircle} />
   );
   const forgotPasswordElement = (
-    <FontAwesomeIcon icon={faKey} className={loginStyles.forgot2}>
-      {"   "}
+    <FontAwesomeIcon icon={faKey} className={`${loginStyles.forgot2} ${loginStyles.faKey2}`}>
       &nbsp;
     </FontAwesomeIcon>
   );
@@ -145,14 +144,13 @@ export default function Login() {
                   </button>
                 </div>
                 <div
-                  className={loginStyles.forgot}
-                  onClick={handleShow}
                   style={{ textAlign: "center" }}
                 >
                   <a
                     className={loginStyles.forgot}
+                  onClick={handleShow}
                     style={{ color: "#232323" }}
-                    href="#"
+                    href="#tcf"
                   >
                     {forgotPasswordElement}
                     &nbsp;Şifremi Unuttum
@@ -181,7 +179,7 @@ export default function Login() {
                           type="text"
                           minLength="11"
                           maxLength="11"
-                          id="tc"
+                          id="tcf"
                           className={`form-control ${loginStyles.formControl}`}
                           placeholder="T.C. Kimlik Numarası"
                           aria-describedby="basic-addon1"
