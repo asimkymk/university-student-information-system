@@ -1,0 +1,164 @@
+.Panel {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-direction: column;
+  width: 100% !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: sticky;
+  z-index: 1100;
+  left: auto;
+  right: 0px;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: rgb(123, 128, 154);
+  top: 1rem;
+  min-height: 4.6875rem;
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background-color: transparent;
+  transition: 150ms ease-in;
+}
+.PanelScroll {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-direction: column;
+  transition: 150ms ease-out;
+
+  width: 100% !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: sticky;
+  z-index: 1100;
+  left: auto;
+  right: 0px;
+  box-shadow: rgba(255, 255, 255, 0.9) 0rem 0rem 0.0625rem 0.0625rem inset,
+    rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 0rem;
+  backdrop-filter: saturate(200%) blur(1.875rem);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(52, 71, 103);
+  top: 1rem;
+  min-height: 4.6875rem;
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.PanelRoot {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.PanelItem {
+  justify-content: stretch !important;
+  width: max-content !important;
+}
+.PanelNav {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.625;
+  letter-spacing: 0.00938em;
+  color: rgba(0, 0, 0, 0.6);
+}
+.PanelList {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.PanelLi {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.PanelLink {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.02857em;
+  opacity: 0.5;
+  text-transform: capitalize;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 400;
+  line-height: 0;
+}
+
+.PanelLink:nth-last-child() {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.02857em;
+  opacity: 1;
+  text-transform: capitalize;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 400;
+  line-height: 0;
+}
+.PanelListSeperator {
+  display: flex;
+  user-select: none;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 0.875rem;
+  color: rgb(108, 117, 125);
+}
+.PanelListSeperator:nth-last-of-type(1) {
+  display: none;
+}
+.PanelPageText {
+  margin: 0px;
+  font-size: 1rem;
+  line-height: 1.625;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.0075em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 1;
+  text-transform: capitalize;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 700;
+}
+.PanelIcon {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-align: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: visible;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 5px 8px;
+  font-size: 1.125rem;
+}
