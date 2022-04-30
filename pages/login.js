@@ -3,7 +3,6 @@ REFACTOR BUTTON STYLE
 CUSTOMINPUTTEXT
 CLEAN CODE*/
 
-import "react-fontawesome/lib/index";
 import loginStyles from "../styles/Login.module.css";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
