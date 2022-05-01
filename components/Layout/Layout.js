@@ -19,7 +19,7 @@ class Layout extends Component {
             links={{ "Ana Sayfa": "#", "Notlar": "#" }}
             title="Notlar"
           ></AppBar>
-          <p style={{textAlign:"justify"}}>
+          <p style={{textAlign:"justify", paddingLeft:"8px", paddingRight:"8px"}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
             consequatur et maxime, fugit tempore perspiciatis tempora assumenda
             quis fuga rerum cupiditate nemo veritatis, quidem aperiam saepe
@@ -137,7 +137,7 @@ class Layout extends Component {
             doloribus excepturi voluptatum veritatis voluptatibus placeat ex
             aspernatur. Tempora commodi quo voluptatibus animi esse molestias!
           </p>
-          <p style={{textAlign:"justify"}}>
+          <p style={{textAlign:"justify", paddingLeft:"8px", paddingRight:"8px"}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
             consequatur et maxime, fugit tempore perspiciatis tempora assumenda
             quis fuga rerum cupiditate nemo veritatis, quidem aperiam saepe
@@ -255,7 +255,7 @@ class Layout extends Component {
             doloribus excepturi voluptatum veritatis voluptatibus placeat ex
             aspernatur. Tempora commodi quo voluptatibus animi esse molestias!
           </p>
-          <p style={{textAlign:"justify"}}>
+          <p style={{textAlign:"justify", paddingLeft:"8px", paddingRight:"8px"}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
             consequatur et maxime, fugit tempore perspiciatis tempora assumenda
             quis fuga rerum cupiditate nemo veritatis, quidem aperiam saepe
@@ -373,7 +373,7 @@ class Layout extends Component {
             doloribus excepturi voluptatum veritatis voluptatibus placeat ex
             aspernatur. Tempora commodi quo voluptatibus animi esse molestias!
           </p>
-          <p style={{textAlign:"justify"}}>
+          <p style={{textAlign:"justify", paddingLeft:"8px", paddingRight:"8px"}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
             consequatur et maxime, fugit tempore perspiciatis tempora assumenda
             quis fuga rerum cupiditate nemo veritatis, quidem aperiam saepe

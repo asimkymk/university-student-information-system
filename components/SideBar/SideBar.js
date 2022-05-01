@@ -44,7 +44,7 @@ class SideBar extends Component {
     $("#lessonExpandLess").toggleClass(styles.none);
     $("#lessonExpandLess").toggleClass(styles.itemExpand);
     $("#lessonExpandMore").toggleClass(styles.itemExpand);
-    
+
   }
   _requestLinkListener() {
     if (requestStatus) {

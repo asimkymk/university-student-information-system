@@ -21,11 +21,11 @@
   background-color: transparent;
   transition: 150ms ease-in;
 }
+
 .PanelScroll {
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   flex-direction: column;
   transition: 150ms ease-out;
-
   width: 100% !important;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -46,6 +46,7 @@
   border-radius: 0.75rem;
   padding: 1rem;
 }
+
 .PanelRoot {
   display: flex;
   -webkit-box-pack: justify;
@@ -53,10 +54,12 @@
   -webkit-box-align: center;
   align-items: center;
 }
+
 .PanelItem {
   justify-content: stretch !important;
   width: max-content !important;
 }
+
 .PanelNav {
   margin: 0px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -66,6 +69,7 @@
   letter-spacing: 0.00938em;
   color: rgba(0, 0, 0, 0.6);
 }
+
 .PanelList {
   display: flex;
   flex-wrap: wrap;
@@ -75,12 +79,14 @@
   margin: 0px;
   list-style: none;
 }
+
 .PanelLi {
   line-height: 0;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
+
 .PanelLink {
   margin: 0px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -108,6 +114,7 @@
   font-weight: 400;
   line-height: 0;
 }
+
 .PanelListSeperator {
   display: flex;
   user-select: none;
@@ -116,9 +123,11 @@
   font-size: 0.875rem;
   color: rgb(108, 117, 125);
 }
+
 .PanelListSeperator:nth-last-of-type(1) {
   display: none;
 }
+
 .PanelPageText {
   margin: 0px;
   font-size: 1rem;
@@ -135,6 +144,7 @@
   color: rgb(52, 71, 103);
   font-weight: 700;
 }
+
 .PanelIcon {
   display: inline-flex;
   -webkit-box-align: center;
