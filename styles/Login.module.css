@@ -175,6 +175,10 @@
   box-shadow: 0 0 5px 3px #11263e;
 }
 
+.button:hover:nth-child(2) {
+  box-shadow: 0 0 5px 3px #505050;
+}
+
 .formControl:focus {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
