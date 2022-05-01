@@ -30,7 +30,10 @@ export default function Login() {
     <FontAwesomeIcon icon={faPlusCircle} className={loginStyles.faPlusCircle} />
   );
   const forgotPasswordElement = (
-    <FontAwesomeIcon icon={faKey} className={`${loginStyles.forgot2} ${loginStyles.faKey2}`}>
+    <FontAwesomeIcon
+      icon={faKey}
+      className={`${loginStyles.forgot2} ${loginStyles.faKey2}`}
+    >
       &nbsp;
     </FontAwesomeIcon>
   );
@@ -121,8 +124,7 @@ export default function Login() {
                   className="mt-3 mb-3"
                   style={{ overflow: "hidden", paddingTop: "10px" }}
                 >
-                  <Button
-                    variant="contained"
+                  <button
                     id="btn1"
                     type="submit"
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
@@ -130,10 +132,9 @@ export default function Login() {
                   >
                     {signElement}
                     &nbsp; Giriş Yap
-                  </Button>
+                  </button>
 
-                  <Button
-                    variant="contained"
+                  <button
                     id="btn2"
                     type="submit"
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
@@ -145,11 +146,9 @@ export default function Login() {
                   >
                     {registerElement}
                     &nbsp; Kayıt Ol
-                  </Button>
+                  </button>
                 </div>
-                <div
-                  style={{ textAlign: "center" }}
-                >
+                <div style={{ textAlign: "center" }}>
                   <a
                     className={loginStyles.forgot}
                     onClick={handleShow}
@@ -192,8 +191,7 @@ export default function Login() {
                       </div>
                     </Modal.Body>
                     <Modal.Footer>
-                      <Button
-                        variant="contained"
+                      <button
                         id={loginStyles.btn3}
                         type="submit"
                         className={`button w-100 ${loginStyles.button}`}
@@ -205,7 +203,7 @@ export default function Login() {
                       >
                         {sendElement}
                         &nbsp; Gönder
-                      </Button>
+                      </button>
                     </Modal.Footer>
                   </form>
                 </Modal>
