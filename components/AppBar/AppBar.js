@@ -10,9 +10,8 @@ import $ from "jquery";
 import React, { useEffect, Component } from "react";
 
 class AppBar extends Component {
-  constructor({ props, children }) {
+  constructor({ props }) {
     super(props);
-    this.children = children;
     this.props = props;
   }
   componentDidMount() {
@@ -52,12 +51,12 @@ class AppBar extends Component {
                   </a>
                 </li>
                 {Object.entries(this.props.links).map(([key, value]) => [
-                  <li className={styles.PanelLi}>
+                  <li key = {Math.random()*95} className={styles.PanelLi}>
                     <a href={value}>
                       <span className={styles.PanelLink}>{key}</span>
                     </a>
                   </li>,
-                  <li className={styles.PanelListSeperator}>/</li>,
+                  <li key = {Math.random()*95}  className={styles.PanelListSeperator}>/</li>,
                 ])}
               </ol>
             </nav>

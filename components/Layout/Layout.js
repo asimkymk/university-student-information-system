@@ -16,7 +16,7 @@ class Layout extends Component {
 
         <div className={styles.rightPanel}>
           <AppBar
-            links={{ "Ana Sayfa": "#", Notlar: "#" }}
+            links={{ "Ana Sayfa": "#", "Notlar": "#" }}
             title="Notlar"
           ></AppBar>
           <p style={{textAlign:"justify"}}>

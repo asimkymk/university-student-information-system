@@ -55,9 +55,8 @@
   box-shadow: none;
   transition: 0.15s ease-out;
   box-shadow: 0px 0px 0px 15px #d5aa41 inset;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 
 .logoImage:hover {
   box-shadow: 0px 0px 0px 10px #d5aa41 inset, 0 0 25px 3px #d5aa41;
@@ -73,10 +72,12 @@
   margin: 1rem 0;
   border-bottom: none;
   opacity: 0.25;
-  background-image: linear-gradient(to right,
-      rgba(52, 71, 103, 0),
-      rgba(52, 71, 103, 0.4),
-      rgba(52, 71, 103, 0)) !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 71, 103, 0),
+    rgba(52, 71, 103, 0.4),
+    rgba(52, 71, 103, 0)
+  ) !important;
 }
 
 .linkList {
@@ -204,9 +205,7 @@
   margin-bottom: -0.0625rem;
   transform: rotate(0);
   color: #344767;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
   font-size: 1.125rem !important;
   display: block !important;
   font-family: "Material Icons Round";
@@ -228,9 +227,7 @@
   min-height: 0;
   display: block;
   height: auto;
-  transition-duration: 1s;
   overflow: visible;
-  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1) 1s;
 }
 
 .itemEnteredVertical {
@@ -367,7 +364,6 @@
 
 .none {
   display: none;
-  transition: all 1s;
 }
 
 .pages {
