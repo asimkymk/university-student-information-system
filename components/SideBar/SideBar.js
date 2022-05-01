@@ -5,42 +5,57 @@ import { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import $ from "jquery";
 import {
-  faBookOpenReader, faEnvelope, faFolderPlus, faMarker, faQuestionCircle
+  faBookOpenReader,
+  faEnvelope,
+  faFolderPlus,
+  faMarker,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
+let profileStatus = false;
+let lessonStatus = false;
+let requestStatus = false;
 class SideBar extends Component {
   constructor(props) {
     super(props);
     this.props = props;
+    this.state = false;
   }
-  _profileLinkListener() {
-    $("#profileList").toggleClass(styles.none);
 
-    $("#profileList").toggleClass(styles.itemEntered);
+  _profileLinkListener() {
+    if (profileStatus) {
+      $("#profileList").slideUp(400, "swing", styles.itemEntered);
+    } else {
+      $("#profileList").slideDown(400, "swing", styles.itemEntered);
+    }
+    profileStatus = !profileStatus;
     $("#profileExpandMore").toggleClass(styles.none);
     $("#profileExpandLess").toggleClass(styles.none);
     $("#profileExpandLess").toggleClass(styles.itemExpand);
-
     $("#profileExpandMore").toggleClass(styles.itemExpand);
-    console.log("merhaba");
   }
   _lessonLinkListener() {
-    $("#lessonList").toggleClass(styles.none);
-
-    $("#lessonList").toggleClass(styles.itemEntered);
+    if (lessonStatus) {
+      $("#lessonList").slideUp(400, "swing", styles.itemEntered);
+    } else {
+      $("#lessonList").slideDown(400, "swing", styles.itemEntered);
+    }
+    lessonStatus = !lessonStatus;
     $("#lessonExpandMore").toggleClass(styles.none);
     $("#lessonExpandLess").toggleClass(styles.none);
     $("#lessonExpandLess").toggleClass(styles.itemExpand);
-
     $("#lessonExpandMore").toggleClass(styles.itemExpand);
+    
   }
   _requestLinkListener() {
-    $("#requestList").toggleClass(styles.none);
-
-    $("#requestList").toggleClass(styles.itemEntered);
+    if (requestStatus) {
+      $("#requestList").slideUp(400, "swing", styles.itemEntered);
+    } else {
+      $("#requestList").slideDown(400, "swing", styles.itemEntered);
+    }
+    requestStatus = !requestStatus;
     $("#requestExpandMore").toggleClass(styles.none);
     $("#requestExpandLess").toggleClass(styles.none);
     $("#requestExpandLess").toggleClass(styles.itemExpand);
-
     $("#requestExpandMore").toggleClass(styles.itemExpand);
   }
   render() {
@@ -87,7 +102,6 @@ class SideBar extends Component {
             style={{
               minHeight: "0px",
               height: "auto",
-              transitionDuration: "300ms",
             }}
           >
             <div className={styles.itemEnteredVertical}>
@@ -151,7 +165,10 @@ class SideBar extends Component {
           >
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <FontAwesomeIcon icon={faBookOpenReader} className={styles.itemIcon} />
+                <FontAwesomeIcon
+                  icon={faBookOpenReader}
+                  className={styles.itemIcon}
+                />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Öğrenim Bilgileri</span>
@@ -171,7 +188,6 @@ class SideBar extends Component {
             style={{
               minHeight: "0px",
               height: "auto",
-              transitionDuration: "300ms",
             }}
           >
             <div className={styles.itemEnteredVertical}>
@@ -279,8 +295,10 @@ class SideBar extends Component {
           <li className={styles.linkItem}>
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <FontAwesomeIcon icon={faFolderPlus} className={styles.itemIcon} />
-
+                <FontAwesomeIcon
+                  icon={faFolderPlus}
+                  className={styles.itemIcon}
+                />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Ders Alma ve Kayıt</span>
@@ -298,7 +316,10 @@ class SideBar extends Component {
           >
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <FontAwesomeIcon icon={faQuestionCircle} className={styles.itemIcon} />
+                <FontAwesomeIcon
+                  icon={faQuestionCircle}
+                  className={styles.itemIcon}
+                />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Talep ve İtiraz</span>
@@ -320,8 +341,7 @@ class SideBar extends Component {
             className={styles.none}
             style={{
               minHeight: "0px",
-              height: "auto",
-              transitionDuration: "300ms",
+              height: "auto"
             }}
           >
             <div className={styles.itemEnteredVertical}>
@@ -375,7 +395,10 @@ class SideBar extends Component {
           <li className={styles.linkItem}>
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <FontAwesomeIcon icon={faEnvelope} className={styles.itemIcon} />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className={styles.itemIcon}
+                />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Mesaj Kutusu</span>
