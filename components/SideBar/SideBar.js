@@ -82,7 +82,7 @@ class SideBar extends Component {
                 </div>
               </div>
               <div className={styles.itemBottom}>
-                <span className={styles.itemText} style={{fontWeight:"bolder", fontSize:"11pt"}}>Asım Kaymak</span>
+                <span className={styles.itemText} style={{fontWeight:"bolder", fontSize:"11.5pt"}}>Asım Kaymak</span>
               </div>
               <span className={styles.itemExpand}>
                 <ExpandMoreIcon
