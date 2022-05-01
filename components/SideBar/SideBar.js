@@ -23,9 +23,9 @@ class SideBar extends Component {
 
   _profileLinkListener() {
     if (profileStatus) {
-      $("#profileList").slideUp(400, "swing", styles.itemEntered);
+      $("#profileList").slideUp(300, "swing", styles.itemEntered);
     } else {
-      $("#profileList").slideDown(400, "swing", styles.itemEntered);
+      $("#profileList").slideDown(300, "swing", styles.itemEntered);
     }
     profileStatus = !profileStatus;
     $("#profileExpandMore").toggleClass(styles.none);
@@ -35,9 +35,9 @@ class SideBar extends Component {
   }
   _lessonLinkListener() {
     if (lessonStatus) {
-      $("#lessonList").slideUp(400, "swing", styles.itemEntered);
+      $("#lessonList").slideUp(300, "swing", styles.itemEntered);
     } else {
-      $("#lessonList").slideDown(400, "swing", styles.itemEntered);
+      $("#lessonList").slideDown(300, "swing", styles.itemEntered);
     }
     lessonStatus = !lessonStatus;
     $("#lessonExpandMore").toggleClass(styles.none);
@@ -48,9 +48,9 @@ class SideBar extends Component {
   }
   _requestLinkListener() {
     if (requestStatus) {
-      $("#requestList").slideUp(400, "swing", styles.itemEntered);
+      $("#requestList").slideUp(300, "swing", styles.itemEntered);
     } else {
-      $("#requestList").slideDown(400, "swing", styles.itemEntered);
+      $("#requestList").slideDown(300, "swing", styles.itemEntered);
     }
     requestStatus = !requestStatus;
     $("#requestExpandMore").toggleClass(styles.none);
