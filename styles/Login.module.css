@@ -85,20 +85,17 @@
 
 .button:active:nth-child(1) {
   background-color: #245ea0 !important;
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
+
 }
 
 .button:active:nth-child(2) {
   background-color: #747474 !important;
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
+
 }
 
 .button:active:nth-child(3) {
   background-color: #245ea0 !important;
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
+
 }
 
 @keyframes shake {
@@ -175,11 +172,7 @@
 
 .button:hover,
 .formControl:focus {
-  box-shadow: 0 0 10px 3px #11263e;
-}
-
-.button:hover {
-  top: -3px !important;
+  box-shadow: 0 0 5px 3px #11263e;
 }
 
 .formControl:focus {
