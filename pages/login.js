@@ -15,6 +15,8 @@ import {
   faKey,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+
+import Button from "@mui/material/Button";
 export default function Login() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -119,7 +121,8 @@ export default function Login() {
                   className="mt-3 mb-3"
                   style={{ overflow: "hidden", paddingTop: "10px" }}
                 >
-                  <button
+                  <Button
+                    variant="contained"
                     id="btn1"
                     type="submit"
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
@@ -127,9 +130,10 @@ export default function Login() {
                   >
                     {signElement}
                     &nbsp; Giriş Yap
-                  </button>
+                  </Button>
 
-                  <button
+                  <Button
+                    variant="contained"
                     id="btn2"
                     type="submit"
                     className={`button mt-3 mb-3 ${loginStyles.button}`}
@@ -141,7 +145,7 @@ export default function Login() {
                   >
                     {registerElement}
                     &nbsp; Kayıt Ol
-                  </button>
+                  </Button>
                 </div>
                 <div
                   style={{ textAlign: "center" }}
@@ -188,8 +192,9 @@ export default function Login() {
                       </div>
                     </Modal.Body>
                     <Modal.Footer>
-                      <button
-                        id="btn3"
+                      <Button
+                        variant="contained"
+                        id={loginStyles.btn3}
                         type="submit"
                         className={`button w-100 ${loginStyles.button}`}
                         style={{
@@ -200,7 +205,7 @@ export default function Login() {
                       >
                         {sendElement}
                         &nbsp; Gönder
-                      </button>
+                      </Button>
                     </Modal.Footer>
                   </form>
                 </Modal>
