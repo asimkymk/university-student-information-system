@@ -13,6 +13,8 @@
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   box-shadow: none;
   overflow-y: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -27,6 +29,9 @@
   margin: 1rem;
   border-radius: 0.75rem;
   border: none;
+}
+.sideBar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 .logoPanel {
   padding: 24px 32px 8px;
