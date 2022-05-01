@@ -20,7 +20,7 @@ class AppBar extends Component {
   _handleScroll() {
     $(document).ready(function () {
       $(window).scroll(function () {
-        if ($(document).scrollTop() > 25) {
+        if ($(document).scrollTop() > 8) {
           $(".scrollCheck").removeClass(styles.Panel);
           $(".scrollCheck").addClass(styles.PanelScroll);
         } else {
@@ -51,12 +51,12 @@ class AppBar extends Component {
                   </a>
                 </li>
                 {Object.entries(this.props.links).map(([key, value]) => [
-                  <li key = {Math.random()*95} className={styles.PanelLi}>
+                  <li key={Math.random() * 95} className={styles.PanelLi}>
                     <a href={value}>
                       <span className={styles.PanelLink}>{key}</span>
                     </a>
                   </li>,
-                  <li key = {Math.random()*95}  className={styles.PanelListSeperator}>/</li>,
+                  <li key={Math.random() * 95} className={styles.PanelListSeperator}>/</li>,
                 ])}
               </ol>
             </nav>
