@@ -1,13 +1,12 @@
 import styles from "../../styles/SideBar.module.css";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
-import AppsIcon from "@mui/icons-material/Apps";
-import ChatIcon from "@mui/icons-material/Chat";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
 import { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import $ from "jquery";
+import {
+  faBookOpenReader, faEnvelope, faFolderPlus, faMarker, faQuestionCircle
+} from "@fortawesome/free-solid-svg-icons";
 class SideBar extends Component {
   constructor(props) {
     super(props);
@@ -152,7 +151,7 @@ class SideBar extends Component {
           >
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <MenuBookIcon className={styles.itemIcon}></MenuBookIcon>
+                <FontAwesomeIcon icon={faBookOpenReader} className={styles.itemIcon} />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Öğrenim Bilgileri</span>
@@ -280,9 +279,8 @@ class SideBar extends Component {
           <li className={styles.linkItem}>
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <CreateNewFolderIcon
-                  className={styles.itemIcon}
-                ></CreateNewFolderIcon>
+                <FontAwesomeIcon icon={faFolderPlus} className={styles.itemIcon} />
+
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Ders Alma ve Kayıt</span>
@@ -300,7 +298,7 @@ class SideBar extends Component {
           >
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <AppsIcon className={styles.itemIcon}></AppsIcon>
+                <FontAwesomeIcon icon={faQuestionCircle} className={styles.itemIcon} />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Talep ve İtiraz</span>
@@ -367,7 +365,7 @@ class SideBar extends Component {
           <li className={styles.linkItem}>
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <TouchAppIcon className={styles.itemIcon}></TouchAppIcon>
+                <FontAwesomeIcon icon={faMarker} className={styles.itemIcon} />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Başvuru</span>
@@ -377,7 +375,7 @@ class SideBar extends Component {
           <li className={styles.linkItem}>
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
-                <ChatIcon className={styles.itemIcon}></ChatIcon>
+                <FontAwesomeIcon icon={faEnvelope} className={styles.itemIcon} />
               </div>
               <div className={styles.itemBottom}>
                 <span className={styles.itemText}>Mesaj Kutusu</span>
