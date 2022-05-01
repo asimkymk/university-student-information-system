@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
 .sideBar {
   box-shadow: rgba(0, 0, 0, 0.05) 0 1.25rem 1.6875rem 0;
   margin-bottom: inherit;
@@ -257,13 +258,37 @@
   font-size: 0.875rem;
 }
 #profilim::before {
-  content: "P";
+  content: "B";
 }
 #ayarlar::before {
   content: "A";
 }
 #cikis::before {
   content: "Ç";
+}
+#notbilgisi::before {
+  content: "N";
+}
+#dersprogrami::before {
+  content: "D";
+}
+#notkarti::before {
+  content: "N";
+}
+#derslistesi::before {
+  content: "D";
+}
+#mufredat::before {
+  content: "M";
+}
+#odev::before {
+  content: "Ö";
+}
+#sinav::before {
+  content: "S";
+}
+#belge::before {
+  content: "B";
 }
 .innerItemTextContainer {
   flex: 1 1 auto;
@@ -289,4 +314,29 @@
 .none {
   display: none;
   transition: all 1s;
+}
+.pages {
+  margin: 16px 0px 8px 8px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.03333em;
+  display: block;
+  padding-left: 24px;
+  opacity: 1;
+  text-transform: uppercase;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 700;
+}
+.itemIcon {
+  flex-shrink: 0;
+  min-width: 1rem;
+  min-height: 1rem;
+  color: rgb(52, 71, 103) !important;
+  border-radius: 0.375rem;
+  display: grid;
+  place-items: center;
+  transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }

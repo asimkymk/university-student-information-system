@@ -9,6 +9,7 @@ export default function SideBar() {
       <div className={styles.logoPanel}>
         <img className={styles.logoImage} src="login/iuclogo.png"></img>
       </div>
+
       <hr className={styles.seperator}></hr>
       <ul className={styles.linkList}>
         <li className={styles.linkItem}>
