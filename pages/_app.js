@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     import("bootstrap/dist/js/bootstrap");
   }, []);
 
-  var isLogin = false;
+  var isLogin = true;
   const router = useRouter();
   return <Component {...pageProps} isLogin={isLogin} router={router} />;
 }
