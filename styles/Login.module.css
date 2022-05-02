@@ -35,18 +35,18 @@
   z-index: 1;
   transform: translateX(-50%);
   position: relative;
-  top: 75px;
-  height: 150px;
-  width: 150px;
+  top: 70px;
+  height: 140px;
+  width: 140px;
   transition: 0.15s ease-out;
   box-shadow: 0px 0px 0px 15px #d5aa41 inset;
 }
 
 .loginLogo:hover {
   box-shadow: 0px 0px 0px 10px #d5aa41 inset, 0 0 20px 5px #d5aa41;
-  height: 160px;
-  width: 160px;
-  top: 60px;
+  height: 145px;
+  width: 145px;
+  top: 65px;
 }
 
 .forgot {
