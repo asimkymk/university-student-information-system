@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
-
+import Head from "next/head";
 class Home extends Component {
   constructor(props, children) {
     super(props);
@@ -14,7 +14,16 @@ class Home extends Component {
     }
   }
   render() {
-    return <Layout appBar={{links:{"Ana Sayfa":"#","Notlar":"#"},title:"Notlar"}}></Layout>;
+    return (
+      <>
+        <Head>
+          <title>Not Bilgisi - İÜC ÖBS</title>
+        </Head>
+        <Layout
+          appBar={{ links: { "Ana Sayfa": "#", Notlar: "#" }, title: "Notlar" }}
+        ></Layout>
+      </>
+    );
   }
 }
 

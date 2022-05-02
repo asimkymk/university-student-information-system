@@ -1,3 +1,11 @@
+/*
+TODO
+
+LİNKE TIKLANDIĞINDA AÇILIR MENÜLER BUGA GİRİYOR.
+BAKILACAK!
+
+*/
+
 import styles from "../../styles/SideBar.module.css";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -46,7 +54,6 @@ class SideBar extends Component {
     $("#lessonExpandLess").toggleClass(styles.none);
     $("#lessonExpandLess").toggleClass(styles.itemExpand);
     $("#lessonExpandMore").toggleClass(styles.itemExpand);
-
   }
   _requestLinkListener() {
     if (requestStatus) {
@@ -66,12 +73,12 @@ class SideBar extends Component {
         <div className={styles.logoPanel}>
           <div className={styles.logoImage}>
             <Image
-
               width="100%"
               height="100%"
               src="/login/iuclogo.png"
               layout="responsive"
-            /></div>
+            />
+          </div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
         <hr className={styles.seperator}></hr>
@@ -84,7 +91,6 @@ class SideBar extends Component {
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
-
                   <img
                     src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
                     className={styles.circularAvatarImage}
@@ -92,7 +98,12 @@ class SideBar extends Component {
                 </div>
               </div>
               <div className={styles.itemBottom}>
-                <span className={styles.itemText} style={{ fontWeight: "bolder", fontSize: "11.5pt" }}>Asım Kaymak</span>
+                <span
+                  className={styles.itemText}
+                  style={{ fontWeight: "bolder", fontSize: "11.5pt" }}
+                >
+                  Asım Kaymak
+                </span>
               </div>
               <span className={styles.itemExpand}>
                 <ExpandMoreIcon
@@ -144,7 +155,9 @@ class SideBar extends Component {
                           id={styles.ayarlar}
                         >
                           <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>Ayarlar</span>
+                            <span className={styles.innerItemText}>
+                              Ayarlar
+                            </span>
                           </div>
                         </div>
                       </li>
@@ -165,7 +178,8 @@ class SideBar extends Component {
                           </div>
                         </div>
                       </li>
-                    </a></Link>
+                    </a>
+                  </Link>
                 </ul>
               </div>
             </div>
@@ -241,7 +255,8 @@ class SideBar extends Component {
                           </div>
                         </div>
                       </li>
-                    </a></Link>
+                    </a>
+                  </Link>
                 </ul>
                 <ul className={styles.innerItem}>
                   <Link href="#">
@@ -367,7 +382,7 @@ class SideBar extends Component {
             className={styles.none}
             style={{
               minHeight: "0px",
-              height: "auto"
+              height: "auto",
             }}
           >
             <div className={styles.itemEnteredVertical}>
