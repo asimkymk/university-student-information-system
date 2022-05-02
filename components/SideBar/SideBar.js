@@ -64,13 +64,13 @@ class SideBar extends Component {
     return (
       <div className={styles.sideBar}>
         <div className={styles.logoPanel}>
-        <div className={styles.logoImage}>
+          <div className={styles.logoImage}>
             <Image
-               
-               width="100%"
-               height="100%"
-               src="/login/iuclogo.png"
-               layout="responsive"
+
+              width="100%"
+              height="100%"
+              src="/login/iuclogo.png"
+              layout="responsive"
             /></div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
@@ -84,7 +84,7 @@ class SideBar extends Component {
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
-                  
+
                   <img
                     src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
                     className={styles.circularAvatarImage}
@@ -118,54 +118,54 @@ class SideBar extends Component {
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.profilim}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Bilgilerim
-                          </span>
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.profilim}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Bilgilerim
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
 
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.ayarlar}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>Ayarlar</span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.ayarlar}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>Ayarlar</span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
 
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.cikis}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>Çıkış</span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.cikis}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>Çıkış</span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a></Link>
+                      </li>
+                    </a></Link>
                 </ul>
               </div>
             </div>
@@ -209,110 +209,110 @@ class SideBar extends Component {
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
                   <Link href="/grade">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.notbilgisi}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Not Bilgisi
-                          </span>
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.notbilgisi}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Not Bilgisi
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
 
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.dersprogrami}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Ders Programı
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.dersprogrami}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Ders Programı
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a></Link>
+                      </li>
+                    </a></Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.odev}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Ödev ve Döküman
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.odev}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Ödev ve Döküman
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.notkarti}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Not Kartı
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.notkarti}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Not Kartı
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.derslistesi}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Ders Listesi
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.derslistesi}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Ders Listesi
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.mufredat}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Müfredat Listesi
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.mufredat}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Müfredat Listesi
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
               </div>
@@ -373,40 +373,40 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.belge}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Belge Talebi
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.belge}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Belge Talebi
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
+                      </li>
+                    </a>
                   </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                <Link href="#">
-                  <a  style={{ textDecoration: "none" }}>
-                    <li className={styles.innerItemList}>
-                      <div
-                        className={styles.innerItemContainer}
-                        id={styles.sinav}
-                      >
-                        <div className={styles.innerItemTextContainer}>
-                          <span className={styles.innerItemText}>
-                            Sınav İtiraz
-                          </span>
+                  <Link href="#">
+                    <a style={{ textDecoration: "none" }}>
+                      <li className={styles.innerItemList}>
+                        <div
+                          className={styles.innerItemContainer}
+                          id={styles.sinav}
+                        >
+                          <div className={styles.innerItemTextContainer}>
+                            <span className={styles.innerItemText}>
+                              Sınav İtiraz
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </a>
-                 </Link>
+                      </li>
+                    </a>
+                  </Link>
                 </ul>
               </div>
             </div>

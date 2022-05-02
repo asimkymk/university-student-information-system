@@ -47,7 +47,7 @@
 }
 
 .logoImage {
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   width: 7rem !important;
   opacity: 1;
@@ -55,13 +55,13 @@
   color: #344767;
   border-radius: 50%;
   box-shadow: none;
-  transition: 0.15s ease-out;
-  box-shadow: 0px 0px 0px 15px #d5aa41 inset;
+  transition: 0.3s ease-out;
+  box-shadow: 0px 0px 0px 5px #d5aa41 inset;
   margin-bottom: 0.5rem;
 }
 
 .logoImage:hover {
-  box-shadow: 0px 0px 0px 10px #d5aa41 inset, 0 0 25px 3px #d5aa41;
+  box-shadow: 0px 0px 0px 5px #d5aa41 inset, 0px 0px 25px 4px #d5aa41;
 }
 
 .seperator {
