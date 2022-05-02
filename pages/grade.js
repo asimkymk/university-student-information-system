@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 
 class Home extends Component {
-  //TASRIM İÇİN GEÇİCİ ÇÖZÜM
-  //NORMALDE AUTHENTICATION İLE ÇÖZÜM ÜRETİLECEK.
   constructor(props, children) {
     super(props);
     this.props = props;
@@ -16,7 +14,7 @@ class Home extends Component {
     }
   }
   render() {
-    return <Layout appBar={{links:{"Ana Sayfa":"#"},title:"Ana Sayfa"}}></Layout>;
+    return <Layout appBar={{links:{"Ana Sayfa":"#","Notlar":"#"},title:"Notlar"}}></Layout>;
   }
 }
 

@@ -3,6 +3,8 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import Image from "next/image";
 import $ from "jquery";
 import {
   faBookOpenReader,
@@ -62,7 +64,14 @@ class SideBar extends Component {
     return (
       <div className={styles.sideBar}>
         <div className={styles.logoPanel}>
-          <img className={styles.logoImage} src="login/iuclogo.png"></img>
+        <div className={styles.logoImage}>
+            <Image
+               
+               width="100%"
+               height="100%"
+               src="/login/iuclogo.png"
+               layout="responsive"
+            /></div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
         <hr className={styles.seperator}></hr>
@@ -75,6 +84,7 @@ class SideBar extends Component {
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
+                  
                   <img
                     src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
                     className={styles.circularAvatarImage}
@@ -107,7 +117,8 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                  <Link href="#">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -121,10 +132,12 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
 
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -136,10 +149,12 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
 
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -150,7 +165,7 @@ class SideBar extends Component {
                         </div>
                       </div>
                     </li>
-                  </a>
+                  </a></Link>
                 </ul>
               </div>
             </div>
@@ -193,7 +208,8 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                  <Link href="/grade">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -207,10 +223,12 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
 
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -223,10 +241,11 @@ class SideBar extends Component {
                         </div>
                       </div>
                     </li>
-                  </a>
+                  </a></Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -240,9 +259,11 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -256,9 +277,11 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -272,9 +295,11 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -288,6 +313,7 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
               </div>
             </div>
@@ -347,7 +373,8 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -361,9 +388,11 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                  </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <a href="#" style={{ textDecoration: "none" }}>
+                <Link href="#">
+                  <a  style={{ textDecoration: "none" }}>
                     <li className={styles.innerItemList}>
                       <div
                         className={styles.innerItemContainer}
@@ -377,6 +406,7 @@ class SideBar extends Component {
                       </div>
                     </li>
                   </a>
+                 </Link>
                 </ul>
               </div>
             </div>

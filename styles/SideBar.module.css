@@ -47,7 +47,9 @@
 }
 
 .logoImage {
-  width: 8rem;
+  margin-left:auto;
+  margin-right: auto;
+  width: 8rem !important;
   opacity: 1;
   background: 0 0;
   color: #344767;
