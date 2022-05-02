@@ -181,12 +181,7 @@
 .inputGroupText {
   background: "#D5AA41";
   border-color: "#D5AA41";
-  width: 50px !important;
-  border: none !important;
-}
-
-.inputGrupPrepend {
-  width: 50px !important;
+  width: 40px !important;
   border: none !important;
 }
 
@@ -272,4 +267,16 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.label {
+  margin-bottom: 2px !important;
+  font-size: 14pt;
+  color: #454545;
+}
+
+.select option:hover,
+.select option:focus,
+.select option:active {
+  background-color: yellow !important;
 }
