@@ -5,7 +5,7 @@ import React, { useState, Component } from "react";
 import AppBar from "../AppBar/AppBar";
 import SideBar from "../SideBar/SideBar";
 class Layout extends Component {
-  constructor({ props,children }) {
+  constructor({ props, children }) {
     super(props);
     this.children = children;
     this.props = props;
@@ -20,13 +20,9 @@ class Layout extends Component {
             links={this.props.appBar.links}
             title={this.props.appBar.title}
           ></AppBar>
-          <div style={{textAlign:"justify", paddingLeft:"8px", paddingRight:"8px"}}>
-          {this.children}
+          <div style={{ textAlign: "justify", paddingLeft: "8px", paddingRight: "8px" }}>
+            {this.children}
           </div>
-          
-          
-          
-          
         </div>
 
         <script>{this._handleScroll}</script>

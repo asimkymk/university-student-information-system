@@ -16,7 +16,7 @@ class Home extends Component {
     }
   }
   render() {
-    return <Layout appBar={{links:{"Ana Sayfa":"#"},title:"Ana Sayfa"}}></Layout>;
+    return <Layout appBar={{ links: { "Ana Sayfa": "#" }, title: "Ana Sayfa" }}></Layout>;
   }
 }
 
