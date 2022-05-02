@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 
@@ -16,7 +17,16 @@ class Home extends Component {
     }
   }
   render() {
-    return <Layout appBar={{ links: { "Ana Sayfa": "#" }, title: "Ana Sayfa" }}></Layout>;
+    return (
+      <>
+        <Head>
+          <title>Ana Sayfa - İÜC ÖBS</title>
+        </Head>
+        <Layout
+          appBar={{ links: { "Ana Sayfa": "#" }, title: "Ana Sayfa" }}
+        ></Layout>
+      </>
+    );
   }
 }
 
