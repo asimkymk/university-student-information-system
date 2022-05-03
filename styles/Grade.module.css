@@ -27,7 +27,7 @@
   margin: 0px;
   font-size: 1rem;
   line-height: 1.625;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto Condensed, Helvetica, Arial, sans-serif;
   letter-spacing: 0.0075em;
   opacity: 1;
   text-transform: none;
@@ -36,11 +36,65 @@
   color: rgb(52, 71, 103);
   font-weight: 600;
 }
+.gradePanelBody {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  width: 100%;
+  overflow-x: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.75rem;
+  box-shadow: none;
+}
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border-color: gray;
+  color: rgb(52, 71, 103);
+  overflow-wrap: break-word;
+}
+.thead {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+.tr {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0px;
+}
+.th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+  width: 55%;
+  padding: 12px 24px;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  border-bottom: 0.0625rem solid rgb(240, 242, 245);
+}
 .textxs {
-  font-size: 0.95rem !important;
+  font-size: 0.75rem !important;
 }
 .textxxs {
-  font-size: 0.8rem !important;
+  font-size: 0.65rem !important;
 }
 .fontWeightBolder {
   font-weight: 700 !important;

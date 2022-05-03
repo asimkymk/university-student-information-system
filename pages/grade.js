@@ -32,46 +32,50 @@ class Home extends Component {
             <div className={styles.gradePanelHeader}>
               <h6 className={styles.gradePanelHeaderText}>Dönem Notları</h6>
             </div>
-            <table className="table align-items-center mb-0 mt-2">
-              <thead>
-                <tr>
-                  <th
-                    className={`text-uppercase text-secondary opacity-7 ${styles.textxxs} ${styles.fontWeightBolder}`}
-                  >
-                    Ders Adı
-                  </th>
-                  <th
-                    className={`text-uppercase text-secondary opacity-7 ${styles.textxxs} ${styles.fontWeightBolder}`}
-                  >
-                    Öğretİm GörevlİSİ
-                  </th>
-                  <th
-                    className={`text-uppercase text-secondary opacity-7 ${styles.textxxs} ${styles.fontWeightBolder}`}
-                  >
-                    Harf Notu
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <h6 class="mb-0 text-sm">Bilgisayar Mimarisi</h6>
-                  </td>
-                  <td>
-                    <p class="text-xs text-secondary mb-0">
-                      Prof. Dr. Ahmet Sertbaş
-                    </p>
-                  </td>
-                  <td>
-                    <span
-                      className={`text-secondary ${styles.textxs} ${styles.fontWeightBold}`}
+            <div className={styles.gradePanelBody}>
+              <table
+                className={`table align-items-center mb-0 mt-2 ${styles.table}`}
+              >
+                <thead className={styles.thead}>
+                  <tr className={styles.tr}>
+                    <th
+                      className={`text-uppercase text-secondary opacity-7 ${styles.textxxs} ${styles.fontWeightBolder} ${styles.th}`}
                     >
-                      AA
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                      Ders Adı
+                    </th>
+                    <th
+                      className={`text-uppercase text-secondary opacity-7 ${styles.textxxs} ${styles.fontWeightBolder}`}
+                    >
+                      Öğretİm GörevlİSİ
+                    </th>
+                    <th
+                      className={`text-uppercase text-secondary opacity-7 ${styles.textxxs} ${styles.fontWeightBolder}`}
+                    >
+                      Harf Notu
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <h6 class="mb-0 text-sm">Bilgisayar Mimarisi</h6>
+                    </td>
+                    <td>
+                      <p class="text-xs text-secondary mb-0">
+                        Prof. Dr. Ahmet Sertbaş
+                      </p>
+                    </td>
+                    <td>
+                      <span
+                        className={`text-secondary ${styles.textxs} ${styles.fontWeightBold}`}
+                      >
+                        AA
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </Layout>
       </>
