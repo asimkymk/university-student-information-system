@@ -152,25 +152,6 @@ class SideBar extends Component {
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
-                          id={styles.ayarlar}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Ayarlar
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                    </a>
-                  </Link>
-                </ul>
-
-                <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
                           id={styles.cikis}
                         >
                           <div className={styles.innerItemTextContainer}>
