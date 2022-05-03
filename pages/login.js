@@ -34,10 +34,10 @@ export default function Login() {
     <FontAwesomeIcon icon={faLock} className={`mx-auto faLock`} />
   );
   const signElement = (
-    <FontAwesomeIcon icon={faSignIn} className={`mx-auto faSignIn`} />
+    <FontAwesomeIcon icon={faSignIn} className={`mx-auto ${loginStyles.faSignIn} faSignIn`} />
   );
   const registerElement = (
-    <FontAwesomeIcon icon={faPlusCircle} className={`faPlusCircle mx-auto`} />
+    <FontAwesomeIcon icon={faPlusCircle} className={`${loginStyles.faPlusCircle} mx-auto`} />
   );
   const forgotPasswordElement = (
     <FontAwesomeIcon
