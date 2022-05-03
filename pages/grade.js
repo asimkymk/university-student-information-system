@@ -1,6 +1,9 @@
+//TODO : TABLE TASARIMI
+
 import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
+import styles from "../styles/Grade.module.css";
 class Home extends Component {
   constructor(props, children) {
     super(props);
@@ -21,7 +24,26 @@ class Home extends Component {
         </Head>
         <Layout
           appBar={{ links: { "Ana Sayfa": "#", Notlar: "#" }, title: "Notlar" }}
-        ></Layout>
+        >
+          <div className={styles.gradePanel}>
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>DERS ADI</th>
+                  <th>HARF NOTU</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>BİLGİSAYAR MİMARİSİ</td>
+                  <td>AA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Layout>
       </>
     );
   }
