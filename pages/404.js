@@ -3,9 +3,9 @@
 import styles from "../styles/404.module.css";
 export default function NotFound() {
   return (
-    <div class={styles.not}>
-      <div class={styles.notfound}>
-        <div class={styles.notfound404}>
+    <div className={styles.not}>
+      <div className={styles.notfound}>
+        <div className={styles.notfound404}>
           <h3>Oops! Sayfa bulunamadı</h3>
           <h1>
             <span>4</span>
