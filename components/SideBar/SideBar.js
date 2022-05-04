@@ -387,7 +387,7 @@ class SideBar extends Component {
                   </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
+                  <Link href="/examobjection">
                     <a style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
