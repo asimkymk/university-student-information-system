@@ -14,7 +14,7 @@ const exclamationElement = (
     <FontAwesomeIcon icon={faExclamationCircle} className={`mx-auto ${styles.exclamationElement}`} />
 );
 const exclamationElement2 = (
-    <FontAwesomeIcon icon={faExclamationCircle} className={`mx-auto ${styles.exclamationElement}`} style={{color:"white"}} />
+    <FontAwesomeIcon icon={faExclamationCircle} className={`mx-auto ${styles.exclamationElement}`} style={{ color: "white" }} />
 );
 
 export default function ExamObjection() {

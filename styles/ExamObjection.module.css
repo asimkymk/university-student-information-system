@@ -138,7 +138,7 @@
     color: white;
 }
 
-.itirazModal{
+.itirazModal {
     margin-bottom: 0.5rem;
 }
 
@@ -162,41 +162,41 @@
     touch-action: manipulation;
     top: 0;
     transition: 0.15s ease;
-  }
+}
 
 .button:hover {
     box-shadow: 0 0 5px 3px #11263e;
-  }
+}
 
-  @keyframes shake {
+@keyframes shake {
     0% {
-      transform: translateX(2px);
+        transform: translateX(2px);
     }
-  
+
     20% {
-      transform: translateX(-2px);
+        transform: translateX(-2px);
 
     }
-  
+
     40% {
-      transform: translateX(2px);
+        transform: translateX(2px);
     }
-  
-    60% {
-      transform: translateX(-2px);
-    }
-  
-    80% {
-      transform: translateX(2px);
-    }
-  
-    100% {
-      transform: translateX(-2px);
-    }
-  
-  }
 
-.button:hover > .exclamationElement {
+    60% {
+        transform: translateX(-2px);
+    }
+
+    80% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(-2px);
+    }
+
+}
+
+.button:hover>.exclamationElement {
     animation: shake 2s;
     animation-iteration-count: 1;
-  }
+}
