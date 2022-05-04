@@ -369,7 +369,7 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
+                  <Link href="/documentrequest">
                     <a style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
