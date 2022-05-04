@@ -1,4 +1,5 @@
-.mainContainer, .mainContainer2 {
+.mainContainer,
+.mainContainer2 {
     background-color: #fff;
     width: 100% !important;
     max-width: 100% !important;
@@ -14,6 +15,7 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 .mainContainer2 {
     max-height: calc(100vh - 266px) !important;
 }
@@ -29,7 +31,8 @@
     }
 }
 
-.mainContainer::-webkit-scrollbar, .mainContainer2::-webkit-scrollbar {
+.mainContainer::-webkit-scrollbar,
+.mainContainer2::-webkit-scrollbar {
     display: none;
 }
 
@@ -218,7 +221,7 @@
     animation-iteration-count: 1;
 }
 
-.itirazBtn {
+.talepBtn {
     text-align: right;
     align-items: end;
     margin: 0px 20px 0px auto;
