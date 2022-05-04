@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import { useState } from "react";
-import styles from "../styles/ExamObjection.module.css";
+import styles from "../styles/RequestAndObjection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Modal } from "react-bootstrap";
 import {
@@ -46,14 +46,9 @@ export default function ExamObjection() {
                     </Modal.Body>
                     <Modal.Footer>
                         <button
-                            id={styles.btn3}
+                            id="btn3"
                             type="submit"
                             className={`button w-100 ${styles.button}`}
-                            style={{
-                                marginRight: "12px",
-                                float: "right",
-                                width: "43%",
-                            }}
                         >
                             {exclamationElement2}
                             &nbsp; İtirazda Bulun
@@ -103,19 +98,19 @@ export default function ExamObjection() {
                 </div>
                 <div className={`container ${styles.mainContainer}`} style={{ marginTop: "-4rem" }}>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -127,19 +122,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -151,19 +146,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -175,19 +170,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -199,19 +194,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -223,19 +218,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -247,19 +242,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -271,19 +266,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -295,19 +290,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -319,19 +314,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -343,19 +338,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -367,19 +362,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -391,19 +386,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -415,19 +410,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -439,19 +434,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -463,19 +458,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -487,19 +482,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -511,19 +506,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -535,19 +530,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -559,19 +554,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -583,19 +578,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -607,19 +602,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -631,19 +626,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -655,19 +650,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -679,19 +674,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -703,19 +698,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -727,19 +722,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -751,19 +746,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -775,19 +770,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -799,19 +794,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -823,19 +818,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -847,19 +842,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -871,19 +866,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -895,19 +890,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -919,19 +914,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -943,19 +938,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -967,19 +962,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -991,19 +986,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
@@ -1015,19 +1010,19 @@ export default function ExamObjection() {
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
                     <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.dersAdi}`}>
+                        <div className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavTuru}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.sinavNotu}`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             54
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
