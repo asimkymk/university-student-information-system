@@ -274,9 +274,3 @@ input:checked+.slider:before {
   font-size: 13.5pt;
   color: #454545;
 }
-
-.select option:hover,
-.select option:focus,
-.select option:active {
-  background-color: yellow !important;
-}
