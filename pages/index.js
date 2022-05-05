@@ -9,13 +9,13 @@ import {
   faCalendar
 } from "@fortawesome/free-solid-svg-icons";
 const bookElement = (
-  <FontAwesomeIcon icon={faBook}/>
+  <FontAwesomeIcon icon={faBook} />
 );
 const starElement = (
-  <FontAwesomeIcon icon={faStar}/>
+  <FontAwesomeIcon icon={faStar} />
 );
 const classElement = (
-  <FontAwesomeIcon icon={faCalendar}/>
+  <FontAwesomeIcon icon={faCalendar} />
 );
 class Home extends Component {
   //TASRIM İÇİN GEÇİCİ ÇÖZÜM
@@ -48,8 +48,8 @@ class Home extends Component {
                   <div className="row h-100">
                     <div className={`col-2 h-100 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.blue}`}>
-                        <div style={{ paddingTop: "10px" }}>
-                        {bookElement}
+                        <div className={`${styles.icons}`}>
+                          {bookElement}
                         </div>
                       </div>
                     </div>
@@ -67,8 +67,8 @@ class Home extends Component {
                   <div className={`row`}>
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.red} mx-auto my-auto`}>
-                        <div style={{ paddingTop: "10px" }}>
-                        {starElement}
+                        <div className={`${styles.icons}`}>
+                          {starElement}
                         </div>
                       </div>
                     </div>
@@ -86,8 +86,8 @@ class Home extends Component {
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.green}`}>
-                      <div style={{ paddingTop: "10px" }}>
-                      {classElement}
+                        <div className={`${styles.icons}`}>
+                          {classElement}
                         </div>
                       </div>
                     </div>
