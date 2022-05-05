@@ -142,7 +142,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -190,7 +190,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -214,7 +214,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -238,7 +238,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -262,7 +262,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -286,7 +286,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -310,7 +310,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -334,7 +334,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -358,7 +358,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -382,7 +382,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -406,7 +406,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -430,7 +430,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -454,7 +454,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -478,7 +478,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
@@ -502,7 +502,7 @@ export default function DocumentRequest() {
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto`}>
+                        <div className={`col-2 my-auto ${styles.rows}`}>
                             <a href="#">Belge {externalElement}</a>
                         </div>
                     </div>
