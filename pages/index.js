@@ -60,6 +60,10 @@ class Home extends Component {
                       </div>
                     </div>
                   </div>
+                  <div className="row">
+                    <div className={`${styles.horizontalLine}`}></div>
+                    <div className={`${styles.info}`}>Geçen yıla göre 1 ders fazla alıyorsun.</div>
+                  </div>
                 </div>
               </div>
               <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
@@ -79,6 +83,11 @@ class Home extends Component {
                       </div>
                     </div>
                   </div>
+                  <div className="row">
+                    <div className={`${styles.horizontalLine}`}></div>
+                    <div className={`${styles.info}`}>Ortalama geçen yıla göre %40 arttı.</div>
+                  </div>
+
                 </div>
               </div>
               <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
@@ -97,6 +106,10 @@ class Home extends Component {
                         <p className={`card-text ${styles.cardText}`}>3</p>
                       </div>
                     </div>
+                  </div>
+                  <div className="row">
+                    <div className={`${styles.horizontalLine}`}></div>
+                    <div className={`${styles.info}`}>&nbsp;</div>
                   </div>
                 </div>
               </div>

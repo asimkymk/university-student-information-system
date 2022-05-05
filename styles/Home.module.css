@@ -79,3 +79,27 @@
 .icons {
     padding-top: 10px;
 }
+
+.horizontalLine {
+    flex-shrink: 0;
+    background-color: transparent;
+    width: 100% !important;
+    height: 1px !important;
+    border: none;
+    padding: 0 ! important;
+    margin: 0 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    opacity: 0.4;
+    background-image: linear-gradient(to right,
+            rgba(52, 71, 103, 0),
+            rgba(52, 71, 103, 0.6),
+            rgba(52, 71, 103, 0)) !important;
+}
+
+.info {
+    text-align: center;
+    width: 100% !important;
+    color:rgba(0, 0, 0, 1);
+    font-weight: lighter;
+}
