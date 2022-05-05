@@ -209,14 +209,14 @@ class Home extends Component {
                   </div>
                   <div className="col-12 col-xl-4">
                     <div className="card card-plain h-100">
-                      <div class="row">
-                        <div class="col-md-8 d-flex pb-0 p-3 align-items-center">
-                          <h6 class="mb-0">İletişim Bilgileri</h6>
+                      <div className="row">
+                        <div className="col-md-8 d-flex pb-0 p-3 align-items-center">
+                          <h6 className="mb-0">İletişim Bilgileri</h6>
                         </div>
-                        <div class="col-md-4 text-end  pb-0">
+                        <div className="col-md-4 text-end  pb-0">
                           <IconButton
                             variant="primary"
-                            className={styles.buttonIcon}
+                            className={` mt-2 ${styles.buttonIcon}`}
                           >
                             <AddIcon color="disabled"></AddIcon>
                           </IconButton>
@@ -294,9 +294,8 @@ class Home extends Component {
                     </div>
                   </div>
                   <div className="col-12 mt-4">
-                    <div className="mb-5 ps-3">
-                      <h6 className="mb-1">Projects</h6>
-                      <p className="text-sm">Architects design houses</p>
+                    <div class="mb-5 ps-3">
+                      <h6 class="mb-1">Diğer Bilgiler</h6>
                     </div>
                     <div className="row">
                       <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
@@ -304,240 +303,26 @@ class Home extends Component {
                           <div className="card-header p-0 mt-n4 mx-3">
                             <a className="d-block shadow-xl border-radius-xl">
                               <img
-                                src="../assets/img/home-decor-1.jpg"
+                                src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                                 alt="img-blur-shadow"
                                 className="img-fluid shadow border-radius-xl"
                               />
                             </a>
                           </div>
                           <div className="card-body p-3">
-                            <p className="mb-0 text-sm">Project #2</p>
-                            <a href="javascript:;">
-                              <h5>Modern</h5>
-                            </a>
-                            <p className="mb-4 text-sm">
-                              As Uber works through a huge amount of internal
-                              management turmoil.
+                            <h5>Ev Adresi</h5>
+
+                            <p className="mb-4 text-sm card-body-text">
+                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
+                              Bahçelievler, İstanbul.
                             </p>
                             <div className="d-flex align-items-center justify-content-between">
-                              <button
-                                type="button"
-                                className="btn btn-outline-primary btn-sm mb-0"
+                              <Button
+                                variant="text"
+                                className="pe-3 ps-0 mb-0 mr-auto text-center w-10 w-md-auto"
                               >
-                                View Project
-                              </button>
-                              <div className="avatar-group mt-2">
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Elena Morison"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-1.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Ryan Milly"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-2.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Nick Daniel"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-3.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Peterson"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-4.jpg"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                        <div className="card card-blog card-plain">
-                          <div className="card-header p-0 mt-n4 mx-3">
-                            <a className="d-block shadow-xl border-radius-xl">
-                              <img
-                                src="../assets/img/home-decor-2.jpg"
-                                alt="img-blur-shadow"
-                                className="img-fluid shadow border-radius-lg"
-                              />
-                            </a>
-                          </div>
-                          <div className="card-body p-3">
-                            <p className="mb-0 text-sm">Project #1</p>
-                            <a href="javascript:;">
-                              <h5>Scandinavian</h5>
-                            </a>
-                            <p className="mb-4 text-sm">
-                              Music is something that every person has his or
-                              her own specific opinion about.
-                            </p>
-                            <div className="d-flex align-items-center justify-content-between">
-                              <button
-                                type="button"
-                                className="btn btn-outline-primary btn-sm mb-0"
-                              >
-                                View Project
-                              </button>
-                              <div className="avatar-group mt-2">
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Nick Daniel"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-3.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Peterson"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-4.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Elena Morison"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-1.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Ryan Milly"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-2.jpg"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                        <div className="card card-blog card-plain">
-                          <div className="card-header p-0 mt-n4 mx-3">
-                            <a className="d-block shadow-xl border-radius-xl">
-                              <img
-                                src="../assets/img/home-decor-3.jpg"
-                                alt="img-blur-shadow"
-                                className="img-fluid shadow border-radius-xl"
-                              />
-                            </a>
-                          </div>
-                          <div className="card-body p-3">
-                            <p className="mb-0 text-sm">Project #3</p>
-                            <a href="javascript:;">
-                              <h5>Minimalist</h5>
-                            </a>
-                            <p className="mb-4 text-sm">
-                              Different people have different taste, and various
-                              types of music.
-                            </p>
-                            <div className="d-flex align-items-center justify-content-between">
-                              <button
-                                type="button"
-                                className="btn btn-outline-primary btn-sm mb-0"
-                              >
-                                View Project
-                              </button>
-                              <div className="avatar-group mt-2">
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Peterson"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-4.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Nick Daniel"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-3.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Ryan Milly"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-2.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Elena Morison"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-1.jpg"
-                                  />
-                                </a>
-                              </div>
+                                &nbsp;&nbsp; Düzenle
+                              </Button>
                             </div>
                           </div>
                         </div>
@@ -554,71 +339,77 @@ class Home extends Component {
                             </a>
                           </div>
                           <div className="card-body p-3">
-                            <p className="mb-0 text-sm">Project #4</p>
-                            <a href="javascript:;">
-                              <h5>Gothic</h5>
-                            </a>
-                            <p className="mb-4 text-sm">
-                              Why would anyone pick blue over pink? Pink is
-                              obviously a better color.
+                            <h5>Ev Adresi</h5>
+
+                            <p className="mb-4 text-sm card-body-text">
+                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
+                              Bahçelievler, İstanbul.
                             </p>
                             <div className="d-flex align-items-center justify-content-between">
-                              <button
-                                type="button"
-                                className="btn btn-outline-primary btn-sm mb-0"
+                              <Button
+                                variant="text"
+                                className="pe-3 ps-0 mb-0 mr-auto text-center w-10 w-md-auto"
                               >
-                                View Project
-                              </button>
-                              <div className="avatar-group mt-2">
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Peterson"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-4.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Nick Daniel"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-3.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Ryan Milly"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-2.jpg"
-                                  />
-                                </a>
-                                <a
-                                  href="javascript:;"
-                                  className="avatar avatar-xs rounded-circle"
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="bottom"
-                                  title="Elena Morison"
-                                >
-                                  <img
-                                    alt="Image placeholder"
-                                    src="../assets/img/team-1.jpg"
-                                  />
-                                </a>
-                              </div>
+                                &nbsp;&nbsp; Düzenle
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
+                        <div className="card card-blog card-plain">
+                          <div className="card-header p-0 mt-n4 mx-3">
+                            <a className="d-block shadow-xl border-radius-xl">
+                              <img
+                                src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="img-blur-shadow"
+                                className="img-fluid shadow border-radius-xl"
+                              />
+                            </a>
+                          </div>
+                          <div className="card-body p-3">
+                            <h5>Ev Adresi</h5>
+
+                            <p className="mb-4 text-sm card-body-text">
+                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
+                              Bahçelievler, İstanbul.
+                            </p>
+                            <div className="d-flex align-items-center justify-content-between">
+                              <Button
+                                variant="text"
+                                className="pe-3 ps-0 mb-0 mr-auto text-center w-10 w-md-auto"
+                              >
+                                &nbsp;&nbsp; Düzenle
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
+                        <div className="card card-blog card-plain">
+                          <div className="card-header p-0 mt-n4 mx-3">
+                            <a className="d-block shadow-xl border-radius-xl">
+                              <img
+                                src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="img-blur-shadow"
+                                className="img-fluid shadow border-radius-xl"
+                              />
+                            </a>
+                          </div>
+                          <div className="card-body p-3">
+                            <h5>Ev Adresi</h5>
+
+                            <p className="mb-4 text-sm card-body-text">
+                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
+                              Bahçelievler, İstanbul.
+                            </p>
+                            <div className="d-flex align-items-center justify-content-between">
+                              <Button
+                                variant="text"
+                                className="pe-3 ps-0 mb-0 mr-auto text-center w-10 w-md-auto"
+                              >
+                                &nbsp;&nbsp; Düzenle
+                              </Button>
                             </div>
                           </div>
                         </div>

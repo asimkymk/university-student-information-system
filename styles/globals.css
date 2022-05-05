@@ -1012,3 +1012,26 @@ hr.horizontal.gray-light {
     rgba(52, 71, 103, 0)
   ) !important;
 }
+.card-body h5 {
+  font-size: 1.25rem;
+  line-height: 1.375;
+  font-weight: 700;
+  letter-spacing: 0em;
+  opacity: 1;
+  text-transform: capitalize;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+}
+.card-body-text {
+  margin: 0px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(123, 128, 154);
+  font-weight: 500;
+}
