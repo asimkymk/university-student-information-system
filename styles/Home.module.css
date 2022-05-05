@@ -41,36 +41,41 @@
     width: 60px;
     border-radius: 1rem;
     text-align: center;
-    color:white;
-    font-size: 18pt;
+    color: white;
+    font-size: 20pt;
 }
 
-.blue{
+.blue {
     background: rgb(14, 0, 255);
     background: -moz-linear-gradient(325deg, rgba(14, 0, 255, 1) 0%, rgba(95, 175, 191, 1) 100%);
     background: -webkit-linear-gradient(325deg, rgba(14, 0, 255, 1) 0%, rgba(95, 175, 191, 1) 100%);
     background: linear-gradient(325deg, rgba(14, 0, 255, 1) 0%, rgba(95, 175, 191, 1) 100%);
 }
 
-.red{
-    background: rgb(200,0,0);
-background: -moz-linear-gradient(325deg, rgba(200,0,0,1) 0%, rgba(255,178,178,1) 100%);
-background: -webkit-linear-gradient(325deg, rgba(200,0,0,1) 0%, rgba(255,178,178,1) 100%);
-background: linear-gradient(325deg, rgba(200,0,0,1) 0%, rgba(255,178,178,1) 100%);
+.red {
+    background: rgb(200, 0, 0);
+    background: -moz-linear-gradient(325deg, rgba(200, 0, 0, 1) 0%, rgba(255, 178, 178, 1) 100%);
+    background: -webkit-linear-gradient(325deg, rgba(200, 0, 0, 1) 0%, rgba(255, 178, 178, 1) 100%);
+    background: linear-gradient(325deg, rgba(200, 0, 0, 1) 0%, rgba(255, 178, 178, 1) 100%);
 }
 
-.green{
-    background: rgb(15,150,0);
-background: -moz-linear-gradient(325deg, rgba(15,150,0,1) 0%, rgba(152,221,161,1) 100%);
-background: -webkit-linear-gradient(325deg, rgba(15,150,0,1) 0%, rgba(152,221,161,1) 100%);
-background: linear-gradient(325deg, rgba(15,150,0,1) 0%, rgba(152,221,161,1) 100%);
+.green {
+    background: rgb(15, 150, 0);
+    background: -moz-linear-gradient(325deg, rgba(15, 150, 0, 1) 0%, rgba(152, 221, 161, 1) 100%);
+    background: -webkit-linear-gradient(325deg, rgba(15, 150, 0, 1) 0%, rgba(152, 221, 161, 1) 100%);
+    background: linear-gradient(325deg, rgba(15, 150, 0, 1) 0%, rgba(152, 221, 161, 1) 100%);
 }
 
 .cardTitle {
     font-weight: bold;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.75);
     font-size: 15pt;
 }
-.cardText{
+
+.cardText {
     font-size: 14pt;
+}
+
+.icons {
+    padding-top: 10px;
 }
