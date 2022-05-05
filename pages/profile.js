@@ -218,7 +218,7 @@ class Home extends Component {
                             variant="primary"
                             className={styles.buttonIcon}
                           >
-                            <AddIcon color="secondary"></AddIcon>
+                            <AddIcon color="disabled"></AddIcon>
                           </IconButton>
                         </div>
                       </div>
