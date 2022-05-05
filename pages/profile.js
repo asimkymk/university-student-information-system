@@ -211,14 +211,14 @@ class Home extends Component {
                     <div className="card card-plain h-100">
                       <div class="row">
                         <div class="col-md-8 d-flex pb-0 p-3 align-items-center">
-                          <h6 class="mb-0">Profile Information</h6>
+                          <h6 class="mb-0">İletişim Bilgileri</h6>
                         </div>
                         <div class="col-md-4 text-end  pb-0">
                           <IconButton
                             variant="primary"
-                            className="pe-3 ps-0 mb-0 ms-auto text-center w-25 w-md-auto "
+                            className={styles.buttonIcon}
                           >
-                            <AddIcon></AddIcon>
+                            <AddIcon color="secondary"></AddIcon>
                           </IconButton>
                         </div>
                       </div>
