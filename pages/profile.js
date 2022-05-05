@@ -4,6 +4,9 @@ import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import styles from "../styles/Profile.module.css";
+import AddIcon from "@mui/icons-material/Add";
+import Button from "@mui/material/Button";
+import { IconButton } from "@mui/material";
 class Home extends Component {
   constructor(props, children) {
     super(props);
@@ -47,9 +50,13 @@ class Home extends Component {
                 </div>
                 <div className="col-auto my-auto">
                   <div className="h-100">
-                    <h5 className="mb-1">Richard Davis</h5>
-                    <p className="mb-0 font-weight-normal text-sm">
-                      CEO / Co-Founder
+                    <h5 className={`mb-1 ${styles.profileText}`}>
+                      Asım Kaymak
+                    </h5>
+                    <p
+                      className={`mb-0 font-weight-normal text-sm ${styles.profileSubText}`}
+                    >
+                      Bilgisayar Mühendisliği
                     </p>
                   </div>
                 </div>
@@ -62,122 +69,11 @@ class Home extends Component {
                   <div className="col-12 col-xl-4">
                     <div className="card card-plain h-100">
                       <div className="card-header pb-0 p-3">
-                        <h6 className="mb-0">Platform Settings</h6>
-                      </div>
-                      <div className="card-body p-3">
-                        <h6 className="text-uppercase text-body text-xs font-weight-bolder">
-                          Account
-                        </h6>
-                        <ul className="list-group">
-                          <li className="list-group-item border-0 px-0">
-                            <div className="form-check form-switch ps-0">
-                              <input
-                                className="form-check-input ms-auto"
-                                type="checkbox"
-                                id="flexSwitchCheckDefault"
-                                checked
-                              />
-                              <label
-                                className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
-                                for="flexSwitchCheckDefault"
-                              >
-                                Email me when someone follows me
-                              </label>
-                            </div>
-                          </li>
-                          <li className="list-group-item border-0 px-0">
-                            <div className="form-check form-switch ps-0">
-                              <input
-                                className="form-check-input ms-auto"
-                                type="checkbox"
-                                id="flexSwitchCheckDefault1"
-                              />
-                              <label
-                                className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
-                                for="flexSwitchCheckDefault1"
-                              >
-                                Email me when someone answers on my post
-                              </label>
-                            </div>
-                          </li>
-                          <li className="list-group-item border-0 px-0">
-                            <div className="form-check form-switch ps-0">
-                              <input
-                                className="form-check-input ms-auto"
-                                type="checkbox"
-                                id="flexSwitchCheckDefault2"
-                                checked
-                              />
-                              <label
-                                className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
-                                for="flexSwitchCheckDefault2"
-                              >
-                                Email me when someone mentions me
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                        <h6 className="text-uppercase text-body text-xs font-weight-bolder mt-4">
-                          Application
-                        </h6>
-                        <ul className="list-group">
-                          <li className="list-group-item border-0 px-0">
-                            <div className="form-check form-switch ps-0">
-                              <input
-                                className="form-check-input ms-auto"
-                                type="checkbox"
-                                id="flexSwitchCheckDefault3"
-                              />
-                              <label
-                                className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
-                                for="flexSwitchCheckDefault3"
-                              >
-                                New launches and projects
-                              </label>
-                            </div>
-                          </li>
-                          <li className="list-group-item border-0 px-0">
-                            <div className="form-check form-switch ps-0">
-                              <input
-                                className="form-check-input ms-auto"
-                                type="checkbox"
-                                id="flexSwitchCheckDefault4"
-                                checked
-                              />
-                              <label
-                                className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
-                                for="flexSwitchCheckDefault4"
-                              >
-                                Monthly product updates
-                              </label>
-                            </div>
-                          </li>
-                          <li className="list-group-item border-0 px-0 pb-0">
-                            <div className="form-check form-switch ps-0">
-                              <input
-                                className="form-check-input ms-auto"
-                                type="checkbox"
-                                id="flexSwitchCheckDefault5"
-                              />
-                              <label
-                                className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
-                                for="flexSwitchCheckDefault5"
-                              >
-                                Subscribe to newsletter
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-xl-4">
-                    <div className="card card-plain h-100">
-                      <div className="card-header pb-0 p-3">
                         <div className="row">
                           <div className="col-md-8 d-flex align-items-center">
-                            <h6 className="mb-0">Profile Information</h6>
+                            <h6 className="mb-0">Özlük Bilgileri</h6>
                           </div>
+                          <hr className="horizontal gray-light mt-2 mb-2" />
                           <div className="col-md-4 text-end">
                             <a href="javascript:;">
                               <i
@@ -191,53 +87,67 @@ class Home extends Component {
                         </div>
                       </div>
                       <div className="card-body p-3">
-                        <p className="text-sm">
-                          Hi, I’m Alec Thompson, Decisions: If you can’t decide,
-                          the answer is no. If two equally difficult paths,
-                          choose the one more painful in the short term (pain
-                          avoidance is creating an illusion of equality).
-                        </p>
-                        <hr className="horizontal gray-light my-4" />
                         <ul className="list-group">
-                          <li className="list-group-item border-0 ps-0 pt-0 text-sm">
-                            <strong className="text-dark">Full Name:</strong>{" "}
-                            &nbsp; Alec M. Thompson
+                          <li className="list-group-item border-0 ps-0 pt-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              İsim:
+                            </strong>{" "}
+                            &nbsp; Asım Kaymak
                           </li>
-                          <li className="list-group-item border-0 ps-0 text-sm">
-                            <strong className="text-dark">Mobile:</strong>{" "}
-                            &nbsp; (44) 123 1234 123
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Kimlik Numarası:
+                            </strong>{" "}
+                            &nbsp; 45262969542
                           </li>
-                          <li className="list-group-item border-0 ps-0 text-sm">
-                            <strong className="text-dark">Email:</strong> &nbsp;
-                            alecthompson@mail.com
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Baba Adı:
+                            </strong>{" "}
+                            &nbsp; Adem
                           </li>
-                          <li className="list-group-item border-0 ps-0 text-sm">
-                            <strong className="text-dark">Location:</strong>{" "}
-                            &nbsp; USA
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Anne Adı:
+                            </strong>{" "}
+                            &nbsp; Yurdagül
                           </li>
-                          <li className="list-group-item border-0 ps-0 pb-0">
-                            <strong className="text-dark text-sm">
-                              Social:
+
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Doğum Tarihi:
+                            </strong>{" "}
+                            &nbsp; 12.03.2000
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Doğum Yeri:
+                            </strong>{" "}
+                            &nbsp; Bahçelievler
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Medeni Hali:
+                            </strong>{" "}
+                            &nbsp; Bekar
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Uyruk:
+                            </strong>{" "}
+                            &nbsp; Türk
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Kan Grubu:
                             </strong>{" "}
                             &nbsp;
-                            <a
-                              className="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0"
-                              href="javascript:;"
-                            >
-                              <i className="fab fa-facebook fa-lg"></i>
-                            </a>
-                            <a
-                              className="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0"
-                              href="javascript:;"
-                            >
-                              <i className="fab fa-twitter fa-lg"></i>
-                            </a>
-                            <a
-                              className="btn btn-instagram btn-simple mb-0 ps-1 pe-2 py-0"
-                              href="javascript:;"
-                            >
-                              <i className="fab fa-instagram fa-lg"></i>
-                            </a>
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Cinsiyet:
+                            </strong>{" "}
+                            &nbsp; Erkek
                           </li>
                         </ul>
                       </div>
@@ -246,114 +156,138 @@ class Home extends Component {
                   <div className="col-12 col-xl-4">
                     <div className="card card-plain h-100">
                       <div className="card-header pb-0 p-3">
-                        <h6 className="mb-0">Conversations</h6>
+                        <h6 className="mb-0">Birim Bilgileri</h6>
                       </div>
+                      <hr className="horizontal gray-light mt-2 mb-2" />
+                      <div className="card-body p-3">
+                        <ul className="list-group">
+                          <li className="list-group-item border-0 ps-0 pt-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Fakülte:
+                            </strong>{" "}
+                            &nbsp; Mühendislik Fakültesi
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Birim:
+                            </strong>{" "}
+                            &nbsp; Bilgisayar Mühendisliği, Lisans Programı
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Kayıt Şekli:
+                            </strong>{" "}
+                            &nbsp; Standart Kayıt ÖSYM
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Numara:
+                            </strong>{" "}
+                            &nbsp; 1306180004
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Öğrenim Durumu:
+                            </strong>{" "}
+                            &nbsp; Normal
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Durum:
+                            </strong>{" "}
+                            &nbsp; Devamlı Öğrenci
+                          </li>
+                          <li className="list-group-item border-0 ps-0 text-sm list-section">
+                            <strong className="text-dark li-header">
+                              Askerlik Durumu:
+                            </strong>{" "}
+                            &nbsp; Belirsiz
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-12 col-xl-4">
+                    <div className="card card-plain h-100">
+                      <div class="row">
+                        <div class="col-md-8 d-flex pb-0 p-3 align-items-center">
+                          <h6 class="mb-0">Profile Information</h6>
+                        </div>
+                        <div class="col-md-4 text-end  pb-0">
+                          <IconButton
+                            variant="primary"
+                            className="pe-3 ps-0 mb-0 ms-auto text-center w-25 w-md-auto "
+                          >
+                            <AddIcon></AddIcon>
+                          </IconButton>
+                        </div>
+                      </div>
+                      <hr className="horizontal gray-light mt-2 mb-2" />
                       <div className="card-body p-3">
                         <ul className="list-group">
                           <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
-                            <div className="avatar me-3">
-                              <img
-                                src="../assets/img/kal-visuals-square.jpg"
-                                alt="kal"
-                                className="border-radius-lg shadow"
-                              />
-                            </div>
                             <div className="d-flex align-items-start flex-column justify-content-center">
-                              <h6 className="mb-0 text-sm">Sophie B.</h6>
-                              <p className="mb-0 text-xs">
-                                Hi! I need more information..
+                              <strong className="mb-0 li-header">
+                                Cep Telefonu
+                              </strong>
+                              <p className="mb-0 list-section">
+                                +90 (539) 712 9136
                               </p>
                             </div>
-                            <a
-                              className="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto"
-                              href="javascript:;"
+                            <Button
+                              variant="text"
+                              className="pe-3 ps-0 mb-0 ms-auto text-center w-10 w-md-auto"
                             >
-                              Reply
-                            </a>
+                              &nbsp;&nbsp; Düzenle
+                            </Button>
                           </li>
-                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                            <div className="avatar me-3">
-                              <img
-                                src="../assets/img/marie.jpg"
-                                alt="kal"
-                                className="border-radius-lg shadow"
-                              />
-                            </div>
+                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
                             <div className="d-flex align-items-start flex-column justify-content-center">
-                              <h6 className="mb-0 text-sm">Anne Marie</h6>
-                              <p className="mb-0 text-xs">
-                                Awesome work, can you..
+                              <strong className="mb-0 li-header">
+                                Ev Telefonu
+                              </strong>
+                              <p className="mb-0 list-section">
+                                +90 (212) 603 9984
                               </p>
                             </div>
-                            <a
-                              className="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto"
-                              href="javascript:;"
+                            <Button
+                              variant="text"
+                              className="pe-3 ps-0 mb-0 ms-auto text-center w-10 w-md-auto"
                             >
-                              Reply
-                            </a>
+                              &nbsp;&nbsp; Düzenle
+                            </Button>
                           </li>
-                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                            <div className="avatar me-3">
-                              <img
-                                src="../assets/img/ivana-square.jpg"
-                                alt="kal"
-                                className="border-radius-lg shadow"
-                              />
-                            </div>
+                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
                             <div className="d-flex align-items-start flex-column justify-content-center">
-                              <h6 className="mb-0 text-sm">Ivanna</h6>
-                              <p className="mb-0 text-xs">
-                                About files I can..
+                              <strong className="mb-0 li-header">
+                                Mail Adresi
+                              </strong>
+                              <p className="mb-0 list-section">
+                                kaymakasm@gmail.com
                               </p>
                             </div>
-                            <a
-                              className="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto"
-                              href="javascript:;"
+                            <Button
+                              variant="text"
+                              className="pe-3 ps-0 mb-0 ms-auto text-center w-10 w-md-auto"
                             >
-                              Reply
-                            </a>
+                              &nbsp;&nbsp; Düzenle
+                            </Button>
                           </li>
-                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                            <div className="avatar me-3">
-                              <img
-                                src="../assets/img/team-4.jpg"
-                                alt="kal"
-                                className="border-radius-lg shadow"
-                              />
-                            </div>
+                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
                             <div className="d-flex align-items-start flex-column justify-content-center">
-                              <h6 className="mb-0 text-sm">Peterson</h6>
-                              <p className="mb-0 text-xs">
-                                Have a great afternoon..
+                              <strong className="mb-0 li-header">
+                                Anne Cep Telefonu
+                              </strong>
+                              <p className="mb-0 list-section">
+                                +90 (539) 712 9136
                               </p>
                             </div>
-                            <a
-                              className="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto"
-                              href="javascript:;"
+                            <Button
+                              variant="text"
+                              className="pe-3 ps-0 mb-0 ms-auto text-center w-10 w-md-auto"
                             >
-                              Reply
-                            </a>
-                          </li>
-                          <li className="list-group-item border-0 d-flex align-items-center px-0">
-                            <div className="avatar me-3">
-                              <img
-                                src="../assets/img/team-3.jpg"
-                                alt="kal"
-                                className="border-radius-lg shadow"
-                              />
-                            </div>
-                            <div className="d-flex align-items-start flex-column justify-content-center">
-                              <h6 className="mb-0 text-sm">Nick Daniel</h6>
-                              <p className="mb-0 text-xs">
-                                Hi! I need more information..
-                              </p>
-                            </div>
-                            <a
-                              className="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto"
-                              href="javascript:;"
-                            >
-                              Reply
-                            </a>
+                              &nbsp;&nbsp; Düzenle
+                            </Button>
                           </li>
                         </ul>
                       </div>

@@ -47,3 +47,43 @@
   text-indent: 10000px;
   height: auto;
 }
+.profileText {
+  margin: 0px;
+  font-size: 1.25rem;
+  line-height: 1.375;
+  letter-spacing: 0em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 600;
+}
+.profileSubText {
+  margin: 0px;
+  letter-spacing: 0.05em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(123, 128, 154);
+  font-weight: 400;
+}
+.verticalLine {
+  flex-shrink: 0;
+  border-top: 0px solid rgba(0, 0, 0, 0.12);
+  border-left: 0px solid rgba(0, 0, 0, 0.12);
+  border-bottom: none;
+  opacity: 0.25;
+  background-color: transparent;
+  width: 0.0625rem;
+  height: 100%;
+  margin: 0px 8px 0px -16px;
+  border-right: none;
+  background-image: linear-gradient(
+    rgba(52, 71, 103, 0),
+    rgba(52, 71, 103, 0.4),
+    rgba(52, 71, 103, 0)
+  ) !important;
+  display: flex;
+}
