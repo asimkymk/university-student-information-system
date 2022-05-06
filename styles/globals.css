@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 html,
 body {
   padding: 0;
@@ -9,8 +10,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-body::-webkit-scrollbar{
-  display:none;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -20,4 +21,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
