@@ -66,6 +66,34 @@
     background: linear-gradient(325deg, rgba(15, 150, 0, 1) 0%, rgba(152, 221, 161, 1) 100%);
 }
 
+.orange {
+    background: rgb(255, 113, 18);
+    background: -moz-linear-gradient(325deg, rgb(255, 113, 18) 0%, rgb(255, 191, 138) 100%);
+    background: -webkit-linear-gradient(325deg, rgb(255, 113, 18) 0%, rgb(255, 191, 138) 100%);
+    background: linear-gradient(325deg, rgb(255, 113, 18) 0%, rgb(255, 191, 138) 100%);
+}
+
+.purple {
+    background: rgb(162, 0, 255);
+    background: -moz-linear-gradient(325deg, rgb(162, 0, 255) 0%, rgb(231, 180, 255) 100%);
+    background: -webkit-linear-gradient(325deg, rgb(162, 0, 255) 0%, rgb(231, 180, 255) 100%);
+    background: linear-gradient(325deg, rgb(162, 0, 255) 0%, rgb(231, 180, 255) 100%);
+}
+
+.gray {
+    background: rgb(77, 77, 77);
+    background: -moz-linear-gradient(325deg, rgb(77, 77, 77) 0%, rgb(230, 230, 230) 100%);
+    background: -webkit-linear-gradient(325deg, rgb(77, 77, 77) 0%, rgb(230, 230, 230) 100%);
+    background: linear-gradient(325deg, rgb(77, 77, 77) 0%, rgb(230, 230, 230) 100%);
+}
+
+.yellow {
+    background: rgb(223, 208, 0);
+    background: -moz-linear-gradient(325deg, rgb(223, 208, 0) 0%, rgb(255, 255, 180) 100%);
+    background: -webkit-linear-gradient(325deg, rgb(223, 208, 0) 0%, rgb(255, 255, 180) 100%);
+    background: linear-gradient(325deg, rgb(223, 208, 0) 0%, rgb(255, 255, 180) 100%);
+}
+
 .cardTitle {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.75);
@@ -100,6 +128,10 @@
 .info {
     text-align: center;
     width: 100% !important;
-    color:rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1);
     font-weight: lighter;
+}
+
+.chart {
+    height: 30vh;
 }
