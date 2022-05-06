@@ -332,27 +332,34 @@ class Home extends Component {
                           <div className="card-header p-0 mt-n4 mx-3">
                             <a className="d-block shadow-xl border-radius-xl">
                               <img
-                                src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                src="https://www.schellhammerbusinessschool.com/wp-content/uploads/English-online.jpg"
                                 alt="img-blur-shadow"
                                 className="img-fluid shadow border-radius-xl"
                               />
                             </a>
                           </div>
                           <div className="card-body p-3">
-                            <h5>Ev Adresi</h5>
+                            <h5>Hazırlık</h5>
 
-                            <p className="mb-4 text-sm card-body-text">
-                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
-                              Bahçelievler, İstanbul.
+                            <p className="mb-1 text-sm card-body-text">
+                              <strong className="mb-0 li-header">Yıl:</strong>
+                              <span className="mb-0 list-section">
+                                {" "}
+                                &nbsp;2018
+                              </span>
                             </p>
-                            <div className="d-flex align-items-center justify-content-between">
-                              <Button
-                                variant="text"
-                                className="pe-3 ps-0 mb-0 mr-auto text-center w-10 w-md-auto"
-                              >
-                                &nbsp;&nbsp; Düzenle
-                              </Button>
-                            </div>
+                            <p className="mb-1 text-sm card-body-text">
+                              <strong className="mb-0 li-header">Puan:</strong>
+                              <span className="mb-0 list-section">
+                                &nbsp;88.64
+                              </span>
+                            </p>
+                            <p className="mb-2 text-sm card-body-text">
+                              <strong className="mb-0 li-header">Durum:</strong>
+                              <span className="mb-0 list-section">
+                                &nbsp;Başarılı
+                              </span>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -361,27 +368,36 @@ class Home extends Component {
                           <div className="card-header p-0 mt-n4 mx-3">
                             <a className="d-block shadow-xl border-radius-xl">
                               <img
-                                src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                src="https://wallpaperaccess.com/full/1209535.jpg"
                                 alt="img-blur-shadow"
                                 className="img-fluid shadow border-radius-xl"
                               />
                             </a>
                           </div>
                           <div className="card-body p-3">
-                            <h5>Ev Adresi</h5>
+                            <h5>Lise</h5>
 
-                            <p className="mb-4 text-sm card-body-text">
-                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
-                              Bahçelievler, İstanbul.
+                            <p className="mb-1 text-sm card-body-text">
+                              <strong className="mb-0 li-header">Adı:</strong>
+                              <span className="mb-0 list-section">
+                                {" "}
+                                &nbsp;Küçükçekmece Anadolu Lisesi
+                              </span>
                             </p>
-                            <div className="d-flex align-items-center justify-content-between">
-                              <Button
-                                variant="text"
-                                className="pe-3 ps-0 mb-0 mr-auto text-center w-10 w-md-auto"
-                              >
-                                &nbsp;&nbsp; Düzenle
-                              </Button>
-                            </div>
+                            <p className="mb-1 text-sm card-body-text">
+                              <strong className="mb-0 li-header">Puan:</strong>
+                              <span className="mb-0 list-section">
+                                {" "}
+                                &nbsp;89,64
+                              </span>
+                            </p>
+                            <p className="mb-1 text-sm card-body-text">
+                              <strong className="mb-0 li-header">Durum:</strong>
+                              <span className="mb-0 list-section">
+                                {" "}
+                                &nbsp;Mezun
+                              </span>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -390,18 +406,31 @@ class Home extends Component {
                           <div className="card-header p-0 mt-n4 mx-3">
                             <a className="d-block shadow-xl border-radius-xl">
                               <img
-                                src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                src="https://ak.picdn.net/shutterstock/videos/1011582104/thumb/2.jpg"
                                 alt="img-blur-shadow"
                                 className="img-fluid shadow border-radius-xl"
                               />
                             </a>
                           </div>
                           <div className="card-body p-3">
-                            <h5>Ev Adresi</h5>
+                            <h5>Şifre Güncelleme</h5>
+                            <div>
+                              <span className="mb-4 text-sm card-body-text">
+                                <strong className="mb-0 li-header">
+                                  Eski Şifre:
+                                </strong>
+                              </span>
+                              <input
+                                type="password"
+                                name=""
+                                id=""
+                                className="cardInputText"
+                              />
+                            </div>
 
                             <p className="mb-4 text-sm card-body-text">
-                              Hürriyet Mahallesi Kadıoğlu Sokak No:5 Daire: 19
-                              Bahçelievler, İstanbul.
+                              <strong className="mb-0 li-header">Şifre:</strong>
+                              <p className="mb-0 list-section">Kanarya10.</p>
                             </p>
                             <div className="d-flex align-items-center justify-content-between">
                               <Button
