@@ -241,7 +241,7 @@ class Home extends Component {
 
                     <div className={styles.chartText}>
                       Günlük Ders Sayısı
-                      </div>
+                    </div>
                     <div>
                       <div className={`${styles.squareTopChart} ${styles.brown}`}>
                         <div className={`${styles.icons}`}>

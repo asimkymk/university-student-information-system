@@ -34,7 +34,8 @@
     text-align: right;
 }
 
-.squareTop, .squareTopChart {
+.squareTop,
+.squareTopChart {
     position: relative;
     top: -65px;
     height: 60px;
@@ -44,7 +45,8 @@
     color: white;
     font-size: 20pt;
 }
-.squareTopChart{
+
+.squareTopChart {
     top: -75px;
 }
 
@@ -151,9 +153,9 @@
 }
 
 .chartText {
-    text-align: left !important;
-    font-size: 13pt !important;
-    font-weight: bolder !important;
-    margin-left: 65px !important;
-    color: rgba(0, 0, 0, 0.75) !important;
+    text-align: left;
+    font-size: 13pt;
+    font-weight: bolder;
+    margin-left: 65px;
+    color: rgba(0, 0, 0, 0.75);
 }
