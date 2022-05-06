@@ -205,17 +205,29 @@ class Home extends Component {
 
             </div>
             <div className={`row`} style={{ margin: "0px", marginTop: "0" }}>
-              <div className={`card mt-3 ${styles.card}`}>
-                <div className="row">
-                  <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
-                  <div className={`${styles.horizontalLine}`}></div>
+              <div className="col col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div className={`card mt-3 ${styles.card}`}>
+                  <div className="row">
+                    <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
+                    <div className={`${styles.horizontalLine}`}></div>
+                  </div>
+                  <div className="row mt-0">
+                    <div className={`${styles.chart}`}><Chart id="mychart"></Chart></div>
+                  </div>
                 </div>
-                <div className="row mt-0">
-                  <div className={`${styles.chart}`}><Chart id="mychart"></Chart></div>
+              </div>
+              <div className="col col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div className={`card mt-3 ${styles.card}`}>
+                  <div className="row">
+                    <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
+                    <div className={`${styles.horizontalLine}`}></div>
+                  </div>
+                  <div className="row mt-0">
+                    <div className={`${styles.chart}`}><Chart id="mychart"></Chart></div>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </Layout>
       </>
