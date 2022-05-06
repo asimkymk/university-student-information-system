@@ -205,7 +205,7 @@ class Home extends Component {
 
             </div>
             <div className={`row`} style={{ margin: "0px", marginTop: "0" }}>
-              <div className="col col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div className="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div className={`card mt-3 ${styles.card}`}>
                   <div className="row">
                     <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
@@ -216,7 +216,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div className="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div className={`card mt-3 ${styles.card}`}>
                   <div className="row">
                     <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
