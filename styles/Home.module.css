@@ -34,7 +34,7 @@
     text-align: right;
 }
 
-.squareTop {
+.squareTop, .squareTopChart {
     position: relative;
     top: -65px;
     height: 60px;
@@ -43,6 +43,9 @@
     text-align: center;
     color: white;
     font-size: 20pt;
+}
+.squareTopChart{
+    top: -75px;
 }
 
 .blue {
@@ -94,6 +97,13 @@
     background: linear-gradient(325deg, rgb(223, 208, 0) 0%, rgb(255, 255, 180) 100%);
 }
 
+.brown {
+    background: rgb(102, 66, 41);
+    background: -moz-linear-gradient(325deg, rgb(102, 66, 41) 0%, rgb(255, 217, 168) 100%);
+    background: -webkit-linear-gradient(325deg, rgb(102, 66, 41) 0%, rgb(255, 217, 168) 100%);
+    background: linear-gradient(325deg, rgb(102, 66, 41) 0%, rgb(255, 217, 168) 100%);
+}
+
 .cardTitle {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.75);
@@ -134,4 +144,8 @@
 
 .chart {
     height: 30vh;
+}
+
+.chartCard {
+    height: calc(30vh + 70px)
 }

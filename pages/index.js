@@ -4,6 +4,8 @@ import styles from "../styles/Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import Chart from "../components/Chart/Chart";
+import Chart2 from "../components/Chart/Chart2";
+
 
 import {
   faBook,
@@ -12,6 +14,9 @@ import {
   faPencil,
   faSuitcase,
   faX,
+  faChartBar,
+  faChartColumn,
+  faHashtag,
 } from "@fortawesome/free-solid-svg-icons";
 const bookElement = (
   <FontAwesomeIcon icon={faBook} />
@@ -30,6 +35,12 @@ const workElement = (
 );
 const homeworkElement = (
   <FontAwesomeIcon icon={faPencil} />
+);
+const chartElement = (
+  <FontAwesomeIcon icon={faChartColumn} />
+);
+const countElement = (
+  <FontAwesomeIcon icon={faHashtag} />
 );
 
 class Home extends Component {
@@ -204,26 +215,43 @@ class Home extends Component {
               </div>
 
             </div>
-            <div className={`row`} style={{ margin: "0px", marginTop: "0" }}>
+            <div className={`row d-flex justify-content-between mt-1`}>
+
               <div className="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div className={`card mt-3 ${styles.card}`}>
+                <div className={`card ${styles.card} ${styles.chartCard}`}>
                   <div className="row">
+
                     <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
-                    <div className={`${styles.horizontalLine}`}></div>
+                    <div>
+                      <div className={`${styles.squareTopChart} ${styles.gray}`}>
+                        <div className={`${styles.icons}`}>
+                          {chartElement}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="row mt-0">
-                    <div className={`${styles.chart}`}><Chart id="mychart"></Chart></div>
+                  <div className="row mt-4" style={{ position: "relative", top: "-75px" }}>
+                    <div className={`${styles.chart}`}><Chart></Chart></div>
                   </div>
                 </div>
               </div>
               <div className="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div className={`card mt-3 ${styles.card}`}>
+                <div className={`card ${styles.card} ${styles.chartCard}`}>
                   <div className="row">
-                    <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
-                    <div className={`${styles.horizontalLine}`}></div>
+
+                    <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>
+                      Günlük Ders Sayısı
+                      </span>
+                    <div>
+                      <div className={`${styles.squareTopChart} ${styles.brown}`}>
+                        <div className={`${styles.icons}`}>
+                          {countElement}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="row mt-0">
-                    <div className={`${styles.chart}`}><Chart id="mychart"></Chart></div>
+                  <div className="row mt-4" style={{ position: "relative", top: "-75px" }}>
+                    <div className={`${styles.chart}`}><Chart2></Chart2></div>
                   </div>
                 </div>
               </div>
