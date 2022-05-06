@@ -149,3 +149,11 @@
 .chartCard {
     height: calc(30vh + 70px)
 }
+
+.chartText {
+    text-align: left !important;
+    font-size: 13pt !important;
+    font-weight: bolder !important;
+    margin-left: 65px !important;
+    color: rgba(0, 0, 0, 0.75) !important;
+}

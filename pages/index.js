@@ -221,7 +221,7 @@ class Home extends Component {
                 <div className={`card ${styles.card} ${styles.chartCard}`}>
                   <div className="row">
 
-                    <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>Dönem Ortalamaları</span>
+                    <span className={`${styles.chartText}`}>Dönem Ortalamaları</span>
                     <div>
                       <div className={`${styles.squareTopChart} ${styles.gray}`}>
                         <div className={`${styles.icons}`}>
@@ -239,9 +239,9 @@ class Home extends Component {
                 <div className={`card ${styles.card} ${styles.chartCard}`}>
                   <div className="row">
 
-                    <span style={{ textAlign: "center", fontSize: "14pt", fontWeight: "lighter" }}>
+                    <div className={styles.chartText}>
                       Günlük Ders Sayısı
-                      </span>
+                      </div>
                     <div>
                       <div className={`${styles.squareTopChart} ${styles.brown}`}>
                         <div className={`${styles.icons}`}>
