@@ -11,6 +11,7 @@ const state = {
             backgroundColor: "rgba(241, 187, 50, 0.8)",
             borderWidth: 2,
             borderRadius: 10,
+            maxBarThickness:60,
             data: [3.40, 3.56, 3.10, 2.5, 1.8, 3.30, 3.62, 3.80]
         }
     ]
