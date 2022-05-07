@@ -86,6 +86,7 @@ class SideBar extends Component {
                 height="100%"
                 src="/login/iuclogo.png"
                 layout="responsive"
+                priority="true"
               /></a>
           </div>
         </div>
