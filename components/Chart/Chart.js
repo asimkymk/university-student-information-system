@@ -3,16 +3,16 @@ import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js/auto'
 
 const state = {
-    labels: ['Tıp', 'Mühendislik', 'Orman', 'Veterinerlik', 'Eğitim', 'Sağlık Bilimleri', 'Eczacılık', 'İşletme'],
+    labels: ['1. Dönem', '2. Dönem', '3. Dönem', '4. Dönem', '5. Dönem', '6. Dönem', '7. Dönem', '8. Dönem'],
     datasets: [
         {
-            label: 'Öğretim görevlisi sayısı',
+            label: 'Dönem ortalaması',
             borderColor: 'rgba(0,0,0,0)',
             backgroundColor: "rgba(241, 187, 50, 0.8)",
             borderWidth: 2,
             borderRadius: 10,
             maxBarThickness:60,
-            data: [140, 180, 100, 80, 50, 80, 120, 80]
+            data: [3.40, 3.56, 3.10, 2.5, 1.8, 3.30, 3.62, 3.80]
         }
     ]
 }
@@ -20,11 +20,8 @@ const options = {
     scales: {
         yAxis: {
             min: 0,
-            max: 200,
+            max: 4.0,
             beginAtZero: true,
-            ticks:{
-                precision:0,
-            }
         }
     },
     plugins: {
