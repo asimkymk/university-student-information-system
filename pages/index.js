@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import Chart from "../components/Chart/Chart";
 import Chart2 from "../components/Chart/Chart2";
-
-
 import {
   faBook,
   faStar,
@@ -17,6 +15,7 @@ import {
   faChartColumn,
   faHashtag,
 } from "@fortawesome/free-solid-svg-icons";
+
 const bookElement = (
   <FontAwesomeIcon icon={faBook} />
 );

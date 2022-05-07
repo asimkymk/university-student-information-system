@@ -80,12 +80,13 @@ class SideBar extends Component {
       <div className={styles.sideBar}>
         <div className={styles.logoPanel}>
           <div className={styles.logoImage}>
-            <Image
-              width="100%"
-              height="100%"
-              src="/login/iuclogo.png"
-              layout="responsive"
-            />
+            <a href=".">
+              <Image
+                width="100%"
+                height="100%"
+                src="/login/iuclogo.png"
+                layout="responsive"
+              /></a>
           </div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
