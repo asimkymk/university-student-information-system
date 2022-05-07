@@ -27,15 +27,3 @@ canvas {
   width: 100% !important;
   height: 100% !important;
 }
-
-.carousel-control-prev-icon, .carousel-control-next-icon{
- filter: invert(100%);
-}
-img{
-  object-fit: contain;
-  height: calc(50vh - 50px);
-}
-.carousel-indicators {
-  position: relative;
-  filter: invert(100%);
-}
