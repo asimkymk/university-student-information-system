@@ -14,7 +14,6 @@ import {
   faPencil,
   faSuitcase,
   faX,
-  faChartBar,
   faChartColumn,
   faHashtag,
 } from "@fortawesome/free-solid-svg-icons";
@@ -69,10 +68,8 @@ class Home extends Component {
         >
           <div className={`container ${styles.container}`}>
 
-
-
             <div className="row d-flex justify-content-between">
-              <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
+              <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
                 <div className={`card ${styles.reddb} ${styles.card}`}>
                   <div className="row ">
                     <div className={`col-2  my-auto mx-auto`}>
@@ -95,7 +92,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
+              <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
                 <div className={`card ${styles.bluedb} ${styles.card}`}>
                   <div className={`row`}>
                     <div className={`col-2 my-auto mx-auto`}>
@@ -119,7 +116,7 @@ class Home extends Component {
 
                 </div>
               </div>
-              <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
+              <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
                 <div className={`card ${styles.greendb} ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
@@ -142,7 +139,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
+              <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
                 <div className={`card ${styles.greendb} ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
@@ -166,7 +163,7 @@ class Home extends Component {
                 </div>
               </div>
 
-              <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
+              <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
                 <div className={`card ${styles.greendb} ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
@@ -190,7 +187,7 @@ class Home extends Component {
                 </div>
               </div>
 
-              <div className={`col col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
+              <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
                 <div className={`card ${styles.greendb} ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
@@ -217,9 +214,9 @@ class Home extends Component {
             </div>
             <div className={`row d-flex justify-content-between mt-1`}>
 
-              <div className="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                 <div className={`card ${styles.card} ${styles.chartCard}`}>
-                  <div className="row">
+                  <div className={`row ${styles.chartRow}`} >
 
                     <span className={`${styles.chartText}`}>Dönem Ortalamaları</span>
                     <div>
@@ -235,10 +232,9 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                 <div className={`card ${styles.card} ${styles.chartCard}`}>
-                  <div className="row">
-
+                  <div className={`row ${styles.chartRow}`}>
                     <div className={styles.chartText}>
                       Günlük Ders Sayısı
                     </div>
