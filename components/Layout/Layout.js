@@ -20,7 +20,14 @@ class Layout extends Component {
             links={this.props.appBar.links}
             title={this.props.appBar.title}
           ></AppBar>
-          <div style={{ textAlign: "justify", paddingLeft: "8px", paddingRight: "8px" }}>
+          <div
+            style={{
+              textAlign: "justify",
+              paddingLeft: "8px",
+              paddingRight: "8px",
+              paddingTop: "1rem",
+            }}
+          >
             {this.children}
           </div>
         </div>
