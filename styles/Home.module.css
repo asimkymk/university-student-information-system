@@ -153,3 +153,96 @@
 .chartRow {
     width: calc(100% - 65px) !important;
 }
+
+.portalCard {
+    text-align: center;
+    padding: 1rem;
+    display: table;
+    cursor: pointer;
+    position: relative;
+}
+
+.portalCardIcon {
+    color: #002b5c;
+}
+
+@media screen and (min-width: 992px) {
+    .portalCard {
+        height: 50vh;
+        margin: 1rem !important;
+    }
+
+    .portalCardIcon {
+        height: 18vh;
+        transition: all 0.5s ease-in;
+        transition: transform 1.5s ease-out, color 1.5s ease-out;
+
+    }
+
+    .portalCardText {
+        font-size: 2.7vh;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .portalCard {
+        height: 40vh;
+        margin: 1rem !important;
+    }
+
+    .portalCardIcon {
+        height: 13vh;
+        transition: all 0.5s ease-in;
+        transition: transform 1.5s ease-out, color 1.5s ease-out;
+
+    }
+
+    .portalCardText {
+        font-size: 2.5vh;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portalCard {
+        height: calc(33vh - 3rem);
+        margin: 0.5rem !important;
+    }
+
+    .portalCardIcon {
+        height: 11vh;
+        transition: transform 1.5s ease-out, color 1.5s ease-out;
+    }
+
+    .portalCardText {
+        font-size: 2.8vh;
+        margin-top: 1rem;
+    }
+
+
+}
+
+.portalCardInner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.portalCard:hover .portalCardIcon {
+    transform: rotateY(360deg);
+}
+
+.portalCard:hover .li {
+    color: #d5aa41;
+}
+
+.li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.ul {
+    text-align: center;
+}
