@@ -1,13 +1,9 @@
-/*TODO
-REFACTOR BUTTON STYLE
-CUSTOMINPUTTEXT
-CLEAN CODE*/
-
 import loginStyles from "../styles/Login.module.css";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
+import Image from "next/image"
 import {
   faSignIn,
   faIdBadge,
@@ -96,11 +92,16 @@ export default function Login() {
               className="col-md-7 col-lg-5 col-10 mx-auto my-auto"
               style={{ position: "relative", top: "-50px" }}
             >
-              <img
-                className={loginStyles.loginLogo}
-                src="/login/iuclogo.png"
-                alt="Logo"
-              ></img>
+              <div className={loginStyles.loginLogo}>
+                <Image
+                  src="/login/iuclogo.png"
+                  alt="Logo"
+                  layout="responsive"
+                  width="100%"
+                  height="100%"
+                >
+                </Image>
+              </div>
               <div className={loginStyles.loginArea}>
                 <form action=".">
                   <div
