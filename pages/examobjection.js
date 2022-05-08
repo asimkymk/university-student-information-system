@@ -34,13 +34,13 @@ export default function ExamObjection() {
                 </Modal.Header>
                 <form>
                     <Modal.Body>
-                        <label for="ders">Ders Adı</label>
+                        <label htmlFor="ders">Ders Adı</label>
                         <input type="text" className={`form-control ${styles.itirazModal}`} id="ders" disabled></input>
-                        <label for="tur">Sınav Türü</label>
+                        <label htmlFor="tur">Sınav Türü</label>
                         <input type="text" className={`form-control ${styles.itirazModal}`} id="tur" disabled></input>
-                        <label for="not">Sınav Notu</label>
+                        <label htmlFor="not">Sınav Notu</label>
                         <input type="text" className={`form-control ${styles.itirazModal}`} id="not" disabled></input>
-                        <label for="itiraz">İtiraz Nedeni:</label>
+                        <label htmlFor="itiraz">İtiraz Nedeni:</label>
                         <textarea className={`form-control`} id="itiraz" rows="5" placeholder="Lütfen itiraz nedeninizi yazınız."></textarea>
 
                     </Modal.Body>
