@@ -24,22 +24,11 @@
   height: auto;
 }
 .listItem {
-  margin: 0px;
-  font-size: 0.875rem !important;
-  line-height: 1.5;
-  letter-spacing: 0.02857em;
+  padding-top: 0px;
   opacity: 1;
-  text-transform: capitalize;
-  vertical-align: unset;
-  text-decoration: none;
+  background: transparent;
   color: rgb(52, 71, 103);
-  font-weight: 400;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  border-radius: 0.375rem;
-  padding: 0.625rem 1rem;
-  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
 }
 .listItemText {
   margin-right: 12px;
@@ -100,4 +89,92 @@
   background: transparent;
   color: rgb(52, 71, 103);
   box-shadow: none;
+}
+
+.listItem:hover {
+  background-color: rgba(206, 212, 218, 0.2) !important;
+}
+
+.listItem:active {
+  background-color: rgba(206, 212, 218, 0.8) !important;
+}
+.linkItem {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.itemPanel {
+  opacity: 1;
+  background: 0 0;
+  color: #344767;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0.09375rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: none;
+  transition: all 100ms ease-in;
+}
+
+.itemPanel:hover,
+.innerItemList:hover {
+  background-color: rgba(206, 212, 218, 0.2);
+}
+
+.itemPanel:active,
+.innerItemList:active {
+  background-color: rgba(206, 212, 218, 0.8);
+}
+.itemProfile {
+  flex-shrink: 0;
+  min-width: 2rem;
+  min-height: 2rem;
+  color: #344767;
+  border-radius: 0.375rem;
+  display: grid;
+  place-items: center;
+  transition: margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.itemIcon {
+  flex-shrink: 0;
+  min-width: 1rem;
+  min-height: 1rem;
+  color: rgb(52, 71, 103) !important;
+  border-radius: 0.375rem;
+  display: grid;
+  place-items: center;
+  transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.itemBottom {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.625rem;
+  opacity: 1;
+  max-width: 100%;
+  margin-left: 0.625rem;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.itemText {
+  font-weight: 500;
+  font-size: 0.9rem;
 }

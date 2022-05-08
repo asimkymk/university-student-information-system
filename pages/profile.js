@@ -23,6 +23,7 @@ import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Input from "@mui/material/Input";
+import Link from "next/link";
 import FormHelperText from "@mui/material/FormHelperText";
 import {
   Box,
@@ -35,6 +36,7 @@ import {
   TableRow,
   TableCell,
   Avatar,
+  Button,
   Typography,
 } from "@mui/material";
 import styles from "../styles/Profile.module.css";
@@ -58,7 +60,7 @@ const Item = styled(Paper)(({ theme }) => ({
   marginBottom: "1.1rem",
 }));
 
-class Home extends Component {
+class Profile extends Component {
   constructor(props, children) {
     super(props);
     this.props = props;
@@ -78,7 +80,7 @@ class Home extends Component {
         </Head>
         <Layout
           appBar={{
-            links: { "Ana Sayfa": "#", Bilgilerim: "#" },
+            links: { "Ana Sayfa": "/", Bilgilerim: "/profile" },
             title: "Bilgilerim",
           }}
         >
@@ -86,69 +88,111 @@ class Home extends Component {
             <Grid item xs={12} lg={3}>
               <Paper className={styles.listMenu}>
                 <List>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <PersonIcon></PersonIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;Özlük Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <SchoolIcon></SchoolIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;Birim Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <CallIcon></CallIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;İletişim Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <HomeIcon></HomeIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;Adres Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <TranslateIcon></TranslateIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;Hazırlık Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <WorkIcon></WorkIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;Staj Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton className={styles.listItem}>
-                      <LockOpenIcon></LockOpenIcon>
-                      <ListItemText
-                        primary="&nbsp;&nbsp;Giriş Bilgileri"
-                        className={styles.listItemText}
-                      />
-                    </ListItemButton>
-                  </ListItem>
+                  <Link href="#ozlukbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <PersonIcon></PersonIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="Özlük Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
+                  <Link href="#birimbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <SchoolIcon></SchoolIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="Birim Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
+                  <Link href="#iletisimbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <CallIcon></CallIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="İletişim Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
+                  <Link href="#adresbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <HomeIcon></HomeIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="Adres Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
+                  <Link href="#hazirlikbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <TranslateIcon></TranslateIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="Hazırlık Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
+                  <Link href="#stajbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <WorkIcon></WorkIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="Staj Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
+                  <Link href="#girisbilgileri">
+                    <li className={styles.linkItem}>
+                      <Grid className={styles.itemPanel}>
+                        <Grid className={styles.itemProfile}>
+                          <LockOpenIcon></LockOpenIcon>
+                        </Grid>
+                        <Grid className={styles.itemBottom}>
+                          <ListItemText
+                            primary="Giriş Bilgileri"
+                            className={styles.listItemText}
+                          />
+                        </Grid>
+                      </Grid>
+                    </li>
+                  </Link>
                 </List>
               </Paper>
             </Grid>
@@ -156,22 +200,25 @@ class Home extends Component {
               <Grid container>
                 <Grid item xs={12}>
                   <Item>
-                    <Box>
+                    <Box style={{ textAlign: "center", alignItems: "center" }}>
                       <Grid container>
-                        <Grid item xs={3} xl={1}>
+                        <Grid
+                          item
+                          xs={12}
+                          style={{
+                            textAlign: "center",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                          }}
+                        >
                           <Avatar
                             circular
                             src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg"
-                            sx={{ width: "100%", height: "auto" }}
+                            sx={{ width: "15%", height: "auto" }}
                           ></Avatar>
                         </Grid>
-                        <Grid
-                          item
-                          xs={9}
-                          xl={11}
-                          paddingLeft={3}
-                          paddingTop={1}
-                        >
+                        <Grid item xs={12} paddingTop={1}>
                           <Typography variant="h5" className={styles.h5}>
                             Asım Kaymak
                           </Typography>
@@ -189,7 +236,12 @@ class Home extends Component {
                 </Grid>
               </Grid>
               <Grid container>
-                <Grid item xs={12}>
+                <Grid
+                  item
+                  xs={12}
+                  id="ozlukbilgileri"
+                  style={{ scrollMarginTop: "110px" }}
+                >
                   <Item>
                     <Box>
                       <Grid container>
@@ -201,10 +253,10 @@ class Home extends Component {
                         <Grid item xs={12}>
                           <Grid container paddingBottom={2} paddingTop={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="firstname">Ad</InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Asım"
+                                  label="Ad"
                                   disabled
                                   id="firstname"
                                   variant="standard"
@@ -212,10 +264,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="lastname">Soyad</InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Kaymak"
+                                  label="Soyad"
                                   disabled
                                   id="lastname"
                                   variant="standard"
@@ -225,12 +277,10 @@ class Home extends Component {
                           </Grid>
                           <Grid container paddingBottom={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="mothername">
-                                Anne Adı
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Yurdagül"
+                                  label="Anne Adı"
                                   disabled
                                   id="mothername"
                                   variant="standard"
@@ -238,12 +288,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="fathername">
-                                Baba Adı
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Adem"
+                                  label="Baba Adı"
                                   disabled
                                   id="fathername"
                                   variant="standard"
@@ -253,12 +301,10 @@ class Home extends Component {
                           </Grid>
                           <Grid container paddingBottom={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="nationality">
-                                Uyruk
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Türk"
+                                  label="Uyruk"
                                   disabled
                                   id="nationality"
                                   variant="standard"
@@ -266,12 +312,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="idnumber">
-                                Kimlik Numarası
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="45262969542"
+                                  label="Kimlik Numarası"
                                   disabled
                                   id="idnumber"
                                   variant="standard"
@@ -281,10 +325,10 @@ class Home extends Component {
                           </Grid>
                           <Grid container paddingBottom={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="gender">Cinsiyet</InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Erkek"
+                                  label="Cinsiyet"
                                   disabled
                                   id="gender"
                                   variant="standard"
@@ -292,12 +336,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="birthdate">
-                                Doğum Tarihi
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="12.03.2000"
+                                  label="Doğum Tarihi"
                                   disabled
                                   id="idnumber"
                                   variant="standard"
@@ -307,12 +349,10 @@ class Home extends Component {
                           </Grid>
                           <Grid container paddingBottom={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="status">
-                                Medeni Hal
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Bekar"
+                                  label="Medeni Hali"
                                   disabled
                                   id="status"
                                   variant="standard"
@@ -320,12 +360,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="birthplace">
-                                Doğum Yeri
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Bahçelievler"
+                                  label="Doğum Yeri"
                                   disabled
                                   id="birthplace"
                                   variant="standard"
@@ -338,7 +376,12 @@ class Home extends Component {
                     </Box>
                   </Item>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid
+                  item
+                  xs={12}
+                  id="birimbilgileri"
+                  style={{ scrollMarginTop: "110px" }}
+                >
                   <Item>
                     <Box>
                       <Grid container>
@@ -350,10 +393,10 @@ class Home extends Component {
                         <Grid item xs={12}>
                           <Grid container paddingBottom={2} paddingTop={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="faculty">Fakülte</InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Mühendislik Fakültesi"
+                                  label="Fakülte"
                                   disabled
                                   id="faculty"
                                   variant="standard"
@@ -361,12 +404,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="department">
-                                Bölüm
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Bilgisayar Mühendisliği, Lisans Programı"
+                                  label="Bölüm"
                                   disabled
                                   id="department"
                                   variant="standard"
@@ -376,12 +417,10 @@ class Home extends Component {
                           </Grid>
                           <Grid container paddingBottom={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="studentnumber">
-                                Numara
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="1306180004"
+                                  label="Öğrenci Numarası"
                                   disabled
                                   id="studentnumber"
                                   variant="standard"
@@ -389,12 +428,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="learnstatus">
-                                Öğrenim Durumu
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Normal"
+                                  label="Öğrenci Durumu"
                                   disabled
                                   id="learnstatus"
                                   variant="standard"
@@ -404,10 +441,10 @@ class Home extends Component {
                           </Grid>
                           <Grid container paddingBottom={2}>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="statu">Statu</InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Devamlı Öğrenci"
+                                  label="Statu"
                                   disabled
                                   id="statu"
                                   variant="standard"
@@ -415,12 +452,10 @@ class Home extends Component {
                               </FormControl>
                             </Grid>
                             <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="registerType">
-                                Kayıt Şekli
-                              </InputLabel>
                               <FormControl fullWidth>
                                 <TextField
                                   value="Standart Kayıt - ÖSYM"
+                                  label="Kayıt Şekli"
                                   disabled
                                   id="registerType"
                                   variant="standard"
@@ -435,251 +470,399 @@ class Home extends Component {
                 </Grid>
               </Grid>
 
-              <Grid container>
-                <Grid item xs={12}>
-                  <Item>
-                    <Box>
-                      <Grid container>
-                        <Grid item xs={12} paddintBottom={2}>
-                          <Typography variant="h5" className={styles.h5}>
-                            Özlük Bilgileri
-                          </Typography>
+              <Grid
+                item
+                xs={12}
+                id="iletisimbilgileri"
+                style={{ scrollMarginTop: "110px" }}
+              >
+                <Item>
+                  <Box>
+                    <Grid container>
+                      <Grid item xs={12} paddintBottom={2}>
+                        <Typography variant="h5" className={styles.h5}>
+                          İletişim Bilgileri
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Grid container paddingBottom={2} paddingTop={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue="5397129136"
+                                label="Cep Telefonu"
+                                id="cellphone"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue="2126039984"
+                                label="Ev Telefonu"
+                                id="homephone"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Grid container paddingBottom={2} paddingTop={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="firstname">Ad</InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Asım"
-                                  disabled
-                                  id="firstname"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="lastname">Soyad</InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Kaymak"
-                                  disabled
-                                  id="lastname"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="asim.kaymak@ogr.iuc.edu.tr"
+                                label="Kurumsal E-posta"
+                                id="emailofficial"
+                                disabled
+                                variant="standard"
+                              />
+                            </FormControl>
                           </Grid>
-                          <Grid container paddingBottom={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="mothername">
-                                Anne Adı
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Yurdagül"
-                                  disabled
-                                  id="mothername"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="fathername">
-                                Baba Adı
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Adem"
-                                  disabled
-                                  id="fathername"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue="kaymakasm@gmail.com"
+                                label="Kurtarma E-posta"
+                                id="email"
+                                variant="standard"
+                              />
+                            </FormControl>
                           </Grid>
-                          <Grid container paddingBottom={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="nationality">
-                                Uyruk
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Türk"
-                                  disabled
-                                  id="nationality"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="idnumber">
-                                Kimlik Numarası
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="45262969542"
-                                  disabled
-                                  id="idnumber"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
+                        </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue="5397129136"
+                                label="Birincil Yakın Numarası"
+                                id="veliphone"
+                                variant="standard"
+                              />
+                            </FormControl>
                           </Grid>
-                          <Grid container paddingBottom={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="gender">Cinsiyet</InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Erkek"
-                                  disabled
-                                  id="gender"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="birthdate">
-                                Doğum Tarihi
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="12.03.2000"
-                                  disabled
-                                  id="idnumber"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
+                          <Grid
+                            item
+                            xs={12}
+                            sm={6}
+                            paddingRight={2}
+                            paddingTop={3}
+                            textAlign={"end"}
+                          >
+                            <Button color="primary">Güncelle</Button>
                           </Grid>
-                          <Grid container paddingBottom={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="status">
-                                Medeni Hal
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Bekar"
-                                  disabled
-                                  id="status"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="birthplace">
-                                Doğum Yeri
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Bahçelievler"
-                                  disabled
-                                  id="birthplace"
-                                  variant="standard"
-                                />
-                              </FormControl>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Item>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                id="adresbilgileri"
+                style={{ scrollMarginTop: "110px" }}
+              >
+                <Item>
+                  <Box>
+                    <Grid container>
+                      <Grid item xs={12} paddintBottom={2}>
+                        <Typography variant="h5" className={styles.h5}>
+                          Adres Bilgileri
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Grid container paddingBottom={2} paddingTop={2}>
+                          <Grid item xs={12} sm={12} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                id="standard-multiline-static"
+                                label="İkamet"
+                                multiline
+                                defaultValue="Hürriyet Mahallesi Kadıoğlu Sokak No: 5 Daire: 19 Bahçelievler / İstanbul"
+                                variant="standard"
+                              />
+                            </FormControl>
+                            <Grid
+                              item
+                              xs={12}
+                              sm={12}
+                              paddingRight={2}
+                              paddingTop={3}
+                              textAlign={"end"}
+                            >
+                              <Button color="primary">Güncelle</Button>
                             </Grid>
                           </Grid>
                         </Grid>
                       </Grid>
-                    </Box>
-                  </Item>
-                </Grid>
-                <Grid item xs={12}>
-                  <Item>
-                    <Box>
-                      <Grid container>
-                        <Grid item xs={12} paddintBottom={2}>
-                          <Typography variant="h5" className={styles.h5}>
-                            Birim Bilgileri
-                          </Typography>
+                    </Grid>
+                  </Box>
+                </Item>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                id="hazirlikbilgileri"
+                style={{ scrollMarginTop: "110px" }}
+              >
+                <Item>
+                  <Box>
+                    <Grid container>
+                      <Grid item xs={12} paddintBottom={2}>
+                        <Typography variant="h5" className={styles.h5}>
+                          Hazırlık Bilgileri
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Grid container paddingBottom={2} paddingTop={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="Tamamlandı"
+                                disabled
+                                label="Durum"
+                                id="prepstatus"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="89,65"
+                                disabled
+                                label="Sınav Puanı"
+                                id="preppoint"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Grid container paddingBottom={2} paddingTop={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="faculty">Fakülte</InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Mühendislik Fakültesi"
-                                  disabled
-                                  id="faculty"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="department">
-                                Bölüm
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Bilgisayar Mühendisliği, Lisans Programı"
-                                  disabled
-                                  id="department"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="İngilizce"
+                                disabled
+                                label="Dil"
+                                id="preplanguage"
+                                variant="standard"
+                              />
+                            </FormControl>
                           </Grid>
-                          <Grid container paddingBottom={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="studentnumber">
-                                Numara
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="1306180004"
-                                  disabled
-                                  id="studentnumber"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="learnstatus">
-                                Öğrenim Durumu
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Normal"
-                                  disabled
-                                  id="learnstatus"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                          </Grid>
-                          <Grid container paddingBottom={2}>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="statu">Statu</InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Devamlı Öğrenci"
-                                  disabled
-                                  id="statu"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={6} paddingRight={2}>
-                              <InputLabel htmlFor="registerType">
-                                Kayıt Şekli
-                              </InputLabel>
-                              <FormControl fullWidth>
-                                <TextField
-                                  value="Standart Kayıt - ÖSYM"
-                                  disabled
-                                  id="registerType"
-                                  variant="standard"
-                                />
-                              </FormControl>
-                            </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="Başarılı"
+                                disabled
+                                label="Sonuç Bilgisi"
+                                id="prepresult"
+                                variant="standard"
+                              />
+                            </FormControl>
                           </Grid>
                         </Grid>
                       </Grid>
-                    </Box>
-                  </Item>
-                </Grid>
+                    </Grid>
+                  </Box>
+                </Item>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                id="stajbilgileri"
+                style={{ scrollMarginTop: "110px" }}
+              >
+                <Item>
+                  <Box>
+                    <Grid container>
+                      <Grid item xs={12} paddintBottom={2}>
+                        <Typography variant="h5" className={styles.h5}>
+                          Staj Bilgileri
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Grid container paddingBottom={2} paddingTop={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="Tamamlandı"
+                                disabled
+                                label="Staj-1 Durum"
+                                id="staj1status"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="30"
+                                disabled
+                                label="Staj-1 Gün Sayısı"
+                                id="staj1day"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                        </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="ASELSAN A.Ş."
+                                disabled
+                                label="Staj-1 Kurum"
+                                id="staj1place"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="18.07.2022 / 24.08.2022"
+                                disabled
+                                label="Staj-1 Başlangıç ve Bitiş Tarihi"
+                                id="staj1dates"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Grid container paddingBottom={2} paddingTop={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="Tamamlanmadı"
+                                disabled
+                                label="Staj-2 Durum"
+                                id="staj2status"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="-"
+                                disabled
+                                label="Staj-2 Gün Sayısı"
+                                id="staj2day"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                        </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="-"
+                                disabled
+                                label="Staj-2 Kurum"
+                                id="staj2place"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="-"
+                                disabled
+                                label="Staj-2 Başlangıç ve Bitiş Tarihi"
+                                id="staj2dates"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Item>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                id="girisbilgileri"
+                style={{ scrollMarginTop: "110px" }}
+              >
+                <Item>
+                  <Box>
+                    <Grid container>
+                      <Grid item xs={12} paddintBottom={2}>
+                        <Typography variant="h5" className={styles.h5}>
+                          Giriş Bilgileri
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Grid container paddingBottom={2} paddingTop={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                value="45262969542"
+                                label="Kulanıcı Adı"
+                                disabled
+                                id="username"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue="kanarya10"
+                                label="Şifre"
+                                id="password"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                        </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue=""
+                                label="Yeni Şifre"
+                                id="newpassword"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} paddingRight={2}>
+                            <FormControl fullWidth>
+                              <TextField
+                                defaultValue=""
+                                label="Yeni Şifre (Tekrar)"
+                                id="newpasswordagain"
+                                variant="standard"
+                              />
+                            </FormControl>
+                          </Grid>
+                        </Grid>
+                        <Grid container paddingBottom={2}>
+                          <Grid item xs={12} sm={6} paddingRight={2}></Grid>
+                          <Grid
+                            item
+                            xs={12}
+                            sm={6}
+                            paddingRight={2}
+                            paddingTop={3}
+                            textAlign={"end"}
+                          >
+                            <Button color="primary">Güncelle</Button>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Item>
               </Grid>
             </Grid>
           </Grid>
@@ -689,4 +872,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Profile;
