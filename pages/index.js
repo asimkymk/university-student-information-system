@@ -53,7 +53,7 @@ class Home extends Component {
 
   componentDidMount() {
     if (this.props.isLogin == false) {
-      this.router.push("/login/");
+      this.router.push("/loginportal/");
     }
   }
   render() {
