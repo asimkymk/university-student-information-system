@@ -69,7 +69,7 @@ class Home extends Component {
 
             <div className="row d-flex justify-content-between">
               <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
-                <div className={`card ${styles.reddb} ${styles.card}`}>
+                <div className={`card ${styles.card}`}>
                   <div className="row ">
                     <div className={`col-2  my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.blue}`}>
@@ -92,7 +92,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
-                <div className={`card ${styles.bluedb} ${styles.card}`}>
+                <div className={`card ${styles.card}`}>
                   <div className={`row`}>
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.red} mx-auto my-auto`}>
@@ -116,7 +116,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
-                <div className={`card ${styles.greendb} ${styles.card}`}>
+                <div className={`card ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.green}`}>
@@ -139,7 +139,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
-                <div className={`card ${styles.greendb} ${styles.card}`}>
+                <div className={`card ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.orange}`}>
@@ -163,7 +163,7 @@ class Home extends Component {
               </div>
 
               <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
-                <div className={`card ${styles.greendb} ${styles.card}`}>
+                <div className={`card ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.purple}`}>
@@ -187,7 +187,7 @@ class Home extends Component {
               </div>
 
               <div className={`col-xl-4 col-lg-6 col-md-6 col-sm-12`}>
-                <div className={`card ${styles.greendb} ${styles.card}`}>
+                <div className={`card ${styles.card}`}>
                   <div className="row">
                     <div className={`col-2 my-auto mx-auto`}>
                       <div className={`${styles.squareTop} ${styles.yellow}`}>
