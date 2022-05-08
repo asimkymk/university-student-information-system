@@ -115,3 +115,7 @@ canvas {
   width: 100% !important;
   height: 100% !important;
 }
+
+.vw-85 {
+  width: 85vw !important;
+}
