@@ -29,7 +29,7 @@
   margin: 1rem;
   border-radius: 0.75rem;
   border: none;
-  z-index: 99999;
+  z-index: 1;
 }
 
 .sideBar::-webkit-scrollbar {
@@ -218,6 +218,7 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+  font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
@@ -375,7 +376,6 @@
   padding-left: 24px;
   opacity: 1;
   text-transform: uppercase;
-  vertical-align: unset;
   text-decoration: none;
   color: rgb(52, 71, 103);
   font-weight: 700;

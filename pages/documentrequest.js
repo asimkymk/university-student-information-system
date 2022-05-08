@@ -37,7 +37,7 @@ export default function DocumentRequest() {
                 </Modal.Header>
                 <form>
                     <Modal.Body>
-                        <label for="tur">Belge Türü</label>
+                        <label htmlFor="tur">Belge Türü</label>
                         <select
                             id="tur"
                             className={`form-select ${styles.itirazModal}`}
@@ -61,9 +61,9 @@ export default function DocumentRequest() {
                             <option value="dcdbe">Transkript E-İmzalı (İngilizce)</option>
 
                         </select>
-                        <label for="yer">Verilecek Kişi/Kurum</label>
+                        <label htmlFor="yer">Verilecek Kişi/Kurum</label>
                         <input type="text" className={`form-control ${styles.itirazModal}`} id="tur"></input>
-                        <label for="adet">Belge Adedi</label>
+                        <label htmlFor="adet">Belge Adedi</label>
                         <input type="text" className={`form-control ${styles.itirazModal}`} id="not"></input>
 
                     </Modal.Body>

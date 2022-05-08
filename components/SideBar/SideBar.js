@@ -20,6 +20,7 @@ import {
   faFolderPlus,
   faMarker,
   faQuestionCircle,
+  faHome
 } from "@fortawesome/free-solid-svg-icons";
 let profileStatus = false;
 let lessonStatus = false;
@@ -102,10 +103,12 @@ class SideBar extends Component {
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
-                  <img
+                  <Image
                     src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
                     className={styles.circularAvatarImage}
-                  ></img>
+                    alt="Avatar"
+                    layout="fill"
+                  ></Image>
                 </div>
               </div>
               <div className={styles.itemBottom}>
@@ -177,8 +180,26 @@ class SideBar extends Component {
             </div>
           </div>
           <hr className={styles.seperator}></hr>
+          <span className={styles.pages}>ÖĞRENCİ BİLGİ SİSTEMİ</span>
+          <Link href="/" passHref>
+            <li className={styles.linkItem}>
+              <div className={styles.itemPanel}>
+                <div className={styles.itemProfile}>
+                  <FontAwesomeIcon
+                    icon={faHome}
+                    className={styles.itemIcon}
+                  />
+                </div>
+                <div className={styles.itemBottom}>
+                  <span className={styles.itemText}>Ana Sayfa</span>
+                </div>
+              </div>
+            </li>
+          </Link>
 
-          <span className={styles.pages}>Ders İşlemlerİ</span>
+          <hr className={styles.seperator}></hr>
+
+          <span className={styles.pages}>DERS İŞLEMLERİ</span>
           <li
             className={styles.linkItem}
             id="lessonShow"
@@ -340,7 +361,7 @@ class SideBar extends Component {
           </li>
           <hr className={styles.seperator}></hr>
 
-          <span className={styles.pages}>İnteraktİf</span>
+          <span className={styles.pages}>İNTERAKTİF</span>
 
           <li
             className={styles.linkItem}
@@ -443,7 +464,7 @@ class SideBar extends Component {
             </div>
           </li>
         </ul>
-      </div>
+      </div >
     );
   }
 }
