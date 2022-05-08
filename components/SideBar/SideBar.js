@@ -77,7 +77,7 @@ class SideBar extends Component {
   }
   render() {
     return (
-      <div className={styles.sideBar}>
+      <div className={styles.sideBar} id="leftPanel">
         <div className={styles.logoPanel}>
           <div className={styles.logoImage}>
             <Image
