@@ -13,9 +13,11 @@ class Layout extends Component {
   render() {
     return (
       <div className={styles.main}>
-        <SideBar></SideBar>
+        <div id="leftPanel">
+          <SideBar></SideBar>
+        </div>
 
-        <div className={styles.rightPanel}>
+        <div className={styles.rightPanel} id="rightPanel">
           <AppBar
             links={this.props.appBar.links}
             title={this.props.appBar.title}

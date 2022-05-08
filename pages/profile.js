@@ -60,7 +60,7 @@ const Item = styled(Paper)(({ theme }) => ({
   marginBottom: "1.1rem",
 }));
 
-class Home extends Component {
+class Profile extends Component {
   constructor(props, children) {
     super(props);
     this.props = props;
@@ -80,7 +80,7 @@ class Home extends Component {
         </Head>
         <Layout
           appBar={{
-            links: { "Ana Sayfa": "#", Bilgilerim: "#" },
+            links: { "Ana Sayfa": "/", Bilgilerim: "/profile" },
             title: "Bilgilerim",
           }}
         >
@@ -872,4 +872,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Profile;

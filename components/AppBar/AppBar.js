@@ -8,7 +8,8 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import Badge from "@mui/material/Badge";
 import $ from "jquery";
 import React, { useEffect, Component } from "react";
-
+import MenuIcon from "@mui/icons-material/Menu";
+var status = false;
 class AppBar extends Component {
   constructor({ props }) {
     super(props);
@@ -56,15 +57,43 @@ class AppBar extends Component {
                       <span className={styles.PanelLink}>{key}</span>
                     </a>
                   </li>,
-                  <li key={Math.random() * 95} className={styles.PanelListSeperator}>/</li>,
+                  <li
+                    key={Math.random() * 95}
+                    className={styles.PanelListSeperator}
+                  >
+                    /
+                  </li>,
                 ])}
               </ol>
             </nav>
             <h6 className={styles.PanelPageText}>{this.props.title}</h6>
           </div>
           <div className={styles.PanelItem}>
-            <IconButton className={styles.PanelIcon}>
-              <AccountCircleIcon />
+            <IconButton
+              className={styles.PanelIcon}
+              onClick={() => {
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                  if (status) {
+                    $("#leftPanel").css("display", "flex");
+                    $("#rightPanel").css("margin-left", "1rem");
+                  } else {
+                    $("#leftPanel").css("display", "none");
+                    $("#rightPanel").css("margin-left", "1rem");
+                  }
+                } else {
+                  if (status) {
+                    $("#leftPanel").css("display", "flex");
+                    $("#rightPanel").css("margin-left", "290px");
+                  } else {
+                    $("#leftPanel").css("display", "none");
+                    $("#rightPanel").css("margin-left", "1rem");
+                  }
+                }
+
+                status = !status;
+              }}
+            >
+              <MenuIcon />
             </IconButton>
             <IconButton className={styles.PanelIcon}>
               <Badge badgeContent={4} color="error">
