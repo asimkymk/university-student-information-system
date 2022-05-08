@@ -15,12 +15,19 @@ class Layout extends Component {
       <div className={styles.main}>
         <SideBar></SideBar>
 
-        <div className={styles.rightPanel}>
+        <div className={styles.rightPanel} id="rightPanel">
           <AppBar
             links={this.props.appBar.links}
             title={this.props.appBar.title}
           ></AppBar>
-          <div style={{ textAlign: "justify", paddingLeft: "8px", paddingRight: "8px" }}>
+          <div
+            style={{
+              textAlign: "justify",
+              paddingLeft: "8px",
+              paddingRight: "8px",
+              paddingTop: "1rem",
+            }}
+          >
             {this.children}
           </div>
         </div>

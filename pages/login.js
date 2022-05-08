@@ -1,13 +1,9 @@
-/*TODO
-REFACTOR BUTTON STYLE
-CUSTOMINPUTTEXT
-CLEAN CODE*/
-
 import loginStyles from "../styles/Login.module.css";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
+import Image from "next/image"
 import {
   faSignIn,
   faIdBadge,
@@ -96,13 +92,18 @@ export default function Login() {
               className="col-md-7 col-lg-5 col-10 mx-auto my-auto"
               style={{ position: "relative", top: "-50px" }}
             >
-              <img
-                className={loginStyles.loginLogo}
-                src="/login/iuclogo.png"
-                alt="Logo"
-              ></img>
+              <div className={loginStyles.loginLogo}>
+                <Image
+                  src="/login/iuclogo.png"
+                  alt="Logo"
+                  layout="responsive"
+                  width="100%"
+                  height="100%"
+                >
+                </Image>
+              </div>
               <div className={loginStyles.loginArea}>
-                <form>
+                <form action=".">
                   <div
                     className={`input-group mb-3 mt-5 ${loginStyles.inputGroup}`}
                   >
@@ -120,6 +121,7 @@ export default function Login() {
                     <input
                       type="text"
                       maxLength="11"
+                      name="tc"
                       id="tc"
                       className={`form-control ${loginStyles.formControl}`}
                       placeholder="T.C. Kimlik Numarası"
@@ -151,6 +153,7 @@ export default function Login() {
                     <input
                       type="password"
                       id="password"
+                      name="password"
                       className={`form-control ${loginStyles.formControl}`}
                       placeholder="Şifre"
                       aria-describedby="basic-addon2"
@@ -182,6 +185,7 @@ export default function Login() {
                     <button
                       id="btn1"
                       type="submit"
+                      formMethod="post"
                       className={`button mt-3 mb-3 ${loginStyles.button}`}
                       style={{
                         marginLeft: "12px",

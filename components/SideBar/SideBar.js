@@ -67,17 +67,28 @@ class SideBar extends Component {
     $("#requestExpandLess").toggleClass(styles.itemExpand);
     $("#requestExpandMore").toggleClass(styles.itemExpand);
   }
+  componentDidMount() {
+    $(".link").click(function () {
+      profileStatus = false;
+      lessonStatus = false;
+      requestStatus = false;
+      console.log("ok");
+    });
+  }
   render() {
     return (
-      <div className={styles.sideBar}>
+      <div className={styles.sideBar} id="leftPanel">
         <div className={styles.logoPanel}>
           <div className={styles.logoImage}>
-            <Image
-              width="100%"
-              height="100%"
-              src="/login/iuclogo.png"
-              layout="responsive"
-            />
+            <a href=".">
+              <Image
+                width="100%"
+                height="100%"
+                src="/login/iuclogo.png"
+                layout="responsive"
+                priority="true"
+                alt="logo"
+              /></a>
           </div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
@@ -128,8 +139,8 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                  <Link href="/profile">
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -148,7 +159,7 @@ class SideBar extends Component {
 
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -204,7 +215,7 @@ class SideBar extends Component {
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
                   <Link href="/grade">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -223,7 +234,7 @@ class SideBar extends Component {
 
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -241,7 +252,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -259,7 +270,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -277,7 +288,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -295,7 +306,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -369,8 +380,8 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                  <Link href="/documentrequest">
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
@@ -387,8 +398,8 @@ class SideBar extends Component {
                   </Link>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a style={{ textDecoration: "none" }}>
+                  <Link href="/examobjection">
+                    <a className="link" style={{ textDecoration: "none" }}>
                       <li className={styles.innerItemList}>
                         <div
                           className={styles.innerItemContainer}
