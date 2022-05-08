@@ -29,6 +29,7 @@
   margin: 1rem;
   border-radius: 0.75rem;
   border: none;
+  z-index: 99999;
 }
 
 .sideBar::-webkit-scrollbar {
@@ -73,12 +74,10 @@
   margin: 1rem 0;
   border-bottom: none;
   opacity: 0.25;
-  background-image: linear-gradient(
-    to right,
-    rgba(52, 71, 103, 0),
-    rgba(52, 71, 103, 0.4),
-    rgba(52, 71, 103, 0)
-  ) !important;
+  background-image: linear-gradient(to right,
+      rgba(52, 71, 103, 0),
+      rgba(52, 71, 103, 0.4),
+      rgba(52, 71, 103, 0)) !important;
 }
 
 .linkList {
