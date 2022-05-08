@@ -88,7 +88,7 @@ class Profile extends Component {
             <Grid item xs={12} lg={3}>
               <Paper className={styles.listMenu}>
                 <List>
-                  <Link href="#ozlukbilgileri">
+                  <Link href="#ozlukbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
@@ -103,7 +103,7 @@ class Profile extends Component {
                       </Grid>
                     </li>
                   </Link>
-                  <Link href="#birimbilgileri">
+                  <Link href="#birimbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
@@ -118,7 +118,7 @@ class Profile extends Component {
                       </Grid>
                     </li>
                   </Link>
-                  <Link href="#iletisimbilgileri">
+                  <Link href="#iletisimbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
@@ -133,7 +133,7 @@ class Profile extends Component {
                       </Grid>
                     </li>
                   </Link>
-                  <Link href="#adresbilgileri">
+                  <Link href="#adresbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
@@ -148,7 +148,7 @@ class Profile extends Component {
                       </Grid>
                     </li>
                   </Link>
-                  <Link href="#hazirlikbilgileri">
+                  <Link href="#hazirlikbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
@@ -163,7 +163,7 @@ class Profile extends Component {
                       </Grid>
                     </li>
                   </Link>
-                  <Link href="#stajbilgileri">
+                  <Link href="#stajbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
@@ -178,7 +178,7 @@ class Profile extends Component {
                       </Grid>
                     </li>
                   </Link>
-                  <Link href="#girisbilgileri">
+                  <Link href="#girisbilgileri" passHref>
                     <li className={styles.linkItem}>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
