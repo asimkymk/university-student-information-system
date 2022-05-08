@@ -11,8 +11,20 @@
   background-position: top;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
+  animation: fadeInAnimation ease-out .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .loginArea {
@@ -22,6 +34,7 @@
   backdrop-filter: blur(5px);
   padding: 20px;
   padding-top: 60px;
+  animation: fadeInAnimation ease-out .8s;
 }
 
 .containerText {
@@ -40,6 +53,8 @@
   width: 140px;
   transition: 0.15s ease-out;
   box-shadow: 0px 0px 0px 15px #d5aa41 inset;
+  animation: fadeInAnimation ease-out .8s;
+
 }
 
 .loginLogo:hover {
