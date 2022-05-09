@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <>
                 <Head>
-                    <title>Doküman Paylaşımı - İÜC ÖBS</title>
+                    <title>Ödev ve Doküman - İÜC ÖBS</title>
                 </Head>
                 <Layout appBar={{ links: { "Ana Sayfa": "/", "Ödev ve Döküman Paylaşımı": "/documents" }, title: "Ödev ve Döküman Paylaşımı" }}>
                     <section className="ftco-section">

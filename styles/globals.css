@@ -237,3 +237,7 @@ canvas {
 .container {
   width: 100% !important
 }
+
+.MuiTable-root {
+  min-width: 0px !important;
+}

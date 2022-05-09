@@ -97,20 +97,22 @@ class Home extends Component {
                     <title>Ders Programı - İÜC ÖBS</title>
                 </Head>
                 <Layout appBar={{ links: { "Ana Sayfa": "/", "Ders Programı": "/courseschedule" }, title: "Ders Programı" }}>
-                    <div className="container">
+                    <div className="container-fluid" style={{ width: "100%" }}>
                         <Item>
                             <Scheduler
                                 data={appointments}
                                 locale={"tr"}
-                                height={"100%"}
-                                minWidth={1}
+                                style={{ minWidth: "0" }}
+
                             >
                                 <WeekView
                                     excludedDays={[0, 6]}
                                     startDayHour={7.68}
                                     endDayHour={20.20}
                                     cellDuration={50}
-
+                                    timeTableCellComponent={TimeTableCell}
+                                    dayScaleCellComponent={DayScaleCell}
+                                    style={{ minWidth: "0" }}
                                 />
                                 <Appointments />
                                 <AppointmentTooltip

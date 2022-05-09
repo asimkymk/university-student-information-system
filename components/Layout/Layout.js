@@ -1,6 +1,6 @@
 import styles from "../../styles/Layout.module.css";
 
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 
 import AppBar from "../AppBar/AppBar";
 import SideBar from "../SideBar/SideBar";
