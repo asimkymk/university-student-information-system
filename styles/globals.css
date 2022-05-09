@@ -17,3 +17,85 @@ a {
 * {
   box-sizing: border-box;
 }
+.table-wrap {
+  overflow-x: scroll; }
+
+.table {
+  min-width: 1000px !important;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29); }
+  @media (prefers-reduced-motion: reduce) {
+    .table {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; } }
+  .table thead th {
+    border: none;
+    padding: 30px;
+    font-size: 14px;
+    color: #000;
+    border-bottom: 2px solid #ececec;
+    background: #fff; }
+  .table tbody tr {
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: #fff;
+    border-bottom: 2px solid #ececec;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    @media (prefers-reduced-motion: reduce) {
+      .table tbody tr {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; } }
+  .table tbody th, .table tbody td {
+    border: none;
+    padding: 30px;
+    font-size: 14px; }
+  .table tbody td.acc {
+    background: #f3f3f3;
+    border: none; }
+  .table tbody td .fa {
+    font-size: 12px;
+    color: #28a745; }
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f062";
+  font-family: "FontAwesome";
+  font-style: normal;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-toggle="collapse"] .fa:before {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; } }
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f063";
+  font-family: "FontAwesome";
+  font-style: normal;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-toggle="collapse"].collapsed .fa:before {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; } }
+
+[data-toggle="collapse"] {
+  background: #ececec !important; }
+
+[data-toggle="collapse"].collapsed {
+  background: #fff !important; }
+  [data-toggle="collapse"].collapsed:hover {
+    background: #ececec !important;
+    border-bottom: 2px solid #ececec; }

@@ -1,0 +1,32 @@
+export const appointments = [
+   {
+      title: 'Computer Networks',
+      startDate: new Date(2022, 4, 9, 14, 0),
+      endDate: new Date(2022, 4, 9, 17, 35),
+   },
+   {
+      title: 'Görüntü İşleme',
+      startDate: new Date(2022, 4, 10, 12, 10),
+      endDate: new Date(2022, 4, 10, 14, 50),
+   },
+   {
+      title: 'Software Engineering Uygulama',
+      startDate: new Date(2022, 4, 10, 14, 55),
+      endDate: new Date(2022, 4, 10, 16, 40),
+   },
+   {
+      title: 'Software Engineering',
+      startDate: new Date(2022, 4, 11, 9, 25),
+      endDate: new Date(2022, 4, 11, 12, 5),
+   },
+   {
+      title: 'Bilgisayar Mimarisi',
+      startDate: new Date(2022, 4, 11, 14, 55),
+      endDate: new Date(2022, 4, 11, 17, 35),
+   },
+   {
+      title: 'Web Programlama',
+      startDate: new Date(2022, 4, 12, 11, 15),
+      endDate: new Date(2022, 4, 12, 13, 55),
+   },
+];
