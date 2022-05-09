@@ -262,7 +262,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/assignments" passHref>
+                    <Link href="/documents" passHref>
                       <div
                         className={styles.innerItemContainer}
                         id={styles.odev}
