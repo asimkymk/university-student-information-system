@@ -24,7 +24,7 @@ class Home extends Component {
         </Head>
         <Layout
           appBar={{
-            links: { "Ana Sayfa": "#", "Not Bilgisi": "#" },
+            links: { "Ana Sayfa": "/", "Not Bilgisi": "/grade" },
             title: "Not Bilgisi",
           }}
         ></Layout>
