@@ -2,16 +2,15 @@ import Head from "next/head";
 import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import $ from "jquery";
-import Button from "@mui/material/Button";
 class Home extends Component {
 
     render() {
         return (
             <>
                 <Head>
-                    <title>Ana Sayfa - İÜC ÖBS</title>
+                    <title>Doküman Paylaşımı - İÜC ÖBS</title>
                 </Head>
-                <Layout appBar={{ links: { "Ana Sayfa": "#", "Ödev ve Döküman Paylaşımı": "#" }, title: "Ödev ve Döküman Paylaşımı" }}>
+                <Layout appBar={{ links: { "Ana Sayfa": "/", "Ödev ve Döküman Paylaşımı": "/documents" }, title: "Ödev ve Döküman Paylaşımı" }}>
                     <section className="ftco-section">
                         <div className="container">
                             <div className="row justify-content-center">
@@ -46,7 +45,7 @@ class Home extends Component {
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="6" id="collapseOne" className="collapse show acc" data-parent="#accordion">
+                                                    <td colSpan="6" id="collapseOne" className="collapse show acc" data-parent="#accordion">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
                                                     </td>
                                                 </tr>
@@ -65,7 +64,7 @@ class Home extends Component {
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="6" id="collapseTwo" className="collapse acc" data-parent="#accordion">
+                                                    <td colSpan="6" id="collapseTwo" className="collapse acc" data-parent="#accordion">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
                                                     </td>
                                                 </tr>
@@ -81,7 +80,7 @@ class Home extends Component {
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="6" id="collapseThree" className="collapse acc" data-parent="#accordion">
+                                                    <td colSpan="6" id="collapseThree" className="collapse acc" data-parent="#accordion">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
                                                     </td>
                                                 </tr>
@@ -97,7 +96,7 @@ class Home extends Component {
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="6" id="collapseFour" className="collapse acc" data-parent="#accordion">
+                                                    <td colSpan="6" id="collapseFour" className="collapse acc" data-parent="#accordion">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
                                                     </td>
                                                 </tr>

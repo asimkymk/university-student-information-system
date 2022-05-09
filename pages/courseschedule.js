@@ -95,9 +95,9 @@ class Home extends Component {
         return (
             <>
                 <Head>
-                    <title>Ana Sayfa - İÜC ÖBS</title>
+                    <title>Ders Programı - İÜC ÖBS</title>
                 </Head>
-                <Layout appBar={{ links: { "Ana Sayfa": "#", "Ders Programı": "#" }, title: "Ders Programı" }}>
+                <Layout appBar={{ links: { "Ana Sayfa": "/", "Ders Programı": "/courseschedule" }, title: "Ders Programı" }}>
                     <Item>
                         <Scheduler
                             data={appointments}
