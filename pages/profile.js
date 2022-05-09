@@ -88,8 +88,9 @@ class Profile extends Component {
             <Grid item xs={12} lg={3}>
               <Paper className={styles.listMenu}>
                 <List>
-                  <Link href="#ozlukbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                  <li className={styles.linkItem}>
+                    <Link href="#ozlukbilgileri" passHref>
+
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <PersonIcon></PersonIcon>
@@ -101,10 +102,12 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
-                  <Link href="#birimbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                    </Link>
+
+                  </li>
+
+                  <li className={styles.linkItem}>
+                    <Link href="#birimbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <SchoolIcon></SchoolIcon>
@@ -116,10 +119,12 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
-                  <Link href="#iletisimbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                    </Link>
+                  </li>
+
+
+                  <li className={styles.linkItem}>
+                    <Link href="#iletisimbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <CallIcon></CallIcon>
@@ -131,10 +136,12 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
-                  <Link href="#adresbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                    </Link>
+                  </li>
+
+
+                  <li className={styles.linkItem}>
+                    <Link href="#adresbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <HomeIcon></HomeIcon>
@@ -146,10 +153,12 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
-                  <Link href="#hazirlikbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                    </Link>
+                  </li>
+
+
+                  <li className={styles.linkItem}>
+                    <Link href="#hazirlikbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <TranslateIcon></TranslateIcon>
@@ -161,10 +170,12 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
-                  <Link href="#stajbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                    </Link>
+                  </li>
+
+
+                  <li className={styles.linkItem}>
+                    <Link href="#stajbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <WorkIcon></WorkIcon>
@@ -176,10 +187,12 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
-                  <Link href="#girisbilgileri" passHref>
-                    <li className={styles.linkItem}>
+                    </Link>
+                  </li>
+
+
+                  <li className={styles.linkItem}>
+                    <Link href="#girisbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <LockOpenIcon></LockOpenIcon>
@@ -191,8 +204,9 @@ class Profile extends Component {
                           />
                         </Grid>
                       </Grid>
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
+
                 </List>
               </Paper>
             </Grid>
@@ -213,7 +227,6 @@ class Profile extends Component {
                           }}
                         >
                           <Avatar
-                            circular
                             src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg"
                             sx={{ width: "15%", height: "auto" }}
                           ></Avatar>
@@ -225,7 +238,6 @@ class Profile extends Component {
                           <Typography
                             variant="span"
                             className={styles.span}
-                            button
                           >
                             Bilgisayar Mühendisliği
                           </Typography>
@@ -245,7 +257,7 @@ class Profile extends Component {
                   <Item>
                     <Box>
                       <Grid container>
-                        <Grid item xs={12} paddintBottom={2}>
+                        <Grid item xs={12} paddingBottom={2}>
                           <Typography variant="h5" className={styles.h5}>
                             Özlük Bilgileri
                           </Typography>
@@ -385,7 +397,7 @@ class Profile extends Component {
                   <Item>
                     <Box>
                       <Grid container>
-                        <Grid item xs={12} paddintBottom={2}>
+                        <Grid item xs={12} paddingBottom={2}>
                           <Typography variant="h5" className={styles.h5}>
                             Birim Bilgileri
                           </Typography>
@@ -479,7 +491,7 @@ class Profile extends Component {
                 <Item>
                   <Box>
                     <Grid container>
-                      <Grid item xs={12} paddintBottom={2}>
+                      <Grid item xs={12} paddingBottom={2}>
                         <Typography variant="h5" className={styles.h5}>
                           İletişim Bilgileri
                         </Typography>
@@ -566,7 +578,7 @@ class Profile extends Component {
                 <Item>
                   <Box>
                     <Grid container>
-                      <Grid item xs={12} paddintBottom={2}>
+                      <Grid item xs={12} paddingBottom={2}>
                         <Typography variant="h5" className={styles.h5}>
                           Adres Bilgileri
                         </Typography>
@@ -609,7 +621,7 @@ class Profile extends Component {
                 <Item>
                   <Box>
                     <Grid container>
-                      <Grid item xs={12} paddintBottom={2}>
+                      <Grid item xs={12} paddingBottom={2}>
                         <Typography variant="h5" className={styles.h5}>
                           Hazırlık Bilgileri
                         </Typography>
@@ -677,7 +689,7 @@ class Profile extends Component {
                 <Item>
                   <Box>
                     <Grid container>
-                      <Grid item xs={12} paddintBottom={2}>
+                      <Grid item xs={12} paddingBottom={2}>
                         <Typography variant="h5" className={styles.h5}>
                           Staj Bilgileri
                         </Typography>
@@ -795,7 +807,7 @@ class Profile extends Component {
                 <Item>
                   <Box>
                     <Grid container>
-                      <Grid item xs={12} paddintBottom={2}>
+                      <Grid item xs={12} paddingBottom={2}>
                         <Typography variant="h5" className={styles.h5}>
                           Giriş Bilgileri
                         </Typography>

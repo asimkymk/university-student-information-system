@@ -98,9 +98,8 @@ class SideBar extends Component {
           <li
             className={styles.linkItem}
             id="profileShow"
-            onClick={this._profileLinkListener}
           >
-            <div className={styles.itemPanel}>
+            <div className={styles.itemPanel} onClick={this._profileLinkListener}>
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
                   <Image
@@ -142,47 +141,44 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <Link href="/profile">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.profilim}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Bilgilerim
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                    </a>
-                  </Link>
-                </ul>
 
-                <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.cikis}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>Çıkış</span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/profile" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.profilim}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Bilgilerim
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+                <ul className={styles.innerItem}>
+
+                  <li className={styles.innerItemList}>
+                    <Link href="/loginportal" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.cikis}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>Çıkış</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>ÖĞRENCİ BİLGİ SİSTEMİ</span>
-          <Link href="/" passHref>
-            <li className={styles.linkItem}>
+          <li className={styles.linkItem}>
+            <Link href="/" passHref>
               <div className={styles.itemPanel}>
                 <div className={styles.itemProfile}>
                   <FontAwesomeIcon
@@ -194,18 +190,15 @@ class SideBar extends Component {
                   <span className={styles.itemText}>Ana Sayfa</span>
                 </div>
               </div>
-            </li>
-          </Link>
-
+            </Link>
+          </li>
           <hr className={styles.seperator}></hr>
-
           <span className={styles.pages}>DERS İŞLEMLERİ</span>
           <li
             className={styles.linkItem}
             id="lessonShow"
-            onClick={this._lessonLinkListener}
           >
-            <div className={styles.itemPanel}>
+            <div className={styles.itemPanel} onClick={this._lessonLinkListener}>
               <div className={styles.itemProfile}>
                 <FontAwesomeIcon
                   icon={faBookOpenReader}
@@ -235,140 +228,127 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <Link href="/grade">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.notbilgisi}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Not Bilgisi
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                    </a>
-                  </Link>
-                </ul>
 
-                <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.dersprogrami}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Ders Programı
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/grade" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.notbilgisi}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Not Bilgisi
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.odev}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Ödev ve Döküman
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/courseschedule" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.dersprogrami}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Ders Programı
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.notkarti}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Not Kartı
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/assignments" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.odev}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Ödev ve Döküman
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.derslistesi}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Ders Listesi
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/notecard" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.notkarti}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Not Kartı
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="#">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.mufredat}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Müfredat Listesi
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/courselist" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.derslistesi}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Ders Listesi
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+                <ul className={styles.innerItem}>
+                  <li className={styles.innerItemList}>
+                    <Link href="/syllabus" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.mufredat}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Müfredat Listesi
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <li className={styles.linkItem}>
-            <div className={styles.itemPanel}>
-              <div className={styles.itemProfile}>
-                <FontAwesomeIcon
-                  icon={faFolderPlus}
-                  className={styles.itemIcon}
-                />
+            <Link href="/coursepickdrop" passHref>
+              <div className={styles.itemPanel}>
+                <div className={styles.itemProfile}>
+                  <FontAwesomeIcon
+                    icon={faFolderPlus}
+                    className={styles.itemIcon}
+                  />
+                </div>
+                <div className={styles.itemBottom}>
+                  <span className={styles.itemText}>Ders Alma ve Kayıt</span>
+                </div>
               </div>
-              <div className={styles.itemBottom}>
-                <span className={styles.itemText}>Ders Alma ve Kayıt</span>
-              </div>
-            </div>
+            </Link>
           </li>
           <hr className={styles.seperator}></hr>
-
           <span className={styles.pages}>İNTERAKTİF</span>
-
           <li
             className={styles.linkItem}
             id="requestShow"
-            onClick={this._requestLinkListener}
           >
-            <div className={styles.itemPanel}>
+            <div className={styles.itemPanel} onClick={this._requestLinkListener}>
               <div className={styles.itemProfile}>
                 <FontAwesomeIcon
                   icon={faQuestionCircle}
@@ -401,67 +381,66 @@ class SideBar extends Component {
             <div className={styles.itemEnteredVertical}>
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
-                  <Link href="/documentrequest">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.belge}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Belge Talebi
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/documentrequest" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.belge}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Belge Talebi
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
                 <ul className={styles.innerItem}>
-                  <Link href="/examobjection">
-                    <a className="link" style={{ textDecoration: "none" }}>
-                      <li className={styles.innerItemList}>
-                        <div
-                          className={styles.innerItemContainer}
-                          id={styles.sinav}
-                        >
-                          <div className={styles.innerItemTextContainer}>
-                            <span className={styles.innerItemText}>
-                              Sınav İtiraz
-                            </span>
-                          </div>
+                  <li className={styles.innerItemList}>
+                    <Link href="/examobjection" passHref>
+                      <div
+                        className={styles.innerItemContainer}
+                        id={styles.sinav}
+                      >
+                        <div className={styles.innerItemTextContainer}>
+                          <span className={styles.innerItemText}>
+                            Sınav İtiraz
+                          </span>
                         </div>
-                      </li>
-                    </a>
-                  </Link>
+                      </div>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-
           <li className={styles.linkItem}>
-            <div className={styles.itemPanel}>
-              <div className={styles.itemProfile}>
-                <FontAwesomeIcon icon={faMarker} className={styles.itemIcon} />
+            <Link href="/application" passHref>
+              <div className={styles.itemPanel}>
+                <div className={styles.itemProfile}>
+                  <FontAwesomeIcon icon={faMarker} className={styles.itemIcon} />
+                </div>
+                <div className={styles.itemBottom}>
+                  <span className={styles.itemText}>Başvuru</span>
+                </div>
               </div>
-              <div className={styles.itemBottom}>
-                <span className={styles.itemText}>Başvuru</span>
-              </div>
-            </div>
+            </Link>
           </li>
           <li className={styles.linkItem}>
-            <div className={styles.itemPanel}>
-              <div className={styles.itemProfile}>
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className={styles.itemIcon}
-                />
+            <Link href="/messages" passHref>
+              <div className={styles.itemPanel}>
+                <div className={styles.itemProfile}>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className={styles.itemIcon}
+                  />
+                </div>
+                <div className={styles.itemBottom}>
+                  <span className={styles.itemText}>Mesaj Kutusu</span>
+                </div>
               </div>
-              <div className={styles.itemBottom}>
-                <span className={styles.itemText}>Mesaj Kutusu</span>
-              </div>
-            </div>
+            </Link>
           </li>
         </ul>
       </div >
