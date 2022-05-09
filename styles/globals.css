@@ -233,3 +233,7 @@ canvas {
   background: #ececec !important;
   border-bottom: 2px solid #ececec;
 }
+
+.container {
+  width: 100% !important
+}

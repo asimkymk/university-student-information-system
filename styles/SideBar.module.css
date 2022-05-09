@@ -29,7 +29,7 @@
   margin: 1rem;
   border-radius: 0.75rem;
   border: none;
-  z-index: 2;
+  z-index: 20;
 }
 
 .sideBar::-webkit-scrollbar {
