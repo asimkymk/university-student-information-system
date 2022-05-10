@@ -12,24 +12,24 @@ class Home extends Component {
                 </Head>
                 <Layout appBar={{ links: { "Ana Sayfa": "/", "Ödev ve Döküman Paylaşımı": "/documents" }, title: "Ödev ve Döküman Paylaşımı" }}>
                     <section className="ftco-section">
-                        <div className="container">
+                        <div className="container-fluid" >
                             <div className="row justify-content-center">
                                 <div className="col-md-6 text-center mb-4">
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-md-12">
-                                    <div className="table-wrap">
+                                <div className="col">
+                                    <div className="table-wrap" >
                                         <table className="table myaccordion table-hover" id="accordion">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>Dönem</th>
-                                                    <th>Birim Adı</th>
-                                                    <th>Ders Adı</th>
-                                                    <th>Ders Kodu</th>
-                                                    <th>Kredi</th>
-                                                    <th>AKTS</th>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Dönem</th>
+                                                    <th scope="col">Birim Adı</th>
+                                                    <th scope="col">Ders Adı</th>
+                                                    <th scope="col">Ders Kodu</th>
+                                                    <th scope="col">Kredi</th>
+                                                    <th scope="col">AKTS</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -56,19 +56,19 @@ class Home extends Component {
                                                     <td>6</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colSpan="6" id="collapseOne" className="collapse hide acc" data-parent="#accordion">
-                                                        <table>
+                                                    <td colSpan="9" id="collapseOne" className="collapse hide acc" data-parent="#accordion">
+                                                        <table style={{ width: "100%" }}>
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Hafta</th>
-                                                                    <th>Konu</th>
-                                                                    <th>Doküman Türü</th>
-                                                                    <th>Açıklama</th>
-                                                                    <th>Doküman Tarihi</th>
-                                                                    <th>Ödev Başl.Tar</th>
-                                                                    <th>Ödev Bit.Tar</th>
-                                                                    <th>Not	Dosya Adı</th>
-                                                                    <th>Yükle</th>
+                                                                    <th scope="col">Hafta</th>
+                                                                    <th scope="col">Konu</th>
+                                                                    <th scope="col">Doküman Türü</th>
+                                                                    <th scope="col">Açıklama</th>
+                                                                    <th scope="col">Doküman Tarihi</th>
+                                                                    <th scope="col">Ödev Başl.Tar</th>
+                                                                    <th scope="col">Ödev Bit.Tar</th>
+                                                                    <th scope="col">Not	Dosya Adı</th>
+                                                                    <th scope="col">Yükle</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -111,19 +111,19 @@ class Home extends Component {
                                                     <td>5</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colSpan="6" id="collapseTwo" className="collapse hide acc" data-parent="#accordion">
-                                                        <table>
+                                                    <td colSpan="9" id="collapseTwo" className="collapse hide acc" data-parent="#accordion">
+                                                        <table style={{ width: "100%" }}>
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Hafta</th>
-                                                                    <th>Konu</th>
-                                                                    <th>Doküman Türü</th>
-                                                                    <th>Açıklama</th>
-                                                                    <th>Doküman Tarihi</th>
-                                                                    <th>Ödev Başl.Tar</th>
-                                                                    <th>Ödev Bit.Tar</th>
-                                                                    <th>Not	Dosya Adı</th>
-                                                                    <th>Yükle</th>
+                                                                    <th scope="col">Hafta</th>
+                                                                    <th scope="col">Konu</th>
+                                                                    <th scope="col">Doküman Türü</th>
+                                                                    <th scope="col">Açıklama</th>
+                                                                    <th scope="col">Doküman Tarihi</th>
+                                                                    <th scope="col">Ödev Başl.Tar</th>
+                                                                    <th scope="col">Ödev Bit.Tar</th>
+                                                                    <th scope="col">Not	Dosya Adı</th>
+                                                                    <th scope="col">Yükle</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -166,19 +166,19 @@ class Home extends Component {
                                                     <td>6</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colSpan="6" id="collapseThree" className="collapse hide acc" data-parent="#accordion">
-                                                        <table>
+                                                    <td colSpan="9" id="collapseThree" className="collapse hide acc" data-parent="#accordion">
+                                                        <table style={{ width: "100%" }}>
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Hafta</th>
-                                                                    <th>Konu</th>
-                                                                    <th>Doküman Türü</th>
-                                                                    <th>Açıklama</th>
-                                                                    <th>Doküman Tarihi</th>
-                                                                    <th>Ödev Başl.Tar</th>
-                                                                    <th>Ödev Bit.Tar</th>
-                                                                    <th>Not	Dosya Adı</th>
-                                                                    <th>Yükle</th>
+                                                                    <th scope="col">Hafta</th>
+                                                                    <th scope="col">Konu</th>
+                                                                    <th scope="col">Doküman Türü</th>
+                                                                    <th scope="col">Açıklama</th>
+                                                                    <th scope="col">Doküman Tarihi</th>
+                                                                    <th scope="col">Ödev Başl.Tar</th>
+                                                                    <th scope="col">Ödev Bit.Tar</th>
+                                                                    <th scope="col">Not	Dosya Adı</th>
+                                                                    <th scope="col">Yükle</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -221,19 +221,19 @@ class Home extends Component {
                                                     <td>6</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colSpan="6" id="collapseFour" className="collapse hide acc" data-parent="#accordion">
-                                                        <table>
+                                                    <td colSpan="9" id="collapseFour" className="collapse hide acc" data-parent="#accordion">
+                                                        <table style={{ width: "100%" }}>
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Hafta</th>
-                                                                    <th>Konu</th>
-                                                                    <th>Doküman Türü</th>
-                                                                    <th>Açıklama</th>
-                                                                    <th>Doküman Tarihi</th>
-                                                                    <th>Ödev Başl.Tar</th>
-                                                                    <th>Ödev Bit.Tar</th>
-                                                                    <th>Not	Dosya Adı</th>
-                                                                    <th>Yükle</th>
+                                                                    <th scope="col">Hafta</th>
+                                                                    <th scope="col">Konu</th>
+                                                                    <th scope="col">Doküman Türü</th>
+                                                                    <th scope="col">Açıklama</th>
+                                                                    <th scope="col">Doküman Tarihi</th>
+                                                                    <th scope="col">Ödev Başl.Tar</th>
+                                                                    <th scope="col">Ödev Bit.Tar</th>
+                                                                    <th scope="col">Not	Dosya Adı</th>
+                                                                    <th scope="col">Yükle</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>

@@ -125,8 +125,6 @@ canvas {
 }
 
 .table {
-  min-width: 1000px !important;
-  width: 100%;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -239,5 +237,9 @@ canvas {
 }
 
 .MuiTable-root {
+  min-width: 0px !important;
+}
+
+.myaccordion {
   min-width: 0px !important;
 }
