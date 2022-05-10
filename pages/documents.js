@@ -10,7 +10,7 @@ class Home extends Component {
                 <Head>
                     <title>Ödev ve Doküman - İÜC ÖBS</title>
                 </Head>
-                <Layout appBar={{ links: { "Ana Sayfa": "/", "Ödev ve Döküman Paylaşımı": "/documents" }, title: "Ödev ve Döküman Paylaşımı" }}>
+                <Layout appBar={{ links: { "Ana Sayfa": "/", "Ödev ve Doküman Paylaşımı": "/documents" }, title: "Ödev ve Doküman Paylaşımı" }}>
                     <section className="ftco-section">
                         <div className="container-fluid" >
                             <div className="row justify-content-center">
