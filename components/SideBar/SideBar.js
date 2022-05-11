@@ -415,17 +415,21 @@ class SideBar extends Component {
               </div>
             </div>
           </div>
-
-          <li className={styles.linkItem}>
-            <div className={styles.itemPanel}>
-              <div className={styles.itemProfile}>
-                <FontAwesomeIcon icon={faMarker} className={styles.itemIcon} />
+          <Link href="/application">
+            <li className={styles.linkItem}>
+              <div className={styles.itemPanel}>
+                <div className={styles.itemProfile}>
+                  <FontAwesomeIcon
+                    icon={faMarker}
+                    className={styles.itemIcon}
+                  />
+                </div>
+                <div className={styles.itemBottom}>
+                  <span className={styles.itemText}>Başvuru</span>
+                </div>
               </div>
-              <div className={styles.itemBottom}>
-                <span className={styles.itemText}>Başvuru</span>
-              </div>
-            </div>
-          </li>
+            </li>
+          </Link>
           <li className={styles.linkItem}>
             <div className={styles.itemPanel}>
               <div className={styles.itemProfile}>
