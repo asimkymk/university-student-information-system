@@ -22,7 +22,7 @@ export default function Portal() {
     return (
         <>
             <Head>
-                <title>Giriş Portalı - İÜC ÖBS</title>
+                <title>Giriş Portalı - İÜC ÖBS </title>
             </Head>
             <div className="container align-items-center justify-content-center d-flex vh-100">
                 <div className="row vw-85 align-items-center justify-content-center px-4">
