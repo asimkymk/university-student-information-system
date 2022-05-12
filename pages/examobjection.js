@@ -95,8 +95,7 @@ export default function ExamObjection() {
                     </div>
 
                     <div className={`${styles.horizontalLine2}`}></div>
-                </div>
-                <div className={`container ${styles.mainContainer}`} style={{ marginTop: "-4rem" }}>
+
                     <div className={`row ${styles.row}`}>
                         <div className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
