@@ -91,7 +91,7 @@ export default function DocumentRequest() {
             >   <div className={`my-auto mb-3 ${styles.talepBtn}`}>
                     <button id="btn2" type="submit" className={`${styles.btn2}`} onClick={handleShow}>{addElement}</button>
                 </div>
-                <div className={`container ${styles.mainContainer2}`}>
+                <div className={`container ${styles.mainContainer}`}>
                     <div style={{ textAlign: "center" }}>
                         <div className={`row`} style={{ paddingTop: "0.5rem" }}>
                             <div className={`col-3 my-auto ${styles.baslik}`}>
@@ -119,8 +119,6 @@ export default function DocumentRequest() {
                     </div>
 
                     <div className={`${styles.horizontalLine2}`}></div>
-                </div>
-                <div className={`container ${styles.mainContainer2}`} style={{ marginTop: "-4rem" }}>
                     <div className={`row ${styles.row}`}>
                         <div className={`col-3 my-auto ${styles.rows}`}>
                             1306190022
