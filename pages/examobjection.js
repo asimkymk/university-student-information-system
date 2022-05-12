@@ -6,6 +6,7 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from "../styles/RequestAndObjection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import $ from "jquery";
 import { Modal } from "react-bootstrap";
 import {
     faExclamationCircle,
@@ -17,6 +18,15 @@ const exclamationElement2 = (
     <FontAwesomeIcon icon={faExclamationCircle} className={`mx-auto ${styles.exclamationElement}`} style={{ color: "white" }} />
 );
 
+function modalHandler(id) {
+    id = "#" + id;
+    var dersadi = $(id).children("[name='dersadi']").text();
+    var tur = $(id).children("[name='tur']").text();
+    var not = $(id).children("[name='not']").text();
+    $("#modalders").val(dersadi);
+    $("#modaltur").val(tur);
+    $("#modalnot").val(not);
+}
 export default function ExamObjection() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -34,12 +44,12 @@ export default function ExamObjection() {
                 </Modal.Header>
                 <form>
                     <Modal.Body>
-                        <label htmlFor="ders">Ders Adı</label>
-                        <input type="text" className={`form-control ${styles.itirazModal}`} id="ders" disabled></input>
-                        <label htmlFor="tur">Sınav Türü</label>
-                        <input type="text" className={`form-control ${styles.itirazModal}`} id="tur" disabled></input>
-                        <label htmlFor="not">Sınav Notu</label>
-                        <input type="text" className={`form-control ${styles.itirazModal}`} id="not" disabled></input>
+                        <label htmlFor="modalders">Ders Adı</label>
+                        <input type="text" className={`form-control ${styles.itirazModal}`} id="modalders" disabled></input>
+                        <label htmlFor="modaltur">Sınav Türü</label>
+                        <input type="text" className={`form-control ${styles.itirazModal}`} id="modaltur" disabled></input>
+                        <label htmlFor="modalnot">Sınav Notu</label>
+                        <input type="text" className={`form-control ${styles.itirazModal}`} id="modalnot" disabled></input>
                         <label htmlFor="itiraz">İtiraz Nedeni:</label>
                         <textarea className={`form-control`} id="itiraz" rows="5" placeholder="Lütfen itiraz nedeninizi yazınız."></textarea>
 
@@ -96,939 +106,102 @@ export default function ExamObjection() {
 
                     <div className={`${styles.horizontalLine2}`}></div>
 
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
+                    <div id="1" className={`row ${styles.row}`}>
+                        <div name="dersadi" className={`col-5 my-auto ${styles.rows}`}>
                             Bilgisayar Mühendisliğine Giriş
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
+                        <div name="tur" className={`col-2 my-auto ${styles.rows}`}>
                             Vize
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
+                        <div name="not" className={`col-2 my-auto ${styles.rows}`}>
                             68
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
                         <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button id="btn1" type="submit" className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
+                            <button id="btn1" type="submit" className={`${styles.btn}`} onClick={e => {
+                                handleShow();
+                                var id = $(e.currentTarget.parentElement.parentElement).attr("id");
+                                setTimeout(function () {
+                                    modalHandler(id)
+                                }, 1)
+                            }
+                            }>
+                                {exclamationElement}
+                            </button>
                         </div>
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
+                    <div id="2" className={`row ${styles.row}`}>
+                        <div name="dersadi" className={`col-5 my-auto ${styles.rows}`}>
                             Programming Applications
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
+                        <div name="tur" className={`col-2 my-auto ${styles.rows}`}>
                             Bitirme
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
+                        <div name="not" className={`col-2 my-auto ${styles.rows}`}>
                             75
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
                         <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
+                            <button id="btn1" type="submit" className={`${styles.btn}`} onClick={e => {
+                                handleShow();
+                                var id = $(e.currentTarget.parentElement.parentElement).attr("id");
+                                setTimeout(function () {
+                                    modalHandler(id)
+                                }, 1)
+                            }
+                            }>
+                                {exclamationElement}
+                            </button>
                         </div>
                     </div>
                     <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
+                    <div id="3" className={`row ${styles.row}`}>
+                        <div name="dersadi" className={`col-5 my-auto ${styles.rows}`}>
                             Calculus I
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
+                        <div name="tur" className={`col-2 my-auto ${styles.rows}`}>
+                            Proje
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
+                        <div name="not" className={`col-2 my-auto ${styles.rows}`}>
+                            95
                         </div>
                         <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                         </div>
                         <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Bilgisayar Mühendisliğine Giriş
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            68
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Programming Applications
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Bitirme
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            75
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
-                        </div>
-                    </div>
-                    <div className={`${styles.horizontalLine}`}></div>
-                    <div className={`row ${styles.row}`}>
-                        <div className={`col-5 my-auto ${styles.rows}`}>
-                            Calculus I
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            Vize
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.rows}`}>
-                            54
-                        </div>
-                        <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                        </div>
-                        <div className={`col-2 my-auto ${styles.itirazBtn}`}>
-                            <button className={`${styles.btn}`} onClick={handleShow}>{exclamationElement}</button>
+                            <button id="btn1" type="submit" className={`${styles.btn}`} onClick={e => {
+                                handleShow();
+                                var id = $(e.currentTarget.parentElement.parentElement).attr("id");
+                                setTimeout(function () {
+                                    modalHandler(id)
+                                }, 1)
+                            }
+                            }>
+                                {exclamationElement}
+                            </button>
                         </div>
                     </div>
                 </div>
