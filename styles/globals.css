@@ -243,3 +243,8 @@ canvas {
 .myaccordion {
   min-width: 0px !important;
 }
+
+.link {
+  width: 100%;
+  margin-right: 2rem;
+}
