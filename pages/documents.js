@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import $ from "jquery";
+import styles from "../styles/RequestAndObjection.module.css";
 class Home extends Component {
 
     render() {
@@ -10,255 +11,517 @@ class Home extends Component {
                 <Head>
                     <title>Ödev ve Doküman - İÜC ÖBS</title>
                 </Head>
-                <Layout appBar={{ links: { "Ana Sayfa": "/", "Ödev ve Doküman Paylaşımı": "/documents" }, title: "Ödev ve Doküman Paylaşımı" }}>
-                    <section className="ftco-section">
-                        <div className="container-fluid" >
-                            <div className="row justify-content-center">
-                                <div className="col-md-6 text-center mb-4">
+                <Layout
+                    appBar={{
+                        links: { "Ana Sayfa": "/", "Ödev ve Doküman": "/documents" },
+                        title: "Ödev ve Doküman",
+                    }}
+                >
+                    <div className={`container ${styles.mainContainer}`}>
+                        <div className={`container ${styles.mainContainer}`} style={{ fontWeight: "400", textAlign: "center" }} >
+
+                            <div className={`row`}>
+                                <div className={`col-2 my-auto ${styles.baslik}`}>
+                                    Dönem
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
+                                    Birim adı
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Ders Adı
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Ders Kodu
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-2 my-auto ${styles.baslik}`}>
+                                    Kredi
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-2 my-auto ${styles.baslik}`}>
+                                    AKTS
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col">
-                                    <div className="table-wrap" >
-                                        <table className="table myaccordion table-hover" id="accordion">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Dönem</th>
-                                                    <th scope="col">Birim Adı</th>
-                                                    <th scope="col">Ders Adı</th>
-                                                    <th scope="col">Ders Kodu</th>
-                                                    <th scope="col">Kredi</th>
-                                                    <th scope="col">AKTS</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" className="collapsed" onClick={e => {
-                                                    if ($("#collapseOne").hasClass("hide")) {
-                                                        $(e.currentTarget).attr("aria-expanded", "true")
-                                                        $("#collapseOne").attr("class", "collapse show acc")
-                                                        $(e.currentTarget).attr("data-toggle", "collapse")
-                                                        $(e.currentTarget).attr("class", "")
-                                                    }
-                                                    else {
-                                                        $(e.currentTarget).attr("aria-expanded", "false")
-                                                        $("#collapseOne").attr("class", "collapse hide acc")
-                                                        $(e.currentTarget).attr("data-toggle", "")
-                                                        $(e.currentTarget).attr("class", "collapsed")
-                                                    }
-                                                }}>
-                                                    <th scope="row">1</th>
-                                                    <td>Bahar</td>
-                                                    <td>BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)</td>
-                                                    <td>Computer Networks</td>
-                                                    <td>BIMU3031</td>
-                                                    <td>4</td>
-                                                    <td>6</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colSpan="9" id="collapseOne" className="collapse hide acc" data-parent="#accordion">
-                                                        <table style={{ width: "100%" }}>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">Hafta</th>
-                                                                    <th scope="col">Konu</th>
-                                                                    <th scope="col">Doküman Türü</th>
-                                                                    <th scope="col">Açıklama</th>
-                                                                    <th scope="col">Doküman Tarihi</th>
-                                                                    <th scope="col">Ödev Başl.Tar</th>
-                                                                    <th scope="col">Ödev Bit.Tar</th>
-                                                                    <th scope="col">Not	Dosya Adı</th>
-                                                                    <th scope="col">Yükle</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Bahar</td>
-                                                                    <td>Sınav</td>
-                                                                    <td>Slayt</td>
-                                                                    <td></td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>31.05.2022</td>
-                                                                    <td></td>
-                                                                    <td>Buraya Tıkla</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
 
-                                                <tr data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" className="collapsed" onClick={e => {
-                                                    if ($("#collapseTwo").hasClass("hide")) {
-                                                        $(e.currentTarget).attr("aria-expanded", "true")
-                                                        $("#collapseTwo").attr("class", "collapse show acc")
-                                                        $(e.currentTarget).attr("data-toggle", "collapse")
-                                                        $(e.currentTarget).attr("class", "")
-                                                    }
-                                                    else {
-                                                        $(e.currentTarget).attr("aria-expanded", "false")
-                                                        $("#collapseTwo").attr("class", "collapse hide acc")
-                                                        $(e.currentTarget).attr("data-toggle", "")
-                                                        $(e.currentTarget).attr("class", "collapsed")
-                                                    }
-                                                }}>
-                                                    <th scope="row">2</th>
-                                                    <td>Bahar</td>
-                                                    <td>BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)</td>
-                                                    <td>Görüntü İşleme</td>
-                                                    <td>BIMU3930</td>
-                                                    <td>3</td>
-                                                    <td>5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colSpan="9" id="collapseTwo" className="collapse hide acc" data-parent="#accordion">
-                                                        <table style={{ width: "100%" }}>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">Hafta</th>
-                                                                    <th scope="col">Konu</th>
-                                                                    <th scope="col">Doküman Türü</th>
-                                                                    <th scope="col">Açıklama</th>
-                                                                    <th scope="col">Doküman Tarihi</th>
-                                                                    <th scope="col">Ödev Başl.Tar</th>
-                                                                    <th scope="col">Ödev Bit.Tar</th>
-                                                                    <th scope="col">Not	Dosya Adı</th>
-                                                                    <th scope="col">Yükle</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Bahar</td>
-                                                                    <td>Sınav</td>
-                                                                    <td>Slayt</td>
-                                                                    <td></td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>31.05.2022</td>
-                                                                    <td></td>
-                                                                    <td>Buraya Tıkla</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
 
-                                                <tr data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" className="collapsed" onClick={e => {
-                                                    if ($("#collapseThree").hasClass("hide")) {
-                                                        $(e.currentTarget).attr("aria-expanded", "true")
-                                                        $("#collapseThree").attr("class", "collapse show acc")
-                                                        $(e.currentTarget).attr("data-toggle", "collapse")
-                                                        $(e.currentTarget).attr("class", "")
-                                                    }
-                                                    else {
-                                                        $(e.currentTarget).attr("aria-expanded", "false")
-                                                        $("#collapseThree").attr("class", "collapse hide acc")
-                                                        $(e.currentTarget).attr("data-toggle", "")
-                                                        $(e.currentTarget).attr("class", "collapsed")
-                                                    }
-                                                }}>
-                                                    <th scope="row">3</th>
-                                                    <td>Bahar</td>
-                                                    <td>BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)</td>
-                                                    <td>SOFTWARE ENGINEERING</td>
-                                                    <td>BIMU3019</td>
-                                                    <td>4</td>
-                                                    <td>6</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colSpan="9" id="collapseThree" className="collapse hide acc" data-parent="#accordion">
-                                                        <table style={{ width: "100%" }}>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">Hafta</th>
-                                                                    <th scope="col">Konu</th>
-                                                                    <th scope="col">Doküman Türü</th>
-                                                                    <th scope="col">Açıklama</th>
-                                                                    <th scope="col">Doküman Tarihi</th>
-                                                                    <th scope="col">Ödev Başl.Tar</th>
-                                                                    <th scope="col">Ödev Bit.Tar</th>
-                                                                    <th scope="col">Not	Dosya Adı</th>
-                                                                    <th scope="col">Yükle</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Bahar</td>
-                                                                    <td>Sınav</td>
-                                                                    <td>Slayt</td>
-                                                                    <td></td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>31.05.2022</td>
-                                                                    <td></td>
-                                                                    <td>Buraya Tıkla</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
+                            <hr></hr>
 
-                                                <tr data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" className="collapsed" onClick={e => {
-                                                    if ($("#collapseFour").hasClass("hide")) {
-                                                        $(e.currentTarget).attr("aria-expanded", "true")
-                                                        $("#collapseFour").attr("class", "collapse show acc")
-                                                        $(e.currentTarget).attr("data-toggle", "collapse")
-                                                        $(e.currentTarget).attr("class", "")
-                                                    }
-                                                    else {
-                                                        $(e.currentTarget).attr("aria-expanded", "false")
-                                                        $("#collapseFour").attr("class", "collapse hide acc")
-                                                        $(e.currentTarget).attr("data-toggle", "")
-                                                        $(e.currentTarget).attr("class", "collapsed")
-                                                    }
-                                                }}>
-                                                    <th scope="row">4</th>
-                                                    <td>Bahar</td>
-                                                    <td>BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)</td>
-                                                    <td>BİLGİSAYAR MİMARİSİ</td>
-                                                    <td>BIMU3024</td>
-                                                    <td>3</td>
-                                                    <td>6</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colSpan="9" id="collapseFour" className="collapse hide acc" data-parent="#accordion">
-                                                        <table style={{ width: "100%" }}>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">Hafta</th>
-                                                                    <th scope="col">Konu</th>
-                                                                    <th scope="col">Doküman Türü</th>
-                                                                    <th scope="col">Açıklama</th>
-                                                                    <th scope="col">Doküman Tarihi</th>
-                                                                    <th scope="col">Ödev Başl.Tar</th>
-                                                                    <th scope="col">Ödev Bit.Tar</th>
-                                                                    <th scope="col">Not	Dosya Adı</th>
-                                                                    <th scope="col">Yükle</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Bahar</td>
-                                                                    <td>Sınav</td>
-                                                                    <td>Slayt</td>
-                                                                    <td></td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>09.05.2022</td>
-                                                                    <td>31.05.2022</td>
-                                                                    <td></td>
-                                                                    <td>Buraya Tıkla</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                            <div className={`row ${styles.dersler}`} onClick={e => {
+                                if ($("#1").is(":visible")) {
+                                    $(e.currentTarget).css("background", "#F1F2F7");
+                                }
+                                else {
+                                    $(e.currentTarget).css("background", "#fff");
+                                }
+                                $("#1").slideToggle(300)
+                            }} >
+                                <div className={`col-2 my-auto ${styles.rows}`}>
+                                    Bahar
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
+                                    BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    BİLGİSAYAR MİMARİSİ
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    BIMU3024
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-2 my-auto ${styles.rows}`}>
+                                    3
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-2 my-auto ${styles.rows}`}>
+                                    4
+                                </div>
+                            </div>
+
+                            <div id='1' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem" }}>
+                                <div className={`row`}>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Hafta
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Konu
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Doküman Türü
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-2 my-auto ${styles.baslik}`}>
+                                        Açıklama
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Doküman Tarihi
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Ödev Başlangıç Tarihi
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Ödev Bitiş Tarihi
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Not
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Dosya Adı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Yükle
+                                    </div>
+                                </div>
+                                <div className={`${styles.horizontalLine2}`}></div>
+                                <div className={`row`}>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        6. Hafta
+                                    </div>
+
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Komut Seti tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Slayt
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-2 my-auto ${styles.rows}`}>
+                                        Komut Seti Tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        2.3.2022
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        slayt.pdf
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        <button type="button" value="Dosya Seç">
+                                            Dosya Seç
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className={`${styles.horizontalLine}`}></div>
+                                <div className={`row`}>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        6. Hafta
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Komut Seti tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Slayt
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-2 my-auto ${styles.rows}`}>
+                                        Komut Seti Tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        2.3.2022
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        slayt.pdf
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        <button type="button" value="Dosya Seç">
+                                            Dosya Seç
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`${styles.horizontalLine}`}></div>
+                            <div className={`row ${styles.dersler}`} onClick={e => {
+                                if ($("#2").is(":visible")) {
+                                    $(e.currentTarget).css("background", "#F1F2F7");
+                                }
+                                else {
+                                    $(e.currentTarget).css("background", "#fff");
+                                }
+                                $("#2").slideToggle(300)
+                            }} >
+                                <div className={`col-2 my-auto ${styles.rows}`}>
+                                    Bahar
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
+                                    BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    BİLGİSAYAR MİMARİSİ
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    BIMU3024
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-2 my-auto ${styles.rows}`}>
+                                    3
+                                </div>
+                                <div className={`${styles.mycol} my-auto`}>
+                                    <div className={`${styles.verticalLine}`}></div>
+                                </div>
+                                <div className={`col-2 my-auto ${styles.rows}`}>
+                                    4
+                                </div>
+                            </div>
+
+                            <div id='2' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem" }}>
+                                <div className={`row`}>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Hafta
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Konu
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Doküman Türü
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-2 my-auto ${styles.baslik}`}>
+                                        Açıklama
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Doküman Tarihi
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Ödev Başlangıç Tarihi
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Ödev Bitiş Tarihi
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Not
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Dosya Adı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.baslik}`}>
+                                        Yükle
+                                    </div>
+                                </div>
+                                <div className={`${styles.horizontalLine2}`}></div>
+                                <div className={`row`}>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        6. Hafta
+                                    </div>
+
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Komut Seti tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Slayt
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-2 my-auto ${styles.rows}`}>
+                                        Komut Seti Tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        2.3.2022
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        slayt.pdf
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        <button type="button" value="Dosya Seç">
+                                            Dosya Seç
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className={`${styles.horizontalLine}`}></div>
+                                <div className={`row`}>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        6. Hafta
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Komut Seti tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        Slayt
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-2 my-auto ${styles.rows}`}>
+                                        Komut Seti Tasarımı
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        2.3.2022
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        slayt.pdf
+                                    </div>
+                                    <div className={`${styles.mycol} my-auto`}>
+                                        <div className={`${styles.verticalLine}`}></div>
+                                    </div>
+                                    <div className={`col-1 my-auto ${styles.rows}`}>
+                                        <button type="button" value="Dosya Seç">
+                                            Dosya Seç
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </Layout>
             </>
         );
