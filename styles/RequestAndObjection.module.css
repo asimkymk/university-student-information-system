@@ -33,6 +33,7 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 12pt;
+    word-wrap: break-word;
     font-style: italic;
 }
 
@@ -43,6 +44,10 @@
     padding-bottom: 0;
     text-align: center;
     word-wrap: break-word;
+}
+
+.rows {
+    font-size: 11pt;
 }
 
 .itirazBtn,
@@ -219,7 +224,7 @@
     text-align: center !important;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 13pt;
+    font-size: 12.5pt;
     cursor: pointer;
     transition: .2s ease;
     border-radius: .5rem;

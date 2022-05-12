@@ -43,7 +43,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -67,8 +67,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -76,37 +76,37 @@ export default function GradeCard() {
 
                             <div className={`row ${styles.row}`}>
                                 <div className={`col-2 my-auto ${styles.rows}`}>
-                                    BIMU1051
+                                    BIMU1054
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
-                                    CALCULUS I
+                                <div className={`col-3 my-auto ${styles.rows}`}>
+                                    Programming Applications
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
                                 <div className={`col-1 my-auto ${styles.rows}`}>
-                                    CB
+                                    DC
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
                                 <div className={`col-2 my-auto ${styles.rows}`}>
-                                    4
+                                    3
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
                                 <div className={`col-2 my-auto ${styles.rows}`}>
-                                    6
+                                    5
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    S
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -117,7 +117,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -141,8 +141,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -153,7 +153,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -177,8 +177,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -189,7 +189,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -213,8 +213,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -225,7 +225,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -249,8 +249,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -261,7 +261,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -285,8 +285,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -346,7 +346,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -370,8 +370,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -384,7 +384,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -408,8 +408,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -420,7 +420,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -444,8 +444,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -456,7 +456,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -480,8 +480,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -492,7 +492,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -516,8 +516,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -528,7 +528,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -552,8 +552,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -564,7 +564,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -588,8 +588,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -652,7 +652,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -676,8 +676,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -690,7 +690,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -714,8 +714,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -726,7 +726,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -750,8 +750,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -762,7 +762,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -786,8 +786,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -798,7 +798,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -822,8 +822,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -834,7 +834,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -858,8 +858,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -870,7 +870,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -894,8 +894,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -958,7 +958,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -982,8 +982,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -996,7 +996,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1020,8 +1020,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1032,7 +1032,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1056,8 +1056,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1068,7 +1068,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1092,8 +1092,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1104,7 +1104,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1128,8 +1128,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1140,7 +1140,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1164,8 +1164,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1176,7 +1176,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1200,8 +1200,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -1264,7 +1264,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1288,8 +1288,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -1302,7 +1302,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1326,8 +1326,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1338,7 +1338,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1362,8 +1362,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1374,7 +1374,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1398,8 +1398,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1410,7 +1410,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1434,8 +1434,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1446,7 +1446,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1470,8 +1470,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1482,7 +1482,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1506,8 +1506,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -1570,7 +1570,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1594,8 +1594,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -1608,7 +1608,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1632,8 +1632,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1644,7 +1644,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1668,8 +1668,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1680,7 +1680,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1704,8 +1704,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1716,7 +1716,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1740,8 +1740,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1752,7 +1752,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1776,8 +1776,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1788,7 +1788,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1812,8 +1812,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -1877,7 +1877,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1901,8 +1901,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -1915,7 +1915,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1939,8 +1939,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1951,7 +1951,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -1975,8 +1975,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -1987,7 +1987,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2011,8 +2011,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2023,7 +2023,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2047,8 +2047,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2059,7 +2059,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2083,8 +2083,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2095,7 +2095,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2119,8 +2119,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
@@ -2183,7 +2183,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.baslik}`}>
+                                <div className={`col-3 my-auto ${styles.baslik}`}>
                                     Ad
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2207,8 +2207,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.baslik}`}>
-                                    Zor/Seç
+                                <div className={`col-1 my-auto ${styles.baslik}`}>
+                                    Z/S
                                 </div>
                             </div>
 
@@ -2221,7 +2221,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2245,8 +2245,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2257,7 +2257,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2281,8 +2281,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2293,7 +2293,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2317,8 +2317,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2329,7 +2329,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2353,8 +2353,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2365,7 +2365,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2389,8 +2389,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
@@ -2401,7 +2401,7 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col my-auto ${styles.rows}`}>
+                                <div className={`col-3 my-auto ${styles.rows}`}>
                                     CALCULUS I
                                 </div>
                                 <div className={`${styles.mycol} my-auto`}>
@@ -2425,8 +2425,8 @@ export default function GradeCard() {
                                 <div className={`${styles.mycol} my-auto`}>
                                     <div className={`${styles.verticalLine}`}></div>
                                 </div>
-                                <div className={`col-2 my-auto ${styles.rows}`}>
-                                    Zor.
+                                <div className={`col-1 my-auto ${styles.rows}`}>
+                                    Z
                                 </div>
                             </div>
                             <hr></hr>
