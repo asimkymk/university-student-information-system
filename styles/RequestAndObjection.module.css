@@ -1,5 +1,4 @@
-.mainContainer,
-.mainContainer2 {
+.mainContainer {
     background-color: #fff;
     width: 100% !important;
     max-width: 100% !important;
@@ -8,16 +7,11 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     text-align: justify;
-    margin-bottom: 1rem;
-    max-height: calc(100vh - 194px) !important;
     overflow: auto;
     animation: fadeInAnimation ease-out 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-
-.mainContainer2 {
-    max-height: calc(100vh - 266px) !important;
+    margin-bottom: 1rem;
 }
 
 @keyframes fadeInAnimation {
@@ -30,8 +24,7 @@
     }
 }
 
-.mainContainer::-webkit-scrollbar,
-.mainContainer2::-webkit-scrollbar {
+.mainContainer::-webkit-scrollbar {
     display: none;
 }
 
@@ -39,7 +32,8 @@
     font-weight: bold;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-size: 13pt;
+    font-size: 12pt;
+    font-style: italic;
 }
 
 .rows,
@@ -78,7 +72,8 @@
     margin-left: auto !important;
 }
 
-.horizontalLine {
+.horizontalLine,
+.horizontalLine2 {
     flex-shrink: 0;
     background-color: transparent;
     width: 100% !important;
@@ -96,19 +91,13 @@
 }
 
 .horizontalLine2 {
-    flex-shrink: 0;
-    background-color: transparent;
-    width: 100% !important;
     height: 2.5px !important;
-    border: none;
-    padding: 0 ! important;
-    margin: 0 !important;
     margin-top: 0.3rem !important;
-    margin-bottom: 3rem !important;
-    opacity: 0.6;
+    margin-bottom: 1rem !important;
+    opacity: 0.8;
     background-image: linear-gradient(to right,
             rgba(52, 71, 103, .1),
-            rgba(52, 71, 103, .4),
+            rgba(52, 71, 103, .6),
             rgba(52, 71, 103, .1)) !important;
 }
 
@@ -117,9 +106,9 @@
     border-radius: 0.75rem;
 }
 
-.row:hover {
+/* .row:hover {
     background-color: #F5F6F8;
-}
+} */
 
 .btn,
 .btn2 {
@@ -224,4 +213,40 @@
     text-align: right;
     align-items: end;
     margin: 0px 20px 0px auto;
+}
+
+.donem {
+    text-align: center !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13pt;
+    cursor: pointer;
+    transition: .3s ease;
+    border-radius: .5rem;
+    margin-bottom: 0;
+}
+
+.donem:hover {
+    background-color: #F5F6F8;
+}
+
+.grade1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100;
+    text-align: left;
+}
+
+.grade2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100;
+    text-align: right;
+}
+
+.info {
+    padding: .5rem;
+    border: 1px solid #D1D6DD;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
 }

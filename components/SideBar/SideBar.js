@@ -288,7 +288,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/notecard" passHref>
+                    <Link href="/gradecard" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
