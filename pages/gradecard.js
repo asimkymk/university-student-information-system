@@ -30,7 +30,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem1").toggle()
+                            $("#donem1").slideToggle(300)
                         }}>
                             2019-2020 / Güz
                         </div>
@@ -332,7 +332,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem2").toggle()
+                            $("#donem2").slideToggle(300)
                         }}>
                             2019-2020 / Bahar
                         </div>
@@ -638,7 +638,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem3").toggle()
+                            $("#donem3").slideToggle(300)
                         }}>
                             2020-2021 / Güz
                         </div>
@@ -944,7 +944,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem4").toggle()
+                            $("#donem4").slideToggle(300)
                         }}>
                             2020-2021 / Bahar
                         </div>
@@ -1250,7 +1250,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem5").toggle()
+                            $("#donem5").slideToggle(300)
                         }}>
                             2021-2022 / Güz
                         </div>
@@ -1556,7 +1556,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem6").toggle()
+                            $("#donem6").slideToggle(300)
                         }}>
                             2021-2022 / Bahar
                         </div>
@@ -1862,7 +1862,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem7").toggle();
+                            $("#donem7").slideToggle(300);
 
                         }}>
                             2022-2023 / Güz
@@ -2169,7 +2169,7 @@ export default function GradeCard() {
                                 $(e.currentTarget.parentElement.parentElement).css("background", "#fff");
                                 $(e.currentTarget).css("background", "#fff");
                             }
-                            $("#donem8").toggle()
+                            $("#donem8").slideToggle(300)
                         }}>
                             2022-2023 / Bahar
                         </div>
