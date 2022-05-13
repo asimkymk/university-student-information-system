@@ -2,6 +2,7 @@
   position: relative;
   height: 100vh;
 }
+
 .notfound {
   position: absolute;
   left: 50%;
@@ -14,10 +15,12 @@
   line-height: 1.4;
   text-align: center;
 }
+
 .notfound404 {
   position: relative;
   height: 240px;
 }
+
 .notfound404 h3 {
   font-family: "Cabin", sans-serif;
   position: relative;
@@ -29,6 +32,7 @@
   letter-spacing: 3px;
   padding-left: 6px;
 }
+
 .notfound404 h1 {
   font-family: "Montserrat", sans-serif;
   position: absolute;
@@ -45,9 +49,11 @@
   letter-spacing: -40px;
   margin-left: -20px;
 }
-.notfound404 h1 > span {
+
+.notfound404 h1>span {
   text-shadow: -8px 0px 0px #fff;
 }
+
 .notfound h2 {
   font-family: "Cabin", sans-serif;
   font-size: 20px;
