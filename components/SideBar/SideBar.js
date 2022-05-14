@@ -306,7 +306,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/courselist" passHref>
+                    <Link href="/lectureList" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
@@ -324,7 +324,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/syllabus" passHref>
+                    <Link href="/syllabusList" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
