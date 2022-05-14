@@ -15,6 +15,7 @@
   position: sticky;
   top: 7rem;
 }
+
 .profileImage {
   width: 100%;
   text-align: center;
@@ -23,6 +24,7 @@
   text-indent: 10000px;
   height: auto;
 }
+
 .listItem {
   padding-top: 0px;
   opacity: 1;
@@ -30,15 +32,17 @@
   color: rgb(52, 71, 103);
   box-shadow: none;
 }
+
 .listItemText {
   margin-right: 12px;
   line-height: 1;
-
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif !important;
   opacity: 1;
   background: transparent;
   color: rgb(52, 71, 103);
   box-shadow: none;
 }
+
 .card {
   color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -55,11 +59,12 @@
     rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
   overflow: visible;
 }
+
 .h5 {
   margin: 0px;
   font-size: 1.25rem;
   line-height: 1.375;
-  font-family: Roboto Condensed, Helvetica, Arial, sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   letter-spacing: 0em;
   opacity: 1;
   text-transform: none;
@@ -68,9 +73,10 @@
   color: rgb(52, 71, 103);
   font-weight: 600;
 }
+
 .span {
   margin: 0px;
-  font-family: Roboto Condensed, Helvetica, Arial, sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.5;
   letter-spacing: 0.02857em;
@@ -81,6 +87,7 @@
   color: rgb(123, 128, 154);
   font-weight: 600;
 }
+
 .form {
   padding-bottom: 24px;
   padding-left: 24px;
@@ -98,6 +105,7 @@
 .listItem:active {
   background-color: rgba(206, 212, 218, 0.8) !important;
 }
+
 .linkItem {
   display: flex;
   -webkit-box-pack: start;
@@ -114,6 +122,7 @@
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
     background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
+
 .itemPanel {
   opacity: 1;
   background: 0 0;
@@ -141,6 +150,7 @@
 .innerItemList:active {
   background-color: rgba(206, 212, 218, 0.8);
 }
+
 .itemProfile {
   flex-shrink: 0;
   min-width: 2rem;
@@ -151,6 +161,7 @@
   place-items: center;
   transition: margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
+
 .itemIcon {
   flex-shrink: 0;
   min-width: 1rem;
@@ -161,6 +172,7 @@
   place-items: center;
   transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
+
 .itemBottom {
   flex: 1 1 auto;
   min-width: 0;
