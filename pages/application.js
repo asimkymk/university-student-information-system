@@ -69,7 +69,6 @@ export default function Application() {
       </Modal>
       <Head>
         <title>Başvuru - İÜC ÖBS</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
 
       <Layout
@@ -89,20 +88,20 @@ export default function Application() {
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.baslik}`}>
+              <div className={`col-4 my-auto ${styles.baslik}`}>
                 Başvuru Türü
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.baslik}`}>
+              <div className={`col-2 my-auto ${styles.baslik}`}>
                 Başvuru Tarihi
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
               <div className={`col-2 my-auto ${styles.baslik}`}>
-                Belge
+                Durum
               </div>
             </div>
 
@@ -115,20 +114,20 @@ export default function Application() {
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
+              <div className={`col-4 my-auto ${styles.rows}`}>
                 2021-2022 Lisansüstü Online Başvuru
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
+              <div className={`col-2 my-auto ${styles.rows}`}>
                 12.05.2022
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-2 my-auto ${styles.rows}`}>
-                <a href="#">Belge {externalElement}</a>
+              <div className={`col-2 my-auto ${styles.rows}`} style={{ color: " green" }}>
+                Başvuruldu
               </div>
             </div>
             <div className={`${styles.horizontalLine}`}></div>
@@ -139,20 +138,20 @@ export default function Application() {
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
+              <div className={`col-4 my-auto ${styles.rows}`}>
                 2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
+              <div className={`col-2 my-auto ${styles.rows}`}>
                 12.05.2022
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-2 my-auto ${styles.rows}`}>
-                <a href="#">Belge {externalElement}</a>
+              <div className={`col-2 my-auto ${styles.rows}`} style={{ color: " green" }}>
+                Başvuruldu
               </div>
             </div>
             <div className={`${styles.horizontalLine}`}></div>
@@ -163,68 +162,20 @@ export default function Application() {
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
+              <div className={`col-4 my-auto ${styles.rows}`}>
                 2021-2022 Lisansüstü Online Başvuru
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                12.05.2022
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
               <div className={`col-2 my-auto ${styles.rows}`}>
-                <a href="#">Belge {externalElement}</a>
-              </div>
-            </div>
-            <div className={`${styles.horizontalLine}`}></div>
-            <div className={`row ${styles.row}`}>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                1306180061
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                12.05.2022
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
-              <div className={`col-2 my-auto ${styles.rows}`}>
-                <a href="#">Belge {externalElement}</a>
-              </div>
-            </div>
-            <div className={`${styles.horizontalLine}`}></div>
-            <div className={`row ${styles.row}`}>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                1306180061
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
                 11.05.2022
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-2 my-auto ${styles.rows}`}>
-                <a href="#">Belge {externalElement}</a>
+              <div className={`col-2 my-auto ${styles.rows}`} style={{ color: " green" }}>
+                Başvuruldu
               </div>
             </div>
             <div className={`${styles.horizontalLine}`}></div>
@@ -235,20 +186,68 @@ export default function Application() {
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                2021-2022 Lisansüstü Online Başvuru
-              </div>
-              <div className={`${styles.mycol} my-auto`}>
-                <div className={`${styles.verticalLine}`}></div>
-              </div>
-              <div className={`col-3 my-auto ${styles.rows}`}>
-                11.05.2022
+              <div className={`col-4 my-auto ${styles.rows}`}>
+                2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
               </div>
               <div className={`col-2 my-auto ${styles.rows}`}>
-                <a href="#">Belge {externalElement}</a>
+                12.05.2022
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-2 my-auto ${styles.rows}`} style={{ color: " green" }}>
+                Başvuruldu
+              </div>
+            </div>
+            <div className={`${styles.horizontalLine}`}></div>
+            <div className={`row ${styles.row}`}>
+              <div className={`col-3 my-auto ${styles.rows}`}>
+                1306180061
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-4 my-auto ${styles.rows}`}>
+                2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-2 my-auto ${styles.rows}`}>
+                11.05.2022
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-2 my-auto ${styles.rows}`} style={{ color: " green" }}>
+                Başvuruldu
+              </div>
+            </div>
+            <div className={`${styles.horizontalLine}`}></div>
+            <div className={`row ${styles.row}`}>
+              <div className={`col-3 my-auto ${styles.rows}`}>
+                1306180061
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-4 my-auto ${styles.rows}`}>
+                2021-2022 Lisansüstü Online Başvuru
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-2 my-auto ${styles.rows}`}>
+                11.05.2022
+              </div>
+              <div className={`${styles.mycol} my-auto`}>
+                <div className={`${styles.verticalLine}`}></div>
+              </div>
+              <div className={`col-2 my-auto ${styles.rows}`} style={{ color: " green" }}>
+                Başvuruldu
               </div>
             </div>
           </div>
