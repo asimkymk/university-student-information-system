@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import $ from "jquery";
 import styles from "../styles/RequestAndObjection.module.css";
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 class Home extends Component {
 
     render() {
@@ -55,8 +56,6 @@ class Home extends Component {
                                     AKTS
                                 </div>
                             </div>
-
-
                             <hr></hr>
 
                             <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
@@ -221,8 +220,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
@@ -283,8 +282,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
@@ -452,8 +451,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
@@ -514,8 +513,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>

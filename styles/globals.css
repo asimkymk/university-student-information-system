@@ -248,3 +248,12 @@ canvas {
   width: 100%;
   margin-right: 2rem;
 }
+
+.uploadButton {
+  color: #7B809A;
+  transition: 0.2s;
+}
+
+.uploadButton:hover {
+  color: #64656b;
+}
