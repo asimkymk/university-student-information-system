@@ -111,10 +111,6 @@
     border-radius: 0.75rem;
 }
 
-/* .row:hover {
-    background-color: #F5F6F8;
-} */
-
 .btn,
 .btn2 {
     border: none;
@@ -220,7 +216,8 @@
     margin: 0px 20px 0px auto;
 }
 
-.donem,.dersler {
+.donem,
+.dersler {
     text-align: center !important;
     text-transform: uppercase;
     font-weight: 700;
@@ -231,11 +228,13 @@
     margin-bottom: 0;
 }
 
-.donem:hover,.dersler:hover {
+.donem:hover,
+.dersler:hover {
     background-color: #F5F6F8 !important;
 }
 
-.donem:active,.dersler:active {
+.donem:active,
+.dersler:active {
     background-color: #D3D1CE !important;
 }
 
@@ -259,6 +258,7 @@
     border-radius: .5rem;
     margin-bottom: .5rem;
 }
-.dersler{
+
+.dersler {
     font-weight: 400;
 }

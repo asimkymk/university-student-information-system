@@ -84,7 +84,7 @@ export default function Application() {
           <div style={{ textAlign: "center" }}>
             <div className={`row`} style={{ paddingTop: "0.5rem" }}>
               <div className={`col-3 my-auto ${styles.baslik}`}>
-                No
+                No&nbsp;
               </div>
               <div className={`${styles.mycol} my-auto`}>
                 <div className={`${styles.verticalLine}`}></div>
@@ -105,11 +105,9 @@ export default function Application() {
                 Belge
               </div>
             </div>
-          </div>
 
-          <div className={`${styles.horizontalLine2}`}></div>
+            <div className={`${styles.horizontalLine2}`}></div>
 
-          <div className={`container ${styles.mainContainer}`}>
             <div className={`row ${styles.row}`}>
               <div className={`col-3 my-auto ${styles.rows}`}>
                 1306180061

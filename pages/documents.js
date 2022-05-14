@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Layout from "../components/Layout/Layout";
 import $ from "jquery";
 import styles from "../styles/RequestAndObjection.module.css";
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 class Home extends Component {
 
     render() {
@@ -55,11 +56,9 @@ class Home extends Component {
                                     AKTS
                                 </div>
                             </div>
-
-
                             <hr></hr>
 
-                            <div className={`row ${styles.dersler}`} onClick={e => {
+                            <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
                                 if ($("#1").is(":visible")) {
                                     $(e.currentTarget).css("background", "#F1F2F7");
                                 }
@@ -103,7 +102,7 @@ class Home extends Component {
                                 </div>
                             </div>
 
-                            <div id='1' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem" }}>
+                            <div id='1' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem", display: "none" }}>
                                 <div className={`row`}>
                                     <div className={`col-1 my-auto ${styles.baslik}`}>
                                         Hafta
@@ -221,8 +220,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
@@ -283,14 +282,14 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
-                            <div className={`row ${styles.dersler}`} onClick={e => {
+                            <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
                                 if ($("#2").is(":visible")) {
                                     $(e.currentTarget).css("background", "#F1F2F7");
                                 }
@@ -334,7 +333,7 @@ class Home extends Component {
                                 </div>
                             </div>
 
-                            <div id='2' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem" }}>
+                            <div id='2' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem", display: "none" }}>
                                 <div className={`row`}>
                                     <div className={`col-1 my-auto ${styles.baslik}`}>
                                         Hafta
@@ -452,8 +451,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
@@ -514,8 +513,8 @@ class Home extends Component {
                                         <div className={`${styles.verticalLine}`}></div>
                                     </div>
                                     <div className={`col-1 my-auto ${styles.rows}`}>
-                                        <button type="button" value="Dosya Seç">
-                                            Dosya Seç
+                                        <button type="button" className="btn" title="Dosya Seç" value="Dosya Seç">
+                                            <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
                                         </button>
                                     </div>
                                 </div>
