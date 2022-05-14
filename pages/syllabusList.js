@@ -115,7 +115,7 @@ export default function GradeCard() {
                             }
                             $("#donem1").slideToggle(300)
                         }}>
-                            2019-2020 / Güz
+                            1. SINIF / GÜZ DÖNEMİ
                         </div>
                         <div id="donem1">
                             <hr></hr>
@@ -353,7 +353,7 @@ export default function GradeCard() {
                             }
                             $("#donem2").slideToggle(300)
                         }}>
-                            2019-2020 / Bahar
+                            1. SINIF / BAHAR DÖNEMİ
                         </div>
 
                         <div id="donem2">
@@ -597,7 +597,7 @@ export default function GradeCard() {
                             }
                             $("#donem3").slideToggle(300)
                         }}>
-                            2020-2021 / Güz
+                            2. SINIF / GÜZ DÖNEMİ
                         </div>
 
                         <div id="donem3">
@@ -841,7 +841,7 @@ export default function GradeCard() {
                             }
                             $("#donem4").slideToggle(300)
                         }}>
-                            2020-2021 / Bahar
+                            2. SINIF / BAHAR DÖNEMİ
                         </div>
 
                         <div id="donem4">
@@ -1085,7 +1085,7 @@ export default function GradeCard() {
                             }
                             $("#donem5").slideToggle(300)
                         }}>
-                            2021-2022 / Güz
+                            3. SINIF / GÜZ DÖNEMİ
                         </div>
 
                         <div id="donem5">
@@ -1329,7 +1329,7 @@ export default function GradeCard() {
                             }
                             $("#donem6").slideToggle(300)
                         }}>
-                            2021-2022 / Bahar
+                            3. SINIF / BAHAR DÖNEMİ
                         </div>
 
                         <div id="donem6">
@@ -1574,7 +1574,7 @@ export default function GradeCard() {
                             $("#donem7").slideToggle(300);
 
                         }}>
-                            2022-2023 / Güz
+                            4. SINIF / GÜZ DÖNEMİ
                         </div>
 
                         <div id="donem7">
@@ -1818,7 +1818,7 @@ export default function GradeCard() {
                             }
                             $("#donem8").slideToggle(300)
                         }}>
-                            2022-2023 / Bahar
+                            4. SINIF / BAHAR DÖNEMİ
                         </div>
 
                         <div id="donem8">
