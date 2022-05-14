@@ -78,7 +78,8 @@
 }
 
 .horizontalLine,
-.horizontalLine2 {
+.horizontalLine2,
+.horizontalLine3 {
     flex-shrink: 0;
     background-color: transparent;
     width: 100% !important;
@@ -100,6 +101,16 @@
     margin-top: 0.3rem !important;
     margin-bottom: 1rem !important;
     opacity: 0.8;
+    background-image: linear-gradient(to right,
+            rgba(52, 71, 103, .1),
+            rgba(52, 71, 103, .6),
+            rgba(52, 71, 103, .1)) !important;
+}
+
+.horizontalLine3 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    opacity: 0.5;
     background-image: linear-gradient(to right,
             rgba(52, 71, 103, .1),
             rgba(52, 71, 103, .6),
@@ -261,4 +272,35 @@
 
 .dersler {
     font-weight: 400;
+}
+
+.lecturer {
+    border: 2px solid #e1e3e6;
+    border-radius: .75rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.innerLecturer {
+    padding-right: 2rem;
+    padding-top: 1rem;
+    font-weight: bold;
+    color: #233046;
+}
+
+.innerTextLecturer {
+    text-align: justify;
+    font-weight: lighter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.3rem;
+    max-height: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.innerReplyLecturer {
+    text-align: right;
 }
