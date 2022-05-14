@@ -1,29 +1,56 @@
 //TODO : TABLE TASARIMI
 
-import React from "react";
+import React, { useState, setShow } from "react";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import styles from "../styles/RequestAndObjection.module.css";
 import Checkbox from "@mui/material/Checkbox";
-
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Modal } from "react-bootstrap";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
-import {
-  Box,
-  Card,
-  Container,
-  Grid,
-  Paper,
-  Table,
-  TableBody,
-  TableRow,
-  TableCell,
-  Avatar,
-  Button,
-  Typography,
-} from "@mui/material";
-export default function LectureList() {
+import { Button } from "@mui/material";
+const exclamationElement2 = (
+  <FontAwesomeIcon
+    icon={faCheck}
+    className={`mx-auto ${styles.exclamationElement}`}
+    style={{ color: "white" }}
+  />
+);
+export default function CoursePickDrop() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        centered
+        className={`mx-auto my-auto`}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Sınav İtirazı</Modal.Title>
+        </Modal.Header>
+        <form>
+          <Modal.Body>
+            <p>
+              Ders seçim işlemi onaylandıktan sonra değiştirilemez. Onaylıyor
+              musunuz?
+            </p>
+          </Modal.Body>
+          <Modal.Footer>
+            <button
+              id="btn3"
+              type="submit"
+              className={`button w-100 ${styles.button}`}
+            >
+              {exclamationElement2}
+              &nbsp; Onayla
+            </button>
+          </Modal.Footer>
+        </form>
+      </Modal>
       <Head>
         <title>Ders Listesi - İÜC ÖBS</title>
       </Head>
@@ -276,6 +303,7 @@ export default function LectureList() {
                     variant="contained"
                     color="primary"
                     className="float-right"
+                    onClick={handleShow}
                   >
                     Onayla
                   </Button>
