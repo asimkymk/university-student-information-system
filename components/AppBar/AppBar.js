@@ -95,11 +95,6 @@ class AppBar extends Component {
             >
               <MenuIcon />
             </IconButton>
-            <IconButton className={styles.PanelIcon}>
-              <Badge badgeContent={4} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
           </div>
         </div>
       </div>
