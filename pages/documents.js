@@ -59,7 +59,7 @@ class Home extends Component {
 
                             <hr></hr>
 
-                            <div className={`row ${styles.dersler}`} onClick={e => {
+                            <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
                                 if ($("#1").is(":visible")) {
                                     $(e.currentTarget).css("background", "#F1F2F7");
                                 }
@@ -103,7 +103,7 @@ class Home extends Component {
                                 </div>
                             </div>
 
-                            <div id='1' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem" }}>
+                            <div id='1' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem", display: "none" }}>
                                 <div className={`row`}>
                                     <div className={`col-1 my-auto ${styles.baslik}`}>
                                         Hafta
@@ -290,7 +290,7 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className={`${styles.horizontalLine}`}></div>
-                            <div className={`row ${styles.dersler}`} onClick={e => {
+                            <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
                                 if ($("#2").is(":visible")) {
                                     $(e.currentTarget).css("background", "#F1F2F7");
                                 }
@@ -334,7 +334,7 @@ class Home extends Component {
                                 </div>
                             </div>
 
-                            <div id='2' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem" }}>
+                            <div id='2' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem", display: "none" }}>
                                 <div className={`row`}>
                                     <div className={`col-1 my-auto ${styles.baslik}`}>
                                         Hafta
