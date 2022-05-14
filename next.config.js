@@ -4,6 +4,8 @@ const nextConfig = {
   images: {
     domains: ['demos.creative-tim.com'],
   },
+  experimental: { images: { layoutRaw: true } }
+
 
 }
 
