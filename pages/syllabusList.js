@@ -10,13 +10,13 @@ export default function GradeCard() {
         <>
 
             <Head>
-                <title>Belge Talebi - İÜC ÖBS</title>
+                <title>Müfredat Listesi - İÜC ÖBS</title>
             </Head>
 
             <Layout
                 appBar={{
-                    links: { "Ana Sayfa": "/", "Not Kartı": "/gradecard" },
-                    title: "Not Kartı",
+                    links: { "Ana Sayfa": "/", "Müfredat Listesi": "/syllabusList" },
+                    title: "Müfredat Listesi",
                 }}
             >
                 <div className={`container ${styles.mainContainer}`}>

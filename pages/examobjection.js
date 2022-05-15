@@ -206,11 +206,9 @@ export default function ExamObjection() {
                     </div>
                 </div>
 
-
             </Layout>
 
         </>
     );
-
 }
 

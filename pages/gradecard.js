@@ -10,7 +10,7 @@ export default function GradeCard() {
         <>
 
             <Head>
-                <title>Belge Talebi - İÜC ÖBS</title>
+                <title>Not Kartı - İÜC ÖBS</title>
             </Head>
 
             <Layout
