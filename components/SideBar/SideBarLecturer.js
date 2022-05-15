@@ -80,7 +80,7 @@ class SideBar extends Component {
       <div className={styles.sideBar} id="leftPanel">
         <div className={styles.logoPanel}>
           <div className={styles.logoImage}>
-            <a href=".">
+            <a href="/lecturer/">
               <Image
                 width="100%"
                 height="100%"
@@ -103,7 +103,7 @@ class SideBar extends Component {
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
                   <Image
-                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                    src="https://publons.com/media/thumbs/academic/photos/c4635c71-e215-476d-bf38-03b1996dbf9a.png.200x200_q95_crop_detail_upscale.png"
                     className={styles.circularAvatarImage}
                     alt="Avatar"
                     layout="fill"
@@ -115,7 +115,7 @@ class SideBar extends Component {
                   className={styles.itemText}
                   style={{ fontWeight: "bolder", fontSize: "11.5pt" }}
                 >
-                  Asım Kaymak
+                  Özgür Can TURNA
                 </span>
               </div>
               <span className={styles.itemExpand}>
@@ -160,7 +160,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/lecturer/loginportal" passHref>
+                    <Link href="/loginportal" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
@@ -215,7 +215,7 @@ class SideBar extends Component {
               </a>
             </Link>
           </li><li className={styles.linkItem}>
-            <Link href="/lecturer/" passHref>
+            <Link href="/lecturer/documents" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -234,7 +234,7 @@ class SideBar extends Component {
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>İNTERAKTİF</span>
           <li className={styles.linkItem}>
-            <Link href="/lecturer/" passHref>
+            <Link href="/lecturer/examobjection" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -288,7 +288,7 @@ class SideBar extends Component {
                         >
                           <div className={styles.innerItemTextContainer}>
                             <span className={styles.innerItemText}>
-                              Sınav İtiraz
+                              Sınav İt
                             </span>
                           </div>
                         </div>

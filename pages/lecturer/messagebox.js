@@ -25,7 +25,7 @@ export default function GradeCard() {
                                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
                             >
                                 <Image
-                                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                                    src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"
                                     alt="Avatar"
                                     layout="raw"
                                     width="100"
@@ -35,12 +35,10 @@ export default function GradeCard() {
                             </div>
                             <div className={`col my-auto`}>
                                 <div className={`row ${styles.innerLecturer}`}>
-                                    Özgür Can Turna
+                                    Asım KAYMAK
                                 </div>
                                 <div className={`row ${styles.innerTextLecturer}`}>
-                                    Evet, projede istediğiniz frameworkü kullanabilirsiniz. Proje
-                                    son teslim tarihi 14.05.2022&apos;dir. Geç teslim kabul
-                                    edilmeyecektir.
+                                    Merhaba hocam, yarın laboratuvar olacak mı?
                                 </div>
                             </div>
                             <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
@@ -67,7 +65,7 @@ export default function GradeCard() {
                                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
                             >
                                 <Image
-                                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                                    src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"
                                     alt="Avatar"
                                     layout="raw"
                                     width="100"
@@ -77,10 +75,10 @@ export default function GradeCard() {
                             </div>
                             <div className={`col my-auto`}>
                                 <div className={`row ${styles.innerLecturer}`}>
-                                    Özgür Can Turna
+                                    Mert YILMAZ
                                 </div>
                                 <div className={`row ${styles.innerTextLecturer}`}>
-                                    Evet projede istediğiniz frameworkü kullanabilirsiniz.
+                                    Hocam projede istediğimiz frameworkü kullanabilir miyiz?
                                 </div>
                             </div>
                             <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
@@ -104,7 +102,7 @@ export default function GradeCard() {
                                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
                             >
                                 <Image
-                                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                                    src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"
                                     alt="Avatar"
                                     layout="raw"
                                     width="100"
@@ -114,10 +112,10 @@ export default function GradeCard() {
                             </div>
                             <div className={`col my-auto`}>
                                 <div className={`row ${styles.innerLecturer}`}>
-                                    Özgür Can Turna
+                                    Emin Can ÖZGE
                                 </div>
                                 <div className={`row ${styles.innerTextLecturer}`}>
-                                    Evet projede istediğiniz frameworkü kullanabilirsiniz.
+                                    Ödevi teslim ederken upload kısmında bir sorun oluştuğundan 2 dakika gecikmeli yollayabildim. Bir sorun teşkil eder mi?
                                 </div>
                             </div>
                             <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
@@ -141,7 +139,7 @@ export default function GradeCard() {
                                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
                             >
                                 <Image
-                                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                                    src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"
                                     alt="Avatar"
                                     layout="raw"
                                     width="100"
@@ -151,10 +149,10 @@ export default function GradeCard() {
                             </div>
                             <div className={`col my-auto`}>
                                 <div className={`row ${styles.innerLecturer}`}>
-                                    Özgür Can Turna
+                                    Siraç PETMEZÇİLER
                                 </div>
                                 <div className={`row ${styles.innerTextLecturer}`}>
-                                    Evet projede istediğiniz frameworkü kullanabilirsiniz.
+                                    Hocam hangi saatlerde odanızda olduğunu öğrenebilir miyim?
                                 </div>
                             </div>
                             <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
