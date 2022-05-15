@@ -15,7 +15,7 @@ export default function Message() {
       </Head>
       <Layout
         appBar={{
-          links: { "Ana Sayfa": "/", "Mesaj Kutusu": "/messagebox" },
+          links: { "Ana Sayfa": "/lecturer", "Mesaj Kutusu": "/lecturer/messagebox" },
           title: "Mesaj Kutusu",
         }}
       >
@@ -109,7 +109,7 @@ export default function Message() {
               </div>
             </div>
             <div className={`p-0 mr-2`} style={{ width: "50px" }}>
-              <Link href="../../../messagebox/1">
+              <Link href="../../lecturer/messagebox/1">
                 <a
                   type="button"
                   className="btn uploadButton "
