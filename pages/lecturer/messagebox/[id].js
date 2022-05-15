@@ -31,7 +31,7 @@ export default function Message() {
               <div className="message-blue">
                 <div className="row">
                   <p className="message-content">
-                    This is an awesomsdfsdfsdfd Lorem ipsum dolor sit amet,
+                    Lorem ipsum dolor sit amet,
                     consectetur adipisicing elit. Reprehenderit ut quaerat
                     veritatis perferendis? Aperiam veniam iure quae eaque, sed
                     omnis eos assumenda minus excepturi veritatis porro repellat
@@ -57,7 +57,7 @@ export default function Message() {
               <div className="message-orange">
                 <div className="row">
                   <p className="message-content">
-                    This is an awesomsdfsdfsdfd Lorem ipsum dolor sit amet,
+                    Lorem ipsum dolor sit amet,
                     consectetur adipisicing elit. Reprehenderit ut quaerat
                     veritatis perferendis? Aperiam veniam iure quae eaque, sed
                     omnis eos assumenda minus excepturi veritatis porro repellat

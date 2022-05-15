@@ -199,7 +199,7 @@ class SideBar extends Component {
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>DERS İŞLEMLERİ</span>
           <li className={styles.linkItem}>
-            <Link href="/lecturer/" passHref>
+            <Link href="/lecturer/editgrades" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>

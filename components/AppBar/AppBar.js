@@ -1,13 +1,10 @@
 import styles from "../../styles/AppBar.module.css";
 
 import IconButton from "@mui/material/IconButton";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import Badge from "@mui/material/Badge";
 import $ from "jquery";
-import React, { useEffect, Component } from "react";
+import React, { Component } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 var status = false;
 class AppBar extends Component {

@@ -1,35 +1,13 @@
 //TODO : TABLE TASARIMI
 
 import React, { Component, useState } from "react";
-import Image from "next/image";
 import Layout from "../../components/Layout/LayoutLecturer";
 import Head from "next/head";
 import { styled } from "@mui/material/styles";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/Inbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
-import PersonIcon from "@mui/icons-material/Person";
-import SchoolIcon from "@mui/icons-material/School";
-import CallIcon from "@mui/icons-material/Call";
-import HomeIcon from "@mui/icons-material/Home";
-import TranslateIcon from "@mui/icons-material/Translate";
-import WorkIcon from "@mui/icons-material/Work";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
-import TextField from "@mui/material/TextField";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Input from "@mui/material/Input";
-import Link from "next/link";
-import FormHelperText from "@mui/material/FormHelperText";
 import $ from "jquery";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Modal } from "react-bootstrap";
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const exclamationElement2 = (
   <FontAwesomeIcon
     icon={faCheck}
@@ -38,30 +16,17 @@ const exclamationElement2 = (
   />
 );
 import {
-  Box,
-  Card,
-  Container,
   Grid,
   Paper,
-  Table,
-  TableBody,
-  TableRow,
-  TableCell,
-  Avatar,
   Button,
   Typography,
 } from "@mui/material";
 import otherstyles from "../../styles/Profile.module.css";
 import styles from "../../styles/RequestAndObjection.module.css";
-import { Theme, useTheme } from "@mui/material/styles";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 const Item = styled(Paper)(({ theme }) => ({
   color: "rgba(0, 0, 0, 0.87)",
   transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;",
-
   flexDirection: "column",
   position: "relative",
   minWidth: "0px",
@@ -84,7 +49,6 @@ export default function EditGrades() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const showList = () => {
-    console.log("ok");
     $("#list").show();
   };
   return (
@@ -139,13 +103,13 @@ export default function EditGrades() {
             </Grid>
 
             <Grid item xs={12} marginTop={1}>
-              <div class="input-group">
-                <select class="form-control">
+              <div className="input-group">
+                <select className="form-control">
                   <option>Ders seçin</option>
                   <option>Web Programlama</option>
                   <option>Inst. to the Algorithm</option>
                 </select>
-                <select class="form-control ml-1">
+                <select className="form-control ml-1">
                   <option>Sınav türü seçin</option>
                   <option>Vize</option>
                   <option>Final</option>
@@ -159,15 +123,15 @@ export default function EditGrades() {
                   className="form-control"
                   placeholder="Etki Oranı girin"
                 />
-                <span class="input-group-btn">
+                <span className="input-group-btn">
                   <button
-                    class="btn btn-default"
+                    className="btn btn-default"
                     type="button"
-                    tabindex="-1"
+                    tabIndex="-1"
                     onClick={showList}
                   >
                     <span
-                      class="glyphicon glyphicon-remove"
+                      className="glyphicon glyphicon-remove"
                       aria-hidden="true"
                     ></span>
                     Listele

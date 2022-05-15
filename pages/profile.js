@@ -1,17 +1,11 @@
 //TODO : TABLE TASARIMI
 
 import React, { Component } from "react";
-import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import { styled } from "@mui/material/styles";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/Inbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
 import PersonIcon from "@mui/icons-material/Person";
 import SchoolIcon from "@mui/icons-material/School";
 import CallIcon from "@mui/icons-material/Call";
@@ -21,20 +15,11 @@ import WorkIcon from "@mui/icons-material/Work";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Input from "@mui/material/Input";
 import Link from "next/link";
-import FormHelperText from "@mui/material/FormHelperText";
 import {
   Box,
-  Card,
-  Container,
   Grid,
   Paper,
-  Table,
-  TableBody,
-  TableRow,
-  TableCell,
   Avatar,
   Button,
   Typography,
@@ -227,7 +212,7 @@ class Profile extends Component {
                           }}
                         >
                           <Avatar
-                            src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg"
+                            src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"
                             sx={{ width: "15%", height: "auto" }}
                           ></Avatar>
                         </Grid>

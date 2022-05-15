@@ -176,7 +176,7 @@ class Profile extends Component {
                           }}
                         >
                           <Avatar
-                            src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg"
+                            src="https://publons.com/media/thumbs/academic/photos/c4635c71-e215-476d-bf38-03b1996dbf9a.png.200x200_q95_crop_detail_upscale.png"
                             sx={{ width: "15%", height: "auto" }}
                           ></Avatar>
                         </Grid>
