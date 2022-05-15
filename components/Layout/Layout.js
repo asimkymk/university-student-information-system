@@ -31,8 +31,6 @@ class Layout extends Component {
             {this.children}
           </div>
         </div>
-
-        <script>{this._handleScroll}</script>
       </div>
     );
   }
