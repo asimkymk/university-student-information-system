@@ -30,7 +30,7 @@ export default function CoursePickDrop() {
         className={`mx-auto my-auto`}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Sınav İtirazı</Modal.Title>
+          <Modal.Title>Ders Alma</Modal.Title>
         </Modal.Header>
         <form>
           <Modal.Body>

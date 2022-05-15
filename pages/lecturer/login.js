@@ -64,7 +64,7 @@ export default function Login() {
                 </Image>
               </div>
               <div className={loginStyles.loginArea}>
-                <form action="/lecturer">
+                <form action="/lecturer/profile">
                   <div className="mt-3 mb-3" style={{ fontSize: "16pt", color: "#11263E", fontWeight: "bold", opacity: "0.9", textAlign: "center" }}>Öğretim Görevlisi Girişi</div>
                   <div
                     className={`input-group mb-3 mt-2 ${loginStyles.inputGroup}`}
