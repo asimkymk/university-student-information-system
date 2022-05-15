@@ -104,7 +104,7 @@ class SideBar extends Component {
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
                   <Image
-                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                    src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"
                     className={styles.circularAvatarImage}
                     alt="Avatar"
                     layout="fill"

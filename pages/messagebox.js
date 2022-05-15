@@ -25,7 +25,7 @@ export default function GradeCard() {
                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
               >
                 <Image
-                  src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                  src="https://publons.com/media/thumbs/academic/photos/c4635c71-e215-476d-bf38-03b1996dbf9a.png.200x200_q95_crop_detail_upscale.png"
                   alt="Avatar"
                   layout="raw"
                   width="100"
@@ -39,7 +39,7 @@ export default function GradeCard() {
                 </div>
                 <div className={`row ${styles.innerTextLecturer}`}>
                   Evet, projede istediğiniz frameworkü kullanabilirsiniz. Proje
-                  son teslim tarihi 14.05.2022&apos;dir. Geç teslim kabul
+                  son teslim tarihi 15.05.2022&apos;dir. Geç teslim kabul
                   edilmeyecektir.
                 </div>
               </div>
@@ -67,7 +67,7 @@ export default function GradeCard() {
                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
               >
                 <Image
-                  src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                  src="https://avesis.iuc.edu.tr/user/image/4335"
                   alt="Avatar"
                   layout="raw"
                   width="100"
@@ -77,10 +77,10 @@ export default function GradeCard() {
               </div>
               <div className={`col my-auto`}>
                 <div className={`row ${styles.innerLecturer}`}>
-                  Özgür Can Turna
+                  Rüya Şamlı
                 </div>
                 <div className={`row ${styles.innerTextLecturer}`}>
-                  Evet projede istediğiniz frameworkü kullanabilirsiniz.
+                  Vize sınavı 5-12. üniteler arası olacaktır. Kolay gelsin, başarılar.
                 </div>
               </div>
               <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
@@ -104,7 +104,7 @@ export default function GradeCard() {
                 style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
               >
                 <Image
-                  src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                  src="https://avesis.iuc.edu.tr/user/image/2168"
                   alt="Avatar"
                   layout="raw"
                   width="100"
@@ -114,47 +114,10 @@ export default function GradeCard() {
               </div>
               <div className={`col my-auto`}>
                 <div className={`row ${styles.innerLecturer}`}>
-                  Özgür Can Turna
+                  Sabri Arık
                 </div>
                 <div className={`row ${styles.innerTextLecturer}`}>
-                  Evet projede istediğiniz frameworkü kullanabilirsiniz.
-                </div>
-              </div>
-              <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
-                <button
-                  type="button"
-                  className="btn uploadButton "
-                  title="Mesaj Gönder"
-                  value="Mesaj Gönder"
-                >
-                  <SendIcon className="uploadButton"></SendIcon>
-                  <br></br>
-                  Yanıtla
-                </button>
-              </div>
-            </div>
-            <div className={`${styles.horizontalLine3}`}></div>
-
-            <div className={`row ${styles.lecturer}`}>
-              <div
-                className={`my-auto`}
-                style={{ marginLeft: "1rem", width: "5rem", padding: "0" }}
-              >
-                <Image
-                  src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
-                  alt="Avatar"
-                  layout="raw"
-                  width="100"
-                  height="100"
-                  style={{ borderRadius: "50%", height: "4rem", width: "4rem" }}
-                ></Image>
-              </div>
-              <div className={`col my-auto`}>
-                <div className={`row ${styles.innerLecturer}`}>
-                  Özgür Can Turna
-                </div>
-                <div className={`row ${styles.innerTextLecturer}`}>
-                  Evet projede istediğiniz frameworkü kullanabilirsiniz.
+                  Kaynak kitabınız dokümanlar kısmına eklenmiştir.
                 </div>
               </div>
               <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>

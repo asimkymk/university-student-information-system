@@ -103,7 +103,7 @@ class SideBar extends Component {
               <div className={styles.itemProfile}>
                 <div className={styles.circularAvatar}>
                   <Image
-                    src="https://demos.creative-tim.com/material-dashboard-2-pro-react-ts/static/media/team-3.0ef0be95e6850814c79e.jpg"
+                    src="https://publons.com/media/thumbs/academic/photos/c4635c71-e215-476d-bf38-03b1996dbf9a.png.200x200_q95_crop_detail_upscale.png"
                     className={styles.circularAvatarImage}
                     alt="Avatar"
                     layout="fill"
@@ -115,7 +115,7 @@ class SideBar extends Component {
                   className={styles.itemText}
                   style={{ fontWeight: "bolder", fontSize: "11.5pt" }}
                 >
-                  Asım Kaymak
+                  Özgür Can TURNA
                 </span>
               </div>
               <span className={styles.itemExpand}>
