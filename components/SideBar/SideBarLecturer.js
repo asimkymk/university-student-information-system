@@ -215,7 +215,7 @@ class SideBar extends Component {
               </a>
             </Link>
           </li><li className={styles.linkItem}>
-            <Link href="/lecturer/" passHref>
+            <Link href="/lecturer/documents" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
