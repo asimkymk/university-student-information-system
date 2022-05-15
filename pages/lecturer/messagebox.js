@@ -44,7 +44,7 @@ export default function GradeCard() {
                                 </div>
                             </div>
                             <div className={`col-3 my-auto ${styles.innerReplyLecturer}`}>
-                                <Link href="/messagebox/1">
+                                <Link href="../../lecturer/messagebox/1">
                                     <a
                                         type="button"
                                         className="btn uploadButton "

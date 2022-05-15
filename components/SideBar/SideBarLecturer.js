@@ -142,7 +142,7 @@ class SideBar extends Component {
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/profile" passHref>
+                    <Link href="/lecturer/profile" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
@@ -160,7 +160,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/loginportal" passHref>
+                    <Link href="/lecturer/loginportal" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
@@ -180,7 +180,7 @@ class SideBar extends Component {
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>ÖĞRENCİ BİLGİ SİSTEMİ</span>
           <li className={styles.linkItem}>
-            <Link href="/" passHref>
+            <Link href="/lecturer/" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -199,7 +199,7 @@ class SideBar extends Component {
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>DERS İŞLEMLERİ</span>
           <li className={styles.linkItem}>
-            <Link href="/" passHref>
+            <Link href="/lecturer/" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -215,7 +215,7 @@ class SideBar extends Component {
               </a>
             </Link>
           </li><li className={styles.linkItem}>
-            <Link href="/" passHref>
+            <Link href="/lecturer/" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -234,7 +234,7 @@ class SideBar extends Component {
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>İNTERAKTİF</span>
           <li className={styles.linkItem}>
-            <Link href="/" passHref>
+            <Link href="/lecturer/" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -262,7 +262,7 @@ class SideBar extends Component {
               <div style={{ width: "100%" }}>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/documentrequest" passHref>
+                    <Link href="/lecturer/documentrequest" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
@@ -280,7 +280,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/examobjection" passHref>
+                    <Link href="/lecturer/examobjection" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
@@ -301,7 +301,7 @@ class SideBar extends Component {
           </div>
 
           <li className={styles.linkItem}>
-            <Link href="/messagebox" passHref>
+            <Link href="/lecturer/messagebox" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
