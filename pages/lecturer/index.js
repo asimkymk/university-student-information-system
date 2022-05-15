@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/LayoutLecturer";
 export default function Home() {
     return (
         <>
@@ -9,7 +9,6 @@ export default function Home() {
             </Head>
             <Layout
                 appBar={{ links: { "Ana Sayfa": "/lecturer" }, title: "Ana Sayfa" }}
-                suppressHydrationWarning
             >
             </Layout>
         </>
