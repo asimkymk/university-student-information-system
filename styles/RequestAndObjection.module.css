@@ -306,3 +306,7 @@
 .innerReplyLecturer {
   text-align: right;
 }
+
+.removable {
+  cursor: pointer;
+}

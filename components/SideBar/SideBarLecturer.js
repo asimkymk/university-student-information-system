@@ -80,7 +80,7 @@ class SideBar extends Component {
       <div className={styles.sideBar} id="leftPanel">
         <div className={styles.logoPanel}>
           <div className={styles.logoImage}>
-            <a href=".">
+            <a href="/lecturer/">
               <Image
                 width="100%"
                 height="100%"
@@ -234,7 +234,7 @@ class SideBar extends Component {
           <hr className={styles.seperator}></hr>
           <span className={styles.pages}>İNTERAKTİF</span>
           <li className={styles.linkItem}>
-            <Link href="/lecturer/" passHref>
+            <Link href="/lecturer/examobjection" passHref>
               <a className="link">
                 <div className={styles.itemPanel}>
                   <div className={styles.itemProfile}>
@@ -288,7 +288,7 @@ class SideBar extends Component {
                         >
                           <div className={styles.innerItemTextContainer}>
                             <span className={styles.innerItemText}>
-                              Sınav İtiraz
+                              Sınav İt
                             </span>
                           </div>
                         </div>
