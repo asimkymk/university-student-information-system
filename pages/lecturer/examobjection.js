@@ -1,7 +1,7 @@
 //TODO : TABLE TASARIMI
 
 import React from "react";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/LayoutLecturer";
 import Head from "next/head";
 import { useState } from "react";
 import styles from "../../styles/RequestAndObjection.module.css";
