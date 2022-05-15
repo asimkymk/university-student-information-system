@@ -103,9 +103,15 @@ export default function Login() {
                 </Image>
               </div>
               <div className={loginStyles.loginArea}>
-                <form action=".">
+                <form action="/">
                   <div
-                    className={`input-group mb-3 mt-5 ${loginStyles.inputGroup}`}
+                    className="mt-3 mb-3"
+                    style={{ fontSize: "16pt", color: "#11263E", fontWeight: "bold", opacity: "0.9", textAlign: "center" }}>
+                    Öğrenci Girişi
+                  </div>
+
+                  <div
+                    className={`input-group mb-2 mt-2 ${loginStyles.inputGroup}`}
                   >
                     <div
                       id="tcp"
@@ -179,7 +185,7 @@ export default function Login() {
                     </span>
                   </div>
                   <div
-                    className="mt-3 mb-3"
+                    className="mt-2 mb-2"
                     style={{ overflow: "hidden", paddingTop: "10px" }}
                   >
                     <button

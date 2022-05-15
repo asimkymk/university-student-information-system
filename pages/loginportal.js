@@ -27,7 +27,7 @@ export default function Portal() {
             <div className="container align-items-center justify-content-center d-flex vh-100">
                 <div className="row vw-85 align-items-center justify-content-center px-4">
                     <Link href="/login" passHref>
-                        <div className={`col-lg-3 col-md-5 col-sm-12 card ${styles.card} ${styles.portalCard} m-3`}>
+                        <div className={`col-lg-5 col-md-5 col-sm-12 card ${styles.card} ${styles.portalCard} m-3`}>
                             <div className={`${styles.portalCardInner}`}>
                                 {studentElement}
                                 <div className={styles.portalCardText}>
@@ -39,20 +39,13 @@ export default function Portal() {
                                         <li className={`${styles.li}`}>n</li>
                                         <li className={`${styles.li}`}>c</li>
                                         <li className={`${styles.li}`}>i</li>
-                                        <li className={`${styles.li}`}>&nbsp;</li>
-                                        <li className={`${styles.li}`}>G</li>
-                                        <li className={`${styles.li}`}>i</li>
-                                        <li className={`${styles.li}`}>r</li>
-                                        <li className={`${styles.li}`}>i</li>
-                                        <li className={`${styles.li}`}>ş</li>
-                                        <li className={`${styles.li}`}>i</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </Link>
-                    <Link href="/login" passHref>
-                        <div className={`col-lg-3 col-md-5 col-sm-12 card ${styles.card} ${styles.portalCard} m-3`}>
+                    <Link href="/lecturer/login" passHref>
+                        <div className={`col-lg-5 col-md-5 col-sm-12 card ${styles.card} ${styles.portalCard} m-3`}>
                             <div className={`${styles.portalCardInner}`}>
                                 {lecturerElement}
                                 <div className={styles.portalCardText}>
@@ -79,25 +72,7 @@ export default function Portal() {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/login" passHref>
-                        <div className={`col-lg-3 col-md-5 col-sm-12 card ${styles.card} ${styles.portalCard} m-3`}>
-                            <div className={`${styles.portalCardInner}`}>
-                                {adminElement}
-                                <div className={styles.portalCardText}>
-                                    <ul className={`p-0`}>
-                                        <li className={`${styles.li}`}>Y</li>
-                                        <li className={`${styles.li}`}>ö</li>
-                                        <li className={`${styles.li}`}>n</li>
-                                        <li className={`${styles.li}`}>e</li>
-                                        <li className={`${styles.li}`}>t</li>
-                                        <li className={`${styles.li}`}>i</li>
-                                        <li className={`${styles.li}`}>c</li>
-                                        <li className={`${styles.li}`}>i</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
+
                 </div>
             </div >
         </>

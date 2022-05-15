@@ -160,7 +160,7 @@ class SideBar extends Component {
                 </ul>
                 <ul className={styles.innerItem}>
                   <li className={styles.innerItemList}>
-                    <Link href="/lecturer/loginportal" passHref>
+                    <Link href="/loginportal" passHref>
                       <a className="link">
                         <div
                           className={styles.innerItemContainer}
