@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Layout from "../../components/Layout/LayoutLecturer";
 import $ from "jquery";
 import styles from "../../styles/RequestAndObjection.module.css";
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
