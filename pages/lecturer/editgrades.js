@@ -60,7 +60,7 @@ export default function EditGrades() {
         className={`mx-auto my-auto`}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Sınav İtirazı</Modal.Title>
+          <Modal.Title>Not Girişi</Modal.Title>
         </Modal.Header>
         <form>
           <Modal.Body>
