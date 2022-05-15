@@ -276,7 +276,7 @@ class Profile extends Component {
                             <Grid item xs={12} sm={6} paddingRight={2}>
                               <FormControl fullWidth>
                                 <TextField
-                                  value="Yurdagül"
+                                  value="Anne Adı"
                                   label="Anne Adı"
                                   disabled
                                   id="mothername"
@@ -287,7 +287,7 @@ class Profile extends Component {
                             <Grid item xs={12} sm={6} paddingRight={2}>
                               <FormControl fullWidth>
                                 <TextField
-                                  value="Adem"
+                                  value="Baba Adı"
                                   label="Baba Adı"
                                   disabled
                                   id="fathername"
@@ -311,7 +311,7 @@ class Profile extends Component {
                             <Grid item xs={12} sm={6} paddingRight={2}>
                               <FormControl fullWidth>
                                 <TextField
-                                  value="45262969542"
+                                  value="Kimlik"
                                   label="Kimlik Numarası"
                                   disabled
                                   id="idnumber"
@@ -576,7 +576,7 @@ class Profile extends Component {
                                 id="standard-multiline-static"
                                 label="İkamet"
                                 multiline
-                                defaultValue="Hürriyet Mahallesi Kadıoğlu Sokak No: 5 Daire: 19 Bahçelievler / İstanbul"
+                                defaultValue="Adres"
                                 variant="standard"
                               />
                             </FormControl>
@@ -802,7 +802,7 @@ class Profile extends Component {
                           <Grid item xs={12} sm={6} paddingRight={2}>
                             <FormControl fullWidth>
                               <TextField
-                                value="45262969542"
+                                value="Kimlik"
                                 label="Kulanıcı Adı"
                                 disabled
                                 id="username"
@@ -813,7 +813,7 @@ class Profile extends Component {
                           <Grid item xs={12} sm={6} paddingRight={2}>
                             <FormControl fullWidth>
                               <TextField
-                                defaultValue="kanarya10"
+                                defaultValue="Şifre"
                                 label="Şifre"
                                 id="password"
                                 variant="standard"
