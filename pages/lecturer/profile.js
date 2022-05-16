@@ -80,7 +80,7 @@ class Profile extends Component {
         </Head>
         <Layout
           appBar={{
-            links: { "Ana Sayfa": "/", Bilgilerim: "/profile" },
+            links: { "Ana Sayfa": "/lecturer", Bilgilerim: "/lecturer/profile" },
             title: "Bilgilerim",
           }}
         >

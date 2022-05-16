@@ -1,11 +1,3 @@
-/*
-TODO
-
-LİNKE TIKLANDIĞINDA AÇILIR MENÜLER BUGA GİRİYOR.
-BAKILACAK!
-
-*/
-
 import styles from "../../styles/SideBar.module.css";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -93,6 +85,7 @@ class SideBar extends Component {
           </div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
+        <span style={{ padding: "5px", paddingBottom: "0", fontSize: "10pt", textAlign: "center" }}> Asım Kaymak / Emin Can Özge / Mert Yılmaz  Mustafa Emre Taşkın / Siraç Petmezçiler  Yunus Kara </span>
         <hr className={styles.seperator}></hr>
         <ul className={styles.linkList}>
           <li className={styles.linkItem} id="profileShow">

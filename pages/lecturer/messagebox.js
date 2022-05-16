@@ -13,7 +13,7 @@ export default function GradeCard() {
             </Head>
             <Layout
                 appBar={{
-                    links: { "Ana Sayfa": "/lecturer", "Mesaj Kutusu": "/messagebox" },
+                    links: { "Ana Sayfa": "/lecturer", "Mesaj Kutusu": "/lecturer/messagebox" },
                     title: "Mesaj Kutusu",
                 }}
             >

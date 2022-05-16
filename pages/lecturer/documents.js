@@ -68,7 +68,7 @@ export default function Documents() {
             </Head>
             <Layout
                 appBar={{
-                    links: { "Ana Sayfa": "/", "Ödev ve Doküman": "/documents" },
+                    links: { "Ana Sayfa": "/lecturer", "Ödev ve Doküman": "/lecturer/documents" },
                     title: "Ödev ve Doküman",
                 }}
             >
