@@ -3,7 +3,8 @@ import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
-import Image from "next/image"
+import Image from "next/image";
+import { useRouter } from "next/router";
 import {
   faSignIn,
   faIdBadge,
@@ -16,7 +17,9 @@ import {
   faFont,
   faAt,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 export default function Login() {
+  const router = useRouter();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -30,10 +33,16 @@ export default function Login() {
     <FontAwesomeIcon icon={faLock} className={`mx-auto faLock`} />
   );
   const signElement = (
-    <FontAwesomeIcon icon={faSignIn} className={`mx-auto ${loginStyles.faSignIn} faSignIn`} />
+    <FontAwesomeIcon
+      icon={faSignIn}
+      className={`mx-auto ${loginStyles.faSignIn} faSignIn`}
+    />
   );
   const registerElement = (
-    <FontAwesomeIcon icon={faPlusCircle} className={`${loginStyles.faPlusCircle} mx-auto`} />
+    <FontAwesomeIcon
+      icon={faPlusCircle}
+      className={`${loginStyles.faPlusCircle} mx-auto`}
+    />
   );
   const forgotPasswordElement = (
     <FontAwesomeIcon
@@ -80,6 +89,21 @@ export default function Login() {
     date.setFullYear(date.getFullYear() - 15);
     return date;
   }
+  function girisYap() {
+    axios
+      .post("http://localhost:3001/login", {
+        tcNo: "45262969542",
+        password: "Kanarya10.",
+      })
+      .then(function (response) {
+        if (response.data.result == true) {
+          router.push("/");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
   return (
     <>
       <Head>
@@ -99,14 +123,20 @@ export default function Login() {
                   layout="responsive"
                   width="100%"
                   height="100%"
-                >
-                </Image>
+                ></Image>
               </div>
               <div className={loginStyles.loginArea}>
                 <form action="/">
                   <div
                     className="mt-3 mb-3"
-                    style={{ fontSize: "16pt", color: "#11263E", fontWeight: "bold", opacity: "0.9", textAlign: "center" }}>
+                    style={{
+                      fontSize: "16pt",
+                      color: "#11263E",
+                      fontWeight: "bold",
+                      opacity: "0.9",
+                      textAlign: "center",
+                    }}
+                  >
                     Öğrenci Girişi
                   </div>
 
@@ -192,6 +222,7 @@ export default function Login() {
                       id="btn1"
                       type="submit"
                       formMethod="post"
+                      onClick={girisYap}
                       className={`button mt-3 mb-3 ${loginStyles.button}`}
                       style={{
                         marginLeft: "12px",
