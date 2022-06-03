@@ -1,7 +1,12 @@
 [
   {
     "tcNo": "45262969542",
-    "password": "Kanarya10."
+    "password": "Kanarya10.",
+    "isim": "Asım",
+    "soyisim": "Kaymak",
+    "alinanDers": 6,
+    "notOrtalamasi": 3.31,
+    "bulunulanSinif": 3
   },
   {
     "tcNo": "12345678901",

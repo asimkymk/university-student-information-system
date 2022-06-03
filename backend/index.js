@@ -5,7 +5,7 @@ const express = require("express"),
 bodyParser = require("body-parser");
 var jwt = require("jsonwebtoken");
 const privateKey = "ASIM";
-
+var user;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -28,14 +28,26 @@ function tokenControl(request, response, next) {
   });
 }
 app.get("/", tokenControl, (req, res) => {
-  res.send("ANASAYFA");
+  console.log(user);
+  return res.json({
+    result: true,
+
+    data: [
+      {
+        alinanDers: user.alinanDers,
+        notOrtalamasi: user.notOrtalamasi,
+        bulunulanSinif: user.bulunulanSinif,
+      },
+    ],
+    message: "Anasayfa açıldı.",
+  });
 });
 app.post("/login", (req, res) => {
   const fs = require("fs");
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
   for (index in students) {
-    const user = students[index];
+    user = students[index];
     if (req.body.tcNo == user.tcNo && req.body.password == user.password) {
       var token = jwt.sign({ tcNo: user.tcNo }, privateKey);
       return res.json({

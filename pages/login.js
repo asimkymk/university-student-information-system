@@ -18,6 +18,7 @@ import {
   faAt,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import AppConstant from "../connect/app_constants";
 export default function Login() {
   const router = useRouter();
   const [show, setShow] = useState(false);
@@ -97,6 +98,9 @@ export default function Login() {
       })
       .then(function (response) {
         if (response.data.result == true) {
+          console.log(response.data.data[0].token);
+          AppConstant.token = response.data.data[0].token;
+          AppConstant.isLogged = true;
           router.push("/");
         }
       })
