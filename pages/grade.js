@@ -12,13 +12,12 @@ export default function Grade() {
   const [grade, setGrade] = useState([]);
   if (AppConstant.isLogged) {
     const requestOptions = {
-      method: "POST",
+      method: "GET",
       headers: {
         "content-type": "application/json",
         Accept: "application/json",
         token: AppConstant.token,
       },
-      body: JSON.stringify({ tcNo: "45262969542" }),
     };
     useEffect(() => {
       const fetchData = () => {

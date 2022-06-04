@@ -30,14 +30,16 @@ function tokenControl(request, response, next) {
       );
   });
 }
-app.post("/", tokenControl, (req, res) => {
+app.get("/", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  // bar
   for (index in students) {
     user = students[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let data = {
         Pazartesi: 0,
         Salı: 0,
@@ -82,14 +84,15 @@ app.post("/", tokenControl, (req, res) => {
   });
 });
 
-app.post("/grade", tokenControl, (req, res) => {
+app.get("/grade", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
   for (index in students) {
     user = students[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let data = user.dersAlma;
       let responsedata = [];
       let responseindex = 0;
@@ -109,7 +112,6 @@ app.post("/grade", tokenControl, (req, res) => {
         }
       }
 
-
       return res.json({
         result: true,
 
@@ -125,21 +127,25 @@ app.post("/grade", tokenControl, (req, res) => {
     message: "Bilgi bulunamadı.",
   });
 });
-app.post("/documents", tokenControl, (req, res) => {
+app.get("/documents", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
   let rawdata = fs.readFileSync("data/student.json");
   let student = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
   for (index in student) {
     user = student[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let responsedata = [];
       let responseindex = 0;
       let rawdata1 = fs.readFileSync("data/lecture.json");
       let lecture = JSON.parse(rawdata1);
       for (j in lecture) {
         for (k in user.dersAlma) {
-          if (lecture[j].dersKodu == user.dersAlma[k].dersKodu && lecture[j].donem == user.bulunulanDonem) {
+          if (
+            lecture[j].dersKodu == user.dersAlma[k].dersKodu &&
+            lecture[j].donem == user.bulunulanDonem
+          ) {
             responsedata.push(lecture[j]);
             responseindex++;
           }
@@ -162,21 +168,25 @@ app.post("/documents", tokenControl, (req, res) => {
   });
 });
 
-app.post("/courseschedule", tokenControl, (req, res) => {
+app.get("/courseschedule", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
   let rawdata = fs.readFileSync("data/student.json");
   let student = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
   for (index in student) {
     user = student[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let responsedata = [];
       let responseindex = 0;
       let rawdata1 = fs.readFileSync("data/lecture.json");
       let lecture = JSON.parse(rawdata1);
       for (j in lecture) {
         for (k in user.dersAlma) {
-          if (lecture[j].dersKodu == user.dersAlma[k].dersKodu && lecture[j].donem == user.bulunulanDonem) {
+          if (
+            lecture[j].dersKodu == user.dersAlma[k].dersKodu &&
+            lecture[j].donem == user.bulunulanDonem
+          ) {
             responsedata.push(lecture[j]);
             responseindex++;
           }
@@ -198,14 +208,15 @@ app.post("/courseschedule", tokenControl, (req, res) => {
     message: "Bilgi bulunamadı.",
   });
 });
-app.post("/gradecard", tokenControl, (req, res) => {
+app.get("/gradecard", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
   for (index in students) {
     user = students[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let data = user.dersAlma;
       let responsedata = [];
       let responseindex = 0;
@@ -244,13 +255,13 @@ app.post("/gradecard", tokenControl, (req, res) => {
   });
 });
 
-
-app.post("/lectureList", tokenControl, (req, res) => {
+app.get("/lectureList", tokenControl, (req, res) => {
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
   for (index in students) {
     user = students[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let data = user.dersAlma;
       let responsedata = [];
       let responseindex = 0;
@@ -261,7 +272,6 @@ app.post("/lectureList", tokenControl, (req, res) => {
         for (j in lecture) {
           if (lecture[j].dersKodu == ders.dersKodu) {
             if (lecture[j].donem == user.bulunulanDonem) {
-
               responsedata.push(data[j]);
               responsedata[responseindex].toplamKredi = lecture[j].toplamKredi;
               responsedata[responseindex].dersAdi = lecture[j].dersAdi;
@@ -286,12 +296,13 @@ app.post("/lectureList", tokenControl, (req, res) => {
   }
 });
 
-app.post("/syllabus", tokenControl, (req, res) => {
+app.get("/syllabus", tokenControl, (req, res) => {
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
   for (index in students) {
     user = students[index];
-    if (req.body.tcNo == user.tcNo) {
+    if (decoded.tcNo == user.tcNo) {
       let responsedata = [];
       let donem1 = [];
       let donem2 = [];
@@ -306,22 +317,14 @@ app.post("/syllabus", tokenControl, (req, res) => {
       let lecture = JSON.parse(rawdata1);
       for (j in lecture) {
         if (lecture[j].birimAdı == user.birimAdı) {
-          if (lecture[j].donem == 1)
-            donem1.push(lecture[j]);
-          if (lecture[j].donem == 2)
-            donem2.push(lecture[j]);
-          if (lecture[j].donem == 3)
-            donem3.push(lecture[j]);
-          if (lecture[j].donem == 4)
-            donem4.push(lecture[j]);
-          if (lecture[j].donem == 5)
-            donem5.push(lecture[j]);
-          if (lecture[j].donem == 6)
-            donem6.push(lecture[j]);
-          if (lecture[j].donem == 7)
-            donem7.push(lecture[j]);
-          if (lecture[j].donem == 8)
-            donem8.push(lecture[j]);
+          if (lecture[j].donem == 1) donem1.push(lecture[j]);
+          if (lecture[j].donem == 2) donem2.push(lecture[j]);
+          if (lecture[j].donem == 3) donem3.push(lecture[j]);
+          if (lecture[j].donem == 4) donem4.push(lecture[j]);
+          if (lecture[j].donem == 5) donem5.push(lecture[j]);
+          if (lecture[j].donem == 6) donem6.push(lecture[j]);
+          if (lecture[j].donem == 7) donem7.push(lecture[j]);
+          if (lecture[j].donem == 8) donem8.push(lecture[j]);
           responseindex++;
         }
         responsedata.push(donem1);
@@ -332,7 +335,6 @@ app.post("/syllabus", tokenControl, (req, res) => {
         responsedata.push(donem6);
         responsedata.push(donem7);
         responsedata.push(donem8);
-
       }
 
       return res.json({
