@@ -162,6 +162,42 @@ app.post("/documents", tokenControl, (req, res) => {
   });
 });
 
+app.post("/courseschedule", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let student = JSON.parse(rawdata);
+  for (index in student) {
+    user = student[index];
+    if (req.body.tcNo == user.tcNo) {
+      let responsedata = [];
+      let responseindex = 0;
+      let rawdata1 = fs.readFileSync("data/lecture.json");
+      let lecture = JSON.parse(rawdata1);
+      for (j in lecture) {
+        for (k in user.dersAlma) {
+          if (lecture[j].dersKodu == user.dersAlma[k].dersKodu && lecture[j].donem == user.bulunulanDonem) {
+            responsedata.push(lecture[j]);
+            responseindex++;
+          }
+        }
+      }
+
+      return res.json({
+        result: true,
+
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
 app.post("/gradecard", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);

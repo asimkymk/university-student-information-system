@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { styled, alpha } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -9,7 +9,8 @@ import {
     Appointments,
     AppointmentTooltip,
 } from '@devexpress/dx-react-scheduler-material-ui';
-
+import AppConstant from "../connect/app_constants";
+import Portal from "./loginportal";
 import appointments from '../modules/today-appointments';
 const Item = styled(Paper)(({ theme }) => ({
     color: "rgba(0, 0, 0, 0.87)",
@@ -89,8 +90,49 @@ const DayScaleCell = (props) => {
     } return <StyledWeekViewDayScaleCell {...props} />;
 };
 
-class Home extends Component {
-    render() {
+export default function Schedule() {
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+    const [schedule, setSchedule] = useState([]);
+    if (AppConstant.isLogged) {
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                Accept: "application/json",
+                token: AppConstant.token,
+            },
+            body: JSON.stringify({ tcNo: "45262969542" }),
+        };
+        useEffect(() => {
+            const fetchData = () => {
+                fetch("http://localhost:3001/courseschedule", requestOptions)
+                    .then((response) => {
+                        if (response.status >= 200 && response.status < 300) {
+                            setLoading(false);
+                            return response.json();
+                        } else {
+                            throw new Error("Error: Could not fetch the data");
+                        }
+                    })
+                    .then((posts) => {
+                        setSchedule(posts.data);
+                    })
+                    .catch((e) => {
+                        setError(true);
+                        setLoading(false);
+                    });
+            };
+            fetchData();
+        }, []);
+        if (loading) {
+            return <h3>Loading ...</h3>;
+        }
+
+        if (error) {
+            return <h3>Error in the API call itself ...</h3>;
+        }
+        console.log(schedule);
         return (
             <>
                 <Head>
@@ -127,4 +169,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+

@@ -1,13 +1,13 @@
 export const appointments = [
    {
       title: 'Computer Networks',
-      startDate: new Date(2022, 4, 16, 14, 0),
-      endDate: new Date(2022, 4, 16, 17, 35),
+      startDate: new Date(2022, 4, 30, 14, 0),
+      endDate: new Date(2022, 4, 30, 17, 35),
    },
    {
       title: 'Görüntü İşleme',
-      startDate: new Date(2022, 4, 17, 12, 10),
-      endDate: new Date(2022, 4, 17, 14, 50),
+      startDate: new Date(2022, 4, 31, 12, 10),
+      endDate: new Date(2022, 4, 31, 14, 50),
    },
    {
       title: 'Software Engineering Uygulama',
@@ -58,8 +58,8 @@ export const appointments = [
    },
    {
       title: 'Web Programlama',
-      startDate: new Date(2022, 4, 26, 11, 15),
-      endDate: new Date(2022, 4, 26, 13, 55),
+      startDate: new Date(11, 15),
+      endDate: new Date(13, 55),
    },
 
    

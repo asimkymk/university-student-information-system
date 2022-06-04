@@ -28,5 +28,6 @@ export default appointments.map(({ startDate, endDate, ...restArgs }) => {
         ...makeTodayAppointment(startDate, endDate),
         ...restArgs,
     };
+    console.log(result);
     return result;
 });
