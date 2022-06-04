@@ -7,7 +7,17 @@
     "alinanDers": 8,
     "notOrtalamasi": 3.31,
     "bulunulanSinif": 3,
-    "donemOrtalamalari": [1.2, 2.3, 3.6, 3.1, 2.8, 2.9, 3.4, 3.5],
+    "bulunulanDonem": 1,
+    "donemOrtalamalari": [
+      1.2,
+      2.3,
+      3.6,
+      3.1,
+      2.8,
+      2.9,
+      3.4,
+      3.5
+    ],
     "dersAlma": [
       {
         "dersKodu": "001",
