@@ -1,3 +1,5 @@
+var cors = require("cors");
+
 const express = require("express"),
   app = express(),
   port = 3001;
@@ -6,6 +8,7 @@ bodyParser = require("body-parser");
 var jwt = require("jsonwebtoken");
 const privateKey = "ASIM";
 const fs = require("fs");
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
