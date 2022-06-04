@@ -250,6 +250,64 @@ app.post("/lectureList", tokenControl, (req, res) => {
   }
 });
 
+app.post("/syllabus", tokenControl, (req, res) => {
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  for (index in students) {
+    user = students[index];
+    if (req.body.tcNo == user.tcNo) {
+      let responsedata = [];
+      let donem1 = [];
+      let donem2 = [];
+      let donem3 = [];
+      let donem4 = [];
+      let donem5 = [];
+      let donem6 = [];
+      let donem7 = [];
+      let donem8 = [];
+      let responseindex = 0;
+      let rawdata1 = fs.readFileSync("data/lecture.json");
+      let lecture = JSON.parse(rawdata1);
+      for (j in lecture) {
+        if (lecture[j].birimAdı == user.birimAdı) {
+          if (lecture[j].donem == 1)
+            donem1.push(lecture[j]);
+          if (lecture[j].donem == 2)
+            donem2.push(lecture[j]);
+          if (lecture[j].donem == 3)
+            donem3.push(lecture[j]);
+          if (lecture[j].donem == 4)
+            donem4.push(lecture[j]);
+          if (lecture[j].donem == 5)
+            donem5.push(lecture[j]);
+          if (lecture[j].donem == 6)
+            donem6.push(lecture[j]);
+          if (lecture[j].donem == 7)
+            donem7.push(lecture[j]);
+          if (lecture[j].donem == 8)
+            donem8.push(lecture[j]);
+          responseindex++;
+        }
+        responsedata.push(donem1);
+        responsedata.push(donem2);
+        responsedata.push(donem3);
+        responsedata.push(donem4);
+        responsedata.push(donem5);
+        responsedata.push(donem6);
+        responsedata.push(donem7);
+        responsedata.push(donem8);
+
+      }
+
+      return res.json({
+        result: true,
+
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+});
 app.post("/login", (req, res) => {
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);

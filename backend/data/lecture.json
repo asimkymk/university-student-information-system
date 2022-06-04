@@ -11,30 +11,31 @@
     "tur": "S",
     "dersSaati": 2,
     "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-    "akts" : 4,
-    "belgeler":[{
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "Slayt",
-      "aciklama" : "bişey",
-      "dokumanTarih" : "2.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 50,
-      "dosyaAdi" :" Sunum1"
-    },
-    {
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "zort",
-      "aciklama" : "2şey",
-      "dokumanTarih" : "31.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 31,
-      "dosyaAdi" :" Sunum31"
-    }]
-    
+    "akts": 4,
+    "belgeler": [
+      {
+        "hafta": 6,
+        "konu": "Ders",
+        "tur": "Slayt",
+        "aciklama": "bişey",
+        "dokumanTarih": "2.3.2022",
+        "odevBasTarihi": " ",
+        "odevBtsTarihi": " ",
+        "not": 50,
+        "dosyaAdi": " Sunum1"
+      },
+      {
+        "hafta": 6,
+        "konu": "Ders",
+        "tur": "zort",
+        "aciklama": "2şey",
+        "dokumanTarih": "31.3.2022",
+        "odevBasTarihi": " ",
+        "odevBtsTarihi": " ",
+        "not": 31,
+        "dosyaAdi": " Sunum31"
+      }
+    ]
   },
   {
     "dersKodu": "002",
@@ -48,18 +49,20 @@
     "tur": "Z",
     "dersSaati": 2,
     "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-    "akts" : 2,
-    "belgeler":[{
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "Slayt",
-      "aciklama" : "bişey",
-      "dokumanTarih" : "2.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 50,
-      "dosyaAdi" :" Sunum1"
-    }]
+    "akts": 2,
+    "belgeler": [
+      {
+        "hafta": 6,
+        "konu": "Ders",
+        "tur": "Slayt",
+        "aciklama": "bişey",
+        "dokumanTarih": "2.3.2022",
+        "odevBasTarihi": " ",
+        "odevBtsTarihi": " ",
+        "not": 50,
+        "dosyaAdi": " Sunum1"
+      }
+    ]
   },
   {
     "dersKodu": "003",
@@ -73,18 +76,20 @@
     "dersSaati": 2,
     "tur": "Z",
     "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-    "akts" : 2,
-    "belgeler":[{
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "Slayt",
-      "aciklama" : "bişey",
-      "dokumanTarih" : "2.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 50,
-      "dosyaAdi" :" Sunum1"
-    }]
+    "akts": 2,
+    "belgeler": [
+      {
+        "hafta": 6,
+        "konu": "Ders",
+        "tur": "Slayt",
+        "aciklama": "bişey",
+        "dokumanTarih": "2.3.2022",
+        "odevBasTarihi": " ",
+        "odevBtsTarihi": " ",
+        "not": 50,
+        "dosyaAdi": " Sunum1"
+      }
+    ]
   },
   {
     "dersKodu": "004",
@@ -98,18 +103,20 @@
     "dersSaati": 2,
     "tur": "Z",
     "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-    "akts" : 2,
-    "belgeler":[{
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "Slayt",
-      "aciklama" : "bişey",
-      "dokumanTarih" : "2.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 50,
-      "dosyaAdi" :" Sunum1"
-    }]
+    "akts": 2,
+    "belgeler": [
+      {
+        "hafta": 6,
+        "konu": "Ders",
+        "tur": "Slayt",
+        "aciklama": "bişey",
+        "dokumanTarih": "2.3.2022",
+        "odevBasTarihi": " ",
+        "odevBtsTarihi": " ",
+        "not": 50,
+        "dosyaAdi": " Sunum1"
+      }
+    ]
   },
   {
     "dersKodu": "005",
@@ -123,17 +130,19 @@
     "dersSaati": 2,
     "tur": "S",
     "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-    "akts" : 2,
-    "belgeler":[{
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "Slayt",
-      "aciklama" : "bişey",
-      "dokumanTarih" : "2.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 50,
-      "dosyaAdi" :" Sunum1"
-    }]
+    "akts": 2,
+    "belgeler": [
+      {
+        "hafta": 6,
+        "konu": "Ders",
+        "tur": "Slayt",
+        "aciklama": "bişey",
+        "dokumanTarih": "2.3.2022",
+        "odevBasTarihi": " ",
+        "odevBtsTarihi": " ",
+        "not": 50,
+        "dosyaAdi": " Sunum1"
+      }
+    ]
   }
 ]
