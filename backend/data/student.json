@@ -4,9 +4,62 @@
     "password": "Kanarya10.",
     "isim": "Asım",
     "soyisim": "Kaymak",
-    "alinanDers": 6,
+    "alinanDers": 8,
     "notOrtalamasi": 3.31,
-    "bulunulanSinif": 3
+    "bulunulanSinif": 3,
+    "donemOrtalamalari": [1.2, 2.3, 3.6, 3.1, 2.8, 2.9, 3.4, 3.5],
+    "dersAlma": [
+      {
+        "dersKodu": "001",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "AA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 25,
+            "tarih": "04.06.2022",
+            "not": 84
+          },
+          {
+            "sinavTuru": "Odev",
+            "etkiOrani": 25,
+            "tarih": "10.06.2022",
+            "not": 96
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "15.06.2022",
+            "not": 100
+          }
+        ]
+      },
+      {
+        "dersKodu": "002",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "AA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 25,
+            "tarih": "04.06.2022",
+            "not": 84
+          },
+          {
+            "sinavTuru": "Odev",
+            "etkiOrani": 25,
+            "tarih": "10.06.2022",
+            "not": 96
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "15.06.2022",
+            "not": 100
+          }
+        ]
+      }
+    ]
   },
   {
     "tcNo": "12345678901",
