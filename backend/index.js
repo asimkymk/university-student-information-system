@@ -50,7 +50,7 @@ app.post("/", tokenControl, (req, res) => {
         let rawdata1 = fs.readFileSync("data/lecture.json");
         let lecture = JSON.parse(rawdata1);
         for (j in lecture) {
-          if (lecture[j].dersKodu == ders.dersKodu) {
+          if (lecture[j].dersKodu == ders.dersKodu && lecture[j].donem == 6) {
             data[lecture[j].dersGunu] += 1;
           }
         }
@@ -109,6 +109,52 @@ app.post("/grade", tokenControl, (req, res) => {
         }
       }
       console.log(data);
+
+      return res.json({
+        result: true,
+
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+
+app.post("/gradecard", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  for (index in students) {
+    user = students[index];
+    if (req.body.tcNo == user.tcNo) {
+      let data = user.dersAlma;
+      let responsedata = [];
+      let responseindex = 0;
+
+      for (k in user.dersAlma) {
+        const ders = user.dersAlma[k];
+        let rawdata1 = fs.readFileSync("data/lecture.json");
+        let lecture = JSON.parse(rawdata1);
+        for (j in lecture) {
+          if (lecture[j].dersKodu == ders.dersKodu) {
+            responsedata.push(data[j]);
+            responsedata[responseindex].toplamKredi = lecture[j].toplamKredi;
+            responsedata[responseindex].t = lecture[j].t;
+            responsedata[responseindex].dersAdi = lecture[j].dersAdi;
+            responsedata[responseindex].donem = lecture[j].donem;
+            responsedata[responseindex].tur = lecture[j].tur;
+            responseindex++;
+          }
+        }
+      }
+      responsedata.push({ agno: user.donemOrtalamalari });
 
       return res.json({
         result: true,

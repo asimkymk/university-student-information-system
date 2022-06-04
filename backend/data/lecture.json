@@ -8,7 +8,8 @@
     "toplamKredi": 3,
     "donem": 6,
     "dersGunu": "Perşembe",
-    "dersSaati": 2
+    "dersSaati": 2,
+    "tur": "S"
   },
   {
     "dersKodu": "002",
@@ -19,6 +20,43 @@
     "toplamKredi": 3,
     "donem": 6,
     "dersGunu": "Pazartesi",
-    "dersSaati": 2
+    "dersSaati": 2,
+    "tur": "Z"
+  },
+  {
+    "dersKodu": "003",
+    "dersAdi": "Bilgisayar Mühendisliğine Giriş",
+    "p": 0,
+    "t": 3,
+    "l": 0,
+    "toplamKredi": 3,
+    "donem": 1,
+    "dersGunu": "Pazartesi",
+    "dersSaati": 2,
+    "tur": "Z"
+  },
+  {
+    "dersKodu": "004",
+    "dersAdi": "Introduction to Algorithm",
+    "p": 0,
+    "t": 3,
+    "l": 0,
+    "toplamKredi": 3,
+    "donem": 1,
+    "dersGunu": "Pazartesi",
+    "dersSaati": 2,
+    "tur": "Z"
+  },
+  {
+    "dersKodu": "005",
+    "dersAdi": "Programming Applications",
+    "p": 0,
+    "t": 3,
+    "l": 0,
+    "toplamKredi": 3,
+    "donem": 2,
+    "dersGunu": "Pazartesi",
+    "dersSaati": 2,
+    "tur": "S"
   }
 ]

@@ -37,7 +37,70 @@
       {
         "dersKodu": "002",
         "onay": "Kesin Kayıt",
-        "harfNotu": "AA",
+        "harfNotu": "",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 25,
+            "tarih": "04.06.2022",
+            "not": 84
+          }
+        ]
+      },
+      {
+        "dersKodu": "003",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "BA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 25,
+            "tarih": "04.06.2022",
+            "not": 84
+          },
+          {
+            "sinavTuru": "Odev",
+            "etkiOrani": 25,
+            "tarih": "10.06.2022",
+            "not": 96
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "15.06.2022",
+            "not": 100
+          }
+        ]
+      },
+      {
+        "dersKodu": "004",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "CC",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 25,
+            "tarih": "04.06.2022",
+            "not": 84
+          },
+          {
+            "sinavTuru": "Odev",
+            "etkiOrani": 25,
+            "tarih": "10.06.2022",
+            "not": 96
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "15.06.2022",
+            "not": 100
+          }
+        ]
+      },
+      {
+        "dersKodu": "005",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "BB",
         "sınavlar": [
           {
             "sinavTuru": "Vize",
