@@ -8,7 +8,31 @@
     "toplamKredi": 3,
     "donem": 6,
     "dersGunu": "Perşembe",
-    "dersSaati": 2
+    "dersSaati": 2,
+    "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
+    "akts" : 4,
+    "belgeler":[{
+      "hafta" : 6,
+      "konu" : "Ders",
+      "tur" : "Slayt",
+      "aciklama" : "bişey",
+      "dokumanTarih" : "2.3.2022",
+      "odevBasTarihi" : " ",
+      "odevBtsTarihi" : " ",
+      "not" : 50,
+      "dosyaAdi" :" Sunum1"
+    },
+    {
+      "hafta" : 6,
+      "konu" : "Ders",
+      "tur" : "zort",
+      "aciklama" : "2şey",
+      "dokumanTarih" : "31.3.2022",
+      "odevBasTarihi" : " ",
+      "odevBtsTarihi" : " ",
+      "not" : 31,
+      "dosyaAdi" :" Sunum31"
+    }]
   },
   {
     "dersKodu": "002",
@@ -19,6 +43,19 @@
     "toplamKredi": 3,
     "donem": 6,
     "dersGunu": "Pazartesi",
-    "dersSaati": 2
+    "dersSaati": 2,
+    "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
+    "akts" : 2,
+    "belgeler":[{
+      "hafta" : 6,
+      "konu" : "Ders",
+      "tur" : "Slayt",
+      "aciklama" : "bişey",
+      "dokumanTarih" : "2.3.2022",
+      "odevBasTarihi" : " ",
+      "odevBtsTarihi" : " ",
+      "not" : 50,
+      "dosyaAdi" :" Sunum1"
+    }]
   }
 ]
