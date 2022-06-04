@@ -95,6 +95,7 @@ export default function Index() {
             }
           })
           .then((posts) => {
+            AppConstant.agno = posts.data[0].donemOrtalamalari;
             setUser(posts.data[0]);
           })
           .catch((e) => {
