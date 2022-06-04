@@ -1,4 +1,3 @@
-var cors = require("cors");
 const express = require("express"),
   app = express(),
   port = 3001;
@@ -9,7 +8,6 @@ const privateKey = "ASIM";
 var user;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors())
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
