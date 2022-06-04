@@ -13,9 +13,7 @@ class Layout extends Component {
   render() {
     return (
       <div className={styles.main}>
-
-        <SideBar>
-        </SideBar>
+        <SideBar></SideBar>
 
         <div className={styles.rightPanel} id="rightPanel">
           <AppBar
@@ -30,7 +28,7 @@ class Layout extends Component {
               paddingTop: "1rem",
             }}
           >
-            {this.children}
+            {this.props.children}
           </div>
         </div>
       </div>

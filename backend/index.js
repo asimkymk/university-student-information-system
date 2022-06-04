@@ -5,7 +5,7 @@ const express = require("express"),
 bodyParser = require("body-parser");
 var jwt = require("jsonwebtoken");
 const privateKey = "ASIM";
-var user;
+const fs = require("fs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -27,23 +27,102 @@ function tokenControl(request, response, next) {
       );
   });
 }
-app.get("/", tokenControl, (req, res) => {
-  console.log(user);
-  return res.json({
-    result: true,
+app.post("/", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  for (index in students) {
+    user = students[index];
+    if (req.body.tcNo == user.tcNo) {
+      let data = {
+        Pazartesi: 0,
+        Salı: 0,
+        Çarşamba: 0,
+        Perşembe: 0,
+        Cuma: 0,
+      };
+      for (j in user.dersAlma) {
+        const ders = user.dersAlma[j];
+        let rawdata1 = fs.readFileSync("data/lecture.json");
+        let lecture = JSON.parse(rawdata1);
+        for (j in lecture) {
+          if (lecture[j].dersKodu == ders.dersKodu) {
+            data[lecture[j].dersGunu] += 1;
+          }
+        }
+      }
 
-    data: [
-      {
-        alinanDers: user.alinanDers,
-        notOrtalamasi: user.notOrtalamasi,
-        bulunulanSinif: user.bulunulanSinif,
-      },
-    ],
-    message: "Anasayfa açıldı.",
+      var values = Object.values(data);
+
+      return res.json({
+        result: true,
+
+        data: [
+          {
+            alinanDers: user.alinanDers,
+            notOrtalamasi: user.notOrtalamasi,
+            bulunulanSinif: user.bulunulanSinif,
+            donemOrtalamalari: user.donemOrtalamalari,
+            gunlukDersSayisi: values,
+          },
+        ],
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+
+app.post("/grade", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  for (index in students) {
+    user = students[index];
+    if (req.body.tcNo == user.tcNo) {
+      let data = user.dersAlma;
+      let responsedata = [];
+      let responseindex = 0;
+      for (k in user.dersAlma) {
+        const ders = user.dersAlma[k];
+        let rawdata1 = fs.readFileSync("data/lecture.json");
+        let lecture = JSON.parse(rawdata1);
+        for (j in lecture) {
+          if (lecture[j].dersKodu == ders.dersKodu) {
+            if (lecture[j].donem == 6) {
+              responsedata.push(data[j]);
+              responsedata[responseindex].toplamKredi = lecture[j].toplamKredi;
+              responsedata[responseindex].dersAdi = lecture[j].dersAdi;
+              responseindex++;
+            }
+          }
+        }
+      }
+      console.log(data);
+
+      return res.json({
+        result: true,
+
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
   });
 });
 app.post("/login", (req, res) => {
-  const fs = require("fs");
   let rawdata = fs.readFileSync("data/student.json");
   let students = JSON.parse(rawdata);
   for (index in students) {

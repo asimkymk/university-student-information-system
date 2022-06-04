@@ -1,12 +1,54 @@
 import Head from "next/head";
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import $ from "jquery";
 import styles from "../styles/RequestAndObjection.module.css";
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-class Home extends Component {
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import AppConstant from "../connect/app_constants";
+import Portal from "./loginportal";
+export default function Grade() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [grade, setGrade] = useState([]);
+  if (AppConstant.isLogged) {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+        token: AppConstant.token,
+      },
+      body: JSON.stringify({ tcNo: "45262969542" }),
+    };
+    useEffect(() => {
+      const fetchData = () => {
+        fetch("http://localhost:3001/grade", requestOptions)
+          .then((response) => {
+            if (response.status >= 200 && response.status < 300) {
+              setLoading(false);
+              return response.json();
+            } else {
+              throw new Error("Error: Could not fetch the data");
+            }
+          })
+          .then((posts) => {
+            setGrade(posts.data);
+          })
+          .catch((e) => {
+            setError(true);
+            setLoading(false);
+          });
+      };
+      fetchData();
+    }, []);
+    if (loading) {
+      return <h3>Loading ...</h3>;
+    }
 
-  render() {
+    if (error) {
+      return <h3>Error in the API call itself ...</h3>;
+    }
+
     return (
       <>
         <Head>
@@ -19,12 +61,12 @@ class Home extends Component {
           }}
         >
           <div className={`container ${styles.mainContainer}`}>
-            <div className={`container ${styles.mainContainer}`} style={{ fontWeight: "400", textAlign: "center" }} >
-
+            <div
+              className={`container ${styles.mainContainer}`}
+              style={{ fontWeight: "400", textAlign: "center" }}
+            >
               <div className={`row`}>
-                <div className={`col-5 my-auto ${styles.baslik}`}>
-                  Ders Adı
-                </div>
+                <div className={`col-5 my-auto ${styles.baslik}`}>Ders Adı</div>
                 <div className={`${styles.mycol} my-auto`}>
                   <div className={`${styles.verticalLine}`}></div>
                 </div>
@@ -39,261 +81,109 @@ class Home extends Component {
                 </div>
               </div>
               <hr></hr>
+              {grade.map((i) => (
+                <>
+                  <div
+                    className={`row ${styles.dersler}`}
+                    style={{ background: "rgb(241, 242, 247)" }}
+                    onClick={(e) => {
+                      if ($("#" + i.dersKodu).is(":visible")) {
+                        $(e.currentTarget).css("background", "#F1F2F7");
+                      } else {
+                        $(e.currentTarget).css("background", "#fff");
+                      }
+                      $("#" + i.dersKodu).slideToggle(300);
+                    }}
+                  >
+                    <div className={`col-5 my-auto ${styles.rows}`}>
+                      {i.dersAdi}
+                    </div>
+                    <div className={`${styles.mycol} my-auto`}>
+                      <div className={`${styles.verticalLine}`}></div>
+                    </div>
+                    <div className={`col-4 my-auto ${styles.rows}`}>
+                      {i.toplamKredi}
+                    </div>
+                    <div className={`${styles.mycol} my-auto`}>
+                      <div className={`${styles.verticalLine}`}></div>
+                    </div>
+                    <div className={`col-2 my-auto ${styles.rows}`}>
+                      {i.harfNotu}
+                    </div>
+                  </div>
+                  <div
+                    id={i.dersKodu}
+                    className={`row ${styles.row} ${styles.info}`}
+                    style={{
+                      margin: "1rem",
+                      marginRight: "2rem",
+                      marginLeft: "2rem",
+                      display: "none",
+                    }}
+                  >
+                    <div className={`row`}>
+                      <div className={`col-4 my-auto ${styles.baslik}`}>
+                        Sınav Türü
+                      </div>
+                      <div className={`${styles.mycol} my-auto`}>
+                        <div className={`${styles.verticalLine}`}></div>
+                      </div>
+                      <div className={`col-3 my-auto ${styles.baslik}`}>
+                        Etki Oranı
+                      </div>
+                      <div className={`${styles.mycol} my-auto`}>
+                        <div className={`${styles.verticalLine}`}></div>
+                      </div>
+                      <div className={`col-3 my-auto ${styles.baslik}`}>
+                        Sınav İlan Tar.-Saat
+                      </div>
+                      <div className={`${styles.mycol} my-auto`}>
+                        <div className={`${styles.verticalLine}`}></div>
+                      </div>
+                      <div className={`col-1 my-auto ${styles.baslik}`}>
+                        Not
+                      </div>
+                    </div>
+                    <div className={`${styles.horizontalLine2}`}></div>
+                    {i.sınavlar.map((sinav) => (
+                      <>
+                        <div className={`row`}>
+                          <div className={`col-4 my-auto ${styles.rows}`}>
+                            {sinav.sinavTuru}
+                          </div>
+                          <div className={`${styles.mycol} my-auto`}>
+                            <div className={`${styles.verticalLine}`}></div>
+                          </div>
+                          <div className={`col-3 my-auto ${styles.rows}`}>
+                            {sinav.etkiOrani}
+                          </div>
+                          <div className={`${styles.mycol} my-auto`}>
+                            <div className={`${styles.verticalLine}`}></div>
+                          </div>
+                          <div className={`col-3 my-auto ${styles.rows}`}>
+                            {sinav.tarih}
+                          </div>
+                          <div className={`${styles.mycol} my-auto`}>
+                            <div className={`${styles.verticalLine}`}></div>
+                          </div>
+                          <div className={`col-1 my-auto ${styles.rows}`}>
+                            {sinav.not}
+                          </div>
+                        </div>
+                        <div className={`${styles.horizontalLine}`}></div>
+                      </>
+                    ))}
+                  </div>
 
-              <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
-                if ($("#1").is(":visible")) {
-                  $(e.currentTarget).css("background", "#F1F2F7");
-                }
-                else {
-                  $(e.currentTarget).css("background", "#fff");
-                }
-                $("#1").slideToggle(300)
-              }} >
-                <div className={`col-5 my-auto ${styles.rows}`}>
-                  BİLGİSAYAR MİMARİSİ
-                </div>
-                <div className={`${styles.mycol} my-auto`}>
-                  <div className={`${styles.verticalLine}`}></div>
-                </div>
-                <div className={`col-4 my-auto ${styles.rows}`}>
-                  6
-                </div>
-                <div className={`${styles.mycol} my-auto`}>
-                  <div className={`${styles.verticalLine}`}></div>
-                </div>
-                <div className={`col-2 my-auto ${styles.rows}`}>
-                  BA
-                </div>
-              </div>
-
-              <div id='1' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem", display: "none" }}>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.baslik}`}>
-                    Sınav Türü
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.baslik}`}>
-                    Etki Oranı
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.baslik}`}>
-                    Sınav İlan Tar.-Saat
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.baslik}`}>
-                    Not
-                  </div>
-                </div>
-                <div className={`${styles.horizontalLine2}`}></div>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.rows}`}>
-                    Final
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    50
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    12.01.2021
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.rows}`}>
-                    79
-                  </div>
-                </div>
-                <div className={`${styles.horizontalLine}`}></div>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.rows}`}>
-                    Vize
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    25
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    12.01.2021
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.rows}`}>
-                    79
-                  </div>
-                </div>
-                <div className={`${styles.horizontalLine}`}></div>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.rows}`}>
-                    Ödev
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    25
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    12.01.2021
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.rows}`}>
-                    67
-                  </div>
-                </div>
-
-              </div>
-              <div className={`${styles.horizontalLine}`}></div>
-              <div className={`row ${styles.dersler}`} style={{ background: "rgb(241, 242, 247)" }} onClick={e => {
-                if ($("#2").is(":visible")) {
-                  $(e.currentTarget).css("background", "#F1F2F7");
-                }
-                else {
-                  $(e.currentTarget).css("background", "#fff");
-                }
-                $("#2").slideToggle(300)
-              }} >
-                <div className={`col-5 my-auto ${styles.rows}`}>
-                  COMPUTER NETWORKS AND TECHNOLOGIES
-                </div>
-                <div className={`${styles.mycol} my-auto`}>
-                  <div className={`${styles.verticalLine}`}></div>
-                </div>
-                <div className={`col-4 my-auto ${styles.rows}`}>
-                  4
-                </div>
-                <div className={`${styles.mycol} my-auto`}>
-                  <div className={`${styles.verticalLine}`}></div>
-                </div>
-                <div className={`col-2 my-auto ${styles.rows}`}>
-                  BA
-                </div>
-              </div>
-              <div id='2' className={`row ${styles.row} ${styles.info}`} style={{ margin: "1rem", marginRight: "2rem", marginLeft: "2rem", display: "none" }}>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.baslik}`}>
-                    Sınav Türü
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.baslik}`}>
-                    Etki Oranı
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.baslik}`}>
-                    Sınav İlan Tar.-Saat
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.baslik}`}>
-                    Not
-                  </div>
-                </div>
-                <div className={`${styles.horizontalLine2}`}></div>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.rows}`}>
-                    Final
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    50
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    12.01.2021
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.rows}`}>
-                    79
-                  </div>
-                </div>
-                <div className={`${styles.horizontalLine}`}></div>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.rows}`}>
-                    Vize
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    25
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    12.01.2021
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.rows}`}>
-                    79
-                  </div>
-                </div>
-                <div className={`${styles.horizontalLine}`}></div>
-                <div className={`row`}>
-                  <div className={`col-4 my-auto ${styles.rows}`}>
-                    Ödev
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    25
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-3 my-auto ${styles.rows}`}>
-                    12.01.2021
-                  </div>
-                  <div className={`${styles.mycol} my-auto`}>
-                    <div className={`${styles.verticalLine}`}></div>
-                  </div>
-                  <div className={`col-1 my-auto ${styles.rows}`}>
-                    67
-                  </div>
-                </div>
-
-              </div>
+                  <div className={`${styles.horizontalLine}`}></div>
+                </>
+              ))}
             </div>
           </div>
         </Layout>
       </>
     );
+  } else {
+    return <Portal></Portal>;
   }
 }
-
-export default Home;

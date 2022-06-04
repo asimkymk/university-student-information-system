@@ -1,0 +1,24 @@
+[
+  {
+    "dersKodu": "001",
+    "dersAdi": "Web Programming",
+    "p": 0,
+    "t": 3,
+    "l": 0,
+    "toplamKredi": 3,
+    "donem": 6,
+    "dersGunu": "Perşembe",
+    "dersSaati": 2
+  },
+  {
+    "dersKodu": "002",
+    "dersAdi": "Computer Network",
+    "p": 0,
+    "t": 3,
+    "l": 0,
+    "toplamKredi": 3,
+    "donem": 6,
+    "dersGunu": "Pazartesi",
+    "dersSaati": 2
+  }
+]
