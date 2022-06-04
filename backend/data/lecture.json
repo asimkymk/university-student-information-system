@@ -11,8 +11,9 @@
     "tur": "S",
     "dersSaati": 2,
     "birimAdı": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-<<<<<<< Updated upstream
     "akts": 4,
+    "basSaat": "14:00",
+    "bitSaat": "17:35",
     "belgeler": [
       {
         "hafta": 6,
@@ -37,34 +38,6 @@
         "dosyaAdi": " Sunum31"
       }
     ]
-=======
-    "akts" : 4,
-    "basSaat" : "14:00",
-    "bitSaat" : "17:35",
-    "belgeler":[{
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "Slayt",
-      "aciklama" : "bişey",
-      "dokumanTarih" : "2.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 50,
-      "dosyaAdi" :" Sunum1"
-    },
-    {
-      "hafta" : 6,
-      "konu" : "Ders",
-      "tur" : "zort",
-      "aciklama" : "2şey",
-      "dokumanTarih" : "31.3.2022",
-      "odevBasTarihi" : " ",
-      "odevBtsTarihi" : " ",
-      "not" : 31,
-      "dosyaAdi" :" Sunum31"
-    }]
-    
->>>>>>> Stashed changes
   },
   {
     "dersKodu": "002",
