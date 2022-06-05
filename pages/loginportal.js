@@ -34,15 +34,7 @@ export default function Portal() {
               <div className={`${styles.portalCardInner}`}>
                 {studentElement}
                 <div className={styles.portalCardText}>
-                  <ul className={`p-0`}>
-                    <li className={`${styles.li}`}>Ö</li>
-                    <li className={`${styles.li}`}>ğ</li>
-                    <li className={`${styles.li}`}>r</li>
-                    <li className={`${styles.li}`}>e</li>
-                    <li className={`${styles.li}`}>n</li>
-                    <li className={`${styles.li}`}>c</li>
-                    <li className={`${styles.li}`}>i</li>
-                  </ul>
+                  <span className={`${styles.li}`}>Öğrenci</span>
                 </div>
               </div>
             </div>
@@ -55,23 +47,7 @@ export default function Portal() {
                 {lecturerElement}
                 <div className={styles.portalCardText}>
                   <ul className={`p-0`}>
-                    <li className={`${styles.li}`}>Ö</li>
-                    <li className={`${styles.li}`}>ğ</li>
-                    <li className={`${styles.li}`}>r</li>
-                    <li className={`${styles.li}`}>e</li>
-                    <li className={`${styles.li}`}>t</li>
-                    <li className={`${styles.li}`}>i</li>
-                    <li className={`${styles.li}`}>m</li>
-                    <li className={`${styles.li}`}>&nbsp;</li>
-                    <li className={`${styles.li}`}>G</li>
-                    <li className={`${styles.li}`}>ö</li>
-                    <li className={`${styles.li}`}>r</li>
-                    <li className={`${styles.li}`}>e</li>
-                    <li className={`${styles.li}`}>v</li>
-                    <li className={`${styles.li}`}>l</li>
-                    <li className={`${styles.li}`}>i</li>
-                    <li className={`${styles.li}`}>s</li>
-                    <li className={`${styles.li}`}>i</li>
+                    <span className={`${styles.li}`}>Öğretim Görevlisi</span>
                   </ul>
                 </div>
               </div>
