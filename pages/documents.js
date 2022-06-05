@@ -1,15 +1,21 @@
 import Head from "next/head";
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import $ from "jquery";
 import styles from "../styles/RequestAndObjection.module.css";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import AppConstant from "../connect/app_constants";
 import Portal from "./loginportal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faExternalLink
+} from "@fortawesome/free-solid-svg-icons";
 export default function Document() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [document, setDocument] = useState([]);
+  const externalElement = (
+    <FontAwesomeIcon icon={faExternalLink} className={`mx-auto`} />
+  );
   if (AppConstant.isLogged) {
     const requestOptions = {
       method: "GET",
@@ -200,14 +206,8 @@ export default function Document() {
                       <div className={`${styles.mycol} my-auto`}>
                         <div className={`${styles.verticalLine}`}></div>
                       </div>
-                      <div className={`col-1 my-auto ${styles.baslik}`}>
-                        Dosya Adı
-                      </div>
-                      <div className={`${styles.mycol} my-auto`}>
-                        <div className={`${styles.verticalLine}`}></div>
-                      </div>
-                      <div className={`col-1 my-auto ${styles.baslik}`}>
-                        Yükle
+                      <div className={`col-2 my-auto ${styles.baslik}`}>
+                        Dosya
                       </div>
                     </div>
                     <div className={`${styles.horizontalLine2}`}></div>
@@ -262,21 +262,10 @@ export default function Document() {
                           <div className={`${styles.mycol} my-auto`}>
                             <div className={`${styles.verticalLine}`}></div>
                           </div>
-                          <div className={`col-1 my-auto ${styles.rows}`}>
-                            {belge.dosyaAdi}
-                          </div>
-                          <div className={`${styles.mycol} my-auto`}>
-                            <div className={`${styles.verticalLine}`}></div>
-                          </div>
-                          <div className={`col-1 my-auto ${styles.rows}`}>
-                            <button
-                              type="button"
-                              className="btn"
-                              title="Dosya Seç"
-                              value="Dosya Seç"
-                            >
-                              <CloudUploadIcon className="uploadButton"></CloudUploadIcon>
-                            </button>
+                          <div className={`col-2 my-auto ${styles.rows} `}>
+                            <a className={styles.download} target="_blank" href={belge.url} download>
+                              {belge.dosyaAdi} {externalElement}
+                            </a>
                           </div>
                         </div>
                         <div className={`${styles.horizontalLine}`}></div>

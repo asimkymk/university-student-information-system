@@ -64,12 +64,10 @@
   padding: 0 !important;
   margin: 0 !important;
   opacity: 0.5;
-  background-image: linear-gradient(
-    to top,
-    rgba(52, 71, 103, 0),
-    rgba(52, 71, 103, 0.6),
-    rgba(52, 71, 103, 0)
-  ) !important;
+  background-image: linear-gradient(to top,
+      rgba(52, 71, 103, 0),
+      rgba(52, 71, 103, 0.6),
+      rgba(52, 71, 103, 0)) !important;
 }
 
 .mycol {
@@ -92,12 +90,10 @@
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
   opacity: 0.4;
-  background-image: linear-gradient(
-    to right,
-    rgba(52, 71, 103, 0),
-    rgba(52, 71, 103, 0.6),
-    rgba(52, 71, 103, 0)
-  ) !important;
+  background-image: linear-gradient(to right,
+      rgba(52, 71, 103, 0),
+      rgba(52, 71, 103, 0.6),
+      rgba(52, 71, 103, 0)) !important;
 }
 
 .horizontalLine2 {
@@ -105,24 +101,20 @@
   margin-top: 0.3rem !important;
   margin-bottom: 1rem !important;
   opacity: 0.8;
-  background-image: linear-gradient(
-    to right,
-    rgba(52, 71, 103, 0.1),
-    rgba(52, 71, 103, 0.6),
-    rgba(52, 71, 103, 0.1)
-  ) !important;
+  background-image: linear-gradient(to right,
+      rgba(52, 71, 103, 0.1),
+      rgba(52, 71, 103, 0.6),
+      rgba(52, 71, 103, 0.1)) !important;
 }
 
 .horizontalLine3 {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
   opacity: 0.5;
-  background-image: linear-gradient(
-    to right,
-    rgba(52, 71, 103, 0.1),
-    rgba(52, 71, 103, 0.6),
-    rgba(52, 71, 103, 0.1)
-  ) !important;
+  background-image: linear-gradient(to right,
+      rgba(52, 71, 103, 0.1),
+      rgba(52, 71, 103, 0.6),
+      rgba(52, 71, 103, 0.1)) !important;
 }
 
 .row {
@@ -149,19 +141,22 @@
   transition: 0.1s ease-out;
 }
 
-.btn2:hover > .addElement {
+.btn2:hover>.addElement {
   color: #d5aa42 !important;
 }
 
 .btn:hover {
   background: #d32f2f;
 }
+
 .addbtn:hover {
   color: green;
 }
+
 .deletebtn:hover {
   color: #d32f2f;
 }
+
 .exclamationElement,
 .addElement,
 .addbtn,
@@ -170,7 +165,7 @@
   transition: 0.3s ease-out;
 }
 
-.btn:hover > .exclamationElement {
+.btn:hover>.exclamationElement {
   color: white;
 }
 
@@ -230,7 +225,7 @@
   }
 }
 
-.button:hover > .exclamationElement {
+.button:hover>.exclamationElement {
   animation: shake 2s;
   animation-iteration-count: 1;
 }
@@ -318,13 +313,23 @@
 .innerReplyLecturer {
   text-align: right;
 }
+
 .none {
   display: none;
 }
+
 .show {
   display: block;
 }
 
 .removable {
   cursor: pointer;
+}
+
+.download {
+  transition: 0.3s ease;
+}
+
+.download:hover {
+  font-size: 12pt;
 }
