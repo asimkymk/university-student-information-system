@@ -44,6 +44,7 @@ h1,
 }
 
 @media (min-width: 1200px) {
+
   h1,
   .h1 {
     font-size: 3rem;
@@ -56,6 +57,7 @@ h2,
 }
 
 @media (min-width: 1200px) {
+
   h2,
   .h2 {
     font-size: 2.25rem;
@@ -68,6 +70,7 @@ h3,
 }
 
 @media (min-width: 1200px) {
+
   h3,
   .h3 {
     font-size: 1.875rem;
@@ -80,6 +83,7 @@ h4,
 }
 
 @media (min-width: 1200px) {
+
   h4,
   .h4 {
     font-size: 1.5rem;
@@ -256,7 +260,7 @@ canvas {
 
 .message-blue {
   position: relative;
-  margin-left: 30px;
+  margin-left: 15px;
   margin-bottom: 15px;
   padding: 10px;
   width: auto;
@@ -271,11 +275,10 @@ canvas {
 .message-orange {
   position: relative;
   margin-bottom: 15px;
-  margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
-  left: min(80px, 5%);
   width: auto;
+  margin-left: auto;
   max-width: calc(95% - 50px);
   background-color: rgb(52, 71, 103);
   text-align: left;
