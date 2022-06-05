@@ -310,7 +310,6 @@ app.get("/messages/:id", tokenControl, (req, res) => {
 });
 
 app.post("/messages/:id", tokenControl, (req, res) => {
-
   const id = req.params.id;
   var data = req.body;
   var decoded = jwt.verify(req.headers.token, privateKey);
@@ -407,7 +406,10 @@ app.get("/examobjection", tokenControl, (req, res) => {
         let rawdata1 = fs.readFileSync("data/lecture.json");
         let lecture = JSON.parse(rawdata1);
         for (j in lecture) {
-          if (lecture[j].dersKodu == ders.dersKodu && lecture[j].donem == user.bulunulanDonem) {
+          if (
+            lecture[j].dersKodu == ders.dersKodu &&
+            lecture[j].donem == user.bulunulanDonem
+          ) {
             responsedata.push(data[j]);
             responsedata[responseindex].toplamKredi = lecture[j].toplamKredi;
             responsedata[responseindex].dersAdi = lecture[j].dersAdi;
@@ -518,13 +520,16 @@ app.get("/documentrequest", tokenControl, (req, res) => {
   for (index in student) {
     user = student[index];
     if (decoded.tcNo == user.tcNo) {
-      let responsedata = [];
-      responsedata.push(user);
-
+      for (k in user.belgeler) {
+        user.belgeler[k].ogrenciNo = user.ogrenciNo;
+      }
+      user.belgeler.sort((a, b) => {
+        return new Date(b.talepTarihi) - new Date(a.talepTarihi); // descending
+      });
       return res.json({
         result: true,
 
-        data: responsedata,
+        data: user.belgeler,
         message: "Anasayfa açıldı.",
       });
     }
@@ -537,6 +542,40 @@ app.get("/documentrequest", tokenControl, (req, res) => {
   });
 });
 
+app.post("/documentrequest", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  let today = new Date();
+  let yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1; // Months start at 0!
+  let dd = today.getDate();
+
+  if (dd < 10) dd = "0" + dd;
+  if (mm < 10) mm = "0" + mm;
+
+  today = dd + "." + mm + "." + yyyy;
+  // bar
+  for (index in students) {
+    user = students[index];
+    if (decoded.tcNo == user.tcNo) {
+      user.belgeler.push({
+        belgeTuru: req.body.tur,
+        talepTarihi: today,
+        url: "https://mag.wcoomd.org/uploads/2018/05/blank.pdf",
+      });
+      fs.writeFileSync("data/student.json", JSON.stringify(students));
+      return res.json({
+        result: true,
+
+        data: [],
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+});
 
 app.get("/gradecard", tokenControl, (req, res) => {
   //console.log(req.headers);

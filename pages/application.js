@@ -5,14 +5,12 @@ import styles from "../styles/RequestAndObjection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Modal } from "react-bootstrap";
 import Link from "next/link";
-import { useAsyncFn } from "react-use";
 import {
   faExclamationCircle,
   faPlusCircle,
   faExternalLink,
 } from "@fortawesome/free-solid-svg-icons";
 import Portal from "./loginportal";
-import header from "../connect/app_header.json";
 import AppConstant from "../connect/app_constants";
 import axios from "axios";
 import { Router } from "@mui/icons-material";
@@ -90,7 +88,6 @@ export default function Application() {
           console.log(error);
         });
     });
-    connect();
     if (loading) {
       return <h3>Loading ...</h3>;
     }

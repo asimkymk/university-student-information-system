@@ -73,8 +73,6 @@ export default function Message() {
       });
   };
   if (AppConstant.isLogged) {
-    connect();
-
     if (loading) {
       return <h3>Loading ...</h3>;
     }

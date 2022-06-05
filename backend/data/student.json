@@ -11,6 +11,33 @@
     "bulunulanSinif": 3,
     "bulunulanDonem": 1,
     "donemOrtalamalari": [1.2, 2.3, 3.6, 3.1, 2.8, 2.9, 3.4, 3.5],
+    "belgeler": [
+      {
+        "belgeTuru": "Öğrenci Belgesi",
+        "talepTarihi": "04.05.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Disiplin Cezası Durum Belgesi E-İmzalı",
+        "talepTarihi": "04.05.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Transkript",
+        "talepTarihi": "05.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Transkript E-İmzalı",
+        "talepTarihi": "05.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Askerlik Belgesi",
+        "talepTarihi": "05.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      }
+    ],
     "application": [
       {
         "tur": "2021-2022 Lisansüstü Online Başvuru",
