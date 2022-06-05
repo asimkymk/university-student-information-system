@@ -842,6 +842,7 @@ app.post("/login", (req, res) => {
         data: [
           {
             token: token,
+            isim: user.isim + " " + user.soyisim,
           },
         ],
         message: "Giriş yapıldı.",

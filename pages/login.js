@@ -158,7 +158,6 @@ export default function Login() {
                       id="tc"
                       value={tcNo}
                       onChange={handleTcNo}
-
                       className={`form-control ${loginStyles.formControl}`}
                       placeholder="T.C. Kimlik Numarası"
                       style={{ border: "none" }}
@@ -197,7 +196,6 @@ export default function Login() {
                       required
                       value={password}
                       onChange={handlePassword}
-
                       onInvalid={(e) =>
                         e.target.setCustomValidity(
                           "Lütfen şifrenizi doldurunuz."
@@ -206,10 +204,16 @@ export default function Login() {
                       onInput={(e) => e.target.setCustomValidity("")}
                     />
                   </div>
-                  <div id="hata" className={loginStyles.hata}>Hatalı giriş!</div>
+                  <div id="hata" className={loginStyles.hata}>
+                    Hatalı giriş!
+                  </div>
                   <div
                     className="mt-2 mb-2"
-                    style={{ overflow: "hidden", paddingTop: "10px", textAlign: "center" }}
+                    style={{
+                      overflow: "hidden",
+                      paddingTop: "10px",
+                      textAlign: "center",
+                    }}
                   >
                     <button
                       id="btn1"
@@ -221,7 +225,7 @@ export default function Login() {
                             "http://localhost:3001/login/",
                             {
                               tcNo: tcNo,
-                              password: password
+                              password: password,
                             },
                             {
                               headers: {
@@ -236,9 +240,9 @@ export default function Login() {
                               AppConstant.token = response.data.data[0].token;
                               AppConstant.isLogged = true;
                               AppConstant.tcNo = tcNo;
+                              AppConstant.name = response.data.data[0].isim;
                               router.push("/");
-                            }
-                            else {
+                            } else {
                               $("#hata").slideDown(300);
                             }
                           })
@@ -331,7 +335,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-      </div >
+      </div>
     </>
   );
 }

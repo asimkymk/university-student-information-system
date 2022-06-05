@@ -13,6 +13,7 @@ import { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
+import AppConstant from "../../connect/app_constants";
 import $ from "jquery";
 import {
   faBookOpenReader,
@@ -94,7 +95,18 @@ class SideBar extends Component {
           </div>
         </div>
         <h5 style={{ textAlign: "center" }}>Öğrenci Bilgi Sistemi</h5>
-        <span style={{ padding: "5px", paddingBottom: "0", fontSize: "10pt", textAlign: "center" }}> Asım Kaymak / Emin Can Özge / Mert Yılmaz  Mustafa Emre Taşkın / Siraç Petmezçiler  Yunus Kara </span>
+        <span
+          style={{
+            padding: "5px",
+            paddingBottom: "0",
+            fontSize: "10pt",
+            textAlign: "center",
+          }}
+        >
+          {" "}
+          Asım Kaymak / Emin Can Özge / Mert Yılmaz Mustafa Emre Taşkın / Siraç
+          Petmezçiler Yunus Kara{" "}
+        </span>
 
         <hr className={styles.seperator}></hr>
         <ul className={styles.linkList}>
@@ -118,7 +130,7 @@ class SideBar extends Component {
                   className={styles.itemText}
                   style={{ fontWeight: "bolder", fontSize: "11.5pt" }}
                 >
-                  Asım Kaymak
+                  {AppConstant.name}
                 </span>
               </div>
               <span className={styles.itemExpand}>

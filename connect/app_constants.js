@@ -3,4 +3,5 @@ class AppConstant {
   static isLogged = false;
   static agno = [];
   static tcNo = "";
+  static name = "";
 }
