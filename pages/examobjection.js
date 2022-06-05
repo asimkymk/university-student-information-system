@@ -11,6 +11,7 @@ import Link from "next/link";
 import AppConstant from "../connect/app_constants";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import Portal from "./loginportal";
 const exclamationElement = (
   <FontAwesomeIcon
     icon={faExclamationCircle}
@@ -269,5 +270,7 @@ export default function ExamObjection() {
         </Layout>
       </>
     );
+  } else {
+    return <Portal></Portal>;
   }
 }

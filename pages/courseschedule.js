@@ -10,6 +10,7 @@ import {
   AppointmentTooltip,
 } from "@devexpress/dx-react-scheduler-material-ui";
 import AppConstant from "../connect/app_constants";
+import Portal from "./loginportal";
 const Item = styled(Paper)(({ theme }) => ({
   color: "rgba(0, 0, 0, 0.87)",
   transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;",
@@ -102,7 +103,6 @@ const DayScaleCell = (props) => {
   return <StyledWeekViewDayScaleCell {...props} />;
 };
 
-
 function getDay1(add) {
   var next_day = new Date();
   next_day.setDate(next_day.getDate() + add);
@@ -124,9 +124,9 @@ function List(schedule) {
         eDate.setMinutes(schedule[j].dersBitDk);
         eDate.setSeconds(0);
         var obj = {
-          'startDate': sDate,
-          'endDate': eDate,
-          'title': schedule[j].dersAdi
+          startDate: sDate,
+          endDate: eDate,
+          title: schedule[j].dersAdi,
         };
         lectures.push(obj);
       }
@@ -136,7 +136,6 @@ function List(schedule) {
 }
 
 export default function Schedule() {
-
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [schedule, setSchedule] = useState([]);
@@ -182,7 +181,12 @@ export default function Schedule() {
         <Head>
           <title>Ders Programı - İÜC ÖBS</title>
         </Head>
-        <Layout appBar={{ links: { "Ana Sayfa": "/", "Ders Programı": "/courseschedule" }, title: "Ders Programı" }}>
+        <Layout
+          appBar={{
+            links: { "Ana Sayfa": "/", "Ders Programı": "/courseschedule" },
+            title: "Ders Programı",
+          }}
+        >
           <div className="container-fluid" style={{ width: "100%" }}>
             <Item>
               <Scheduler
@@ -193,62 +197,21 @@ export default function Schedule() {
                 <WeekView
                   excludedDays={[0, 6]}
                   startDayHour={7.68}
-                  endDayHour={20.20}
+                  endDayHour={20.2}
                   cellDuration={50}
                   timeTableCellComponent={TimeTableCell}
                   dayScaleCellComponent={DayScaleCell}
                   style={{ minWidth: "0" }}
                 />
                 <Appointments />
-                <AppointmentTooltip
-                  showCloseButton
-                />
+                <AppointmentTooltip showCloseButton />
               </Scheduler>
             </Item>
           </div>
         </Layout>
       </>
     );
+  } else {
+    return <Portal></Portal>;
   }
-
-  if (error) {
-    return <h3>Error in the API call itself ...</h3>;
-  }
-  console.log(schedule);
-  return (
-    <>
-      <Head>
-        <title>Ders Programı - İÜC ÖBS</title>
-      </Head>
-      <Layout
-        appBar={{
-          links: { "Ana Sayfa": "/", "Ders Programı": "/courseschedule" },
-          title: "Ders Programı",
-        }}
-      >
-        <div className="container-fluid" style={{ width: "100%" }}>
-          <Item>
-            <Scheduler
-              data={appointments}
-              locale={"tr"}
-              style={{ minWidth: "0" }}
-            >
-              <WeekView
-                excludedDays={[0, 6]}
-                startDayHour={7.68}
-                endDayHour={20.2}
-                cellDuration={50}
-                timeTableCellComponent={TimeTableCell}
-                dayScaleCellComponent={DayScaleCell}
-                style={{ minWidth: "0" }}
-              />
-              <Appointments />
-              <AppointmentTooltip showCloseButton />
-            </Scheduler>
-          </Item>
-        </div>
-      </Layout>
-    </>
-  );
 }
-

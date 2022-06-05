@@ -16,17 +16,10 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import Link from "next/link";
-import {
-  Box,
-  Grid,
-  Paper,
-  Avatar,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Paper, Avatar, Button, Typography } from "@mui/material";
 import styles from "../styles/Profile.module.css";
 import AppConstant from "../connect/app_constants";
-
+import Portal from "./loginportal";
 const Item = styled(Paper)(({ theme }) => ({
   color: "rgba(0, 0, 0, 0.87)",
   transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;",
@@ -48,7 +41,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Profile() {
-
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [profile, setProfile] = useState([]);
@@ -107,7 +99,6 @@ export default function Profile() {
                 <List>
                   <li className={styles.linkItem}>
                     <Link href="#ozlukbilgileri" passHref>
-
                       <Grid className={styles.itemPanel}>
                         <Grid className={styles.itemProfile}>
                           <PersonIcon></PersonIcon>
@@ -120,7 +111,6 @@ export default function Profile() {
                         </Grid>
                       </Grid>
                     </Link>
-
                   </li>
 
                   <li className={styles.linkItem}>
@@ -139,7 +129,6 @@ export default function Profile() {
                     </Link>
                   </li>
 
-
                   <li className={styles.linkItem}>
                     <Link href="#iletisimbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
@@ -155,7 +144,6 @@ export default function Profile() {
                       </Grid>
                     </Link>
                   </li>
-
 
                   <li className={styles.linkItem}>
                     <Link href="#adresbilgileri" passHref>
@@ -173,7 +161,6 @@ export default function Profile() {
                     </Link>
                   </li>
 
-
                   <li className={styles.linkItem}>
                     <Link href="#hazirlikbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
@@ -190,7 +177,6 @@ export default function Profile() {
                     </Link>
                   </li>
 
-
                   <li className={styles.linkItem}>
                     <Link href="#girisbilgileri" passHref>
                       <Grid className={styles.itemPanel}>
@@ -206,7 +192,6 @@ export default function Profile() {
                       </Grid>
                     </Link>
                   </li>
-
                 </List>
               </Paper>
             </Grid>
@@ -216,7 +201,9 @@ export default function Profile() {
                   <Grid container>
                     <Grid item xs={12}>
                       <Item>
-                        <Box style={{ textAlign: "center", alignItems: "center" }}>
+                        <Box
+                          style={{ textAlign: "center", alignItems: "center" }}
+                        >
                           <Grid container>
                             <Grid
                               item
@@ -763,12 +750,12 @@ export default function Profile() {
                   </Grid>
                 </>
               ))}
-
             </Grid>
           </Grid>
         </Layout>
       </>
     );
+  } else {
+    return <Portal></Portal>;
   }
 }
-

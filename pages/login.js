@@ -100,7 +100,9 @@ export default function Login() {
     date.setFullYear(date.getFullYear() - 15);
     return date;
   }
-
+  if (AppConstant.isLogged) {
+    return <Index></Index>;
+  }
   return (
     <>
       <Head>
