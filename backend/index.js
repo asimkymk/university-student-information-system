@@ -79,6 +79,81 @@ app.get("/", tokenControl, (req, res) => {
     message: "Bilgi bulunamadı.",
   });
 });
+
+app.get("/coursepickdrop", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  let data = [];
+  // bar
+  for (index in students) {
+    user = students[index];
+    if (decoded.tcNo == user.tcNo) {
+      let rawdata1 = fs.readFileSync("data/lecture.json");
+      let lectures = JSON.parse(rawdata1);
+      for (i in lectures) {
+        let lecture = lectures[i];
+        if (lecture.birimAdı == user.birimAdi && lecture.donem == 1) {
+          let status = true;
+          for (k in user.dersAlma) {
+            let ders = user.dersAlma[k];
+            if (lecture.dersKodu == ders.dersKodu) {
+              status = false;
+            }
+          }
+          if (status) data.push(lecture);
+        }
+      }
+      return res.json({
+        result: true,
+
+        data: data,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+app.post("/coursepickdrop", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  let data = [];
+  // bar
+  for (index in students) {
+    user = students[index];
+    if (decoded.tcNo == user.tcNo) {
+      for (i in req.body.data) {
+        let newlecture = req.body.data[i];
+        console.log(newlecture);
+        user.dersAlma.push(newlecture);
+      }
+      fs.writeFileSync("data/student.json", JSON.stringify(students));
+
+      return res.json({
+        result: true,
+
+        data: [],
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
 app.get("/application", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
@@ -496,7 +571,6 @@ app.get("/profile", tokenControl, (req, res) => {
   for (index in student) {
     user = student[index];
     if (decoded.tcNo == user.tcNo) {
-
       let responsedata = [];
       responsedata.push(user);
 

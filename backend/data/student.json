@@ -6,30 +6,30 @@
     "soyisim": "Kaymak",
     "anneAdi": "Yurdagül",
     "babaAdi": "Adem",
-    "uyruk" : "Bayburlu",
+    "uyruk": "Bayburlu",
     "cinsiyet": "Erkek",
     "dg": "12.03.2000",
-    "medeniHal" : "Bekar",
-    "dogumYeri" : "Bahçelievler",
-    "fakulte" : "MÜHENDİSLİK FAKULTESİ",
-    "ogrenciNo" : "1306180004",
-    "durum" :"Normal",
-    "statu" : "Devamlı Öğrenci",
-    "kayıt" : "Standart Kayıt - ÖSYM",
-    "cepNo" : "5397129136",
-    "evTel" : "2126039984",
-    "kurumsalEposta" : "asim.kaymak@ogr.iuc.edu.tr",
-    "kurtarmaEposta" : "kaymakasm@gmail.com",
-    "yakınNo" :"5397129136",
-    "adres" : "Adres",
-    "hazırlıkDurum" : "Tamamlamdı",
-    "hazırlıkSınavPuan" : "89,65",
-    "hazırlıkDil" : "İngilizce",
-    "hazırlıkSınavSonuç" : "Başarılı",
-    "sifre" : "Kanarya10.",
+    "medeniHal": "Bekar",
+    "dogumYeri": "Bahçelievler",
+    "fakulte": "MÜHENDİSLİK FAKULTESİ",
+    "ogrenciNo": "1306180004",
+    "durum": "Normal",
+    "statu": "Devamlı Öğrenci",
+    "kayıt": "Standart Kayıt - ÖSYM",
+    "cepNo": "5397129136",
+    "evTel": "2126039984",
+    "kurumsalEposta": "asim.kaymak@ogr.iuc.edu.tr",
+    "kurtarmaEposta": "kaymakasm@gmail.com",
+    "yakınNo": "5397129136",
+    "adres": "Adres",
+    "hazırlıkDurum": "Tamamlamdı",
+    "hazırlıkSınavPuan": "89,65",
+    "hazırlıkDil": "İngilizce",
+    "hazırlıkSınavSonuç": "Başarılı",
+    "sifre": "Kanarya10.",
     "alinanDers": 8,
     "birimAdi": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
-    "notOrtalamasi": 3.31,
+    "notOrtalamasi": 3.69,
     "bulunulanSinif": 3,
     "bulunulanDonem": 1,
     "donemOrtalamalari": [1.2, 2.3, 3.6, 3.1, 2.8, 2.9, 3.4, 3.5],
@@ -141,31 +141,6 @@
     ],
     "dersAlma": [
       {
-        "dersKodu": "001",
-        "onay": "Kesin Kayıt",
-        "harfNotu": "AA",
-        "sınavlar": [
-          {
-            "sinavTuru": "Vize",
-            "etkiOrani": 25,
-            "tarih": "04.06.2022",
-            "not": 84
-          },
-          {
-            "sinavTuru": "Odev",
-            "etkiOrani": 25,
-            "tarih": "10.06.2022",
-            "not": 96
-          },
-          {
-            "sinavTuru": "Final",
-            "etkiOrani": 50,
-            "tarih": "15.06.2022",
-            "not": 100
-          }
-        ]
-      },
-      {
         "dersKodu": "002",
         "onay": "Kesin Kayıt",
         "harfNotu": "",
@@ -252,6 +227,12 @@
             "not": 100
           }
         ]
+      },
+      {
+        "dersKodu": "001",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "",
+        "sınavlar": []
       }
     ]
   },
