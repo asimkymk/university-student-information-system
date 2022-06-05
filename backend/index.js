@@ -8,6 +8,7 @@ bodyParser = require("body-parser");
 var jwt = require("jsonwebtoken");
 const privateKey = "ASIM";
 const fs = require("fs");
+const { response } = require("express");
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -81,6 +82,205 @@ app.get("/", tokenControl, (req, res) => {
     result: false,
     data: [],
     message: "Bilgi bulunamadı.",
+  });
+});
+
+app.get("/messages", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  var responseMessage = [];
+  let rawdata = fs.readFileSync("data/messages.json");
+  let messages = JSON.parse(rawdata);
+
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  // user birimini çekiyoruz
+  let studendata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(studendata);
+  for (s in students) {
+    let user = students[s];
+    if (user.tcNo == decoded.tcNo) {
+      for (index in messages) {
+        let status = true;
+        var message = messages[index];
+        if (message.birimAdı == undefined) {
+          if (user.tcNo == message.ogrenciTc) {
+            for (var i = 0; i < responseMessage.length; i++) {
+              if (responseMessage[i].ogretmenTc == message.ogretmenTc) {
+                status = false;
+                if (
+                  new Date(message.tarih) > new Date(responseMessage[i].tarih)
+                ) {
+                  let lecturerdata = fs.readFileSync("data/lecturer.json");
+                  let lecturers = JSON.parse(lecturerdata);
+                  for (lecturer in lecturers) {
+                    if (lecturers[lecturer].ogretmenTc == message.ogretmenTc) {
+                      message.ogretmenProfilImg =
+                        lecturers[lecturer].profileImage;
+                      message.ogretmenAdi = lecturers[lecturer].adi;
+                      responseMessage[i] = message;
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+            if (status) {
+              let lecturerdata = fs.readFileSync("data/lecturer.json");
+              let lecturers = JSON.parse(lecturerdata);
+              for (lecturer in lecturers) {
+                if (lecturers[lecturer].ogretmenTc == message.ogretmenTc) {
+                  message.ogretmenProfilImg = lecturers[lecturer].profileImage;
+                  message.ogretmenAdi = lecturers[lecturer].adi;
+                  responseMessage.push(message);
+                  break;
+                }
+              }
+            }
+          }
+        } else {
+          if (message.birimAdı == user.birimAdı) {
+            message.ogrenciTc = user.tcNo;
+            message.alici = user.tcNo;
+            for (var i = 0; i < responseMessage.length; i++) {
+              if (responseMessage[i].ogretmenTc == message.ogretmenTc) {
+                status = false;
+                if (
+                  new Date(message.tarih) > new Date(responseMessage[i].tarih)
+                ) {
+                  let lecturerdata = fs.readFileSync("data/lecturer.json");
+                  let lecturers = JSON.parse(lecturerdata);
+                  for (lecturer in lecturers) {
+                    if (lecturers[lecturer].ogretmenTc == message.ogretmenTc) {
+                      message.ogretmenProfilImg =
+                        lecturers[lecturer].profileImage;
+                      message.ogretmenAdi = lecturers[lecturer].adi;
+                      responseMessage[i] = message;
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+            if (status) {
+              let lecturerdata = fs.readFileSync("data/lecturer.json");
+              let lecturers = JSON.parse(lecturerdata);
+              for (lecturer in lecturers) {
+                if (lecturers[lecturer].ogretmenTc == message.ogretmenTc) {
+                  message.ogretmenProfilImg = lecturers[lecturer].profileImage;
+                  message.ogretmenAdi = lecturers[lecturer].adi;
+                  responseMessage.push(message);
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+      responseMessage.sort((a, b) => {
+        return new Date(b.tarih) - new Date(a.tarih); // descending
+      });
+      return res.json({
+        result: true,
+
+        data: responseMessage,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+
+app.get("/messages/:id", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let responseMessage = [];
+  let rawdata = fs.readFileSync("data/messages.json");
+  let messages = JSON.parse(rawdata);
+  const id = req.params.id;
+
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  // user birimini çekiyoruz
+  let studendata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(studendata);
+  for (s in students) {
+    let user = students[s];
+    if (user.tcNo == decoded.tcNo) {
+      for (index in messages) {
+        var message = messages[index];
+        if (message.birimAdı == undefined) {
+          if (user.tcNo == message.ogrenciTc && message.ogretmenTc == id) {
+            responseMessage.push(message);
+          }
+        } else {
+          if (message.birimAdı == user.birimAdı && message.ogretmenTc == id) {
+            message.ogrenciTc = user.tcNo;
+            message.alici = user.tcNo;
+            responseMessage.push(message);
+          }
+        }
+      }
+      //sıralı mesajlar
+      responseMessage.sort((a, b) => {
+        return new Date(a.tarih) - new Date(b.tarih); // descending
+      });
+      return res.json({
+        result: true,
+
+        data: responseMessage,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+
+app.post("/messages/:id", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+
+  const id = req.params.id;
+  var data = req.body;
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  data.ogrenciTc = decoded.tcNo;
+  data.gonderici = decoded.tcNo;
+  data.alici = id;
+  data.ogretmenTc = id;
+  var currentdate = new Date();
+  var datetime =
+    currentdate.getDate() +
+    "/" +
+    (currentdate.getMonth() + 1) +
+    "/" +
+    currentdate.getFullYear() +
+    " @ " +
+    currentdate.getHours() +
+    ":" +
+    currentdate.getMinutes() +
+    ":" +
+    currentdate.getSeconds();
+
+  data.tarih = datetime;
+  let rawdata = fs.readFileSync("data/messages.json");
+  let messages = JSON.parse(rawdata);
+  messages.push(data);
+
+  fs.writeFileSync("data/messages.json", JSON.stringify(messages));
+
+  return res.json({
+    result: true,
+
+    data: [],
+    message: "Anasayfa açıldı.",
   });
 });
 
