@@ -1,6 +1,6 @@
 //TODO : TABLE TASARIMI
 
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import { styled } from "@mui/material/styles";
@@ -11,15 +11,18 @@ import SchoolIcon from "@mui/icons-material/School";
 import CallIcon from "@mui/icons-material/Call";
 import HomeIcon from "@mui/icons-material/Home";
 import TranslateIcon from "@mui/icons-material/Translate";
-import WorkIcon from "@mui/icons-material/Work";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import TextField from "@mui/material/TextField";
+import Stack from "@mui/material/Stack";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 import FormControl from "@mui/material/FormControl";
 import Link from "next/link";
 import { Box, Grid, Paper, Avatar, Button, Typography } from "@mui/material";
 import styles from "../styles/Profile.module.css";
 import AppConstant from "../connect/app_constants";
 import Portal from "./loginportal";
+import axios from "axios";
 const Item = styled(Paper)(({ theme }) => ({
   color: "rgba(0, 0, 0, 0.87)",
   transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;",
@@ -39,11 +42,37 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: "1rem",
   marginBottom: "1.1rem",
 }));
-
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 export default function Profile() {
+  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [profile, setProfile] = useState([]);
+  const [oldpassword, setPassword] = useState("");
+  const [newpassword, setNewPassword] = useState("");
+  const [againpassword, setAgainPassword] = useState("");
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+  const handleNewPassword = (event) => {
+    setNewPassword(event.target.value);
+  };
+  const handleAgainPassword = (event) => {
+    setAgainPassword(event.target.value);
+  };
   if (AppConstant.isLogged) {
     const requestOptions = {
       method: "GET",
@@ -74,6 +103,23 @@ export default function Profile() {
       };
       fetchData();
     }, []);
+
+    const connect = () => {
+      axios
+        .get("http://localhost:3001/profile", {
+          headers: {
+            token: AppConstant.token,
+          },
+        })
+        .then(function (response) {
+          if (response.data.result == true) {
+            setProfile(response.data.data);
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    };
     if (loading) {
       return <h3>Loading ...</h3>;
     }
@@ -491,6 +537,7 @@ export default function Profile() {
                                 <FormControl fullWidth>
                                   <TextField
                                     defaultValue={i.cepNo}
+                                    disabled
                                     label="Cep Telefonu"
                                     id="cellphone"
                                     variant="standard"
@@ -501,6 +548,7 @@ export default function Profile() {
                                 <FormControl fullWidth>
                                   <TextField
                                     defaultValue={i.evNo}
+                                    disabled
                                     label="Ev Telefonu"
                                     id="homephone"
                                     variant="standard"
@@ -513,9 +561,9 @@ export default function Profile() {
                                 <FormControl fullWidth>
                                   <TextField
                                     value={i.kurumsalEposta}
+                                    disabled
                                     label="Kurumsal E-posta"
                                     id="emailofficial"
-                                    disabled
                                     variant="standard"
                                   />
                                 </FormControl>
@@ -524,6 +572,7 @@ export default function Profile() {
                                 <FormControl fullWidth>
                                   <TextField
                                     defaultValue={i.kurtarmaEposta}
+                                    disabled
                                     label="Kurtarma E-posta"
                                     id="email"
                                     variant="standard"
@@ -536,6 +585,7 @@ export default function Profile() {
                                 <FormControl fullWidth>
                                   <TextField
                                     defaultValue={i.yakınNo}
+                                    disabled
                                     label="Birincil Yakın Numarası"
                                     id="veliphone"
                                     variant="standard"
@@ -549,9 +599,7 @@ export default function Profile() {
                                 paddingRight={2}
                                 paddingTop={3}
                                 textAlign={"end"}
-                              >
-                                <Button color="primary">Güncelle</Button>
-                              </Grid>
+                              ></Grid>
                             </Grid>
                           </Grid>
                         </Grid>
@@ -578,6 +626,7 @@ export default function Profile() {
                                 <FormControl fullWidth>
                                   <TextField
                                     id="standard-multiline-static"
+                                    disabled
                                     label="İkamet"
                                     multiline
                                     defaultValue={i.adres}
@@ -591,9 +640,7 @@ export default function Profile() {
                                   paddingRight={2}
                                   paddingTop={3}
                                   textAlign={"end"}
-                                >
-                                  <Button color="primary">Güncelle</Button>
-                                </Grid>
+                                ></Grid>
                               </Grid>
                             </Grid>
                           </Grid>
@@ -700,10 +747,11 @@ export default function Profile() {
                               <Grid item xs={12} sm={6} paddingRight={2}>
                                 <FormControl fullWidth>
                                   <TextField
-                                    defaultValue={i.sifre}
+                                    type="password"
                                     label="Şifre"
                                     id="password"
                                     variant="standard"
+                                    onChange={handlePassword}
                                   />
                                 </FormControl>
                               </Grid>
@@ -714,8 +762,10 @@ export default function Profile() {
                                   <TextField
                                     defaultValue=""
                                     label="Yeni Şifre"
+                                    type="password"
                                     id="newpassword"
                                     variant="standard"
+                                    onChange={handleNewPassword}
                                   />
                                 </FormControl>
                               </Grid>
@@ -724,7 +774,9 @@ export default function Profile() {
                                   <TextField
                                     defaultValue=""
                                     label="Yeni Şifre (Tekrar)"
+                                    type="password"
                                     id="newpasswordagain"
+                                    onChange={handleAgainPassword}
                                     variant="standard"
                                   />
                                 </FormControl>
@@ -740,7 +792,59 @@ export default function Profile() {
                                 paddingTop={3}
                                 textAlign={"end"}
                               >
-                                <Button color="primary">Güncelle</Button>
+                                <Link href="/profile">
+                                  <>
+                                    <Button
+                                      color="primary"
+                                      onClick={() => {
+                                        axios
+                                          .post(
+                                            "http://localhost:3001/changepassword",
+                                            {
+                                              oldpassword: oldpassword,
+                                              newpassword: newpassword,
+                                              againpassword: againpassword,
+                                            },
+                                            {
+                                              headers: {
+                                                token: AppConstant.token,
+                                              },
+                                            }
+                                          )
+                                          .then(function (response) {
+                                            if (response.data.result == true) {
+                                              handleClick();
+                                              setAgainPassword("");
+                                              setNewPassword("");
+                                              setPassword("");
+                                              connect();
+                                              e.preventDefault();
+                                            } else {
+                                            }
+                                          })
+                                          .catch(function (error) {
+                                            console.log(error);
+                                          });
+                                      }}
+                                    >
+                                      Güncelle
+                                    </Button>
+
+                                    <Snackbar
+                                      open={open}
+                                      autoHideDuration={6000}
+                                      onClose={handleClose}
+                                    >
+                                      <Alert
+                                        onClose={handleClose}
+                                        severity="success"
+                                        sx={{ width: "100%" }}
+                                      >
+                                        Parolanız başarıyla değiştirilmiştir!
+                                      </Alert>
+                                    </Snackbar>
+                                  </>
+                                </Link>
                               </Grid>
                             </Grid>
                           </Grid>

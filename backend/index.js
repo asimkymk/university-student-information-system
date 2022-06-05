@@ -715,7 +715,47 @@ app.post("/documentrequest", tokenControl, (req, res) => {
     }
   }
 });
+app.post("/changepassword", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
 
+  // bar
+  for (index in students) {
+    user = students[index];
+    if (decoded.tcNo == user.tcNo) {
+      if (user.password == req.body.oldpassword) {
+        if (req.body.newpassword == req.body.againpassword) {
+          user.password = req.body.newpassword;
+          fs.writeFileSync("data/student.json", JSON.stringify(students));
+        } else {
+          return res.json({
+            result: false,
+
+            data: [],
+            message: "Parola tekrar eşleşmiyor.",
+          });
+        }
+      } else {
+        return res.json({
+          result: false,
+
+          data: [],
+          message: "Parolanız eşleşmiyor.",
+        });
+      }
+
+      return res.json({
+        result: true,
+
+        data: [],
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+});
 app.get("/gradecard", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);

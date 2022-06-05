@@ -270,7 +270,14 @@ export default function DocumentRequest() {
                     <div className={`${styles.verticalLine}`}></div>
                   </div>
                   <div className={`col-2 my-auto ${styles.rows}`}>
-                    <a href="#">Belge {externalElement}</a>
+                    <a
+                      className={styles.download}
+                      target="_blank"
+                      href={belge.url}
+                      download
+                    >
+                      Belge {externalElement}
+                    </a>
                   </div>
                 </div>
                 <div className={`${styles.horizontalLine}`}></div>
