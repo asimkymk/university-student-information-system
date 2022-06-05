@@ -19,10 +19,24 @@
       3.4,
       3.5
     ],
+    "belgeler":[
+      {
+        "tc" : 1306190022,
+        "belgeTuru" : "Öğrenci Belgesi",
+        "talepTarihi" : "04.05.2022"
+      },
+      {
+        "tc" : 1306190022,
+        "belgeTuru" : "Disiplin Cezası Durum Belgesi E-İmzalı",
+        "talepTarihi" : "04.05.2022"
+      }
+    ],
     "dersAlma": [
       {
         "dersKodu": "001",
+        "dersAdi" : "Web Programlama",
         "onay": "Kesin Kayıt",
+        "donem": 1,
         "harfNotu": "AA",
         "sınavlar": [
           {
@@ -47,8 +61,10 @@
       },
       {
         "dersKodu": "002",
+        "dersAdi" : "Computer Network",
         "onay": "Kesin Kayıt",
         "harfNotu": "",
+        "donem": 6,
         "sınavlar": [
           {
             "sinavTuru": "Vize",
@@ -60,7 +76,9 @@
       },
       {
         "dersKodu": "003",
+        "dersAdi" : "Bilgisayar Mühendisliğine Giriş",
         "onay": "Kesin Kayıt",
+        "donem": 1,
         "harfNotu": "BA",
         "sınavlar": [
           {
@@ -79,13 +97,15 @@
             "sinavTuru": "Final",
             "etkiOrani": 50,
             "tarih": "15.06.2022",
-            "not": 100
+            "not": 31
           }
         ]
       },
       {
         "dersKodu": "004",
+        "dersAdi" : "Introduction to Algorithm",
         "onay": "Kesin Kayıt",
+        "donem": 1,
         "harfNotu": "CC",
         "sınavlar": [
           {
@@ -110,7 +130,9 @@
       },
       {
         "dersKodu": "005",
+        "dersAdi" : "Programming Applications",
         "onay": "Kesin Kayıt",
+        "donem": 2,
         "harfNotu": "BB",
         "sınavlar": [
           {

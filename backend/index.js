@@ -245,8 +245,6 @@ app.get("/messages/:id", tokenControl, (req, res) => {
 });
 
 app.post("/messages/:id", tokenControl, (req, res) => {
-  //console.log(req.headers);
-  //console.log(req.body);
 
   const id = req.params.id;
   var data = req.body;
@@ -308,6 +306,47 @@ app.get("/grade", tokenControl, (req, res) => {
               responsedata[responseindex].dersAdi = lecture[j].dersAdi;
               responseindex++;
             }
+          }
+        }
+      }
+
+      return res.json({
+        result: true,
+
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+app.get("/examobjection", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let students = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  for (index in students) {
+    user = students[index];
+    if (decoded.tcNo == user.tcNo) {
+      let data = user.dersAlma;
+      let responsedata = [];
+      let responseindex = 0;
+      for (k in user.dersAlma) {
+        const ders = user.dersAlma[k];
+        let rawdata1 = fs.readFileSync("data/lecture.json");
+        let lecture = JSON.parse(rawdata1);
+        for (j in lecture) {
+          if (lecture[j].dersKodu == ders.dersKodu && lecture[j].donem == user.bulunulanDonem) {
+            responsedata.push(data[j]);
+            responsedata[responseindex].toplamKredi = lecture[j].toplamKredi;
+            responsedata[responseindex].dersAdi = lecture[j].dersAdi;
+            responseindex++;
           }
         }
       }
@@ -406,6 +445,34 @@ app.get("/courseschedule", tokenControl, (req, res) => {
     message: "Bilgi bulunamadı.",
   });
 });
+
+app.get("/documentrequest", tokenControl, (req, res) => {
+  let rawdata = fs.readFileSync("data/student.json");
+  let student = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  for (index in student) {
+    user = student[index];
+    if (decoded.tcNo == user.tcNo) {
+      let responsedata = [];
+      responsedata.push(user);
+
+      return res.json({
+        result: true,
+
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+
+
 app.get("/gradecard", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
