@@ -406,6 +406,33 @@ app.get("/documents", tokenControl, (req, res) => {
     message: "Bilgi bulunamadı.",
   });
 });
+app.get("/profile", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/student.json");
+  let student = JSON.parse(rawdata);
+  var decoded = jwt.verify(req.headers.token, privateKey);
+  for (index in student) {
+    user = student[index];
+    if (decoded.tcNo == user.tcNo) {
+
+      let responsedata = [];
+      responsedata.push(user);
+
+      return res.json({
+        result: true,
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
 
 app.get("/courseschedule", tokenControl, (req, res) => {
   let rawdata = fs.readFileSync("data/student.json");
