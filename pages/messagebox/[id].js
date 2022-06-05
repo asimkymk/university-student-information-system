@@ -18,46 +18,59 @@ export default function Message() {
   const [message, setMessage] = useState([]);
   const [content, setContent] = useState("");
 
-
   function ScrollToBottom() {
     const elementRef = useRef();
     useEffect(() => elementRef.current.scrollIntoView());
     return <div ref={elementRef} />;
-  };
+  }
 
   const handleChange = (event) => {
     setContent(event.target.value);
   };
-  const connect = () => {
-    const requestOptions = {
-      method: "GET",
-      headers: {
-        "content-type": "application/json",
-        Accept: "application/json",
-        token: AppConstant.token,
-      },
-    };
-    useEffect(() => {
-      const fetchData = () => {
-        fetch("http://localhost:3001/messages/" + id, requestOptions)
-          .then((response) => {
-            if (response.status >= 200 && response.status < 300) {
-              setLoading(false);
-              return response.json();
-            } else {
-              throw new Error("Error: Could not fetch the data");
-            }
-          })
-          .then((posts) => {
-            setMessage(posts.data);
-          })
-          .catch((e) => {
-            setError(true);
+  const requestOptions = {
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+      Accept: "application/json",
+      token: AppConstant.token,
+    },
+  };
+  useEffect(() => {
+    const fetchData = () => {
+      fetch("http://localhost:3001/messages/" + id, requestOptions)
+        .then((response) => {
+          if (response.status >= 200 && response.status < 300) {
             setLoading(false);
-          });
-      };
-      fetchData();
-    }, []);
+            return response.json();
+          } else {
+            throw new Error("Error: Could not fetch the data");
+          }
+        })
+        .then((posts) => {
+          setMessage(posts.data);
+        })
+        .catch((e) => {
+          setError(true);
+          setLoading(false);
+        });
+    };
+    fetchData();
+  }, []);
+  const connect = () => {
+    axios
+      .get("http://localhost:3001/messages/" + id, {
+        headers: {
+          token: AppConstant.token,
+        },
+      })
+      .then(function (response) {
+        if (response.data.result == true) {
+          setMessage(response.data.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   if (AppConstant.isLogged) {
     connect();
@@ -118,7 +131,6 @@ export default function Message() {
                         </div>
                       </div>
                       <ScrollToBottom />
-
                     </>
                   );
                 } else {
@@ -138,7 +150,6 @@ export default function Message() {
                         </div>
                       </div>
                       <ScrollToBottom />
-
                     </>
                   );
                 }
