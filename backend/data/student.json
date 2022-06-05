@@ -6,7 +6,7 @@
     "soyisim": "Kaymak",
     "anneAdi": "Yurdagül",
     "babaAdi": "Adem",
-    "uyruk": "Bayburlu",
+    "uyruk": "Türk",
     "cinsiyet": "Erkek",
     "dg": "12.03.2000",
     "medeniHal": "Bekar",
@@ -32,7 +32,16 @@
     "notOrtalamasi": 3.69,
     "bulunulanSinif": 3,
     "bulunulanDonem": 1,
-    "donemOrtalamalari": [1.2, 2.3, 3.6, 3.1, 2.8, 2.9, 3.4, 3.5],
+    "donemOrtalamalari": [
+      1.2,
+      2.3,
+      3.6,
+      3.1,
+      2.8,
+      2.9,
+      3.4,
+      3.5
+    ],
     "belgeler": [
       {
         "belgeTuru": "Öğrenci Belgesi",
@@ -66,8 +75,16 @@
         "tarih": "12.05.2022",
         "durum": "Başvuruldu"
       },
-      { "tur": "postman deneme", "tarih": "05.06.2022", "durum": "Başvuruldu" },
-      { "tur": "dcdb", "tarih": "05.06.2022", "durum": "Başvuruldu" },
+      {
+        "tur": "postman deneme",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "dcdb",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
       {
         "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
         "tarih": "05.06.2022",
@@ -236,5 +253,8 @@
       }
     ]
   },
-  { "tcNo": "12345678901", "password": "Kanarya19." }
+  {
+    "tcNo": "12345678901",
+    "password": "Kanarya19."
+  }
 ]
