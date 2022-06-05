@@ -433,7 +433,7 @@ export default function Profile() {
                                 <Grid item xs={12} sm={6} paddingRight={2}>
                                   <FormControl fullWidth>
                                     <TextField
-                                      value={i.ogrNo}
+                                      value={i.ogrenciNo}
                                       label="Öğrenci Numarası"
                                       disabled
                                       id="studentnumber"
