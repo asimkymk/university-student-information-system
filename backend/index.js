@@ -369,8 +369,6 @@ app.get("/documents", tokenControl, (req, res) => {
 });
 
 app.get("/courseschedule", tokenControl, (req, res) => {
-  //console.log(req.headers);
-  //console.log(req.body);
   let rawdata = fs.readFileSync("data/student.json");
   let student = JSON.parse(rawdata);
   var decoded = jwt.verify(req.headers.token, privateKey);
