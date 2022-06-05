@@ -433,6 +433,20 @@ app.get("/examobjection", tokenControl, (req, res) => {
     message: "Bilgi bulunamadı.",
   });
 });
+app.post("/examobjection", tokenControl, (req, res) => {
+  //console.log(req.headers);
+  //console.log(req.body);
+  let rawdata = fs.readFileSync("data/objection.json");
+  let objs = JSON.parse(rawdata);
+
+  objs.push(req.body);
+  fs.writeFileSync("data/objection.json", JSON.stringify(objs));
+  return res.json({
+    result: true,
+    data: [],
+    message: "Bilgi eklendi.",
+  });
+});
 app.get("/documents", tokenControl, (req, res) => {
   //console.log(req.headers);
   //console.log(req.body);
