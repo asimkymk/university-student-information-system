@@ -1,5 +1,5 @@
 import styles from "../../styles/RequestAndObjection.module.css";
-import React, { Component, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout";
 import Head from "next/head";
 import SendIcon from "@mui/icons-material/Send";
@@ -17,6 +17,13 @@ export default function Message() {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState([]);
   const [content, setContent] = useState("");
+
+
+  function ScrollToBottom() {
+    const elementRef = useRef();
+    useEffect(() => elementRef.current.scrollIntoView());
+    return <div ref={elementRef} />;
+  };
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -62,6 +69,7 @@ export default function Message() {
     if (error) {
       return <h3>Error in the API call itself ...</h3>;
     }
+
     return (
       <>
         <Head>
@@ -109,6 +117,8 @@ export default function Message() {
                           </div>
                         </div>
                       </div>
+                      <ScrollToBottom />
+
                     </>
                   );
                 } else {
@@ -127,6 +137,8 @@ export default function Message() {
                           </div>
                         </div>
                       </div>
+                      <ScrollToBottom />
+
                     </>
                   );
                 }
