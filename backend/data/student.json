@@ -12,7 +12,7 @@
     "medeniHal" : "Bekar",
     "dogumYeri" : "Bahçelievler",
     "fakulte" : "MÜHENDİSLİK FAKULTESİ",
-    "ogrNo" : "1306180004",
+    "ogrenciNo" : "1306180004",
     "durum" :"Normal",
     "statu" : "Devamlı Öğrenci",
     "kayıt" : "Standart Kayıt - ÖSYM",
@@ -32,34 +32,117 @@
     "notOrtalamasi": 3.31,
     "bulunulanSinif": 3,
     "bulunulanDonem": 1,
-    "donemOrtalamalari": [
-      1.2,
-      2.3,
-      3.6,
-      3.1,
-      2.8,
-      2.9,
-      3.4,
-      3.5
-    ],
-    "belgeler":[
+    "donemOrtalamalari": [1.2, 2.3, 3.6, 3.1, 2.8, 2.9, 3.4, 3.5],
+    "belgeler": [
       {
-        "tc" : 1306190022,
-        "belgeTuru" : "Öğrenci Belgesi",
-        "talepTarihi" : "04.05.2022"
+        "belgeTuru": "Öğrenci Belgesi",
+        "talepTarihi": "04.05.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
       },
       {
-        "tc" : 1306190022,
-        "belgeTuru" : "Disiplin Cezası Durum Belgesi E-İmzalı",
-        "talepTarihi" : "04.05.2022"
+        "belgeTuru": "Disiplin Cezası Durum Belgesi E-İmzalı",
+        "talepTarihi": "04.05.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Transkript",
+        "talepTarihi": "05.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Transkript E-İmzalı",
+        "talepTarihi": "05.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Askerlik Belgesi",
+        "talepTarihi": "05.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      }
+    ],
+    "application": [
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "12.05.2022",
+        "durum": "Başvuruldu"
+      },
+      { "tur": "postman deneme", "tarih": "05.06.2022", "durum": "Başvuruldu" },
+      { "tur": "dcdb", "tarih": "05.06.2022", "durum": "Başvuruldu" },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2021-2022 Lisansüstü Online Başvuru",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
+      },
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "05.06.2022",
+        "durum": "Başvuruldu"
       }
     ],
     "dersAlma": [
       {
         "dersKodu": "001",
-        "dersAdi" : "Web Programlama",
         "onay": "Kesin Kayıt",
-        "donem": 1,
         "harfNotu": "AA",
         "sınavlar": [
           {
@@ -84,10 +167,8 @@
       },
       {
         "dersKodu": "002",
-        "dersAdi" : "Computer Network",
         "onay": "Kesin Kayıt",
         "harfNotu": "",
-        "donem": 6,
         "sınavlar": [
           {
             "sinavTuru": "Vize",
@@ -99,9 +180,7 @@
       },
       {
         "dersKodu": "003",
-        "dersAdi" : "Bilgisayar Mühendisliğine Giriş",
         "onay": "Kesin Kayıt",
-        "donem": 1,
         "harfNotu": "BA",
         "sınavlar": [
           {
@@ -120,15 +199,13 @@
             "sinavTuru": "Final",
             "etkiOrani": 50,
             "tarih": "15.06.2022",
-            "not": 31
+            "not": 100
           }
         ]
       },
       {
         "dersKodu": "004",
-        "dersAdi" : "Introduction to Algorithm",
         "onay": "Kesin Kayıt",
-        "donem": 1,
         "harfNotu": "CC",
         "sınavlar": [
           {
@@ -153,9 +230,7 @@
       },
       {
         "dersKodu": "005",
-        "dersAdi" : "Programming Applications",
         "onay": "Kesin Kayıt",
-        "donem": 2,
         "harfNotu": "BB",
         "sınavlar": [
           {
@@ -180,8 +255,5 @@
       }
     ]
   },
-  {
-    "tcNo": "12345678901",
-    "password": "Kanarya19."
-  }
+  { "tcNo": "12345678901", "password": "Kanarya19." }
 ]
