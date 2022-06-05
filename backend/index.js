@@ -589,6 +589,30 @@ app.get("/profile", tokenControl, (req, res) => {
   });
 });
 
+app.post("/forgotpassword", (req, res) => {
+  let rawdata = fs.readFileSync("data/student.json");
+  let student = JSON.parse(rawdata);
+  for (index in student) {
+    user = student[index];
+    if (req.body.tcNo == user.tcNo) {
+      let responsedata = [];
+      responsedata.push(user.password);
+
+      return res.json({
+        result: true,
+        data: responsedata,
+        message: "Anasayfa açıldı.",
+      });
+    }
+  }
+
+  return res.json({
+    result: false,
+    data: [],
+    message: "Bilgi bulunamadı.",
+  });
+});
+
 app.get("/courseschedule", tokenControl, (req, res) => {
   let rawdata = fs.readFileSync("data/student.json");
   let student = JSON.parse(rawdata);

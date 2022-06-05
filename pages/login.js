@@ -10,13 +10,8 @@ import {
   faSignIn,
   faIdBadge,
   faLock,
-  faPlusCircle,
   faKey,
   faPaperPlane,
-  faCalendar,
-  faMarsAndVenus,
-  faFont,
-  faAt,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import AppConstant from "../connect/app_constants";
@@ -27,12 +22,17 @@ export default function Login() {
   const handleShow = () => setShow(true);
 
   const [tcNo, setTcNo] = useState("");
+  const [forgotTcNo, setForgottcNo] = useState("");
   const [password, setPassword] = useState("");
+  const [forgotPassword, setForgotPassword] = useState("");
   const handleTcNo = (event) => {
     setTcNo(event.target.value);
   };
   const handlePassword = (event) => {
     setPassword(event.target.value);
+  };
+  const handleForgot = (event) => {
+    setForgottcNo(event.target.value);
   };
   const idBadgeElement = (
     <FontAwesomeIcon icon={faIdBadge} className={`mx-auto faIdBadge`} />
@@ -46,12 +46,6 @@ export default function Login() {
       className={`mx-auto ${loginStyles.faSignIn} faSignIn`}
     />
   );
-  const registerElement = (
-    <FontAwesomeIcon
-      icon={faPlusCircle}
-      className={`${loginStyles.faPlusCircle} mx-auto`}
-    />
-  );
   const forgotPasswordElement = (
     <FontAwesomeIcon
       icon={faKey}
@@ -60,43 +54,10 @@ export default function Login() {
       &nbsp;
     </FontAwesomeIcon>
   );
-  const nameSurnameElement = (
-    <FontAwesomeIcon icon={faFont} className={`mx-auto`}>
-      &nbsp;
-    </FontAwesomeIcon>
-  );
-  const mailElement = (
-    <FontAwesomeIcon icon={faAt} className={`mx-auto`}>
-      &nbsp;
-    </FontAwesomeIcon>
-  );
-  const bdayElement = (
-    <FontAwesomeIcon icon={faCalendar} className={`mx-auto`}>
-      &nbsp;
-    </FontAwesomeIcon>
-  );
-  const passElement = (
-    <FontAwesomeIcon icon={faLock} className={`mx-auto`}>
-      &nbsp;
-    </FontAwesomeIcon>
-  );
-  const genderElement = (
-    <FontAwesomeIcon icon={faMarsAndVenus} className={`mx-auto`}>
-      &nbsp;
-    </FontAwesomeIcon>
-  );
-
   const sendElement = (
     <FontAwesomeIcon icon={faPaperPlane} className={`faPaperPlane mx-auto`} />
   );
 
-  function createDate() {
-    var date = new Date();
-    date.setDate(31);
-    date.setMonth(11);
-    date.setFullYear(date.getFullYear() - 15);
-    return date;
-  }
   if (AppConstant.isLogged) {
     return <Index></Index>;
   }
@@ -283,7 +244,7 @@ export default function Login() {
                     <form>
                       <Modal.Body>
                         <div
-                          className={`input-group ${loginStyles.inputGroup}`}
+                          className={`input-group mb-2 ${loginStyles.inputGroup}`}
                         >
                           <div
                             id="tcp"
@@ -305,18 +266,51 @@ export default function Login() {
                             minLength="11"
                             maxLength="11"
                             id="tcf"
+                            value={forgotTcNo}
+                            onChange={handleForgot}
                             className={`form-control ${loginStyles.formControl}`}
                             placeholder="T.C. Kimlik Numarası"
                             aria-describedby="basic-addon1"
                             required
                           />
                         </div>
+                        <div id="hatau" style={{ marginTop: "1rem" }} className={loginStyles.sifre}>
+                          {forgotPassword}
+                        </div>
                       </Modal.Body>
                       <Modal.Footer>
+
                         <button
                           id={loginStyles.btn3}
-                          type="submit"
+                          type="button"
                           className={`button w-100 ${loginStyles.button}`}
+                          onClick={(e) => {
+                            axios
+                              .post(
+                                "http://localhost:3001/forgotpassword/",
+                                {
+                                  tcNo: forgotTcNo
+                                }
+                              )
+                              .then(function (response) {
+                                if (response.data.result == true) {
+                                  e.preventDefault();
+                                  setForgotPassword("Şifreniz: " + response.data.data)
+                                  $("#hatau").css("color", "#11263e");
+                                  $("#hatau").slideDown(300);
+
+                                } else {
+                                  e.preventDefault();
+                                  setForgotPassword(response.data.message)
+                                  $("#hatau").css("color", "red");
+                                  $("#hatau").slideDown(300);
+
+                                }
+                              })
+                              .catch(function (error) {
+                                console.log(error);
+                              });
+                          }}
                           style={{
                             marginRight: "12px",
                             float: "right",
@@ -326,6 +320,7 @@ export default function Login() {
                           {sendElement}
                           &nbsp; Gönder
                         </button>
+
                       </Modal.Footer>
                     </form>
                   </Modal>

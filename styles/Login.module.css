@@ -299,3 +299,13 @@ input:checked+.slider:before {
   margin-bottom: 0;
   display: none;
 }
+
+.sifre {
+  color: #11263e;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  opacity: 0.85;
+  margin-bottom: 0;
+  display: none;
+}
