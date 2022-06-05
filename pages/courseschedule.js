@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { styled, alpha } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -10,8 +10,6 @@ import {
     AppointmentTooltip,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import AppConstant from "../connect/app_constants";
-import Portal from "./loginportal";
-import appointments from '../modules/today-appointments';
 const Item = styled(Paper)(({ theme }) => ({
     color: "rgba(0, 0, 0, 0.87)",
     transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;",
@@ -90,7 +88,41 @@ const DayScaleCell = (props) => {
     } return <StyledWeekViewDayScaleCell {...props} />;
 };
 
+
+function getDay1(add) {
+    var next_day = new Date();
+    next_day.setDate(next_day.getDate() + add);
+    return next_day;
+}
+
+function List(schedule) {
+    var lectures = [];
+    for (var i = -5; i <= 5; i++) {
+        var date = getDay1(i);
+        for (var j = 0; j < schedule.length; j++) {
+            if (date.getDay() == schedule[j].dersGunu) {
+                var sDate = getDay1(i);
+                sDate.setHours(schedule[j].dersBasSaat);
+                sDate.setMinutes(schedule[j].dersBasDk);
+                sDate.setSeconds(0);
+                var eDate = getDay1(i);
+                eDate.setHours(schedule[j].dersBitSaat);
+                eDate.setMinutes(schedule[j].dersBitDk);
+                eDate.setSeconds(0);
+                var obj = {
+                    'startDate': sDate,
+                    'endDate': eDate,
+                    'title': schedule[j].dersAdi
+                };
+                lectures.push(obj);
+            }
+        }
+    }
+    return lectures;
+}
+
 export default function Schedule() {
+
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [schedule, setSchedule] = useState([]);
@@ -117,6 +149,7 @@ export default function Schedule() {
                     })
                     .then((posts) => {
                         setSchedule(posts.data);
+
                     })
                     .catch((e) => {
                         setError(true);
@@ -132,7 +165,6 @@ export default function Schedule() {
         if (error) {
             return <h3>Error in the API call itself ...</h3>;
         }
-        console.log(schedule);
         return (
             <>
                 <Head>
@@ -142,10 +174,9 @@ export default function Schedule() {
                     <div className="container-fluid" style={{ width: "100%" }}>
                         <Item>
                             <Scheduler
-                                data={appointments}
+                                data={List(schedule)}
                                 locale={"tr"}
                                 style={{ minWidth: "0" }}
-
                             >
                                 <WeekView
                                     excludedDays={[0, 6]}
