@@ -101,6 +101,7 @@ export default function Login() {
           console.log(response.data.data[0].token);
           AppConstant.token = response.data.data[0].token;
           AppConstant.isLogged = true;
+          AppConstant.tcNo = "45262969542";
           router.push("/");
         }
       })
