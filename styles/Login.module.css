@@ -289,3 +289,13 @@ input:checked+.slider:before {
   font-size: 13.5pt;
   color: #454545;
 }
+
+.hata {
+  color: red;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  opacity: 0.85;
+  margin-bottom: 0;
+  display: none;
+}

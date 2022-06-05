@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Image from "next/image";
+import $ from "jquery";
 import { useRouter } from "next/router";
 import {
   faSignIn,
@@ -27,6 +28,15 @@ export default function Login() {
   const [show2, setShow2] = useState(false);
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
+
+  const [tcNo, setTcNo] = useState("");
+  const [password, setPassword] = useState("");
+  const handleTcNo = (event) => {
+    setTcNo(event.target.value);
+  };
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
   const idBadgeElement = (
     <FontAwesomeIcon icon={faIdBadge} className={`mx-auto faIdBadge`} />
   );
@@ -90,25 +100,7 @@ export default function Login() {
     date.setFullYear(date.getFullYear() - 15);
     return date;
   }
-  function girisYap() {
-    axios
-      .post("http://localhost:3001/login", {
-        tcNo: "45262969542",
-        password: "Kanarya10.",
-      })
-      .then(function (response) {
-        if (response.data.result == true) {
-          console.log(response.data.data[0].token);
-          AppConstant.token = response.data.data[0].token;
-          AppConstant.isLogged = true;
-          AppConstant.tcNo = "45262969542";
-          router.push("/");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+
   return (
     <>
       <Head>
@@ -164,6 +156,9 @@ export default function Login() {
                       maxLength="11"
                       name="tc"
                       id="tc"
+                      value={tcNo}
+                      onChange={handleTcNo}
+
                       className={`form-control ${loginStyles.formControl}`}
                       placeholder="T.C. Kimlik Numarası"
                       style={{ border: "none" }}
@@ -200,6 +195,9 @@ export default function Login() {
                       aria-describedby="basic-addon2"
                       style={{ border: "none" }}
                       required
+                      value={password}
+                      onChange={handlePassword}
+
                       onInvalid={(e) =>
                         e.target.setCustomValidity(
                           "Lütfen şifrenizi doldurunuz."
@@ -208,50 +206,55 @@ export default function Login() {
                       onInput={(e) => e.target.setCustomValidity("")}
                     />
                   </div>
-                  <div style={{ marginLeft: "10px" }}>
-                    <label className={`switch ${loginStyles.switch}`}>
-                      <input type="checkbox" />
-                      <span
-                        className={`slider round ${loginStyles.slider} ${loginStyles.round}`}
-                      ></span>
-                    </label>
-                    <span style={{ verticalAlign: "bottom", color: "#232323" }}>
-                      &nbsp;Beni Hatırla
-                    </span>
-                  </div>
+                  <div id="hata" className={loginStyles.hata}>Hatalı giriş!</div>
                   <div
                     className="mt-2 mb-2"
-                    style={{ overflow: "hidden", paddingTop: "10px" }}
+                    style={{ overflow: "hidden", paddingTop: "10px", textAlign: "center" }}
                   >
                     <button
                       id="btn1"
-                      type="submit"
+                      type="button"
                       formMethod="post"
-                      onClick={girisYap}
-                      className={`button mt-3 mb-3 ${loginStyles.button}`}
+                      onClick={(e) => {
+                        axios
+                          .post(
+                            "http://localhost:3001/login/",
+                            {
+                              tcNo: tcNo,
+                              password: password
+                            },
+                            {
+                              headers: {
+                                token: AppConstant.token,
+                              },
+                            }
+                          )
+                          .then(function (response) {
+                            if (response.data.result == true) {
+                              e.preventDefault();
+                              $("#hata").slideUp(50);
+                              AppConstant.token = response.data.data[0].token;
+                              AppConstant.isLogged = true;
+                              AppConstant.tcNo = tcNo;
+                              router.push("/");
+                            }
+                            else {
+                              $("#hata").slideDown(300);
+                            }
+                          })
+                          .catch(function (error) {
+                            console.log(error);
+                          });
+                      }}
+                      className={`button mt-1 mb-3 ${loginStyles.button}`}
                       style={{
-                        marginLeft: "12px",
-                        float: "left",
-                        width: "43%",
+                        paddingLeft: "12px",
+                        paddingRight: "12px",
+                        width: "95%",
                       }}
                     >
                       {signElement}
                       &nbsp; Giriş Yap
-                    </button>
-
-                    <button
-                      id="btn2"
-                      type="submit"
-                      onClick={handleShow2}
-                      className={`button mt-3 mb-3 ${loginStyles.button}`}
-                      style={{
-                        marginRight: "12px",
-                        float: "right",
-                        width: "43%",
-                      }}
-                    >
-                      {registerElement}
-                      &nbsp; Kayıt Ol
                     </button>
                   </div>
                   <div style={{ textAlign: "center" }}>
@@ -569,7 +572,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 }
