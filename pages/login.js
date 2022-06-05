@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Image from "next/image";
+import $ from "jquery";
 import { useRouter } from "next/router";
 import {
   faSignIn,
@@ -27,6 +28,15 @@ export default function Login() {
   const [show2, setShow2] = useState(false);
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
+
+  const [tcNo, setTcNo] = useState("");
+  const [password, setPassword] = useState("");
+  const handleTcNo = (event) => {
+    setTcNo(event.target.value);
+  };
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
   const idBadgeElement = (
     <FontAwesomeIcon icon={faIdBadge} className={`mx-auto faIdBadge`} />
   );
@@ -90,25 +100,7 @@ export default function Login() {
     date.setFullYear(date.getFullYear() - 15);
     return date;
   }
-  function girisYap() {
-    axios
-      .post("http://localhost:3001/login", {
-        tcNo: "45262969542",
-        password: "Kanarya10.",
-      })
-      .then(function (response) {
-        if (response.data.result == true) {
-          console.log(response.data.data[0].token);
-          AppConstant.token = response.data.data[0].token;
-          AppConstant.isLogged = true;
-          AppConstant.tcNo = "45262969542";
-          router.push("/");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+
   return (
     <>
       <Head>
@@ -164,6 +156,9 @@ export default function Login() {
                       maxLength="11"
                       name="tc"
                       id="tc"
+                      value={tcNo}
+                      onChange={handleTcNo}
+
                       className={`form-control ${loginStyles.formControl}`}
                       placeholder="T.C. Kimlik Numarası"
                       style={{ border: "none" }}
@@ -200,6 +195,9 @@ export default function Login() {
                       aria-describedby="basic-addon2"
                       style={{ border: "none" }}
                       required
+                      value={password}
+                      onChange={handlePassword}
+
                       onInvalid={(e) =>
                         e.target.setCustomValidity(
                           "Lütfen şifrenizi doldurunuz."
@@ -208,50 +206,55 @@ export default function Login() {
                       onInput={(e) => e.target.setCustomValidity("")}
                     />
                   </div>
-                  <div style={{ marginLeft: "10px" }}>
-                    <label className={`switch ${loginStyles.switch}`}>
-                      <input type="checkbox" />
-                      <span
-                        className={`slider round ${loginStyles.slider} ${loginStyles.round}`}
-                      ></span>
-                    </label>
-                    <span style={{ verticalAlign: "bottom", color: "#232323" }}>
-                      &nbsp;Beni Hatırla
-                    </span>
-                  </div>
+                  <div id="hata" className={loginStyles.hata}>Hatalı giriş!</div>
                   <div
                     className="mt-2 mb-2"
-                    style={{ overflow: "hidden", paddingTop: "10px" }}
+                    style={{ overflow: "hidden", paddingTop: "10px", textAlign: "center" }}
                   >
                     <button
                       id="btn1"
-                      type="submit"
+                      type="button"
                       formMethod="post"
-                      onClick={girisYap}
-                      className={`button mt-3 mb-3 ${loginStyles.button}`}
+                      onClick={(e) => {
+                        axios
+                          .post(
+                            "http://localhost:3001/login/",
+                            {
+                              tcNo: tcNo,
+                              password: password
+                            },
+                            {
+                              headers: {
+                                token: AppConstant.token,
+                              },
+                            }
+                          )
+                          .then(function (response) {
+                            if (response.data.result == true) {
+                              e.preventDefault();
+                              $("#hata").slideUp(50);
+                              AppConstant.token = response.data.data[0].token;
+                              AppConstant.isLogged = true;
+                              AppConstant.tcNo = tcNo;
+                              router.push("/");
+                            }
+                            else {
+                              $("#hata").slideDown(300);
+                            }
+                          })
+                          .catch(function (error) {
+                            console.log(error);
+                          });
+                      }}
+                      className={`button mt-1 mb-3 ${loginStyles.button}`}
                       style={{
-                        marginLeft: "12px",
-                        float: "left",
-                        width: "43%",
+                        paddingLeft: "12px",
+                        paddingRight: "12px",
+                        width: "95%",
                       }}
                     >
                       {signElement}
                       &nbsp; Giriş Yap
-                    </button>
-
-                    <button
-                      id="btn2"
-                      type="submit"
-                      onClick={handleShow2}
-                      className={`button mt-3 mb-3 ${loginStyles.button}`}
-                      style={{
-                        marginRight: "12px",
-                        float: "right",
-                        width: "43%",
-                      }}
-                    >
-                      {registerElement}
-                      &nbsp; Kayıt Ol
                     </button>
                   </div>
                   <div style={{ textAlign: "center" }}>
@@ -323,253 +326,12 @@ export default function Login() {
                       </Modal.Footer>
                     </form>
                   </Modal>
-                  <Modal show={show2} onHide={handleClose2} centered>
-                    <Modal.Header closeButton>
-                      <Modal.Title>Kayıt Ol</Modal.Title>
-                    </Modal.Header>
-                    <form>
-                      <Modal.Body>
-                        <div className={`${loginStyles.label}`}>
-                          T.C. Kimlik Numarası
-                        </div>
-                        <div
-                          className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                        >
-                          <div
-                            id="tcp"
-                            className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                          >
-                            <span
-                              className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                              id="basic-addon1"
-                              style={{
-                                background: "#D5AA41",
-                                borderColor: "#D5AA41",
-                              }}
-                            >
-                              {idBadgeElement}
-                            </span>
-                          </div>
-                          <input
-                            type="text"
-                            minLength="11"
-                            maxLength="11"
-                            id="tcf2"
-                            className={`form-control ${loginStyles.formControl}`}
-                            placeholder="T.C. Kimlik Numarası"
-                            aria-describedby="basic-addon1"
-                            required
-                          />
-                        </div>
-                        <div style={{ width: "49%", float: "left" }}>
-                          <div className={`${loginStyles.label}`}>Ad</div>
-                          <div
-                            className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                          >
-                            <div
-                              id="adp"
-                              className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                            >
-                              <span
-                                className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                                id="basic-addon1"
-                                style={{
-                                  background: "#D5AA41",
-                                  borderColor: "#D5AA41",
-                                }}
-                              >
-                                {nameSurnameElement}
-                              </span>
-                            </div>
-                            <input
-                              type="text"
-                              id="ad"
-                              className={`form-control ${loginStyles.formControl}`}
-                              placeholder="Ad"
-                              aria-describedby="basic-addon1"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div style={{ float: "right", width: "49%" }}>
-                          <div className={`${loginStyles.label}`}>Soyad</div>
-                          <div
-                            className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                          >
-                            <div
-                              id="soyadp"
-                              className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                            >
-                              <span
-                                className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                                id="basic-addon1"
-                                style={{
-                                  background: "#D5AA41",
-                                  borderColor: "#D5AA41",
-                                }}
-                              >
-                                {nameSurnameElement}
-                              </span>
-                            </div>
-                            <input
-                              type="text"
-                              id="soyad"
-                              className={`form-control ${loginStyles.formControl}`}
-                              placeholder="Soyad"
-                              aria-describedby="basic-addon1"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div className={`${loginStyles.label}`}>
-                          E-Posta Adresi
-                        </div>
-                        <div
-                          className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                        >
-                          <div
-                            id="eposta"
-                            className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                          >
-                            <span
-                              className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                              id="basic-addon1"
-                              style={{
-                                background: "#D5AA41",
-                                borderColor: "#D5AA41",
-                              }}
-                            >
-                              {mailElement}
-                            </span>
-                          </div>
-                          <input
-                            type="password"
-                            id="mail"
-                            className={`form-control ${loginStyles.formControl}`}
-                            placeholder="E-Posta"
-                            aria-describedby="basic-addon1"
-                            required
-                          />
-                        </div>
-                        <div style={{ width: "49%", float: "left" }}>
-                          <div className={`${loginStyles.label}`}>
-                            Doğum Tarihi
-                          </div>
-                          <div
-                            className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                          >
-                            <div
-                              id="dgp"
-                              className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                            >
-                              <span
-                                className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                                id="basic-addon1"
-                                style={{
-                                  background: "#D5AA41",
-                                  borderColor: "#D5AA41",
-                                }}
-                              >
-                                {bdayElement}
-                              </span>
-                            </div>
-                            <input
-                              type="date"
-                              max={createDate().toISOString().split("T")[0]}
-                              id="dt"
-                              className={`form-control ${loginStyles.formControl}`}
-                              placeholder="Doğum Tarihi"
-                              aria-describedby="basic-addon1"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div style={{ width: "49%", float: "right" }}>
-                          <div className={`${loginStyles.label}`}>Cinsiyet</div>
-                          <div
-                            className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                          >
-                            <div
-                              id="cinsiyetp"
-                              className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                            >
-                              <span
-                                className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                                id="basic-addon1"
-                                style={{
-                                  background: "#D5AA41",
-                                  borderColor: "#D5AA41",
-                                }}
-                              >
-                                {genderElement}
-                              </span>
-                            </div>
-                            <select
-                              id="cinsiyet"
-                              className={`form-select select ${loginStyles.formControl} ${loginStyles.select}`}
-                              required
-                            >
-                              <option value="" disabled selected>
-                                Cinsiyet seçiniz
-                              </option>
-                              <option value="m">Erkek</option>
-                              <option value="f">Kadın</option>
-                              <option value="ng">Belirtmek istemiyorum</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div className={`${loginStyles.label}`}>Şifre</div>
-                        <div
-                          className={`input-group mb-2 ${loginStyles.inputGroup}`}
-                        >
-                          <div
-                            id="sifrep"
-                            className={`input-group-prepend my-auto mx-auto ${loginStyles.inputGroupPrepend}`}
-                          >
-                            <span
-                              className={`input-group-text ${loginStyles.inputGroupText} h-100`}
-                              id="basic-addon1"
-                              style={{
-                                background: "#D5AA41",
-                                borderColor: "#D5AA41",
-                              }}
-                            >
-                              {passElement}
-                            </span>
-                          </div>
-                          <input
-                            type="password"
-                            id="sifre"
-                            className={`form-control ${loginStyles.formControl}`}
-                            placeholder="Şifre"
-                            aria-describedby="basic-addon1"
-                            required
-                          />
-                        </div>
-                      </Modal.Body>
-                      <Modal.Footer>
-                        <button
-                          id={loginStyles.btn3}
-                          type="submit"
-                          className={`button w-100 ${loginStyles.button}`}
-                          style={{
-                            marginRight: "12px",
-                            float: "right",
-                            width: "43%",
-                          }}
-                        >
-                          {registerElement}
-                          &nbsp; Kayıt Ol
-                        </button>
-                      </Modal.Footer>
-                    </form>
-                  </Modal>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 }
