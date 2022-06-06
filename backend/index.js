@@ -101,7 +101,7 @@ app.get("/coursepickdrop", tokenControl, (req, res) => {
         if (
           lecture.birimAdı == user.birimAdi &&
           lecture.donem == user.bulunulanDonem + 1 &&
-          false
+          true
         ) {
           let status = true;
           for (k in user.dersAlma) {

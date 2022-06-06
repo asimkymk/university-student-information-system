@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import AppConstant from "../connect/app_constants";
+import Index from "./index";
 export default function Login() {
   const router = useRouter();
   const [show, setShow] = useState(false);
@@ -274,37 +275,37 @@ export default function Login() {
                             required
                           />
                         </div>
-                        <div id="hatau" style={{ marginTop: "1rem" }} className={loginStyles.sifre}>
+                        <div
+                          id="hatau"
+                          style={{ marginTop: "1rem" }}
+                          className={loginStyles.sifre}
+                        >
                           {forgotPassword}
                         </div>
                       </Modal.Body>
                       <Modal.Footer>
-
                         <button
                           id={loginStyles.btn3}
                           type="button"
                           className={`button w-100 ${loginStyles.button}`}
                           onClick={(e) => {
                             axios
-                              .post(
-                                "http://localhost:3001/forgotpassword/",
-                                {
-                                  tcNo: forgotTcNo
-                                }
-                              )
+                              .post("http://localhost:3001/forgotpassword/", {
+                                tcNo: forgotTcNo,
+                              })
                               .then(function (response) {
                                 if (response.data.result == true) {
                                   e.preventDefault();
-                                  setForgotPassword("Şifreniz: " + response.data.data)
+                                  setForgotPassword(
+                                    "Şifreniz: " + response.data.data
+                                  );
                                   $("#hatau").css("color", "#11263e");
                                   $("#hatau").slideDown(300);
-
                                 } else {
                                   e.preventDefault();
-                                  setForgotPassword(response.data.message)
+                                  setForgotPassword(response.data.message);
                                   $("#hatau").css("color", "red");
                                   $("#hatau").slideDown(300);
-
                                 }
                               })
                               .catch(function (error) {
@@ -320,7 +321,6 @@ export default function Login() {
                           {sendElement}
                           &nbsp; Gönder
                         </button>
-
                       </Modal.Footer>
                     </form>
                   </Modal>
