@@ -1,1 +1,218 @@
-[{"tcNo":"45262969542","password":"Kanarya10.","isim":"Asım","soyisim":"Kaymak","anneAdi":"Yurdagül","babaAdi":"Adem","uyruk":"Türk","cinsiyet":"Erkek","dg":"12.03.2000","medeniHal":"Bekar","dogumYeri":"Bahçelievler","fakulte":"MÜHENDİSLİK FAKULTESİ","ogrenciNo":"1306180004","durum":"Normal","statu":"Devamlı Öğrenci","kayıt":"Standart Kayıt - ÖSYM","cepNo":"5397129136","evTel":"2126039984","kurumsalEposta":"asim.kaymak@ogr.iuc.edu.tr","kurtarmaEposta":"kaymakasm@gmail.com","yakınNo":"5397129136","adres":"Adres","hazırlıkDurum":"Tamamlamdı","hazırlıkSınavPuan":"89,65","hazırlıkDil":"İngilizce","hazırlıkSınavSonuç":"Başarılı","sifre":"Kanarya10.","alinanDers":3,"birimAdi":"BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)","notOrtalamasi":3.69,"bulunulanSinif":2,"bulunulanDonem":3,"donemOrtalamalari":[3.2,3.4,3.4,0,0,0,0,0],"belgeler":[{"belgeTuru":"","talepTarihi":"06.06.2022","url":"https://mag.wcoomd.org/uploads/2018/05/blank.pdf"},{"belgeTuru":"Disiplin Cezası Durum Belgesi","talepTarihi":"06.06.2022","url":"https://mag.wcoomd.org/uploads/2018/05/blank.pdf"}],"application":[{"tur":"2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu","tarih":"06.06.2022","durum":"Başvuruldu"}],"dersAlma":[{"dersKodu":"O-001","onay":"Kesin Kayıt","harfNotu":"BB","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"10.10.2020","not":84},{"sinavTuru":"Final","etkiOrani":50,"tarih":"09.12.2020","not":50}]},{"dersKodu":"BM-001","onay":"Kesin Kayıt","harfNotu":"AA","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"11.10.2020","not":84},{"sinavTuru":"Final","etkiOrani":50,"tarih":"24.12.2020","not":100}]},{"dersKodu":"BM-002","onay":"Kesin Kayıt","harfNotu":"BA","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"11.10.2020","not":48},{"sinavTuru":"Final","etkiOrani":50,"tarih":"24.12.2020","not":96}]},{"dersKodu":"BM-003","onay":"Kesin Kayıt","harfNotu":"AA","sınavlar":[{"sinavTuru":"Vize","etkiOrani":30,"tarih":"11.03.2021","not":48},{"sinavTuru":"Ödev","etkiOrani":20,"tarih":"11.05.2020","not":48},{"sinavTuru":"Final","etkiOrani":50,"tarih":"24.12.2020","not":96}]},{"dersKodu":"BM-004","onay":"Kesin Kayıt","harfNotu":"BB","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"12.03.2021","not":65},{"sinavTuru":"Final","etkiOrani":50,"tarih":"24.06.2020","not":89}]},{"dersKodu":"O-002","onay":"Kesin Kayıt","harfNotu":"AA","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"13.03.2021","not":95},{"sinavTuru":"Final","etkiOrani":50,"tarih":"25.06.2020","not":90}]},{"dersKodu":"BM-005","onay":"Kesin Kayıt","harfNotu":"","sınavlar":[{"sinavTuru":"Vize","etkiOrani":35,"tarih":"13.10.2021","not":95}]},{"dersKodu":"BM-006","onay":"Kesin Kayıt","harfNotu":"","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"14.10.2021","not":48}]},{"dersKodu":"BM-007","onay":"Kesin Kayıt","harfNotu":"","sınavlar":[{"sinavTuru":"Vize","etkiOrani":50,"tarih":"15.10.2021","not":78}]},{"dersKodu":"BM-008","onay":"Kesin Kayıt","harfNotu":"","sınavlar":[]},{"dersKodu":"BM-009","onay":"Kesin Kayıt","harfNotu":"","sınavlar":[]}]},{"tcNo":"12345678901","password":"Kanarya19."}]
+[
+  {
+    "tcNo": "45262969542",
+    "password": "Kanarya10.",
+    "isim": "Asım",
+    "soyisim": "Kaymak",
+    "anneAdi": "Yurdagül",
+    "babaAdi": "Adem",
+    "uyruk": "Türk",
+    "cinsiyet": "Erkek",
+    "dg": "12.03.2000",
+    "medeniHal": "Bekar",
+    "dogumYeri": "Bahçelievler",
+    "fakulte": "MÜHENDİSLİK FAKULTESİ",
+    "ogrenciNo": "1306180004",
+    "durum": "Normal",
+    "statu": "Devamlı Öğrenci",
+    "kayıt": "Standart Kayıt - ÖSYM",
+    "cepNo": "5397129136",
+    "evTel": "2126039984",
+    "kurumsalEposta": "asim.kaymak@ogr.iuc.edu.tr",
+    "kurtarmaEposta": "kaymakasm@gmail.com",
+    "yakınNo": "5397129136",
+    "adres": "Adres",
+    "hazırlıkDurum": "Tamamlamdı",
+    "hazırlıkSınavPuan": "89,65",
+    "hazırlıkDil": "İngilizce",
+    "hazırlıkSınavSonuç": "Başarılı",
+    "sifre": "Kanarya10.",
+    "alinanDers": 3,
+    "birimAdi": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
+    "notOrtalamasi": 3.69,
+    "bulunulanSinif": 2,
+    "bulunulanDonem": 3,
+    "donemOrtalamalari": [3.2, 3.4, 3.4, 0, 0, 0, 0, 0],
+    "belgeler": [
+      {
+        "belgeTuru": "",
+        "talepTarihi": "06.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      },
+      {
+        "belgeTuru": "Disiplin Cezası Durum Belgesi",
+        "talepTarihi": "06.06.2022",
+        "url": "https://mag.wcoomd.org/uploads/2018/05/blank.pdf"
+      }
+    ],
+    "application": [
+      {
+        "tur": "2022-2023 Eğitim Öğretim Dönemi Erasmus Staj Ek Çağrı Başvurusu",
+        "tarih": "06.06.2022",
+        "durum": "Başvuruldu"
+      }
+    ],
+    "dersAlma": [
+      {
+        "dersKodu": "O-001",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "BB",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "10.10.2020",
+            "not": 84
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "09.12.2020",
+            "not": 50
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-001",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "AA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "11.10.2020",
+            "not": 84
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "24.12.2020",
+            "not": 100
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-002",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "BA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "11.10.2020",
+            "not": 48
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "24.12.2020",
+            "not": 96
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-003",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "AA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 30,
+            "tarih": "11.03.2021",
+            "not": 48
+          },
+          {
+            "sinavTuru": "Ödev",
+            "etkiOrani": 20,
+            "tarih": "11.05.2020",
+            "not": 48
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "24.12.2020",
+            "not": 96
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-004",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "BB",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "12.03.2021",
+            "not": 65
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "24.06.2020",
+            "not": 89
+          }
+        ]
+      },
+      {
+        "dersKodu": "O-002",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "AA",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "13.03.2021",
+            "not": 95
+          },
+          {
+            "sinavTuru": "Final",
+            "etkiOrani": 50,
+            "tarih": "25.06.2020",
+            "not": 90
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-005",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 35,
+            "tarih": "13.10.2021",
+            "not": 95
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-006",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "14.10.2021",
+            "not": 48
+          }
+        ]
+      },
+      {
+        "dersKodu": "BM-007",
+        "onay": "Kesin Kayıt",
+        "harfNotu": "",
+        "sınavlar": [
+          {
+            "sinavTuru": "Vize",
+            "etkiOrani": 50,
+            "tarih": "15.10.2021",
+            "not": 78
+          }
+        ]
+      }
+    ]
+  },
+  { "tcNo": "12345678901", "password": "Kanarya19." }
+]
