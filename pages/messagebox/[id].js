@@ -97,7 +97,7 @@ export default function Message() {
             style={{ overflow: "hidden" }}
           >
             <h5 style={{ paddingLeft: "1rem", paddingTop: "1rem" }}>
-              Özgür Can Turna ile mesajların
+              Ders Danışmanı ile mesajların
             </h5>
             <div className={`${styles.horizontalLine}`}></div>
 

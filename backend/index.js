@@ -47,7 +47,10 @@ app.get("/", tokenControl, (req, res) => {
         let rawdata1 = fs.readFileSync("data/lecture.json");
         let lecture = JSON.parse(rawdata1);
         for (j in lecture) {
-          if (lecture[j].dersKodu == ders.dersKodu && lecture[j].donem == 1) {
+          if (
+            lecture[j].dersKodu == ders.dersKodu &&
+            lecture[j].donem == user.bulunulanDonem
+          ) {
             data[lecture[j].dersGunu] += 1;
           }
         }
@@ -95,7 +98,11 @@ app.get("/coursepickdrop", tokenControl, (req, res) => {
       let lectures = JSON.parse(rawdata1);
       for (i in lectures) {
         let lecture = lectures[i];
-        if (lecture.birimAdı == user.birimAdi && lecture.donem == 1) {
+        if (
+          lecture.birimAdı == user.birimAdi &&
+          lecture.donem == user.bulunulanDonem + 1 &&
+          false
+        ) {
           let status = true;
           for (k in user.dersAlma) {
             let ders = user.dersAlma[k];
@@ -278,7 +285,7 @@ app.get("/messages", tokenControl, (req, res) => {
             }
           }
         } else {
-          if (message.birimAdı == user.birimAdı) {
+          if (message.birimAdı == user.birimAdi) {
             message.ogrenciTc = user.tcNo;
             message.alici = user.tcNo;
             for (var i = 0; i < responseMessage.length; i++) {
@@ -357,7 +364,7 @@ app.get("/messages/:id", tokenControl, (req, res) => {
             responseMessage.push(message);
           }
         } else {
-          if (message.birimAdı == user.birimAdı && message.ogretmenTc == id) {
+          if (message.birimAdı == user.birimAdi && message.ogretmenTc == id) {
             message.ogrenciTc = user.tcNo;
             message.alici = user.tcNo;
             responseMessage.push(message);
@@ -439,7 +446,7 @@ app.get("/grade", tokenControl, (req, res) => {
         let lecture = JSON.parse(rawdata1);
         for (j in lecture) {
           if (lecture[j].dersKodu == ders.dersKodu) {
-            if (lecture[j].donem == 6) {
+            if (lecture[j].donem == user.bulunulanDonem) {
               responsedata.push(data[j]);
               responsedata[responseindex].toplamKredi = lecture[j].toplamKredi;
               responsedata[responseindex].dersAdi = lecture[j].dersAdi;
@@ -864,7 +871,7 @@ app.get("/syllabus", tokenControl, (req, res) => {
       let rawdata1 = fs.readFileSync("data/lecture.json");
       let lecture = JSON.parse(rawdata1);
       for (j in lecture) {
-        if (lecture[j].birimAdı == user.birimAdı) {
+        if (lecture[j].birimAdı == user.birimAdi) {
           if (lecture[j].donem == 1) donem1.push(lecture[j]);
           if (lecture[j].donem == 2) donem2.push(lecture[j]);
           if (lecture[j].donem == 3) donem3.push(lecture[j]);
