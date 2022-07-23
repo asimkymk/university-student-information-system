@@ -1,11 +1,11 @@
 [
   {
-    "tcNo": "45262969542",
-    "password": "Kanarya10.",
+    "tcNo": "12312312312",
+    "password": "sifre123.",
     "isim": "Asım",
     "soyisim": "Kaymak",
-    "anneAdi": "Yurdagül",
-    "babaAdi": "Adem",
+    "anneAdi": "Anne",
+    "babaAdi": "Baba",
     "uyruk": "Türk",
     "cinsiyet": "Erkek",
     "dg": "12.03.2000",
@@ -16,23 +16,32 @@
     "durum": "Normal",
     "statu": "Devamlı Öğrenci",
     "kayıt": "Standart Kayıt - ÖSYM",
-    "cepNo": "5397129136",
-    "evTel": "2126039984",
+    "cepNo": "5555555555",
+    "evTel": "5555555555",
     "kurumsalEposta": "asim.kaymak@ogr.iuc.edu.tr",
     "kurtarmaEposta": "kaymakasm@gmail.com",
-    "yakınNo": "5397129136",
+    "yakınNo": "5555555555",
     "adres": "Adres",
-    "hazırlıkDurum": "Tamamlamdı",
+    "hazırlıkDurum": "Tamamlandı",
     "hazırlıkSınavPuan": "89,65",
     "hazırlıkDil": "İngilizce",
     "hazırlıkSınavSonuç": "Başarılı",
-    "sifre": "Kanarya10.",
+    "sifre": "sifre123.",
     "alinanDers": 3,
     "birimAdi": "BİLGİSAYAR MÜHENDİSLİĞİ, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)",
     "notOrtalamasi": 3.69,
     "bulunulanSinif": 2,
     "bulunulanDonem": 3,
-    "donemOrtalamalari": [3.2, 3.4, 3.4, 0, 0, 0, 0, 0],
+    "donemOrtalamalari": [
+      3.2,
+      3.4,
+      3.4,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "belgeler": [
       {
         "belgeTuru": "",
@@ -214,5 +223,8 @@
       }
     ]
   },
-  { "tcNo": "12345678901", "password": "Kanarya19." }
+  {
+    "tcNo": "11111111111",
+    "password": "sifre111."
+  }
 ]

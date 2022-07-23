@@ -14,33 +14,33 @@
     "tarih": "5/6/2022 @ 1:53:59"
   },
   {
-    "ogrenciTc": "45262969542",
+    "ogrenciTc": "12312312312",
     "ogretmenTc": "12345678901",
     "gonderici": "12345678901",
-    "alici": "45262969542",
+    "alici": "12312312312",
     "mesaj": "Hocadan sadece öğrenciye giden mesaj.",
     "tarih": "5/6/2022 @ 2:08:52"
   },
   {
-    "ogrenciTc": "45262969542",
+    "ogrenciTc": "12312312312",
     "ogretmenTc": "12345678901",
-    "gonderici": "45262969542",
+    "gonderici": "12312312312",
     "alici": "12345678901",
     "mesaj": "Öğrenciden hocaya giden mesaj.",
     "tarih": "5/6/2022 @ 2:10:52"
   },
   {
-    "ogrenciTc": "45262969542",
+    "ogrenciTc": "12312312312",
     "ogretmenTc": "98765432101",
     "gonderici": "98765432101",
-    "alici": "45262969542",
+    "alici": "12312312312",
     "mesaj": "Sınav konularını dökümanlara ekledim agalar.",
     "tarih": "5/6/2022 @ 4:05:52"
   },
   {
     "mesaj": "Nasılsınız Hocam?",
-    "ogrenciTc": "45262969542",
-    "gonderici": "45262969542",
+    "ogrenciTc": "12312312312",
+    "gonderici": "12312312312",
     "alici": "12345678901",
     "ogretmenTc": "12345678901",
     "tarih": "5/6/2022 @ 5:3:20"
@@ -54,16 +54,16 @@
   },
   {
     "mesaj": "Yaptığın hatayı görebilmen için yarın odama gelebilirsin.",
-    "ogrenciTc": "45262969542",
+    "ogrenciTc": "12312312312",
     "gonderici": "01234567890",
-    "alici": "45262969542",
+    "alici": "12312312312",
     "ogretmenTc": "01234567890",
     "tarih": "5/6/2022 @ 5:4:20"
   },
   {
     "mesaj": "selam",
-    "ogrenciTc": "45262969542",
-    "gonderici": "45262969542",
+    "ogrenciTc": "12312312312",
+    "gonderici": "12312312312",
     "alici": "12345678901",
     "ogretmenTc": "12345678901",
     "tarih": "6/6/2022 @ 22:28:27"
