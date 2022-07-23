@@ -18,17 +18,30 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Screenshots for Student Panel
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/01-Login%20Portal.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/02-Login.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/03-Dashboard.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/04-Profil.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/05-Profil2.png?raw=true)
+![alt text](https://raw.githubusercontent.com/asimkymk/university-student-information-system/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/06-Not%20Bilgisi(A%C3%A7%C4%B1k).png)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/07-Not%20Bilgisi(Kapal%C4%B1).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/08-Ders%20Program%C4%B1.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/09-%C3%96dev%20ve%20Dok%C3%BCman(A%C3%A7%C4%B1k).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/10-%C3%96dev%20ve%20Dok%C3%BCman(Kapal%C4%B1).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/11-Not%20Kart%C4%B1(A%C3%A7%C4%B1k).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/12-Not%20Kart%C4%B1(Kapal%C4%B1).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/13-Ders%20Listesi.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/14-M%C3%BCfredat%20Listesi(A%C3%A7%C4%B1k).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/15-M%C3%BCfredat%20Listesi(Kapal%C4%B1).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/16-Ders%20Alma%20ve%20Kay%C4%B1t.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/17-Belge%20Talebi.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/18-Belge%20Talebi%20Modal.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/19-Ders%20Alma%20ve%20Kay%C4%B1t%20(D%C3%B6nem%20D%C4%B1%C5%9F%C4%B1).png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/20-S%C4%B1nav%20%C4%B0tiraz%C4%B1.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/21-S%C4%B1nav%20%C4%B0tiraz%C4%B1%20Modal.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/22-Ba%C5%9Fvuru.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/23-Ba%C5%9Fvuru%20Modal.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/24-Mesaj%20Kutusu.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/25-Mesajla%C5%9Fma.png?raw=true)
