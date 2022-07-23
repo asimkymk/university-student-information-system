@@ -1,7 +1,7 @@
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0Y05vIjoiMTIzNDU2Nzg5MDEiLCJpYXQiOjE2NTQyOTQxMjh9.pgPdJglD9wwh6iJLHF2R3s0ktMdWhuHQIaZJpEhKF2k",
   "content-type": "application/json",
-  "user-agent": "PostmanRuntime/7.29.0",
+  "user-agent": "PostmanRuntime/7.29.2",
   "accept": "*/*",
   "postman-token": "b0563118-e667-4bca-841e-1c64e21ce9dd",
   "host": "192.168.1.47:3001",
