@@ -1,4 +1,3 @@
-//TODO : TABLE TASARIMI
 
 import React, { Component, useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";

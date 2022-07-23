@@ -20,6 +20,7 @@ const exclamationElement = (
     className={`mx-auto ${styles.exclamationElement}`}
   />
 );
+
 const addElement = (
   <FontAwesomeIcon
     icon={faPlusCircle}

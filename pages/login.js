@@ -6,6 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import $ from "jquery";
 import { useRouter } from "next/router";
+
 import {
   faSignIn,
   faIdBadge,

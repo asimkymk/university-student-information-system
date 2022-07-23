@@ -8,6 +8,7 @@ import Link from "next/link";
 import Portal from "./loginportal";
 import header from "../connect/app_header.json";
 import AppConstant from "../connect/app_constants";
+
 export default function GradeCard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);

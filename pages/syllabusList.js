@@ -1,4 +1,3 @@
-//TODO : TABLE TASARIMI
 
 import React, { useState, useEffect } from "react";
 import AppConstant from "../connect/app_constants";

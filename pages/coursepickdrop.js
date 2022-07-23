@@ -14,6 +14,7 @@ import Link from "next/link";
 import AppConstant from "../connect/app_constants";
 import axios from "axios";
 import Portal from "./loginportal";
+
 const exclamationElement2 = (
   <FontAwesomeIcon
     icon={faCheck}
