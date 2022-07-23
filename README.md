@@ -45,3 +45,15 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/23-Ba%C5%9Fvuru%20Modal.png?raw=true)
 ![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/24-Mesaj%20Kutusu.png?raw=true)
 ![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Frenci%20Paneli/25-Mesajla%C5%9Fma.png?raw=true)
+
+## Screenshots for Teacher Panel
+
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/01-Login.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/02-Profil.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/03-Not%20%C4%B0%C5%9Flemleri.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/03-Profil2.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/04-%C3%96dev%20ve%20Dok%C3%BCman.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/05-%C3%96dev%20ve%20Dok%C3%BCman%20Modal.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/06-S%C4%B1nav%20%C4%B0tirazlar%C4%B1.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/07-Mesaj%20Kutusu.png?raw=true)
+![alt text](https://github.com/asimkymk/university-student-information-system/blob/main/Screenshots/%C3%96%C4%9Fretim%20G%C3%B6revlisi%20Paneli/08-Mesajla%C5%9Fma.png?raw=true)
