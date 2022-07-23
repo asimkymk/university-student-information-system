@@ -9,6 +9,7 @@ var jwt = require("jsonwebtoken");
 const privateKey = "ASIM";
 const fs = require("fs");
 const { response } = require("express");
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
